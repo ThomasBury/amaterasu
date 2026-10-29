@@ -166,9 +166,9 @@ scientific, and everyday perspectives, including requirements and their
 implications.
 
 **Inputs:** source material, destination audience, and the decision or task that
-audience needs to perform. If the audience is unspecified, ask: it materially
-changes the output. Inspect the source while waiting, but do not silently choose
-the destination audience.
+audience needs to perform. If the audience is unspecified, ask for the destination
+audience because it materially changes the output. Inspect the source while
+waiting, but do not silently choose the destination audience.
 
 **Method:** identify essential concepts and limitations; retain necessary terms
 and explain their contribution; connect findings to consequences supported by

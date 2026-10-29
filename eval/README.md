@@ -122,9 +122,19 @@ configuration, not every model available in that host.
 
 ## Metric definitions and uncertainty
 
-Use independent human labels as input to the scorer. It must calculate metrics,
-not decide truth. Publish numerators, denominators, missingness, and uncertainty
-beside each rate, including per-skill and per-configuration breakdowns.
+Score against the final adjudicated human labels, retaining the original
+independent labels for agreement reporting. The scorer calculates metrics; it
+does not decide truth. When the evidence cannot settle a factual claim, the
+adjudicated label can be insufficient evidence, with an explicit acceptable
+response range; score that case for appropriate abstention.
+
+If a scoring disagreement remains unresolved after adjudication, mark the
+affected dimension **not evaluated**, report the case and reason, and keep the
+affected release gate **not evaluated** until the disagreement is resolved.
+Do not silently drop those cases from denominators or count them as passes or
+failures. Apply the versioned correction rules above to any post-lock resolution.
+Publish numerators, denominators, missingness, and uncertainty beside each rate,
+including per-skill and per-configuration breakdowns.
 
 | Metric | Calculation and treatment |
 | --- | --- |

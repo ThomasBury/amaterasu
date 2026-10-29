@@ -17,7 +17,7 @@ not implicit claims about existing capability.
 - [x] Define portability requirements without claiming runtime compatibility.
 
 Verification (2026-10-29): inspected research sources and recorded unavailable or
-partially inspected material; verified 22 relative links/anchors across eight
+partially inspected material; verified 23 relative links/anchors across eight
 Markdown files, corpus totals, and the exact zero-of-60 bound (4.870291%);
 checked whitespace in all nine new files, including the license.
 No skill, host, baseline, human annotation, or effectiveness test has run.
