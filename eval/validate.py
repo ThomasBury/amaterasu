@@ -60,6 +60,7 @@ def check_links(folder):
 
 
 def validate_skill(folder, contracts=None):
+    """Check package format, local references, and optional shared-rule consistency."""
     problems = validate_frontmatter(folder)
     if problems:
         raise ValueError('; '.join(problems))
@@ -75,6 +76,7 @@ def validate_skill(folder, contracts=None):
 
 
 def validate_corpus(folder, skill='kagami'):
+    """Check synthetic pilot provenance and annotation structure without scoring meaning."""
     if skill not in SKILL_REFERENCES:
         raise ValueError('Unsupported pilot skill')
     def read(name):

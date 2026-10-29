@@ -28,6 +28,7 @@ def test_real_corpus_and_shared_rules(skill):
 
 @pytest.mark.parametrize('name,reference', [('kagami', 'evidence-and-arguments.md'), ('kotoba', 'writing-and-accountability.md')])
 def test_standalone_package(tmp_path, name, reference):
+    """A copied package loads its own references and rejects a missing required one."""
     skill = tmp_path / name
     shutil.copytree(ROOT / 'skills' / name, skill)
     validate_skill(skill)
