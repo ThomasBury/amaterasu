@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-kagami-001-author-v1",
+  "case_id": "pilot-kagami-001",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-001-p1",
+      "wording": "Defects fell from 8% to 6%",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Defects fell from 8% to 6%"
+    },
+    {
+      "proposition_id": "pilot-kagami-001-p2",
+      "wording": "a 25-percentage-point decrease.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "a 25-percentage-point decrease."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-001-p1",
+      "evidence_id": "pilot-kagami-001-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results."
+    },
+    {
+      "proposition_id": "pilot-kagami-001-p2",
+      "evidence_id": "pilot-kagami-001-e1",
+      "location": "L1",
+      "status": "contradicted",
+      "establishes": "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not infer causality from these rates."
+  ],
+  "answerability": "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results."
+  ],
+  "forbidden_changes": [
+    "Do not infer causality from these rates."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

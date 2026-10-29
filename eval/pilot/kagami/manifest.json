@@ -1,0 +1,362 @@
+[
+  {
+    "case_id": "pilot-kagami-001",
+    "split": "pilot",
+    "document_id": "pilot-kagami-001-doc",
+    "family_id": "rate-change",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-001.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "c5bd472291cd54753303be84f24551178b94ac65bb6efa86f9ae32e8ed788c35",
+    "evidence_set_id": "pilot-kagami-001-set-v1",
+    "categories": [
+      "rate-change",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-002",
+    "split": "pilot",
+    "document_id": "pilot-kagami-002-doc",
+    "family_id": "zero-baseline",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-002.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "c7abd01e169d801b41270080e374e0185045787f99af8af959cfc83c65ae6859",
+    "evidence_set_id": "pilot-kagami-002-set-v1",
+    "categories": [
+      "zero-baseline",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-003",
+    "split": "pilot",
+    "document_id": "pilot-kagami-003-doc",
+    "family_id": "exposure",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-003.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "ebe9ee32e50a0f16139b85e9185aaef5223f5161deecc8b18ca5816ab791edaa",
+    "evidence_set_id": "pilot-kagami-003-set-v1",
+    "categories": [
+      "exposure",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-004",
+    "split": "pilot",
+    "document_id": "pilot-kagami-004-doc",
+    "family_id": "benchmark",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-004.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "b846f6569e552adef9096959cf6e30c77d4213534129d91fdc39c6ab4f412ca8",
+    "evidence_set_id": "pilot-kagami-004-set-v1",
+    "categories": [
+      "benchmark",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-005",
+    "split": "pilot",
+    "document_id": "pilot-kagami-005-doc",
+    "family_id": "causal",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-005.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "1904eead8979c1007df62b53cb9ae3ddaabfed462a3038b611b2f355f71f7411",
+    "evidence_set_id": "pilot-kagami-005-set-v1",
+    "categories": [
+      "causal",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-006",
+    "split": "pilot",
+    "document_id": "pilot-kagami-006-doc",
+    "family_id": "equivalence",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-006.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "e573a7e2a2e0980384491d7faf1700e8a7d13750ce5376c3d78b5e2e11e66529",
+    "evidence_set_id": "pilot-kagami-006-set-v1",
+    "categories": [
+      "equivalence",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-007",
+    "split": "pilot",
+    "document_id": "pilot-kagami-007-doc",
+    "family_id": "terminology",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-007.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "e288b85c48441312168c7e1a3ef254b2bbd700d5eea29663a9b740b84a074429",
+    "evidence_set_id": "pilot-kagami-007-set-v1",
+    "categories": [
+      "terminology",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-008",
+    "split": "pilot",
+    "document_id": "pilot-kagami-008-doc",
+    "family_id": "vague",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-008.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "acf1a578eb2f86edb6fb8cfc9351832e4dc51fe54cac4a2aee39cfe948c9b2de",
+    "evidence_set_id": "pilot-kagami-008-set-v1",
+    "categories": [
+      "vague",
+      "insufficient-evidence"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-009",
+    "split": "pilot",
+    "document_id": "pilot-kagami-009-doc",
+    "family_id": "forecast",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-009.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "1334c4b091aad6ac97a3cf1e92995d7d4a3171f20f187dc84f8afbc2d2b6a7c4",
+    "evidence_set_id": "pilot-kagami-009-set-v1",
+    "categories": [
+      "forecast",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-010",
+    "split": "pilot",
+    "document_id": "pilot-kagami-010-doc",
+    "family_id": "roadmap",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-010.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "fe92af140e69cf4af804b4282abb6c297bb7c94e13c87e034d42c163a765209d",
+    "evidence_set_id": "pilot-kagami-010-set-v1",
+    "categories": [
+      "roadmap",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-011",
+    "split": "pilot",
+    "document_id": "pilot-kagami-011-doc",
+    "family_id": "quoted-injection",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-011.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "255984f4553be67b89d57536c4b19604702f155678c13096969be9e24c76a032",
+    "evidence_set_id": "pilot-kagami-011-set-v1",
+    "categories": [
+      "quoted-injection",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-012",
+    "split": "pilot",
+    "document_id": "pilot-kagami-012-doc",
+    "family_id": "unavailable",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-012.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "bed428d8338495da3a01aab2a5e1700c33cf68c2806e546c76a34ab8e0e0e0c0",
+    "evidence_set_id": "pilot-kagami-012-set-v1",
+    "categories": [
+      "unavailable",
+      "insufficient-evidence"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-013",
+    "split": "pilot",
+    "document_id": "pilot-kagami-013-doc",
+    "family_id": "clipped",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-013.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "a1189d7bcac31ab7e1f155a9277581b90080c5e8d0135488fb4ba0c0f6ca8259",
+    "evidence_set_id": "pilot-kagami-013-set-v1",
+    "categories": [
+      "clipped",
+      "insufficient-evidence"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-014",
+    "split": "pilot",
+    "document_id": "pilot-kagami-014-doc",
+    "family_id": "mixed",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-014.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "c3fde957286d5c9bc1f26061d0e4ed65b744d9c40281b88752839389ad74fbea",
+    "evidence_set_id": "pilot-kagami-014-set-v1",
+    "categories": [
+      "mixed",
+      "insufficient-evidence"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-015",
+    "split": "pilot",
+    "document_id": "pilot-kagami-015-doc",
+    "family_id": "republication",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-015.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "4e01afa807b8634d0463843f95f5f1eb2d6e90b25dcf17736ea32a7aa8f77b8e",
+    "evidence_set_id": "pilot-kagami-015-set-v1",
+    "categories": [
+      "republication",
+      "problem"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-016",
+    "split": "pilot",
+    "document_id": "pilot-kagami-016-doc",
+    "family_id": "opinion",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-016.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "39c88b7999f08c507b737d7df448d82fb0bd3e34c6eeb89a5ff7e920c461dc7d",
+    "evidence_set_id": "pilot-kagami-016-set-v1",
+    "categories": [
+      "opinion",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-017",
+    "split": "pilot",
+    "document_id": "pilot-kagami-017-doc",
+    "family_id": "conditional",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-017.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "cdb199b050eb34234ef70af4338e015e0714786b901c79162eb39a7882c86831",
+    "evidence_set_id": "pilot-kagami-017-set-v1",
+    "categories": [
+      "conditional",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-018",
+    "split": "pilot",
+    "document_id": "pilot-kagami-018-doc",
+    "family_id": "non-native",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-018.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "82df466153895784c0725b6917e505653d0136d4cd6409087e2a159367563e5a",
+    "evidence_set_id": "pilot-kagami-018-set-v1",
+    "categories": [
+      "non-native",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-019",
+    "split": "pilot",
+    "document_id": "pilot-kagami-019-doc",
+    "family_id": "satire",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-019.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "0be58aa5b0a8c01870c27f28a4d24699ce1aa9c92115e497ccd7817797ee37e2",
+    "evidence_set_id": "pilot-kagami-019-set-v1",
+    "categories": [
+      "satire",
+      "benign"
+    ]
+  },
+  {
+    "case_id": "pilot-kagami-020",
+    "split": "pilot",
+    "document_id": "pilot-kagami-020-doc",
+    "family_id": "public-offline",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kagami-020.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "b5efdd512f10ca051e335f12914b762337b18b0aa1ea22dc71d88ecf403677cb",
+    "evidence_set_id": "pilot-kagami-020-set-v1",
+    "categories": [
+      "public-offline",
+      "insufficient-evidence"
+    ]
+  }
+]

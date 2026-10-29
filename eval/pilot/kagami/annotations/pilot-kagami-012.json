@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-012-author-v1",
+  "case_id": "pilot-kagami-012",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-012-p1",
+      "wording": "The archived audit proves there were no incidents.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "The archived audit proves there were no incidents."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-012-p1",
+      "evidence_id": "pilot-kagami-012-e1",
+      "location": null,
+      "status": "insufficient evidence",
+      "establishes": "The referenced audit is unavailable; absence of accessible evidence proves neither zero incidents nor misconduct."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not invent audit contents."
+  ],
+  "answerability": "The referenced audit is unavailable; absence of accessible evidence proves neither zero incidents nor misconduct.",
+  "problem_labels": [
+    "insufficient-evidence"
+  ],
+  "acceptable_outputs": [
+    "The referenced audit is unavailable; absence of accessible evidence proves neither zero incidents nor misconduct."
+  ],
+  "forbidden_changes": [
+    "Do not invent audit contents."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

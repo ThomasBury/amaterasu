@@ -1,0 +1,54 @@
+{
+  "annotation_id": "pilot-kagami-014-author-v1",
+  "case_id": "pilot-kagami-014",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-014-p1",
+      "wording": "The device lasts at least 10 hours under protocol P.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "The device lasts at least 10 hours under protocol P."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-014-p1",
+      "evidence_id": "pilot-kagami-014-e1",
+      "location": "L1",
+      "status": "mixed",
+      "establishes": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+    },
+    {
+      "proposition_id": "pilot-kagami-014-p1",
+      "evidence_id": "pilot-kagami-014-e2",
+      "location": "L1",
+      "status": "mixed",
+      "establishes": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not average into a verdict or choose by prestige."
+  ],
+  "answerability": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving.",
+  "problem_labels": [
+    "insufficient-evidence"
+  ],
+  "acceptable_outputs": [
+    "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+  ],
+  "forbidden_changes": [
+    "Do not average into a verdict or choose by prestige."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

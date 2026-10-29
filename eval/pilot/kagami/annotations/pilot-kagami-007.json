@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-007-author-v1",
+  "case_id": "pilot-kagami-007",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-007-p1",
+      "wording": "The queue uses FIFO: the first item inserted is the first removed.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "The queue uses FIFO: the first item inserted is the first removed."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-007-p1",
+      "evidence_id": "pilot-kagami-007-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The technical term is explained and consistent with the supplied design."
+    }
+  ],
+  "reasoning_gaps": [
+    "No accusation based on jargon."
+  ],
+  "answerability": "The technical term is explained and consistent with the supplied design.",
+  "problem_labels": [
+    "benign"
+  ],
+  "acceptable_outputs": [
+    "The technical term is explained and consistent with the supplied design."
+  ],
+  "forbidden_changes": [
+    "No accusation based on jargon."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

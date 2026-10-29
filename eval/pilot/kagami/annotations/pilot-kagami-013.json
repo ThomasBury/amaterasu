@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-013-author-v1",
+  "case_id": "pilot-kagami-013",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-013-p1",
+      "wording": "Therefore, every site passed.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Therefore, every site passed."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-013-p1",
+      "evidence_id": "pilot-kagami-013-e1",
+      "location": "L1",
+      "status": "insufficient evidence",
+      "establishes": "The fragment cannot establish the universal claim; request the missing coverage."
+    }
+  ],
+  "reasoning_gaps": [
+    "Keep partial-source coverage explicit."
+  ],
+  "answerability": "The fragment cannot establish the universal claim; request the missing coverage.",
+  "problem_labels": [
+    "insufficient-evidence"
+  ],
+  "acceptable_outputs": [
+    "The fragment cannot establish the universal claim; request the missing coverage."
+  ],
+  "forbidden_changes": [
+    "Keep partial-source coverage explicit."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

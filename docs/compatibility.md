@@ -1,6 +1,6 @@
 # Portability contract
 
-**No host has been runtime-tested. No installable skill exists in this phase.**
+**No host has been runtime-tested. Kagami has a standalone skill folder.**
 This document records packaging requirements and the validation work needed
 before publishing installation instructions or compatibility claims.
 

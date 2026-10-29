@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-018-author-v1",
+  "case_id": "pilot-kagami-018",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-018-p1",
+      "wording": "Test finish yesterday; all three checks pass.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Test finish yesterday; all three checks pass."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-018-p1",
+      "evidence_id": "pilot-kagami-018-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The limited test result is supported despite non-native phrasing."
+    }
+  ],
+  "reasoning_gaps": [
+    "No style-based accusation or broader reliability guarantee."
+  ],
+  "answerability": "The limited test result is supported despite non-native phrasing.",
+  "problem_labels": [
+    "benign"
+  ],
+  "acceptable_outputs": [
+    "The limited test result is supported despite non-native phrasing."
+  ],
+  "forbidden_changes": [
+    "No style-based accusation or broader reliability guarantee."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -32,3 +32,10 @@ notice and any applicable attribution within its own folder.
 Future real-world evaluation inputs require documented permission or a license
 allowing their intended use and redistribution. Public availability alone is
 not permission. Private evaluation material stays outside public artifacts.
+
+The development environment uses the official Apache-2.0 `skills-ref` reference
+validator from [agentskills/agentskills](https://github.com/agentskills/agentskills),
+pinned to revision `69ef37e9424c0a7ea9dd2293b559e43ec8176379`. It is installed
+as a development dependency, not copied into the standalone skill. Its own
+license remains applicable; the upstream tool is a demonstration validator,
+not evidence of runtime safety or effectiveness.

@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-004-author-v1",
+  "case_id": "pilot-kagami-004",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-004-p1",
+      "wording": "B processes this batch in half the elapsed time of A on the same machine.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "B processes this batch in half the elapsed time of A on the same machine."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-004-p1",
+      "evidence_id": "pilot-kagami-004-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The scoped elapsed-time result is supported."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not extend one batch to all workloads or production."
+  ],
+  "answerability": "The scoped elapsed-time result is supported.",
+  "problem_labels": [
+    "benign"
+  ],
+  "acceptable_outputs": [
+    "The scoped elapsed-time result is supported."
+  ],
+  "forbidden_changes": [
+    "Do not extend one batch to all workloads or production."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

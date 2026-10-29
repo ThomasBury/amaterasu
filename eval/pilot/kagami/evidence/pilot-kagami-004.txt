@@ -1,0 +1,1 @@
+L1: Same batch and machine; A elapsed 10 seconds, B elapsed 5 seconds.

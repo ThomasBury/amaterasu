@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-017-author-v1",
+  "case_id": "pilot-kagami-017",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-017-p1",
+      "wording": "We will launch on Friday if the safety review passes.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "We will launch on Friday if the safety review passes."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-017-p1",
+      "evidence_id": "pilot-kagami-017-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The plan supports the conditional commitment wording; fulfillment remains unresolved."
+    }
+  ],
+  "reasoning_gaps": [
+    "Preserve Friday and the safety condition; do not assert authority beyond the signed plan."
+  ],
+  "answerability": "The plan supports the conditional commitment wording; fulfillment remains unresolved.",
+  "problem_labels": [
+    "benign"
+  ],
+  "acceptable_outputs": [
+    "The plan supports the conditional commitment wording; fulfillment remains unresolved."
+  ],
+  "forbidden_changes": [
+    "Preserve Friday and the safety condition; do not assert authority beyond the signed plan."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-006-author-v1",
+  "case_id": "pilot-kagami-006",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-006-p1",
+      "wording": "The two treatments are equivalent because p = 0.3.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "The two treatments are equivalent because p = 0.3."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-006-p1",
+      "evidence_id": "pilot-kagami-006-e1",
+      "location": "L1",
+      "status": "insufficient evidence",
+      "establishes": "Nonsignificance does not establish equivalence or prove a difference."
+    }
+  ],
+  "reasoning_gaps": [
+    "Request a relevant margin and appropriate analysis."
+  ],
+  "answerability": "Nonsignificance does not establish equivalence or prove a difference.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "Nonsignificance does not establish equivalence or prove a difference."
+  ],
+  "forbidden_changes": [
+    "Request a relevant margin and appropriate analysis."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-008-author-v1",
+  "case_id": "pilot-kagami-008",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-008-p1",
+      "wording": "We operationalize exponential synergy across paradigms.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "We operationalize exponential synergy across paradigms."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-008-p1",
+      "evidence_id": null,
+      "location": null,
+      "status": "insufficient evidence",
+      "establishes": "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not invent a testable promise or diagnose the speaker."
+  ],
+  "answerability": "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom.",
+  "problem_labels": [
+    "insufficient-evidence"
+  ],
+  "acceptable_outputs": [
+    "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom."
+  ],
+  "forbidden_changes": [
+    "Do not invent a testable promise or diagnose the speaker."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

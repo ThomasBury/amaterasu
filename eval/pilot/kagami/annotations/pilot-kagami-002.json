@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-002-author-v1",
+  "case_id": "pilot-kagami-002",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-002-p1",
+      "wording": "Incidents rose from zero to four, a 400% increase.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Incidents rose from zero to four, a 400% increase."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-002-p1",
+      "evidence_id": "pilot-kagami-002-e1",
+      "location": "L1",
+      "status": "contradicted",
+      "establishes": "Absolute increase is 4; relative increase is undefined with zero baseline."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not divide by zero or invent a percentage."
+  ],
+  "answerability": "Absolute increase is 4; relative increase is undefined with zero baseline.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "Absolute increase is 4; relative increase is undefined with zero baseline."
+  ],
+  "forbidden_changes": [
+    "Do not divide by zero or invent a percentage."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

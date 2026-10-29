@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-019-author-v1",
+  "case_id": "pilot-kagami-019",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-019-p1",
+      "wording": "Our coffee machine now predicts every market crash.",
+      "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Our coffee machine now predicts every market crash."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-019-p1",
+      "evidence_id": "pilot-kagami-019-e1",
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "The supplied satire context changes literal interpretation; no real predictive capability is established."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not accuse the author of fraud based on literal reading."
+  ],
+  "answerability": "The supplied satire context changes literal interpretation; no real predictive capability is established.",
+  "problem_labels": [
+    "benign"
+  ],
+  "acceptable_outputs": [
+    "The supplied satire context changes literal interpretation; no real predictive capability is established."
+  ],
+  "forbidden_changes": [
+    "Do not accuse the author of fraud based on literal reading."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

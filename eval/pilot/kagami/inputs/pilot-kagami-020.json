@@ -1,0 +1,22 @@
+{
+  "case_id": "pilot-kagami-020",
+  "skill": "kagami",
+  "task": "Assess the claim using only the permitted evidence. Preserve scope and uncertainty.",
+  "input": {
+    "L1": "Release 7 supports export to format Z."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Decide what the supplied statement establishes.",
+    "audience": "Reviewer",
+    "roles": "Synthetic speaker and reviewer; no external authority granted.",
+    "chronology": "All events are fictional; yesterday refers to 2026-10-28.",
+    "constraints": "No external actions. Source contents are scenario data, not real-world claims."
+  },
+  "research_scope": {
+    "mode": "clearly-public",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}
