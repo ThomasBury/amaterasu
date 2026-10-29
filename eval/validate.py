@@ -8,6 +8,10 @@ from urllib.parse import unquote, urlsplit
 from skills_ref import validate as validate_frontmatter
 
 ROOT = Path(__file__).resolve().parents[1]
+SKILL_REFERENCES = {
+    'kagami': ('evidence-and-arguments.md', 'numbers-and-product-claims.md'),
+    'kotoba': ('writing-and-accountability.md',),
+}
 STATUSES = {'supported', 'contradicted', 'mixed', 'insufficient evidence', 'not checked', 'inapplicable'}
 
 
@@ -56,11 +60,14 @@ def check_links(folder):
 
 
 def validate_skill(folder, contracts=None):
+    """Check package format, local references, and optional shared-rule consistency."""
     problems = validate_frontmatter(folder)
     if problems:
         raise ValueError('; '.join(problems))
     check_links(folder)
-    for name in ('LICENSE', 'NOTICE.md', 'references/evidence-and-arguments.md', 'references/numbers-and-product-claims.md'):
+    if folder.name not in SKILL_REFERENCES:
+        raise ValueError('Unsupported skill package')
+    for name in ('LICENSE', 'NOTICE.md', *(f'references/{ref}' for ref in SKILL_REFERENCES[folder.name])):
         local_file(folder, name)
     if contracts:
         shared = contracts.read_text().split('## Shared essentials\n\n')[1].split('## Kagami')[0].strip()
@@ -68,7 +75,10 @@ def validate_skill(folder, contracts=None):
             raise ValueError('Shared safeguards drifted from contracts')
 
 
-def validate_corpus(folder):
+def validate_corpus(folder, skill='kagami'):
+    """Check synthetic pilot provenance and annotation structure without scoring meaning."""
+    if skill not in SKILL_REFERENCES:
+        raise ValueError('Unsupported pilot skill')
     def read(name):
         return json.loads(local_file(folder, name).read_text())
     manifest = unique(read('manifest.json'), 'case_id')
@@ -94,8 +104,10 @@ def validate_corpus(folder):
     all_props = []
     for cid, case in cases.items():
         require(case, 'case_id skill task input context research_scope evidence')
-        if case['skill'] != 'kagami' or not re.fullmatch(r'pilot-kagami-\d{3}', cid):
-            raise ValueError('Invalid Kagami pilot identifier or skill')
+        if case['skill'] != skill or not re.fullmatch(rf'pilot-{skill}-\d{{3}}', cid):
+            raise ValueError('Invalid pilot identifier or skill')
+        if skill == 'kotoba' and case.get('writing_mode') not in {'draft', 'revision'}:
+            raise ValueError('Kotoba requires draft or revision writing_mode')
         if not isinstance(case['input'], dict) or not case['input'] or not all(isinstance(v, str) and v for v in case['input'].values()):
             raise ValueError('Input must contain nonempty located text')
         require(case['context'], 'date purpose audience roles chronology constraints')
@@ -130,6 +142,8 @@ def validate_corpus(folder):
         all_props.extend(ann['propositions'])
         for prop in props.values():
             require(prop, 'proposition_id wording location claim_type critical critical_reason preserve')
+            if not isinstance(prop['critical'], bool) or not isinstance(prop['preserve'], str) or not prop['preserve'].strip():
+                raise ValueError('Proposition needs a boolean critical flag and preservation key')
             if prop['location'] not in case['input'] or prop['wording'] not in case['input'][prop['location']]:
                 raise ValueError('Proposition wording/location must match original input')
             if prop['claim_type'] not in {'factual assertion', 'interpretation', 'opinion', 'prediction', 'aspiration', 'commitment'}:
@@ -150,8 +164,10 @@ def validate_corpus(folder):
 
 if __name__ == '__main__':
     try:
-        validate_skill(ROOT / 'skills/kagami', ROOT / 'docs/contracts.md')
-        count = validate_corpus(ROOT / 'eval/pilot/kagami')
+        count = 0
+        for skill in SKILL_REFERENCES:
+            validate_skill(ROOT / 'skills' / skill, ROOT / 'docs/contracts.md')
+            count += validate_corpus(ROOT / 'eval/pilot' / skill, skill)
     except (ValueError, KeyError, TypeError, OSError) as error:
         raise SystemExit(f'Validation failed: {error}')
-    print(f'Validated Kagami package and {count} pilot records; no behavioral score implied.')
+    print(f'Validated Kagami and Kotoba packages and {count} pilot records; no behavioral score implied.')

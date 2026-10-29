@@ -1,0 +1,64 @@
+{
+  "annotation_id": "pilot-kotoba-002-author-v1",
+  "case_id": "pilot-kotoba-002",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-002-p1",
+      "wording": "According to Northstar, installation should take about six days.",
+      "location": "L1",
+      "claim_type": "prediction",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Vendor attribution, about six days, forecast"
+    },
+    {
+      "proposition_id": "pilot-kotoba-002-p2",
+      "wording": "We have not checked that estimate.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Estimate remains unchecked"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-002-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-002-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "Vendor estimate unverified."
+  ],
+  "answerability": "A bounded draft is possible. Vendor estimate unverified.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "Northstar estimates installation will take about six days. We have not checked its estimate.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not make the estimate our promise or an independently verified duration."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

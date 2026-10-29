@@ -1,0 +1,48 @@
+{
+  "annotation_id": "pilot-kotoba-003-author-v1",
+  "case_id": "pilot-kotoba-003",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-003-p1",
+      "wording": "We can deliver the sample on 18 November if approval arrives by 12 November.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Sample only; 18 November conditional on approval by 12 November"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-003-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "No approval is documented."
+  ],
+  "answerability": "A bounded draft is possible. No approval is documented.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "If approval arrives by 12 November, we can deliver the sample on 18 November.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not drop the condition or expand sample delivery to full rollout."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "case_id": "pilot-kotoba-001",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-001-doc",
+    "family_id": "sample-count",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-001.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "2593144a89c482ec5beec2b00780a52bf6fe8e062df47edafa3439ae600bed3c",
+    "evidence_set_id": "pilot-kotoba-001-set-v1",
+    "categories": [
+      "sample-count",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-002",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-002-doc",
+    "family_id": "reported-estimate",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-002.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "3b0b8a94663522dcf11990f11b8e07058cf7e0b1557ca1474701784690409d86",
+    "evidence_set_id": "pilot-kotoba-002-set-v1",
+    "categories": [
+      "reported-estimate",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-003",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-003-doc",
+    "family_id": "conditional-delivery",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-003.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "c250cbf9e60f3fd7ab61d430879d4ea779ae0b38189995b94ba0c5dee2f6e9d8",
+    "evidence_set_id": "pilot-kotoba-003-set-v1",
+    "categories": [
+      "conditional-delivery",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-004",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-004-doc",
+    "family_id": "aspiration",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-004.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "28af99e82a5544e1e6b0d1a4155648ae9bde19b080db01314fa6aebca40b6b78",
+    "evidence_set_id": "pilot-kotoba-004-set-v1",
+    "categories": [
+      "aspiration",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-005",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-005-doc",
+    "family_id": "firm-refusal",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-005.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "d50f6afaccbcb8181184b2cf706f2ace7ae1d678c50813ce51d82685398212b9",
+    "evidence_set_id": "pilot-kotoba-005-set-v1",
+    "categories": [
+      "firm-refusal",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-006",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-006-doc",
+    "family_id": "ordinary-feedback",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-006.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "9d6712ec438647726cff9ec087d4a92382e7f8cbc8125687d1b2c794e1c8bd57",
+    "evidence_set_id": "pilot-kotoba-006-set-v1",
+    "categories": [
+      "ordinary-feedback",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-007",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-007-doc",
+    "family_id": "informal-voice",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-007.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "7e9cdb920e8e25927b6a4d8a737ef43a996ef48d1e73b9b58e3e056352f8b62d",
+    "evidence_set_id": "pilot-kotoba-007-set-v1",
+    "categories": [
+      "informal-voice",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-008",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-008-doc",
+    "family_id": "non-native",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-008.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "3e1b1ab472b5143f1c86189488e6062d36c23adfc177a0eebd9199c5761037c6",
+    "evidence_set_id": "pilot-kotoba-008-set-v1",
+    "categories": [
+      "non-native",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-009",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-009-doc",
+    "family_id": "specialist-term",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-009.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "a9b265b19e29273f67c7d8415db4793096c9766cf22037a43dcff60017509add",
+    "evidence_set_id": "pilot-kotoba-009-set-v1",
+    "categories": [
+      "specialist-term",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-010",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-010-doc",
+    "family_id": "quoted-injection",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-010.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "8ea349b5fd49d8cecd2029b08d77a7a5c21103b48586456d33c6e11573f3b245",
+    "evidence_set_id": "pilot-kotoba-010-set-v1",
+    "categories": [
+      "quoted-injection",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-011",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-011-doc",
+    "family_id": "handoff-notes",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-011.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "1bfaa2cd2d80831ece93cc5876b0f095f61ef4ca03ff39c1d7f9c80562d14049",
+    "evidence_set_id": "pilot-kotoba-011-set-v1",
+    "categories": [
+      "handoff-notes",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-012",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-012-doc",
+    "family_id": "decision-notes",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-012.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "8b487b6df942d558c6ff79526e5e33124e1e951e1ebd35e92e26688ebdf9d7d7",
+    "evidence_set_id": "pilot-kotoba-012-set-v1",
+    "categories": [
+      "decision-notes",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-013",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-013-doc",
+    "family_id": "conflicting-notes",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-013.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "e704693bc626c3bcfaa2d936d0d1590c1cf14d62e125d2d1c31154f5bd3e22d6",
+    "evidence_set_id": "pilot-kotoba-013-set-v1",
+    "categories": [
+      "conflicting-notes",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-014",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-014-doc",
+    "family_id": "missing-metrics",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-014.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "be96a1c9e06314bcb76555db6bc3d6983bf8b61b7909f69e532273abe8f79382",
+    "evidence_set_id": "pilot-kotoba-014-set-v1",
+    "categories": [
+      "missing-metrics",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-015",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-015-doc",
+    "family_id": "requested-proposal",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-015.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "c1c5ccca7470270ca2a8b8e78a250cc06a9fc3491aacbd245f1398e4e581697b",
+    "evidence_set_id": "pilot-kotoba-015-set-v1",
+    "categories": [
+      "requested-proposal",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-016",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-016-doc",
+    "family_id": "reported-impact",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-016.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "1fd4dc6c0cfabec91f98ac01e3dad28e313b0425e3cde02bbd80f1c214ba0ecd",
+    "evidence_set_id": "pilot-kotoba-016-set-v1",
+    "categories": [
+      "reported-impact",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-017",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-017-doc",
+    "family_id": "test-scope",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-017.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "340fd44329e981acd5d844b3b50bc91bc134f640f077b152843d6f3c49f4c209",
+    "evidence_set_id": "pilot-kotoba-017-set-v1",
+    "categories": [
+      "test-scope",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-018",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-018-doc",
+    "family_id": "boundary-notes",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-018.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "d1d1987466fcef116ddab75d21a6a9d8fe726b73c01816c3a3fa55b4ff905208",
+    "evidence_set_id": "pilot-kotoba-018-set-v1",
+    "categories": [
+      "boundary-notes",
+      "draft"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-019",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-019-doc",
+    "family_id": "forecast-range",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-019.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "40b09b44c721a1e41217ea1d2ec8563d9ee2d1ea5131be50ad4a613068300c5b",
+    "evidence_set_id": "pilot-kotoba-019-set-v1",
+    "categories": [
+      "forecast-range",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-020",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-020-doc",
+    "family_id": "already-clear",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-kotoba-020.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "badd0c2113516c8965a5a8704ba08218cabb3f980c81b52ef83cf927cbf99be4",
+    "evidence_set_id": "pilot-kotoba-020-set-v1",
+    "categories": [
+      "already-clear",
+      "revision"
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "annotation_id": "pilot-kotoba-012-author-v1",
+  "case_id": "pilot-kotoba-012",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-012-p1",
+      "wording": "Proposal: extend the trial by two weeks.",
+      "location": "L1",
+      "claim_type": "aspiration",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Proposal; two weeks"
+    },
+    {
+      "proposition_id": "pilot-kotoba-012-p2",
+      "wording": "Additional cost estimate: EUR 900, excluding tax.",
+      "location": "L2",
+      "claim_type": "prediction",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Estimate; EUR 900; excluding tax"
+    },
+    {
+      "proposition_id": "pilot-kotoba-012-p3",
+      "wording": "Approval pending.",
+      "location": "L3",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Pending approval"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-012-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-012-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-012-p3",
+      "evidence_id": null,
+      "location": "L3",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "Approval and final cost are unresolved."
+  ],
+  "answerability": "A bounded draft is possible. Approval and final cost are unresolved.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "Please consider extending the trial by two weeks. The additional cost is estimated at EUR 900 excluding tax; approval is pending.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not imply approval, a guaranteed price, or tax inclusion."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

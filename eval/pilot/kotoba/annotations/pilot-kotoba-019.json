@@ -1,0 +1,64 @@
+{
+  "annotation_id": "pilot-kotoba-019-author-v1",
+  "case_id": "pilot-kotoba-019",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-019-p1",
+      "wording": "We estimate demand at 400–550 units next quarter, assuming the subsidy continues.",
+      "location": "L1",
+      "claim_type": "prediction",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Range 400–550; next quarter; subsidy condition"
+    },
+    {
+      "proposition_id": "pilot-kotoba-019-p2",
+      "wording": "This is not an order commitment.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Not an order commitment"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-019-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-019-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "Future demand and subsidy continuation are unknown."
+  ],
+  "answerability": "A bounded draft is possible. Future demand and subsidy continuation are unknown.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "If the subsidy continues, we estimate demand of 400–550 units next quarter. This is not an order commitment.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not replace the range with a point value or drop the assumption or noncommitment."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

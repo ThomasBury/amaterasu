@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-kotoba-014",
+  "skill": "kotoba",
+  "task": "Draft a progress note from these fragments.",
+  "input": {
+    "L1": "Pilot finished.",
+    "L2": "Success rate: not measured.",
+    "L3": "Next step not decided."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Draft for Sponsor.",
+    "audience": "Sponsor",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "draft"
+}

@@ -1,0 +1,64 @@
+{
+  "annotation_id": "pilot-kotoba-005-author-v1",
+  "case_id": "pilot-kotoba-005",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-005-p1",
+      "wording": "I cannot cover Sunday shifts.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Firm refusal of Sunday shifts"
+    },
+    {
+      "proposition_id": "pilot-kotoba-005-p2",
+      "wording": "I can cover Tuesday afternoon instead.",
+      "location": "L2",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Offer limited to Tuesday afternoon"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-005-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-005-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "No acceptance of the alternative is recorded."
+  ],
+  "answerability": "A bounded draft is possible. No acceptance of the alternative is recorded.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "I cannot cover Sunday shifts, but I can cover Tuesday afternoon.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not weaken cannot to prefer not or offer other days."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}
