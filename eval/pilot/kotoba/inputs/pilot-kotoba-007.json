@@ -1,0 +1,24 @@
+{
+  "case_id": "pilot-kotoba-007",
+  "skill": "kotoba",
+  "task": "Keep my casual tone; cut the repetition.",
+  "input": {
+    "L1": "Quick heads-up: the demo moved to Room 4.",
+    "L2": "Same time, same time as before."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Revision for Close collaborators.",
+    "audience": "Close collaborators",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

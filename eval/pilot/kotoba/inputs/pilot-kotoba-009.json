@@ -1,0 +1,24 @@
+{
+  "case_id": "pilot-kotoba-009",
+  "skill": "kotoba",
+  "task": "Make this less repetitive for this technical audience.",
+  "input": {
+    "L1": "The estimate uses exposure weights; exposure weights are used in the estimate.",
+    "L2": "It excludes policies with zero exposure."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Revision for Actuarial colleagues.",
+    "audience": "Actuarial colleagues",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

@@ -1,0 +1,64 @@
+{
+  "annotation_id": "pilot-kotoba-001-author-v1",
+  "case_id": "pilot-kotoba-001",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-001-p1",
+      "wording": "In September, 9 of 150 reviewed invoices had duplicate charges.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "9 of 150; reviewed invoices; September"
+    },
+    {
+      "proposition_id": "pilot-kotoba-001-p2",
+      "wording": "The review covered the East office only.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "East office only"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-001-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-001-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "The input reports the result; the underlying invoices are not supplied."
+  ],
+  "answerability": "A bounded draft is possible. The input reports the result; the underlying invoices are not supplied.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "In September, 9 of 150 invoices reviewed at the East office had duplicate charges.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not change 9/150 to 9%, omit September, or generalize to all offices."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -4,10 +4,11 @@ Four communication skills in development for examining evidence, preserving mean
 and choosing useful next steps. English-first, Markdown-first, and independently
 usable.
 
-**Status: Kagami implemented; independently evaluated effectiveness is pending.**
-The standalone [Kagami skill](skills/kagami/SKILL.md) includes local references.
-Its 20 synthetic pilot cases have provisional AI-author labels only. The other
-three skills remain planned. No host compatibility or effectiveness is claimed.
+**Status: Kagami and Kotoba implemented; independent effectiveness evaluation is pending.**
+The standalone [Kagami](skills/kagami/SKILL.md) and
+[Kotoba](skills/kotoba/SKILL.md) skills include local references. Each has 20
+synthetic pilot cases with provisional AI-author labels only. Kakehashi and
+Mamoru remain planned. No host compatibility or effectiveness is claimed.
 
 | Skill | Tagline | Intended use |
 | --- | --- | --- |
@@ -55,20 +56,22 @@ and host configuration.
 ## Development and license
 
 Work proceeds in independently reviewable phases, with one completed phase per
-session. The next phase is Kotoba. Kagami stands alone; later skills do not need to be
-grouped with it. Development dependencies are locked; skills have no runtime
-dependency on Python. Run:
+session. The next phase is Kakehashi. Kotoba was implemented alone because it has no
+dependency on the remaining skills. Development dependencies are locked; skills
+have no runtime dependency on Python. Run:
 
 ```sh
 uv sync --locked
 uv run --locked python eval/validate.py
 uv run --locked pytest -q
 uv run --locked skills-ref validate skills/kagami
+uv run --locked skills-ref validate skills/kotoba
 ```
 
-See the [Kagami pilot record](eval/kagami-verification.md) for scope and limits.
-To review or transfer Kagami, copy its entire folder including references and
-license. Host discovery and installation instructions await host-specific tests.
+See the [Kagami](eval/kagami-verification.md) and
+[Kotoba](eval/kotoba-verification.md) pilot records for scope and limits.
+To review or transfer either skill, copy its entire folder including references
+and license. Host discovery and installation instructions await host-specific tests.
 
 Original project material is available under the [MIT license](LICENSE).
 [NOTICE.md](NOTICE.md) records attribution and the boundary around third-party

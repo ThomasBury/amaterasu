@@ -1,0 +1,24 @@
+{
+  "case_id": "pilot-kotoba-019",
+  "skill": "kotoba",
+  "task": "Simplify this forecast.",
+  "input": {
+    "L1": "We estimate demand at 400–550 units next quarter, assuming the subsidy continues.",
+    "L2": "This is not an order commitment."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Revision for Planning committee.",
+    "audience": "Planning committee",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

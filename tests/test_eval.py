@@ -20,18 +20,20 @@ def edit(path, change):
     path.write_text(json.dumps(record))
 
 
-def test_real_corpus_and_shared_rules():
-    assert validate_corpus(ROOT / 'eval/pilot/kagami') == 20
-    validate_skill(ROOT / 'skills/kagami', ROOT / 'docs/contracts.md')
+@pytest.mark.parametrize('skill', ['kagami', 'kotoba'])
+def test_real_corpus_and_shared_rules(skill):
+    assert validate_corpus(ROOT / 'eval/pilot' / skill, skill) == 20
+    validate_skill(ROOT / 'skills' / skill, ROOT / 'docs/contracts.md')
 
 
-def test_standalone_package(tmp_path):
-    skill = tmp_path / 'kagami'
-    shutil.copytree(ROOT / 'skills/kagami', skill)
+@pytest.mark.parametrize('name,reference', [('kagami', 'evidence-and-arguments.md'), ('kotoba', 'writing-and-accountability.md')])
+def test_standalone_package(tmp_path, name, reference):
+    skill = tmp_path / name
+    shutil.copytree(ROOT / 'skills' / name, skill)
     validate_skill(skill)
-    for reference in (skill / 'references').glob('*.md'):
-        assert reference.read_text().strip()
-    (skill / 'references/evidence-and-arguments.md').unlink()
+    for path in (skill / 'references').glob('*.md'):
+        assert path.read_text().strip()
+    (skill / 'references' / reference).unlink()
     with pytest.raises(ValueError, match='Missing'):
         validate_skill(skill)
 
@@ -110,3 +112,30 @@ def test_pilot_arithmetic_keys():
     assert Fraction(10,1000) == Fraction(20,2000) == Fraction(1,100)
     zero_key = json.loads((folder / 'pilot-kagami-002.json').read_text())['acceptable_outputs'][0]
     assert 'undefined with zero baseline' in zero_key
+
+
+@pytest.mark.parametrize('change,match', [
+    (lambda x: x.pop('writing_mode'), 'writing_mode'),
+    (lambda x: x.update(writing_mode='summarize'), 'writing_mode'),
+    (lambda x: x.update(skill='kagami'), 'identifier or skill'),
+])
+def test_kotoba_input_contract(tmp_path, change, match):
+    folder = tmp_path / 'kotoba'
+    shutil.copytree(ROOT / 'eval/pilot/kotoba', folder)
+    edit(folder / 'inputs/pilot-kotoba-001.json', change)
+    with pytest.raises(ValueError, match=match):
+        validate_corpus(folder, 'kotoba')
+
+
+@pytest.mark.parametrize('change,match', [
+    (lambda x: x['propositions'][0].update(preserve=''), 'preservation key'),
+    (lambda x: x['propositions'][0].update(wording='Invented fact'), 'original input'),
+    (lambda x: x['evidence_relationships'][0].update(status='supported'), 'available located evidence'),
+    (lambda x: x.update(state='adjudicated'), 'provisional'),
+])
+def test_kotoba_annotation_contract(tmp_path, change, match):
+    folder = tmp_path / 'kotoba'
+    shutil.copytree(ROOT / 'eval/pilot/kotoba', folder)
+    edit(folder / 'annotations/pilot-kotoba-001.json', change)
+    with pytest.raises(ValueError, match=match):
+        validate_corpus(folder, 'kotoba')

@@ -46,14 +46,23 @@ and safeguard/abstention author walkthrough are recorded in
 annotation or isolated host behavioral run has been performed. Kagami was kept
 alone because later skills are independent phases; release tests remain pending.
 
-## 3. Kotoba — next
+## 3. Kotoba — complete
 
-- [ ] Create the standalone skill and `writing-and-accountability.md` reference.
-- [ ] Prepare 20 pilot cases and check preservation of quantities, attribution,
+- [x] Create the standalone skill and `writing-and-accountability.md` reference.
+- [x] Prepare 20 pilot cases and check preservation of quantities, attribution,
   uncertainty, scope, commitments, voice, and warranted firmness.
-- [ ] Check drafting from notes as well as revision; retain visible gaps.
+- [x] Check drafting from notes as well as revision; retain visible gaps.
 
-## 4. Kakehashi — pending
+Verification (2026-10-29): 20 original synthetic cases (12 revisions, eight drafts)
+with separate provisional AI-author annotations; all 32 pytest tests, official
+skills-ref checks for both packages, and validation of 40 pilot records pass.
+Standalone reference loading and all 20 preservation examples were checked;
+see [the verification record](eval/kotoba-verification.md) for scope and the
+optional quick-validator dependency limitation. No independent human annotation
+or isolated host behavioral run was performed. Kotoba was kept alone because
+remaining skills do not resolve a dependency; release validation remains pending.
+
+## 4. Kakehashi — next
 
 - [ ] Create the standalone skill and `audiences-and-meaning.md` reference.
 - [ ] Prepare 20 pilot cases with specified audiences and answer-keyed

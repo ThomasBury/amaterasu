@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-kotoba-012",
+  "skill": "kotoba",
+  "task": "Draft a decision request.",
+  "input": {
+    "L1": "Proposal: extend the trial by two weeks.",
+    "L2": "Additional cost estimate: EUR 900, excluding tax.",
+    "L3": "Approval pending."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Draft for Budget owner.",
+    "audience": "Budget owner",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "draft"
+}

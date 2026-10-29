@@ -1,0 +1,64 @@
+{
+  "annotation_id": "pilot-kotoba-018-author-v1",
+  "case_id": "pilot-kotoba-018",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-018-p1",
+      "wording": "Do not circulate the draft outside the review group.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Firm restriction; outside review group"
+    },
+    {
+      "proposition_id": "pilot-kotoba-018-p2",
+      "wording": "Written approval required before wider circulation.",
+      "location": "L2",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Written approval required before wider circulation"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-018-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-018-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "No written approval is supplied."
+  ],
+  "answerability": "A bounded draft is possible. No written approval is supplied.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "Do not circulate the draft outside the review group without prior written approval.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not weaken the restriction into a preference or imply approval exists."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

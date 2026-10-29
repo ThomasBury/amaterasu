@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kotoba-020",
+  "skill": "kotoba",
+  "task": "Edit only if needed.",
+  "input": {
+    "L1": "Please send the signed form by 16:00 CET on 4 November."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Revision for Colleague.",
+    "audience": "Colleague",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

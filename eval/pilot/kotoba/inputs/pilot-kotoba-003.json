@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kotoba-003",
+  "skill": "kotoba",
+  "task": "Shorten this without changing our offer.",
+  "input": {
+    "L1": "We can deliver the sample on 18 November if approval arrives by 12 November."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Revision for Customer.",
+    "audience": "Customer",
+    "roles": "Fictional writer and recipient; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic scenario; dates and events are fictional.",
+    "constraints": "No external actions or research. Preserve source meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

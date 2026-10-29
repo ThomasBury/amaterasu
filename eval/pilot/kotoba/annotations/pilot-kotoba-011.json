@@ -1,0 +1,80 @@
+{
+  "annotation_id": "pilot-kotoba-011-author-v1",
+  "case_id": "pilot-kotoba-011",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-011-p1",
+      "wording": "02:10 UTC: backup job failed.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "02:10 UTC; backup job"
+    },
+    {
+      "proposition_id": "pilot-kotoba-011-p2",
+      "wording": "Cause unknown.",
+      "location": "L2",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Unknown cause"
+    },
+    {
+      "proposition_id": "pilot-kotoba-011-p3",
+      "wording": "Retry suggested; owner and time unset.",
+      "location": "L3",
+      "claim_type": "aspiration",
+      "critical": true,
+      "critical_reason": "Changes the meaning or requested action if lost.",
+      "preserve": "Suggestion only; owner and time unset"
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-011-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-011-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    },
+    {
+      "proposition_id": "pilot-kotoba-011-p3",
+      "evidence_id": null,
+      "location": "L3",
+      "status": "inapplicable",
+      "establishes": "Original wording is supplied; underlying events are not independently verified. Preserve meaning without claiming verification."
+    }
+  ],
+  "reasoning_gaps": [
+    "Retry owner and time remain unset."
+  ],
+  "answerability": "A bounded draft is possible. Retry owner and time remain unset.",
+  "problem_labels": [
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "The backup job failed at 02:10 UTC; the cause is unknown. A retry is suggested, with owner and time still to be agreed.",
+    "Equivalent wording that preserves every listed proposition and visible gap is acceptable; exact wording is not required."
+  ],
+  "forbidden_changes": [
+    "Do not invent a cause, recovery, owner, or retry commitment."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}
