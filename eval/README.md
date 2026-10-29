@@ -1,10 +1,10 @@
 # Evaluation protocol
 
-**Status: Kagami and Kotoba pilot artifacts implemented.** Each has 20 original
-synthetic cases with provisional AI-author annotations (40 cases total).
+**Status: Kagami, Kotoba, and Kakehashi pilot artifacts implemented.** Each has 20 original
+synthetic cases with provisional AI-author annotations (60 cases total).
 Independent annotations, isolated model runs, baseline results, and reader-study
-results remain pending. See the [Kagami](kagami-verification.md) and
-[Kotoba](kotoba-verification.md) verification records.
+results remain pending. See the [Kagami](kagami-verification.md),
+[Kotoba](kotoba-verification.md), and [Kakehashi](kakehashi-verification.md) verification records.
 The [annotation rubric](annotation-rubric.md) defines what to collect and how to
 judge it. Examples in that rubric are author calibration examples, not evidence
 of effectiveness.

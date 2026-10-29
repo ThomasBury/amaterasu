@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-012-author-v1",
+  "case_id": "pilot-kakehashi-012",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-012-p1",
+      "wording": "The shift log lists four outages on Tuesday.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The shift log lists four outages on Tuesday."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-012-p2",
+      "wording": "The dashboard lists six outages on Tuesday; neither source supplies event identifiers.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The dashboard lists six outages on Tuesday; neither source supplies event identifiers."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-012-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-012-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; event identifiers and reconciliation evidence are missing."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "conflicting-counts"
+  ],
+  "acceptable_outputs": [
+    "The log lists four Tuesday outages and the dashboard six. Without event identifiers, we cannot tell whether these are duplicates, different definitions, or missing events. Keep both counts attributed until reconciled.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; event identifiers and reconciliation evidence are missing.",
+    "Do not invent authorization or a guarantee contrary to the action key: Neither; report both with attribution and request event-level reconciliation."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-012-q1",
+      "kind": "comprehension",
+      "prompt": "Which counts come from which sources?"
+    },
+    {
+      "question_id": "pilot-kakehashi-012-q2",
+      "kind": "scope",
+      "prompt": "Can the discrepancy be resolved from these inputs?"
+    },
+    {
+      "question_id": "pilot-kakehashi-012-q3",
+      "kind": "action",
+      "prompt": "Which count should be reported as settled?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-012-q1",
+      "answer": "Four from the shift log; six from the dashboard, both Tuesday.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-012-q2",
+      "answer": "No; event identifiers and reconciliation evidence are missing.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-012-q3",
+      "answer": "Neither; report both with attribution and request event-level reconciliation.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

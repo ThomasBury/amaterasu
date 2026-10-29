@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-010-author-v1",
+  "case_id": "pilot-kakehashi-010",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-010-p1",
+      "wording": "The report says tests executed 92% of the measured code lines.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The report says tests executed 92% of the measured code lines."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-010-p2",
+      "wording": "The report does not measure defect counts or correctness of test assertions.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The report does not measure defect counts or correctness of test assertions."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-010-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-010-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; neither defect counts nor assertion correctness were measured."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "coverage"
+  ],
+  "acceptable_outputs": [
+    "The report says tests ran through 92% of the measured lines. This is execution coverage; it does not say 92% of defects were found or that assertions were correct.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; neither defect counts nor assertion correctness were measured.",
+    "Do not invent authorization or a guarantee contrary to the action key: No; inspect relevant behavior and test assertions before making reliability claims."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-010-q1",
+      "kind": "comprehension",
+      "prompt": "What does 92% measure?"
+    },
+    {
+      "question_id": "pilot-kakehashi-010-q2",
+      "kind": "scope",
+      "prompt": "Does it measure defects found?"
+    },
+    {
+      "question_id": "pilot-kakehashi-010-q3",
+      "kind": "action",
+      "prompt": "Is this enough to declare the software defect-free?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-010-q1",
+      "answer": "The share of measured code lines executed by tests.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-010-q2",
+      "answer": "No; neither defect counts nor assertion correctness were measured.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-010-q3",
+      "answer": "No; inspect relevant behavior and test assertions before making reliability claims.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-006-author-v1",
+  "case_id": "pilot-kakehashi-006",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-006-p1",
+      "wording": "The agreed criterion requires all 30 supplied reference records to export with exactly matching identifiers and integer totals.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The agreed criterion requires all 30 supplied reference records to export with exactly matching identifiers and integer totals."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-006-p2",
+      "wording": "It does not specify a maximum export time.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "It does not specify a maximum export time."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-006-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-006-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "precise-requirement"
+  ],
+  "acceptable_outputs": [
+    "The acceptance check must compare identifiers and integer totals for every one of the 30 reference records. An export-time limit would be a new proposal, not part of this agreement.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No.",
+    "Do not invent authorization or a guarantee contrary to the action key: No; retain all 30 exact matches and discuss any additional timing criterion separately."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-006-q1",
+      "kind": "comprehension",
+      "prompt": "How many records must match?"
+    },
+    {
+      "question_id": "pilot-kakehashi-006-q2",
+      "kind": "scope",
+      "prompt": "Is there an agreed time limit?"
+    },
+    {
+      "question_id": "pilot-kakehashi-006-q3",
+      "kind": "action",
+      "prompt": "May the analyst substitute a 95% match threshold?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-006-q1",
+      "answer": "All 30, on both identifiers and integer totals.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-006-q2",
+      "answer": "No.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-006-q3",
+      "answer": "No; retain all 30 exact matches and discuss any additional timing criterion separately.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

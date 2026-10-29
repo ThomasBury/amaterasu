@@ -4,11 +4,11 @@ Four communication skills in development for examining evidence, preserving mean
 and choosing useful next steps. English-first, Markdown-first, and independently
 usable.
 
-**Status: Kagami and Kotoba implemented; independent effectiveness evaluation is pending.**
-The standalone [Kagami](skills/kagami/SKILL.md) and
-[Kotoba](skills/kotoba/SKILL.md) skills include local references. Each has 20
-synthetic pilot cases with provisional AI-author labels only. Kakehashi and
-Mamoru remain planned. No host compatibility or effectiveness is claimed.
+**Status: Kagami, Kotoba, and Kakehashi implemented; independent effectiveness evaluation is pending.**
+The standalone [Kagami](skills/kagami/SKILL.md),
+[Kotoba](skills/kotoba/SKILL.md), and
+[Kakehashi](skills/kakehashi/SKILL.md) skills include local references. Each has 20
+synthetic pilot cases with provisional AI-author labels only. Mamoru remains planned. No host compatibility or effectiveness is claimed.
 
 | Skill | Tagline | Intended use |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ and host configuration.
 ## Development and license
 
 Work proceeds in independently reviewable phases, with one completed phase per
-session. The next phase is Kakehashi. Kotoba was implemented alone because it has no
+session. The next phase is Mamoru. Kakehashi was implemented alone because it has no
 dependency on the remaining skills. Development dependencies are locked; skills
 have no runtime dependency on Python. Run:
 
@@ -66,11 +66,13 @@ uv run --locked python eval/validate.py
 uv run --locked pytest -q
 uv run --locked skills-ref validate skills/kagami
 uv run --locked skills-ref validate skills/kotoba
+uv run --locked skills-ref validate skills/kakehashi
 ```
 
-See the [Kagami](eval/kagami-verification.md) and
-[Kotoba](eval/kotoba-verification.md) pilot records for scope and limits.
-To review or transfer either skill, copy its entire folder including references
+See the [Kagami](eval/kagami-verification.md),
+[Kotoba](eval/kotoba-verification.md), and
+[Kakehashi](eval/kakehashi-verification.md) pilot records for scope and limits.
+To review or transfer a skill, copy its entire folder including references
 and license. Host discovery and installation instructions await host-specific tests.
 
 Original project material is available under the [MIT license](LICENSE).

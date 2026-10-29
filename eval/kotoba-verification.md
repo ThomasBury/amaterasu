@@ -34,7 +34,9 @@ path-containment, and Kagami checks remain green.
 The optional Skill Creator quick validator could not run in the locked project
 environment because its `yaml` module (PyYAML) is absent. No dependency was added
 for this duplicate format check; the project's official skills-ref validator
-passed. Repository Markdown inline links and anchors and whitespace were also
+passed. Follow-up (2026-10-29): PyYAML 6.0.3 was subsequently added as a locked
+development dependency at the user's request; the quick validator now passes
+for Kotoba as well as Kagami and Kakehashi. Repository Markdown inline links and anchors and whitespace were also
 checked. These checks do not test host discovery or runtime behavior.
 
 ## Pilot layout and author walkthrough

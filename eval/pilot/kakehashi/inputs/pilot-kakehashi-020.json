@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-020",
+  "skill": "kakehashi",
+  "task": "Explain the supplied term without judging the author.",
+  "input": {
+    "L1": "The engineer defines redundancy here as two independent pumps, either of which can supply the required flow alone.",
+    "L2": "The update does not describe power supplies or maintenance arrangements."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain the supplied term without judging the author.",
+    "audience": "Community volunteer reading an engineering update",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

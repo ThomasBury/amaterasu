@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-004",
+  "skill": "kakehashi",
+  "task": "Explain what the survey supports.",
+  "input": {
+    "L1": "Among 80 survey respondents, people reporting weekly training also reported fewer support requests.",
+    "L2": "Training was not randomly assigned and request counts were self-reported."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain what the survey supports.",
+    "audience": "Nonexpert team lead evaluating a training proposal",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

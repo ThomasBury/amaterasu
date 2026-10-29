@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-017-author-v1",
+  "case_id": "pilot-kakehashi-017",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-017-p1",
+      "wording": "Supplier A quotes throughput of 50 units per hour without defining a unit.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Supplier A quotes throughput of 50 units per hour without defining a unit."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-017-p2",
+      "wording": "Supplier B quotes 40 completed parcels per hour under a specified packing workload.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Supplier B quotes 40 completed parcels per hour under a specified packing workload."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-017-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-017-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; its unit and workload are not defined."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "ambiguous-unit"
+  ],
+  "acceptable_outputs": [
+    "A quotes 50 undefined units per hour; B quotes 40 completed parcels per hour for its packing workload. These are not yet comparable: A must define its unit and workload before a throughput ranking is justified.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; its unit and workload are not defined.",
+    "Do not invent authorization or a guarantee contrary to the action key: Ask A for its unit and workload, then compare equivalent outputs and conditions."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-017-q1",
+      "kind": "comprehension",
+      "prompt": "What throughput does B quote?"
+    },
+    {
+      "question_id": "pilot-kakehashi-017-q2",
+      "kind": "scope",
+      "prompt": "Is A demonstrably faster?"
+    },
+    {
+      "question_id": "pilot-kakehashi-017-q3",
+      "kind": "action",
+      "prompt": "What clarification is needed before ranking offers?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-017-q1",
+      "answer": "40 completed parcels per hour under its specified packing workload.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-017-q2",
+      "answer": "No; its unit and workload are not defined.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-017-q3",
+      "answer": "Ask A for its unit and workload, then compare equivalent outputs and conditions.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

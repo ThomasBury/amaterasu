@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-009",
+  "skill": "kakehashi",
+  "task": "Explain with an analogy and state where it breaks.",
+  "input": {
+    "L1": "Jobs enter a queue in arrival order.",
+    "L2": "Three workers process jobs concurrently and completion times vary."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain with an analogy and state where it breaks.",
+    "audience": "Operations manager deciding whether to promise completion order",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

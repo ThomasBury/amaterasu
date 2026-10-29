@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-003-author-v1",
+  "case_id": "pilot-kakehashi-003",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-003-p1",
+      "wording": "The planning team forecasts 400–550 orders next week if the promotion launches on Monday.",
+      "location": "L1",
+      "claim_type": "prediction",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The planning team forecasts 400–550 orders next week if the promotion launches on Monday."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-003-p2",
+      "wording": "The promotion launch has not been approved.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The promotion launch has not been approved."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-003-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-003-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; approval is pending."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "conditional-forecast"
+  ],
+  "acceptable_outputs": [
+    "The team forecasts 400–550 orders for next week only if the promotion launches Monday. Approval is still pending; this is a conditional forecast, not a guaranteed workload.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; approval is pending.",
+    "Do not invent authorization or a guarantee contrary to the action key: Plan conditionally and confirm launch approval before treating the forecast as the expected promotion workload."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-003-q1",
+      "kind": "comprehension",
+      "prompt": "What range and period were forecast?"
+    },
+    {
+      "question_id": "pilot-kakehashi-003-q2",
+      "kind": "scope",
+      "prompt": "Is the promotion certain to launch?"
+    },
+    {
+      "question_id": "pilot-kakehashi-003-q3",
+      "kind": "action",
+      "prompt": "How should the forecast inform staffing?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-003-q1",
+      "answer": "400–550 orders next week, conditional on a Monday promotion launch.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-003-q2",
+      "answer": "No; approval is pending.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-003-q3",
+      "answer": "Plan conditionally and confirm launch approval before treating the forecast as the expected promotion workload.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

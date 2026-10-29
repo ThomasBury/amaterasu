@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-011-author-v1",
+  "case_id": "pilot-kakehashi-011",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-011-p1",
+      "wording": "Page 1 reports that the pilot completed on 8 October.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Page 1 reports that the pilot completed on 8 October."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-011-p2",
+      "wording": "Pages 2–4, which the index labels results and limitations, are unavailable.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Pages 2–4, which the index labels results and limitations, are unavailable."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-011-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-011-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; pages 2–4 are missing."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "missing-pages"
+  ],
+  "acceptable_outputs": [
+    "The available page reports completion on 8 October. Results and limitations are on unavailable pages, so completion alone does not establish success or rollout readiness.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; pages 2–4 are missing.",
+    "Do not invent authorization or a guarantee contrary to the action key: Obtain and review the missing results and limitations; do not infer readiness from completion."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-011-q1",
+      "kind": "comprehension",
+      "prompt": "What does the available page report?"
+    },
+    {
+      "question_id": "pilot-kakehashi-011-q2",
+      "kind": "scope",
+      "prompt": "Are the results and limitations available?"
+    },
+    {
+      "question_id": "pilot-kakehashi-011-q3",
+      "kind": "action",
+      "prompt": "What is the next step before using the report to approve rollout?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-011-q1",
+      "answer": "Pilot completion on 8 October.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-011-q2",
+      "answer": "No; pages 2–4 are missing.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-011-q3",
+      "answer": "Obtain and review the missing results and limitations; do not infer readiness from completion.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-003",
+  "skill": "kakehashi",
+  "task": "Explain what can be planned from the forecast.",
+  "input": {
+    "L1": "The planning team forecasts 400–550 orders next week if the promotion launches on Monday.",
+    "L2": "The promotion launch has not been approved."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain what can be planned from the forecast.",
+    "audience": "Operations coordinator planning staffing",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

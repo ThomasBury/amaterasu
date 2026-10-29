@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-018-author-v1",
+  "case_id": "pilot-kakehashi-018",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-018-p1",
+      "wording": "Start the bench test only after the supervisor signs the checklist.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Start the bench test only after the supervisor signs the checklist."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-018-p2",
+      "wording": "The checklist has not been signed.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The checklist has not been signed."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-018-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-018-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; the checklist is unsigned."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "already-clear"
+  ],
+  "acceptable_outputs": [
+    "Start the bench test only after the supervisor signs the checklist. It has not been signed, so the start condition is not met.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; the checklist is unsigned.",
+    "Do not invent authorization or a guarantee contrary to the action key: No; obtain the required signature before starting."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-018-q1",
+      "kind": "comprehension",
+      "prompt": "What must precede the test?"
+    },
+    {
+      "question_id": "pilot-kakehashi-018-q2",
+      "kind": "scope",
+      "prompt": "Is the start condition currently met?"
+    },
+    {
+      "question_id": "pilot-kakehashi-018-q3",
+      "kind": "action",
+      "prompt": "Should the technician start now?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-018-q1",
+      "answer": "The supervisor must sign the checklist.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-018-q2",
+      "answer": "No; the checklist is unsigned.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-018-q3",
+      "answer": "No; obtain the required signature before starting.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}
