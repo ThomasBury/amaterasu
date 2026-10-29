@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-001",
+  "skill": "kakehashi",
+  "task": "Explain this test result.",
+  "input": {
+    "L1": "The staging report defines p95 as the smallest response time at or below which at least 95% of the 2,000 measured requests completed; p95 was 720 ms.",
+    "L2": "Production traffic was not tested."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain this test result.",
+    "audience": "Product manager deciding whether to promise response times",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

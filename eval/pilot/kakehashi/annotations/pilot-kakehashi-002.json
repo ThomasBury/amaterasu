@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-002-author-v1",
+  "case_id": "pilot-kakehashi-002",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-002-p1",
+      "wording": "In the trial, errors were recorded in 12 of 200 tasks before the change and 6 of 200 after it.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "In the trial, errors were recorded in 12 of 200 tasks before the change and 6 of 200 after it."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-002-p2",
+      "wording": "The trial had no comparison group.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The trial had no comparison group."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-002-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-002-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; no comparison group was supplied."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "absolute-relative"
+  ],
+  "acceptable_outputs": [
+    "Recorded errors fell from 6% to 3%: 3 percentage points, or 50% relative. Without a comparison group, this does not establish that the change caused the reduction.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; no comparison group was supplied.",
+    "Do not invent authorization or a guarantee contrary to the action key: Obtain evidence addressing causality and applicability beyond this trial."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-002-q1",
+      "kind": "comprehension",
+      "prompt": "What were the two error rates?"
+    },
+    {
+      "question_id": "pilot-kakehashi-002-q2",
+      "kind": "scope",
+      "prompt": "Was the reduction shown to be caused by the change?"
+    },
+    {
+      "question_id": "pilot-kakehashi-002-q3",
+      "kind": "action",
+      "prompt": "What should precede a claim that expansion will halve errors?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-002-q1",
+      "answer": "6% before and 3% after; a 3-percentage-point or 50% relative reduction.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-002-q2",
+      "answer": "No; no comparison group was supplied.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-002-q3",
+      "answer": "Obtain evidence addressing causality and applicability beyond this trial.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-016-author-v1",
+  "case_id": "pilot-kakehashi-016",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-016-p1",
+      "wording": "The platform lead approved a rehearsal in the test environment.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The platform lead approved a rehearsal in the test environment."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-016-p2",
+      "wording": "Production migration requires separate approval after the rehearsal review.",
+      "location": "L2",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Production migration requires separate approval after the rehearsal review."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-016-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-016-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; it needs separate approval after rehearsal review."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "conditional-authority"
+  ],
+  "acceptable_outputs": [
+    "The lead approved a test-environment rehearsal. Production migration still needs a separate approval after that review; the rehearsal approval is not permission to migrate production.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; it needs separate approval after rehearsal review.",
+    "Do not invent authorization or a guarantee contrary to the action key: Complete the rehearsal review and obtain the separate required approval."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-016-q1",
+      "kind": "comprehension",
+      "prompt": "What is approved?"
+    },
+    {
+      "question_id": "pilot-kakehashi-016-q2",
+      "kind": "scope",
+      "prompt": "Is production migration already authorized?"
+    },
+    {
+      "question_id": "pilot-kakehashi-016-q3",
+      "kind": "action",
+      "prompt": "What should happen before production migration?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-016-q1",
+      "answer": "A rehearsal in the test environment.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-016-q2",
+      "answer": "No; it needs separate approval after rehearsal review.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-016-q3",
+      "answer": "Complete the rehearsal review and obtain the separate required approval.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

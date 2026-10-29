@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-004-author-v1",
+  "case_id": "pilot-kakehashi-004",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-004-p1",
+      "wording": "Among 80 survey respondents, people reporting weekly training also reported fewer support requests.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Among 80 survey respondents, people reporting weekly training also reported fewer support requests."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-004-p2",
+      "wording": "Training was not randomly assigned and request counts were self-reported.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Training was not randomly assigned and request counts were self-reported."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-004-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-004-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; assignment was nonrandom and counts were self-reported."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "association"
+  ],
+  "acceptable_outputs": [
+    "In this 80-person survey, weekly training and fewer reported support requests occurred together. Self-reporting and nonrandom assignment leave other explanations open; the survey does not establish a training effect.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; assignment was nonrandom and counts were self-reported.",
+    "Do not invent authorization or a guarantee contrary to the action key: Seek evidence of an effect and actual costs; do not promise savings from this association."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-004-q1",
+      "kind": "comprehension",
+      "prompt": "What relationship was reported?"
+    },
+    {
+      "question_id": "pilot-kakehashi-004-q2",
+      "kind": "scope",
+      "prompt": "Does the survey prove training reduced requests?"
+    },
+    {
+      "question_id": "pilot-kakehashi-004-q3",
+      "kind": "action",
+      "prompt": "What is warranted before promising savings?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-004-q1",
+      "answer": "Weekly training was associated with fewer self-reported support requests among 80 respondents.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-004-q2",
+      "answer": "No; assignment was nonrandom and counts were self-reported.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-004-q3",
+      "answer": "Seek evidence of an effect and actual costs; do not promise savings from this association.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

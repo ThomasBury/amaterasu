@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-007",
+  "skill": "kakehashi",
+  "task": "Interpret the request and keep open choices visible.",
+  "input": {
+    "L1": "The product owner asks for faster search for catalog users.",
+    "L2": "There is no agreed workload, latency threshold, or implementation."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Interpret the request and keep open choices visible.",
+    "audience": "Developer scoping a product request",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

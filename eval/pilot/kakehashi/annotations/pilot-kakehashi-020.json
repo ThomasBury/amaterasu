@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-020-author-v1",
+  "case_id": "pilot-kakehashi-020",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-020-p1",
+      "wording": "The engineer defines redundancy here as two independent pumps, either of which can supply the required flow alone.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The engineer defines redundancy here as two independent pumps, either of which can supply the required flow alone."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-020-p2",
+      "wording": "The update does not describe power supplies or maintenance arrangements.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The update does not describe power supplies or maintenance arrangements."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-020-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-020-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; power and maintenance arrangements are not described."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "meaningful-jargon"
+  ],
+  "acceptable_outputs": [
+    "Here redundancy means either of two independent pumps can supply the needed flow on its own. The term describes a useful design feature; the update leaves power and maintenance unknown, so it does not establish uninterrupted service.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; power and maintenance arrangements are not described.",
+    "Do not invent authorization or a guarantee contrary to the action key: Ask about power and maintenance arrangements and other relevant failure conditions; do not infer them from the term redundancy."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-020-q1",
+      "kind": "comprehension",
+      "prompt": "What does redundancy mean in this update?"
+    },
+    {
+      "question_id": "pilot-kakehashi-020-q2",
+      "kind": "scope",
+      "prompt": "Does it establish uninterrupted service?"
+    },
+    {
+      "question_id": "pilot-kakehashi-020-q3",
+      "kind": "action",
+      "prompt": "What should be clarified before assuring continuous supply?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-020-q1",
+      "answer": "Two independent pumps, either able to supply required flow alone.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-020-q2",
+      "answer": "No; power and maintenance arrangements are not described.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-020-q3",
+      "answer": "Ask about power and maintenance arrangements and other relevant failure conditions; do not infer them from the term redundancy.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

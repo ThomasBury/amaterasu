@@ -20,13 +20,13 @@ def edit(path, change):
     path.write_text(json.dumps(record))
 
 
-@pytest.mark.parametrize('skill', ['kagami', 'kotoba'])
+@pytest.mark.parametrize('skill', ['kagami', 'kotoba', 'kakehashi'])
 def test_real_corpus_and_shared_rules(skill):
     assert validate_corpus(ROOT / 'eval/pilot' / skill, skill) == 20
     validate_skill(ROOT / 'skills' / skill, ROOT / 'docs/contracts.md')
 
 
-@pytest.mark.parametrize('name,reference', [('kagami', 'evidence-and-arguments.md'), ('kotoba', 'writing-and-accountability.md')])
+@pytest.mark.parametrize('name,reference', [('kagami', 'evidence-and-arguments.md'), ('kotoba', 'writing-and-accountability.md'), ('kakehashi', 'audiences-and-meaning.md')])
 def test_standalone_package(tmp_path, name, reference):
     """A copied package loads its own references and rejects a missing required one."""
     skill = tmp_path / name
@@ -140,3 +140,47 @@ def test_kotoba_annotation_contract(tmp_path, change, match):
     edit(folder / 'annotations/pilot-kotoba-001.json', change)
     with pytest.raises(ValueError, match=match):
         validate_corpus(folder, 'kotoba')
+
+
+@pytest.mark.parametrize('audience', [None, '', '   ', []])
+def test_kakehashi_requires_audience(tmp_path, audience):
+    folder = tmp_path / 'kakehashi'
+    shutil.copytree(ROOT / 'eval/pilot/kakehashi', folder)
+    edit(folder / 'inputs/pilot-kakehashi-001.json', lambda x: x['context'].update(audience=audience))
+    with pytest.raises(ValueError, match='specified audience'):
+        validate_corpus(folder, 'kakehashi')
+
+
+@pytest.mark.parametrize('change,match', [
+    (lambda x: x.update(questions=None), 'must be lists'),
+    (lambda x: x.update(questions=[], answer_key=[]), 'matched'),
+    (lambda x: x['questions'][0].update(prompt=' '), 'Invalid Kakehashi question'),
+    (lambda x: x['questions'][0].update(kind='satisfaction'), 'Invalid Kakehashi question'),
+    (lambda x: x['questions'][2].update(kind='comprehension'), 'matched'),
+    (lambda x: x['questions'].append(x['questions'][0]), 'duplicate'),
+    (lambda x: x['answer_key'].pop(), 'matched'),
+    (lambda x: x['answer_key'][0].update(question_id='unknown'), 'matched'),
+    (lambda x: x['answer_key'].append(x['answer_key'][0]), 'duplicate'),
+    (lambda x: x['answer_key'][0].update(answer=' '), 'Empty Kakehashi answer'),
+    (lambda x: x['answer_key'][0].update(source_locations=['L99']), 'original input locations'),
+    (lambda x: x['answer_key'][0].update(source_locations=[]), 'original input locations'),
+    (lambda x: x.update(state='adjudicated'), 'provisional'),
+    (lambda x: x['evidence_relationships'][0].update(status='supported'), 'available located evidence'),
+])
+def test_kakehashi_answer_contract(tmp_path, change, match):
+    folder = tmp_path / 'kakehashi'
+    shutil.copytree(ROOT / 'eval/pilot/kakehashi', folder)
+    edit(folder / 'annotations/pilot-kakehashi-001.json', change)
+    with pytest.raises(ValueError, match=match):
+        validate_corpus(folder, 'kakehashi')
+
+
+def test_kakehashi_numeric_keys():
+    folder = ROOT / 'eval/pilot/kakehashi/annotations'
+    error_key = json.loads((folder / 'pilot-kakehashi-002.json').read_text())['answer_key'][0]['answer']
+    before, after = Fraction(12, 200), Fraction(6, 200)
+    assert (before, after, (before-after)*100, (before-after)/before*100) == (Fraction(6,100), Fraction(3,100), 3, 50)
+    assert error_key == '6% before and 3% after; a 3-percentage-point or 50% relative reduction.'
+    accuracy_key = json.loads((folder / 'pilot-kakehashi-015.json').read_text())['answer_key'][0]['answer']
+    assert (Fraction(420,500)*100, Fraction(440,500)*100) == (84, 88)
+    assert accuracy_key == '84% to 88%, or 4 percentage points, on the fixed 500-item set.'

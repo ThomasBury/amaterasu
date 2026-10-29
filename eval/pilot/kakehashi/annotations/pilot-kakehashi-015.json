@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-015-author-v1",
+  "case_id": "pilot-kakehashi-015",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-015-p1",
+      "wording": "On the fixed 500-item test set, the old classifier got 420 items right and the new classifier got 440 right.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "On the fixed 500-item test set, the old classifier got 420 items right and the new classifier got 440 right."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-015-p2",
+      "wording": "The set contains only English items collected in May.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The set contains only English items collected in May."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-015-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-015-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; only English items from May were tested."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "baseline-scope"
+  ],
+  "acceptable_outputs": [
+    "On this 500-item test set, accuracy rose from 84% to 88%, a 4-percentage-point increase. The test contains only English items from May; it does not establish the same improvement for other languages or periods.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; only English items from May were tested.",
+    "Do not invent authorization or a guarantee contrary to the action key: Evaluate representative data for the intended languages and periods before claiming comparable improvement."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-015-q1",
+      "kind": "comprehension",
+      "prompt": "What was the accuracy change?"
+    },
+    {
+      "question_id": "pilot-kakehashi-015-q2",
+      "kind": "scope",
+      "prompt": "Does this establish an improvement in other languages?"
+    },
+    {
+      "question_id": "pilot-kakehashi-015-q3",
+      "kind": "action",
+      "prompt": "What should precede wider-language deployment claims?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-015-q1",
+      "answer": "84% to 88%, or 4 percentage points, on the fixed 500-item set.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-015-q2",
+      "answer": "No; only English items from May were tested.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-015-q3",
+      "answer": "Evaluate representative data for the intended languages and periods before claiming comparable improvement.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

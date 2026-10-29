@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-016",
+  "skill": "kakehashi",
+  "task": "Explain which work is authorized and conditional.",
+  "input": {
+    "L1": "The platform lead approved a rehearsal in the test environment.",
+    "L2": "Production migration requires separate approval after the rehearsal review."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain which work is authorized and conditional.",
+    "audience": "Engineer planning a migration",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

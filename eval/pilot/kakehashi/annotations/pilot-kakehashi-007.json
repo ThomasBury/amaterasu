@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-007-author-v1",
+  "case_id": "pilot-kakehashi-007",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-007-p1",
+      "wording": "The product owner asks for faster search for catalog users.",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The product owner asks for faster search for catalog users."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-007-p2",
+      "wording": "There is no agreed workload, latency threshold, or implementation.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "There is no agreed workload, latency threshold, or implementation."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-007-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-007-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; no implementation or threshold is agreed."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "vague-speed"
+  ],
+  "acceptable_outputs": [
+    "The request is to make catalog search faster. Workload, target response time, and implementation are open. Proposed next step: agree a representative workload and measure the current response times before choosing a target.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; no implementation or threshold is agreed.",
+    "Do not invent authorization or a guarantee contrary to the action key: Clarify workload and agree a measurable target; baseline measurement is a proposal, not an existing agreement."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-007-q1",
+      "kind": "comprehension",
+      "prompt": "What improvement was requested?"
+    },
+    {
+      "question_id": "pilot-kakehashi-007-q2",
+      "kind": "scope",
+      "prompt": "Does the request require a cache or a 100 ms target?"
+    },
+    {
+      "question_id": "pilot-kakehashi-007-q3",
+      "kind": "action",
+      "prompt": "What should happen before committing to a solution?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-007-q1",
+      "answer": "Faster search for catalog users.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-007-q2",
+      "answer": "No; no implementation or threshold is agreed.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-007-q3",
+      "answer": "Clarify workload and agree a measurable target; baseline measurement is a proposal, not an existing agreement.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

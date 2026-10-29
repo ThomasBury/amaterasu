@@ -58,19 +58,30 @@ with separate provisional AI-author annotations; all 32 pytest tests, official
 skills-ref checks for both packages, and validation of 40 pilot records pass.
 Standalone reference loading and all 20 preservation examples were checked;
 see [the verification record](eval/kotoba-verification.md) for scope and the
-optional quick-validator dependency limitation. No independent human annotation
+initial quick-validator limitation and subsequent successful rerun. No independent human annotation
 or isolated host behavioral run was performed. Kotoba was kept alone because
 remaining skills do not resolve a dependency; release validation remains pending.
 
-## 4. Kakehashi — next
+## 4. Kakehashi — complete
 
-- [ ] Create the standalone skill and `audiences-and-meaning.md` reference.
-- [ ] Prepare 20 pilot cases with specified audiences and answer-keyed
+- [x] Create the standalone skill and `audiences-and-meaning.md` reference.
+- [x] Prepare 20 pilot cases with specified audiences and answer-keyed
   comprehension/action questions.
-- [ ] Verify technical fidelity, limited analogies, and separation of stated
+- [x] Verify technical fidelity, limited analogies, and separation of stated
   requirements from proposed acceptance criteria.
 
-## 5. Mamoru — pending
+Verification (2026-10-29): 20 original synthetic cases with specified audiences,
+60 comprehension/scope/action questions and provisional AI-author answer keys;
+all 53 pytest tests, official skills-ref checks for all three packages, and
+validation of 60 pilot records pass. Standalone loading, numerical keys, and
+an author preservation walkthrough are recorded in
+[the verification record](eval/kakehashi-verification.md). After adding PyYAML
+as a development dependency, the optional quick validator also passes for all
+three packages. No independent human annotation or
+isolated host behavioral run was performed. Kakehashi was kept alone because
+Mamoru is independent and release validation requires later independent work.
+
+## 5. Mamoru — next
 
 - [ ] Create the standalone skill and `commitments-and-conduct.md` reference.
 - [ ] Prepare 20 pilot cases; obtain workplace-expert review of conduct labels.

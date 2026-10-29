@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-009-author-v1",
+  "case_id": "pilot-kakehashi-009",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-009-p1",
+      "wording": "Jobs enter a queue in arrival order.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Jobs enter a queue in arrival order."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-009-p2",
+      "wording": "Three workers process jobs concurrently and completion times vary.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Three workers process jobs concurrently and completion times vary."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-009-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-009-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; completion times vary across concurrent workers."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "queue-analogy"
+  ],
+  "acceptable_outputs": [
+    "Think of an arrival line feeding three service desks: entry order is preserved, but different jobs take different times. The line analogy does not guarantee completion order because three workers operate concurrently.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; completion times vary across concurrent workers.",
+    "Do not invent authorization or a guarantee contrary to the action key: No; explain the ordering limit or obtain an explicit ordering requirement before promising it."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-009-q1",
+      "kind": "comprehension",
+      "prompt": "How many workers process jobs?"
+    },
+    {
+      "question_id": "pilot-kakehashi-009-q2",
+      "kind": "scope",
+      "prompt": "Does arrival order guarantee completion order?"
+    },
+    {
+      "question_id": "pilot-kakehashi-009-q3",
+      "kind": "action",
+      "prompt": "Can the manager promise that the first submitted job finishes first?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-009-q1",
+      "answer": "Three, concurrently.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-009-q2",
+      "answer": "No; completion times vary across concurrent workers.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-009-q3",
+      "answer": "No; explain the ordering limit or obtain an explicit ordering requirement before promising it.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-017",
+  "skill": "kakehashi",
+  "task": "Explain what cannot yet be compared.",
+  "input": {
+    "L1": "Supplier A quotes throughput of 50 units per hour without defining a unit.",
+    "L2": "Supplier B quotes 40 completed parcels per hour under a specified packing workload."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain what cannot yet be compared.",
+    "audience": "Procurement coordinator comparing throughput offers",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

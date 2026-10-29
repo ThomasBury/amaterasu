@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_REFERENCES = {
     'kagami': ('evidence-and-arguments.md', 'numbers-and-product-claims.md'),
     'kotoba': ('writing-and-accountability.md',),
+    'kakehashi': ('audiences-and-meaning.md',),
 }
 STATUSES = {'supported', 'contradicted', 'mixed', 'insufficient evidence', 'not checked', 'inapplicable'}
 
@@ -111,6 +112,8 @@ def validate_corpus(folder, skill='kagami'):
         if not isinstance(case['input'], dict) or not case['input'] or not all(isinstance(v, str) and v for v in case['input'].values()):
             raise ValueError('Input must contain nonempty located text')
         require(case['context'], 'date purpose audience roles chronology constraints')
+        if skill == 'kakehashi' and (not isinstance(case['context']['audience'], str) or not case['context']['audience'].strip()):
+            raise ValueError('Kakehashi requires a specified audience')
         require(case['research_scope'], 'mode web_available authorization')
         if case['research_scope']['mode'] not in {'clearly-public', 'supplied-evidence-only', 'authorized-public-search'} or not isinstance(case['research_scope']['web_available'], bool):
             raise ValueError('Invalid research scope')
@@ -136,6 +139,24 @@ def validate_corpus(folder, skill='kagami'):
         require(ann, 'annotation_id case_id annotator_id annotator_role expertise rubric_version state propositions evidence_relationships reasoning_gaps answerability problem_labels acceptable_outputs forbidden_changes questions answer_key disagreements adjudication')
         if ann['state'] != 'draft' or ann['annotator_role'] != 'AI case author; not independent':
             raise ValueError('Author labels must remain provisional drafts')
+        if skill == 'kakehashi':
+            if not isinstance(ann['questions'], list) or not isinstance(ann['answer_key'], list):
+                raise ValueError('Kakehashi questions and answer keys must be lists')
+            for question in ann['questions']:
+                require(question, 'question_id kind prompt')
+                if question['kind'] not in {'comprehension', 'scope', 'action'} or not isinstance(question['prompt'], str) or not question['prompt'].strip():
+                    raise ValueError('Invalid Kakehashi question')
+            questions = unique(ann['questions'], 'question_id')
+            for key in ann['answer_key']:
+                require(key, 'question_id answer source_locations')
+                if not isinstance(key['answer'], str) or not key['answer'].strip():
+                    raise ValueError('Empty Kakehashi answer')
+                locations = key['source_locations']
+                if not isinstance(locations, list) or not locations or any(not isinstance(loc, str) or loc not in case['input'] for loc in locations):
+                    raise ValueError('Answer key must cite original input locations')
+            keys = unique(ann['answer_key'], 'question_id')
+            if set(keys) != set(questions) or {q['kind'] for q in questions.values()} != {'comprehension', 'scope', 'action'}:
+                raise ValueError('Kakehashi requires matched comprehension, scope and action keys')
         props = unique(ann['propositions'], 'proposition_id')
         if not props:
             raise ValueError('Missing propositions')
@@ -170,4 +191,4 @@ if __name__ == '__main__':
             count += validate_corpus(ROOT / 'eval/pilot' / skill, skill)
     except (ValueError, KeyError, TypeError, OSError) as error:
         raise SystemExit(f'Validation failed: {error}')
-    print(f'Validated Kagami and Kotoba packages and {count} pilot records; no behavioral score implied.')
+    print(f'Validated {len(SKILL_REFERENCES)} skill packages and {count} pilot records; no behavioral score implied.')

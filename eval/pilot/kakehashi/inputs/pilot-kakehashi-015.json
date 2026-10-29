@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-015",
+  "skill": "kakehashi",
+  "task": "Explain the comparison and deployment limit.",
+  "input": {
+    "L1": "On the fixed 500-item test set, the old classifier got 420 items right and the new classifier got 440 right.",
+    "L2": "The set contains only English items collected in May."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain the comparison and deployment limit.",
+    "audience": "Product manager reviewing a model update",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

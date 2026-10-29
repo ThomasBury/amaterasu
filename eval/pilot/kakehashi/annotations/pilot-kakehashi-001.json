@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-001-author-v1",
+  "case_id": "pilot-kakehashi-001",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-001-p1",
+      "wording": "The staging report defines p95 as the smallest response time at or below which at least 95% of the 2,000 measured requests completed; p95 was 720 ms.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The staging report defines p95 as the smallest response time at or below which at least 95% of the 2,000 measured requests completed; p95 was 720 ms."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-001-p2",
+      "wording": "Production traffic was not tested.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "Production traffic was not tested."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-001-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-001-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; production traffic was not tested."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "latency"
+  ],
+  "acceptable_outputs": [
+    "The report says at least 95% of the 2,000 staging requests completed in 720 ms or less. That is a percentile, not an average. Production performance remains untested.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; production traffic was not tested.",
+    "Do not invent authorization or a guarantee contrary to the action key: No; obtain production-relevant evidence and agree any service commitment separately."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-001-q1",
+      "kind": "comprehension",
+      "prompt": "What does 720 ms describe?"
+    },
+    {
+      "question_id": "pilot-kakehashi-001-q2",
+      "kind": "scope",
+      "prompt": "Does this establish production performance?"
+    },
+    {
+      "question_id": "pilot-kakehashi-001-q3",
+      "kind": "action",
+      "prompt": "Can a production response-time promise be based on this alone?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-001-q1",
+      "answer": "The reported 95th percentile of 2,000 staging requests, not their average.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-001-q2",
+      "answer": "No; production traffic was not tested.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-001-q3",
+      "answer": "No; obtain production-relevant evidence and agree any service commitment separately.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

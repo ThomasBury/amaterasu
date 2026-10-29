@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-006",
+  "skill": "kakehashi",
+  "task": "Explain the agreed criterion without changing it.",
+  "input": {
+    "L1": "The agreed criterion requires all 30 supplied reference records to export with exactly matching identifiers and integer totals.",
+    "L2": "It does not specify a maximum export time."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain the agreed criterion without changing it.",
+    "audience": "QA analyst preparing an acceptance test",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

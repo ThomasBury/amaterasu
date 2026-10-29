@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kakehashi-008",
+  "skill": "kakehashi",
+  "task": "Explain using a short analogy and its limit.",
+  "input": {
+    "L1": "The catalog display uses a cached copy refreshed every ten minutes.",
+    "L2": "The source catalog can change between refreshes."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Explain using a short analogy and its limit.",
+    "audience": "Nontechnical support agent explaining stale displays",
+    "roles": "Fictional participants; authority limited to supplied wording.",
+    "chronology": "Original synthetic scenario; events and dates are fictional.",
+    "constraints": "Supplied material only; no external actions or research. Preserve meaning and visible gaps."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

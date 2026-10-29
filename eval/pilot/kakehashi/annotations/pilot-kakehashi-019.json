@@ -1,0 +1,105 @@
+{
+  "annotation_id": "pilot-kakehashi-019-author-v1",
+  "case_id": "pilot-kakehashi-019",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-019-p1",
+      "wording": "The contractor estimates three to five working days after receipt of the approved drawings.",
+      "location": "L1",
+      "claim_type": "prediction",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The contractor estimates three to five working days after receipt of the approved drawings."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-019-p2",
+      "wording": "The drawings have not been approved or sent.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Losing this proposition changes the technical interpretation or permitted next action.",
+      "preserve": "The drawings have not been approved or sent."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-019-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    },
+    {
+      "proposition_id": "pilot-kakehashi-019-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "Source wording is supplied; underlying events are not independently verified. Requirements and requests do not establish recipient acceptance; predictions do not establish future outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "No; the drawings are neither approved nor sent and the duration is an estimate."
+  ],
+  "answerability": "A bounded audience adaptation is possible; underlying assertions are not independently verified.",
+  "problem_labels": [
+    "estimation-limit"
+  ],
+  "acceptable_outputs": [
+    "The contractor estimates three to five working days from receipt of approved drawings. Approval and sending are still pending, so no calendar completion date follows yet.",
+    "Equivalent wording preserving source meaning and visible gaps is acceptable; this is an author illustration, not an observed output."
+  ],
+  "forbidden_changes": [
+    "Do not contradict the scope key: No; the drawings are neither approved nor sent and the duration is an estimate.",
+    "Do not invent authorization or a guarantee contrary to the action key: Retain the estimate and pending prerequisites; confirm approval and receipt before deriving a tentative schedule."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-019-q1",
+      "kind": "comprehension",
+      "prompt": "What starts the estimated duration?"
+    },
+    {
+      "question_id": "pilot-kakehashi-019-q2",
+      "kind": "scope",
+      "prompt": "Is a completion date established?"
+    },
+    {
+      "question_id": "pilot-kakehashi-019-q3",
+      "kind": "action",
+      "prompt": "What should the update say before promising a date?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-019-q1",
+      "answer": "Receipt of approved drawings; the duration is three to five working days.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-019-q2",
+      "answer": "No; the drawings are neither approved nor sent and the duration is an estimate.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-019-q3",
+      "answer": "Retain the estimate and pending prerequisites; confirm approval and receipt before deriving a tentative schedule.",
+      "source_locations": [
+        "L1",
+        "L2"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}
