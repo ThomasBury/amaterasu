@@ -90,7 +90,7 @@ Mamoru is independent and release validation requires later independent work.
   documented threats, chronology, and proportionate response options.
 
 Verification (2026-10-29): 20 original synthetic cases with hashed source
-snapshots and separate provisional AI-author annotations; all 59 pytest tests,
+snapshots and separate provisional AI-author annotations; all 60 pytest tests,
 validation of four packages and 80 records, and both Mamoru format checks pass.
 Standalone loading, provenance, and the author walkthrough are recorded in
 [the verification record](eval/mamoru-verification.md). The user volunteered as

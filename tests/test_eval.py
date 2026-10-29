@@ -198,3 +198,17 @@ def test_mamoru_provenance(tmp_path, file, change, match):
     edit(folder / file, change)
     with pytest.raises(ValueError, match=match):
         validate_corpus(folder, 'mamoru')
+
+
+def test_mamoru_immediate_threat_chronology():
+    """An urgent response key must describe danger current at analysis time."""
+    from datetime import datetime, timedelta
+    import re
+
+    case = json.loads((ROOT / 'eval/pilot/mamoru/inputs/pilot-mamoru-020.json').read_text())
+    threat, account = [
+        datetime.fromisoformat(re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}', line)[0])
+        for line in case['input'].values()
+    ]
+    assert threat.date().isoformat() == account.date().isoformat() == case['context']['date']
+    assert account - threat == timedelta(minutes=5)

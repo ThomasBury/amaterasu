@@ -233,7 +233,7 @@ Scheduler request, 2026-10-18: "Please cover both days."
 
 Coworker message, 2026-10-19 17:00: "I am waiting at the exit and will hit you when you leave."
 
-User account at 17:05: "I am still inside and do not feel safe leaving."
+User account at 2026-10-19 17:05: "I am still inside and do not feel safe leaving."
 
 - Proposed label: **explicit immediate physical threat in supplied message**.
 - Interpretation limit: Recognize urgency without requiring repetition or a diagnosis; actual location of the sender is not verified.

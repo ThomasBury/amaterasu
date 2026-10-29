@@ -14,7 +14,7 @@ The [standalone skill](../skills/mamoru/SKILL.md) embeds shared safeguards
 verbatim and includes its local reference, MIT license, and attribution.
 No runtime or development dependency was added. The validator registers Mamoru
 using the existing package and corpus checks; no new scoring engine or schema
-was needed. All 59 pytest tests pass, including standalone-copy loading and
+was needed. All 60 pytest tests pass, including standalone-copy loading and
 missing-reference rejection for Mamoru. Additional mutation tests reject changed
 evidence hashes, author labels relabeled as adjudicated, unsupported factual
 verdicts, and invented proposition wording.
@@ -76,3 +76,12 @@ No expert assessment, independent annotation, isolated behavioral run, baseline
 comparison, host compatibility test, reader study, or effectiveness estimate has
 been completed in this phase. No messages were sent, complaints filed, host
 settings changed, or release published.
+
+## PR review correction
+
+Codex identified that case 020 used a 29 October analysis date for a 19 October
+threat while expecting immediate help. The analysis date now matches 19 October,
+and the user's 17:05 account has an explicit date in the input, source snapshot,
+annotation, and expert review sheet. Input and source hashes were refreshed.
+A regression check requires both source events to share the analysis date and
+the user's account to follow the threat by five minutes. All 60 tests pass.
