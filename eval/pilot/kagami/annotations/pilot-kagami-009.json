@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-009-author-v1",
+  "case_id": "pilot-kagami-009",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-009-p1",
+      "wording": "We forecast 120 orders next week, with a plausible range of 80–160.",
+      "location": "L1",
+      "claim_type": "prediction",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "We forecast 120 orders next week, with a plausible range of 80–160."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-009-p1",
+      "evidence_id": "pilot-kagami-009-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The sheet supports the stated forecast and range, not the future outcome."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not remove uncertainty or claim the forecast came true."
+  ],
+  "answerability": "The sheet supports the stated forecast and range, not the future outcome.",
+  "problem_labels": [
+    "benign"
+  ],
+  "acceptable_outputs": [
+    "The sheet supports the stated forecast and range, not the future outcome."
+  ],
+  "forbidden_changes": [
+    "Do not remove uncertainty or claim the forecast came true."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

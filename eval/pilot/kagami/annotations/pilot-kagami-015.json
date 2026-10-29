@@ -1,0 +1,54 @@
+{
+  "annotation_id": "pilot-kagami-015-author-v1",
+  "case_id": "pilot-kagami-015",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-015-p1",
+      "wording": "Two independent reports confirm 90% adoption.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Two independent reports confirm 90% adoption."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-015-p1",
+      "evidence_id": "pilot-kagami-015-e1",
+      "location": "L1",
+      "status": "contradicted",
+      "establishes": "There is one evidential origin, not two independent confirmations."
+    },
+    {
+      "proposition_id": "pilot-kagami-015-p1",
+      "evidence_id": "pilot-kagami-015-e2",
+      "location": "L1",
+      "status": "contradicted",
+      "establishes": "There is one evidential origin, not two independent confirmations."
+    }
+  ],
+  "reasoning_gaps": [
+    "The adoption rate itself is not independently verified."
+  ],
+  "answerability": "There is one evidential origin, not two independent confirmations.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "There is one evidential origin, not two independent confirmations."
+  ],
+  "forbidden_changes": [
+    "The adoption rate itself is not independently verified."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

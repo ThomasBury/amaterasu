@@ -1,0 +1,1 @@
+L1: Product roadmap: offline mode proposed for next year; current version requires a connection.

@@ -22,23 +22,31 @@ Markdown files, corpus totals, and the exact zero-of-60 bound (4.870291%);
 checked whitespace in all nine new files, including the license.
 No skill, host, baseline, human annotation, or effectiveness test has run.
 
-## 2. Kagami — next
+## 2. Kagami — complete
 
-- [ ] Create `skills/kagami/SKILL.md`, with all essential shared safeguards
+- [x] Create `skills/kagami/SKILL.md`, with all essential shared safeguards
   embedded and no dependency on repository-level documentation.
-- [ ] Add `references/evidence-and-arguments.md` and
+- [x] Add `references/evidence-and-arguments.md` and
   `references/numbers-and-product-claims.md` inside that skill.
-- [ ] Implement supplied-evidence analysis first, then bounded public research.
-- [ ] Prepare 20 pilot cases; preserve original input and evidence provenance.
+- [x] Implement supplied-evidence analysis first, then bounded public research.
+- [x] Prepare 20 pilot cases; preserve original input and evidence provenance.
   Keep provisional author labels distinct from independent human labels.
-- [ ] Add the needed development stack (`pyproject.toml`, `uv.lock`, pytest,
+- [x] Add the needed development stack (`pyproject.toml`, `uv.lock`, pytest,
   existing `skills-ref`) and small `eval/validate.py` checks for local references,
   identifiers, evidence hashes, required fields, and shared-rule consistency.
-- [ ] Verify standalone reference loading, numerical correctness, provenance,
+- [x] Verify standalone reference loading, numerical correctness, provenance,
   malicious quoted instructions, incomplete evidence, and appropriate abstention.
   Add meaningful validator tests in `tests/test_eval.py`.
 
-## 3. Kotoba — pending
+Verification (2026-10-29): 20 original synthetic pilot cases with separate
+provisional AI-author labels; 23 pytest tests, official skills-ref format check,
+and local corpus validation pass. Standalone file loading, arithmetic, provenance,
+and safeguard/abstention author walkthrough are recorded in
+[eval/kagami-verification.md](eval/kagami-verification.md). No independent human
+annotation or isolated host behavioral run has been performed. Kagami was kept
+alone because later skills are independent phases; release tests remain pending.
+
+## 3. Kotoba — next
 
 - [ ] Create the standalone skill and `writing-and-accountability.md` reference.
 - [ ] Prepare 20 pilot cases and check preservation of quantities, attribution,

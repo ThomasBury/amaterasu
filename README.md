@@ -1,12 +1,13 @@
 # Amaterasu
 
-Four planned communication skills for examining evidence, preserving meaning,
+Four communication skills in development for examining evidence, preserving meaning,
 and choosing useful next steps. English-first, Markdown-first, and independently
 usable.
 
-**Status: foundation complete; skills not yet implemented or evaluated.** This
-repository currently defines the evidence, behavior, and evaluation contracts.
-It does not yet provide installable skills or demonstrated effectiveness.
+**Status: Kagami implemented; independently evaluated effectiveness is pending.**
+The standalone [Kagami skill](skills/kagami/SKILL.md) includes local references.
+Its 20 synthetic pilot cases have provisional AI-author labels only. The other
+three skills remain planned. No host compatibility or effectiveness is claimed.
 
 | Skill | Tagline | Intended use |
 | --- | --- | --- |
@@ -54,9 +55,20 @@ and host configuration.
 ## Development and license
 
 Work proceeds in independently reviewable phases, with one completed phase per
-session. The next phase is Kagami. Python evaluation utilities, uv, pytest,
-`skills-ref`, and a lockfile will be introduced when there is executable work to
-validate. No package or test harness is needed for this documentation phase.
+session. The next phase is Kotoba. Kagami stands alone; later skills do not need to be
+grouped with it. Development dependencies are locked; skills have no runtime
+dependency on Python. Run:
+
+```sh
+uv sync --locked
+uv run --locked python eval/validate.py
+uv run --locked pytest -q
+uv run --locked skills-ref validate skills/kagami
+```
+
+See the [Kagami pilot record](eval/kagami-verification.md) for scope and limits.
+To review or transfer Kagami, copy its entire folder including references and
+license. Host discovery and installation instructions await host-specific tests.
 
 Original project material is available under the [MIT license](LICENSE).
 [NOTICE.md](NOTICE.md) records attribution and the boundary around third-party

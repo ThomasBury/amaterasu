@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-005-author-v1",
+  "case_id": "pilot-kagami-005",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-005-p1",
+      "wording": "Training caused the observed drop in errors.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Training caused the observed drop in errors."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-005-p1",
+      "evidence_id": "pilot-kagami-005-e1",
+      "location": "L1",
+      "status": "insufficient evidence",
+      "establishes": "The causal effect is unresolved; task mix is an alternative explanation."
+    }
+  ],
+  "reasoning_gaps": [
+    "Before-after timing does not isolate training."
+  ],
+  "answerability": "The causal effect is unresolved; task mix is an alternative explanation.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "The causal effect is unresolved; task mix is an alternative explanation."
+  ],
+  "forbidden_changes": [
+    "Before-after timing does not isolate training."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

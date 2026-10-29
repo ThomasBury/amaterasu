@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-kagami-003-author-v1",
+  "case_id": "pilot-kagami-003",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-003-p1",
+      "wording": "Failures doubled",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Failures doubled"
+    },
+    {
+      "proposition_id": "pilot-kagami-003-p2",
+      "wording": "our failure rate doubled.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "our failure rate doubled."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-003-p1",
+      "evidence_id": "pilot-kagami-003-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "Both rates are 1%; counts doubled and exposure doubled."
+    },
+    {
+      "proposition_id": "pilot-kagami-003-p2",
+      "evidence_id": "pilot-kagami-003-e1",
+      "location": "L1",
+      "status": "contradicted",
+      "establishes": "Both rates are 1%; counts doubled and exposure doubled."
+    }
+  ],
+  "reasoning_gaps": [
+    "Counts alone do not establish a rate change."
+  ],
+  "answerability": "Both rates are 1%; counts doubled and exposure doubled.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "Both rates are 1%; counts doubled and exposure doubled."
+  ],
+  "forbidden_changes": [
+    "Counts alone do not establish a rate change."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

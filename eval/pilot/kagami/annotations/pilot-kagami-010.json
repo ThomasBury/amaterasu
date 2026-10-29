@@ -1,0 +1,47 @@
+{
+  "annotation_id": "pilot-kagami-010-author-v1",
+  "case_id": "pilot-kagami-010",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-010-p1",
+      "wording": "Offline mode is available today.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Controls the requested assessment.",
+      "preserve": "Offline mode is available today."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-010-p1",
+      "evidence_id": "pilot-kagami-010-e1",
+      "location": "L1",
+      "status": "contradicted",
+      "establishes": "The current-version note conflicts with present availability; a roadmap is not shipment."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not call the vendor dishonest."
+  ],
+  "answerability": "The current-version note conflicts with present availability; a roadmap is not shipment.",
+  "problem_labels": [
+    "problem"
+  ],
+  "acceptable_outputs": [
+    "The current-version note conflicts with present availability; a roadmap is not shipment."
+  ],
+  "forbidden_changes": [
+    "Do not call the vendor dishonest."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,7 +1,9 @@
 # Evaluation protocol
 
-**Status: design only.** There are no benchmark cases, independent annotations,
-model runs, baseline results, or reader-study results in this repository yet.
+**Status: Kagami pilot artifacts implemented.** There are 20 original synthetic
+Kagami cases with provisional AI-author annotations. Independent annotations,
+isolated model runs, baseline results, and reader-study results remain pending.
+See the [verification record](kagami-verification.md).
 The [annotation rubric](annotation-rubric.md) defines what to collect and how to
 judge it. Examples in that rubric are author calibration examples, not evidence
 of effectiveness.
