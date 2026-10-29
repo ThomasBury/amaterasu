@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-012",
+  "skill": "mamoru",
+  "task": "Interpret this fragment.",
+  "input": {
+    "L1": "Screenshot fragment, date unknown: \"There will be consequences.\"",
+    "L2": "Earlier messages and the speaker identity are unavailable."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Interpret this fragment.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-012-record"
+  ]
+}

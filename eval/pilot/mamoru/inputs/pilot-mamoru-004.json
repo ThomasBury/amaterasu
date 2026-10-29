@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-004",
+  "skill": "mamoru",
+  "task": "Prepare a firm follow-up.",
+  "input": {
+    "L1": "Owner email, 2026-10-04: \"I will send the signed schedule by noon on 7 October.\"",
+    "L2": "Owner email, 2026-10-08: \"I have not sent the signed schedule yet.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Prepare a firm follow-up.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-004-record"
+  ]
+}

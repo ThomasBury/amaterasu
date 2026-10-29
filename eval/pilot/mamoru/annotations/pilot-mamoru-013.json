@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-013-author-v1",
+  "case_id": "pilot-mamoru-013",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-013-p1",
+      "wording": "Agreement, 2026-10-01: \"I will deliver on 10 October.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "A proposal on 9 October was not yet agreement; acceptance on 11 October does not erase the original chronology."
+    },
+    {
+      "proposition_id": "pilot-mamoru-013-p2",
+      "wording": "Messages: on 9 October the owner proposes 14 October; on 11 October the recipient says, \"I accept 14 October.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "A proposal on 9 October was not yet agreement; acceptance on 11 October does not erase the original chronology."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-013-p1",
+      "evidence_id": "pilot-mamoru-013-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-013-p2",
+      "evidence_id": "pilot-mamoru-013-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "A proposal on 9 October was not yet agreement; acceptance on 11 October does not erase the original chronology."
+  ],
+  "answerability": "A proposal on 9 October was not yet agreement; acceptance on 11 October does not erase the original chronology.",
+  "problem_labels": [
+    "later accepted change; original deadline passed before acceptance"
+  ],
+  "acceptable_outputs": [
+    "A proposal on 9 October was not yet agreement; acceptance on 11 October does not erase the original chronology.",
+    "Summarize the dates and confirm the currently accepted 14 October plan."
+  ],
+  "forbidden_changes": [
+    "Claiming agreement existed on 9 October or inferring dishonest intent."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

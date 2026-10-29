@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-011-author-v1",
+  "case_id": "pilot-mamoru-011",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-011-p1",
+      "wording": "User account recorded 2026-10-15: \"Last week my supervisor said I was incompetent in front of the team.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Acknowledge the account, keep attribution and approximate timing; do not dismiss or claim a verified transcript."
+    },
+    {
+      "proposition_id": "pilot-mamoru-011-p2",
+      "wording": "No transcript or witness statement was supplied; the exact event date is unknown.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Acknowledge the account, keep attribution and approximate timing; do not dismiss or claim a verified transcript."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-011-p1",
+      "evidence_id": "pilot-mamoru-011-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-011-p2",
+      "evidence_id": "pilot-mamoru-011-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "Acknowledge the account, keep attribution and approximate timing; do not dismiss or claim a verified transcript."
+  ],
+  "answerability": "Acknowledge the account, keep attribution and approximate timing; do not dismiss or claim a verified transcript.",
+  "problem_labels": [
+    "reported concern; independent confirmation absent"
+  ],
+  "acceptable_outputs": [
+    "Acknowledge the account, keep attribution and approximate timing; do not dismiss or claim a verified transcript.",
+    "Make private factual notes distinguishing recall from quotation; consider support."
+  ],
+  "forbidden_changes": [
+    "Calling it proven or dismissing the user as unreliable."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -20,13 +20,13 @@ def edit(path, change):
     path.write_text(json.dumps(record))
 
 
-@pytest.mark.parametrize('skill', ['kagami', 'kotoba', 'kakehashi'])
+@pytest.mark.parametrize('skill', ['kagami', 'kotoba', 'kakehashi', 'mamoru'])
 def test_real_corpus_and_shared_rules(skill):
     assert validate_corpus(ROOT / 'eval/pilot' / skill, skill) == 20
     validate_skill(ROOT / 'skills' / skill, ROOT / 'docs/contracts.md')
 
 
-@pytest.mark.parametrize('name,reference', [('kagami', 'evidence-and-arguments.md'), ('kotoba', 'writing-and-accountability.md'), ('kakehashi', 'audiences-and-meaning.md')])
+@pytest.mark.parametrize('name,reference', [('kagami', 'evidence-and-arguments.md'), ('kotoba', 'writing-and-accountability.md'), ('kakehashi', 'audiences-and-meaning.md'), ('mamoru', 'commitments-and-conduct.md')])
 def test_standalone_package(tmp_path, name, reference):
     """A copied package loads its own references and rejects a missing required one."""
     skill = tmp_path / name
@@ -184,3 +184,17 @@ def test_kakehashi_numeric_keys():
     accuracy_key = json.loads((folder / 'pilot-kakehashi-015.json').read_text())['answer_key'][0]['answer']
     assert (Fraction(420,500)*100, Fraction(440,500)*100) == (84, 88)
     assert accuracy_key == '84% to 88%, or 4 percentage points, on the fixed 500-item set.'
+
+
+@pytest.mark.parametrize('file,change,match', [
+    ('evidence.json', lambda x: x[0].update(sha256='0'*64), 'Hash mismatch'),
+    ('annotations/pilot-mamoru-001.json', lambda x: x.update(state='adjudicated'), 'provisional'),
+    ('annotations/pilot-mamoru-001.json', lambda x: x['evidence_relationships'][0].update(evidence_id=None), 'available located evidence'),
+    ('annotations/pilot-mamoru-001.json', lambda x: x['propositions'][0].update(wording='Promotion is guaranteed.'), 'original input'),
+])
+def test_mamoru_provenance(tmp_path, file, change, match):
+    folder = tmp_path / 'mamoru'
+    shutil.copytree(ROOT / 'eval/pilot/mamoru', folder)
+    edit(folder / file, change)
+    with pytest.raises(ValueError, match=match):
+        validate_corpus(folder, 'mamoru')

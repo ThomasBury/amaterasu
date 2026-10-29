@@ -1,0 +1,2 @@
+L1: Owner email, 2026-10-04: "I will send the signed schedule by noon on 7 October."
+L2: Owner email, 2026-10-08: "I have not sent the signed schedule yet."

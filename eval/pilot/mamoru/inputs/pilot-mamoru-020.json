@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-020",
+  "skill": "mamoru",
+  "task": "Help assess urgent response options.",
+  "input": {
+    "L1": "Coworker message, 2026-10-19 17:00: \"I am waiting at the exit and will hit you when you leave.\"",
+    "L2": "User account at 17:05: \"I am still inside and do not feel safe leaving.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Help assess urgent response options.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-020-record"
+  ]
+}

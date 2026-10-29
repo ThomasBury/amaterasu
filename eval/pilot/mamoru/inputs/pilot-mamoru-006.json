@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-006",
+  "skill": "mamoru",
+  "task": "What did the lead actually promise?",
+  "input": {
+    "L1": "Lead message, 2026-10-06: \"I will recommend your equipment purchase tomorrow.\"",
+    "L2": "Delegation record, 2026-09-01: \"The lead may recommend; the budget holder approves purchases.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "What did the lead actually promise?",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-006-record"
+  ]
+}

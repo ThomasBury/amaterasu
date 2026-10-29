@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-008-author-v1",
+  "case_id": "pilot-mamoru-008",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-008-p1",
+      "wording": "Peer comment, 2026-10-08: \"I disagree with using the mean here because three outliers dominate it. Can we compare medians?\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "A methodological disagreement is not a personal attack; its technical merits are not independently assessed here."
+    },
+    {
+      "proposition_id": "pilot-mamoru-008-p2",
+      "wording": "No personal remarks or other exchanges were supplied.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "A methodological disagreement is not a personal attack; its technical merits are not independently assessed here."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-008-p1",
+      "evidence_id": "pilot-mamoru-008-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-008-p2",
+      "evidence_id": "pilot-mamoru-008-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "A methodological disagreement is not a personal attack; its technical merits are not independently assessed here."
+  ],
+  "answerability": "A methodological disagreement is not a personal attack; its technical merits are not independently assessed here.",
+  "problem_labels": [
+    "ordinary reasoned disagreement"
+  ],
+  "acceptable_outputs": [
+    "A methodological disagreement is not a personal attack; its technical merits are not independently assessed here.",
+    "Discuss the proposed comparison or explain why the mean serves the task."
+  ],
+  "forbidden_changes": [
+    "Inferring hostility or diagnosing the peer."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

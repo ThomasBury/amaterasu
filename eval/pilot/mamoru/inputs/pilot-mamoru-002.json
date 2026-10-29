@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-002",
+  "skill": "mamoru",
+  "task": "Is the delivery promise broken?",
+  "input": {
+    "L1": "Supplier email, 2026-10-02: \"If payment arrives by 5 October, I will ship 12 units on 8 October.\"",
+    "L2": "Payment receipt dated 2026-10-07 records payment on 7 October."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Is the delivery promise broken?",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-002-record"
+  ]
+}

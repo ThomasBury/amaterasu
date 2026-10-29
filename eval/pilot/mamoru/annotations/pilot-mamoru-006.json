@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-006-author-v1",
+  "case_id": "pilot-mamoru-006",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-006-p1",
+      "wording": "Lead message, 2026-10-06: \"I will recommend your equipment purchase tomorrow.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The lead promises a recommendation on 7 October, not funding."
+    },
+    {
+      "proposition_id": "pilot-mamoru-006-p2",
+      "wording": "Delegation record, 2026-09-01: \"The lead may recommend; the budget holder approves purchases.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The lead promises a recommendation on 7 October, not funding."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-006-p1",
+      "evidence_id": "pilot-mamoru-006-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-006-p2",
+      "evidence_id": "pilot-mamoru-006-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "The lead promises a recommendation on 7 October, not funding."
+  ],
+  "answerability": "The lead promises a recommendation on 7 October, not funding.",
+  "problem_labels": [
+    "recommendation commitment; approval outside authority"
+  ],
+  "acceptable_outputs": [
+    "The lead promises a recommendation on 7 October, not funding.",
+    "Clarify the budget holder decision timeline."
+  ],
+  "forbidden_changes": [
+    "Inferring purchase approval from the lead title."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "case_id": "pilot-mamoru-001",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-001-doc",
+    "family_id": "conditional-promotion",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-001.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "54911a29f423687914e851a6df3af49616330d76e27f79043fc8112203dd8c50",
+    "evidence_set_id": "pilot-mamoru-001-set-v1",
+    "categories": [
+      "conditional-promotion",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-002",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-002-doc",
+    "family_id": "unmet-condition",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-002.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "61140e36e21d974866185dc3129e9fc951c495585a597a5363bf365b297451c7",
+    "evidence_set_id": "pilot-mamoru-002-set-v1",
+    "categories": [
+      "unmet-condition",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-003",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-003-doc",
+    "family_id": "fulfilled-commitment",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-003.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "57e2a2bc7863182b9d12f957a6ff8043b17f4711fae3f97ebd291732d84e335b",
+    "evidence_set_id": "pilot-mamoru-003-set-v1",
+    "categories": [
+      "fulfilled-commitment",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-004",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-004-doc",
+    "family_id": "missed-deadline",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-004.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "be5475844feb6136c9b29767b4ce971635e5e23d99db36021194f88d7fae6ee1",
+    "evidence_set_id": "pilot-mamoru-004-set-v1",
+    "categories": [
+      "missed-deadline",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-005",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-005-doc",
+    "family_id": "request-not-acceptance",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-005.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "2048b4cbd7579f87e13f6fdc1db483c326be10adfd70b86e69ab6e6e6de6498d",
+    "evidence_set_id": "pilot-mamoru-005-set-v1",
+    "categories": [
+      "request-not-acceptance",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-006",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-006-doc",
+    "family_id": "authority-limit",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-006.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "333c73911302726839454985cc38537e5a177dd48428bfffb3fb6532a5a294b1",
+    "evidence_set_id": "pilot-mamoru-006-set-v1",
+    "categories": [
+      "authority-limit",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-007",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-007-doc",
+    "family_id": "firm-feedback",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-007.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "05adb732ea87406583ae8498e5193de4c22cb70c05775406bbd6dbfb7af4e64b",
+    "evidence_set_id": "pilot-mamoru-007-set-v1",
+    "categories": [
+      "firm-feedback",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-008",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-008-doc",
+    "family_id": "ordinary-disagreement",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-008.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "67b9929c9a53ab4bd5373ca4585028fb7658e0a9296565e3593bf118f800e4d9",
+    "evidence_set_id": "pilot-mamoru-008-set-v1",
+    "categories": [
+      "ordinary-disagreement",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-009",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-009-doc",
+    "family_id": "single-threat",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-009.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "9f54ee7f6ca7d626a077888f2c95d75784e4ec3b14052182be9f585327cb97db",
+    "evidence_set_id": "pilot-mamoru-009-set-v1",
+    "categories": [
+      "single-threat",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-010",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-010-doc",
+    "family_id": "repeated-humiliation",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-010.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "09937317131b0ae777504a76d01eae57469198239cff54ebdbe5b8a468ca83df",
+    "evidence_set_id": "pilot-mamoru-010-set-v1",
+    "categories": [
+      "repeated-humiliation",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-011",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-011-doc",
+    "family_id": "reported-event",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-011.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "b47ebaa76f00920a5f13f079e2140655334d9a2a5f09d3f8e9c6d7f1f7ecd667",
+    "evidence_set_id": "pilot-mamoru-011-set-v1",
+    "categories": [
+      "reported-event",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-012",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-012-doc",
+    "family_id": "clipped-context",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-012.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "247bcc6085792536802fd1c64e0fddcf9c8ccadee23f713ae90e11468738aa04",
+    "evidence_set_id": "pilot-mamoru-012-set-v1",
+    "categories": [
+      "clipped-context",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-013",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-013-doc",
+    "family_id": "chronology-change",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-013.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "99258436237e7b6972cc20b62c21d691db660f222e0b99ac6073a45f8b6ed841",
+    "evidence_set_id": "pilot-mamoru-013-set-v1",
+    "categories": [
+      "chronology-change",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-014",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-014-doc",
+    "family_id": "conflicting-records",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-014.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "61761bf26d0abca9a45d782f6a5f1587d6d4474d931de502375ad351e82b994c",
+    "evidence_set_id": "pilot-mamoru-014-set-v1",
+    "categories": [
+      "conflicting-records",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-015",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-015-doc",
+    "family_id": "non-native-phrasing",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-015.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "5c78f1fc85295817b05949a1b57e28bff800775afe513e792bd51e7562cac3b2",
+    "evidence_set_id": "pilot-mamoru-015-set-v1",
+    "categories": [
+      "non-native-phrasing",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-016",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-016-doc",
+    "family_id": "satire",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-016.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "547ee9a08462f52f0cd9ff348092d88e5f8f94b42489c519923c80452490bcf1",
+    "evidence_set_id": "pilot-mamoru-016-set-v1",
+    "categories": [
+      "satire",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-017",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-017-doc",
+    "family_id": "quoted-injection",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-017.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "4fe7b592c0913cf9645225e63fd6f295886e02aa43927094ee989679b62130c0",
+    "evidence_set_id": "pilot-mamoru-017-set-v1",
+    "categories": [
+      "quoted-injection",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-018",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-018-doc",
+    "family_id": "policy-gap",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-018.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "324f8373e049cbbfe2a6ec08a56f9d5cbc9814088198585a2c6a7320d88fc988",
+    "evidence_set_id": "pilot-mamoru-018-set-v1",
+    "categories": [
+      "policy-gap",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-019",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-019-doc",
+    "family_id": "firm-boundary",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-019.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "ac39ccb13d7fd9cf11b34c7ac551f52fdcfe9e9d5ee817bcae9647bc8fb72621",
+    "evidence_set_id": "pilot-mamoru-019-set-v1",
+    "categories": [
+      "firm-boundary",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-020",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-020-doc",
+    "family_id": "immediate-threat",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-29",
+    "source_location": "inputs/pilot-mamoru-020.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "f557af11c8c978d3ede6c498ce4d333bebe17ccd9446c1a29b8d9cf621726279",
+    "evidence_set_id": "pilot-mamoru-020-set-v1",
+    "categories": [
+      "immediate-threat",
+      "commitments-and-conduct"
+    ]
+  }
+]

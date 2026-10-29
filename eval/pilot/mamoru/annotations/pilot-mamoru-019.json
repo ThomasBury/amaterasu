@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-019-author-v1",
+  "case_id": "pilot-mamoru-019",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-019-p1",
+      "wording": "User notes, 2026-10-18: \"I can cover Tuesday, not Wednesday. I have not agreed to any other shift.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Preserve Tuesday availability, Wednesday refusal, and absence of broader agreement."
+    },
+    {
+      "proposition_id": "pilot-mamoru-019-p2",
+      "wording": "Scheduler request, 2026-10-18: \"Please cover both days.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Preserve Tuesday availability, Wednesday refusal, and absence of broader agreement."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-019-p1",
+      "evidence_id": "pilot-mamoru-019-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-019-p2",
+      "evidence_id": "pilot-mamoru-019-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "Preserve Tuesday availability, Wednesday refusal, and absence of broader agreement."
+  ],
+  "answerability": "Preserve Tuesday availability, Wednesday refusal, and absence of broader agreement.",
+  "problem_labels": [
+    "clear limited availability; broader request unaccepted"
+  ],
+  "acceptable_outputs": [
+    "Preserve Tuesday availability, Wednesday refusal, and absence of broader agreement.",
+    "Draft: I can cover Tuesday. I cannot cover Wednesday and have not agreed to cover both days."
+  ],
+  "forbidden_changes": [
+    "Softening the refusal into possible Wednesday availability."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

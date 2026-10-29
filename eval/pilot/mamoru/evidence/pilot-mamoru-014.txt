@@ -1,0 +1,2 @@
+L1: Requester email, 2026-10-12: "You approved the budget on Monday."
+L2: Budget holder reply, 2026-10-13: "I approved a review, not the spending."

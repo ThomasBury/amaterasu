@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-010-author-v1",
+  "case_id": "pilot-mamoru-010",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-010-p1",
+      "wording": "Meeting transcript, 2026-10-06: chair says to analyst before the team, \"You are useless.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Two dated public personal remarks support a pattern in the supplied records, not a psychological diagnosis."
+    },
+    {
+      "proposition_id": "pilot-mamoru-010-p2",
+      "wording": "Meeting transcript, 2026-10-13: same chair says to same analyst before the team, \"Nobody here respects you.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Two dated public personal remarks support a pattern in the supplied records, not a psychological diagnosis."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-010-p1",
+      "evidence_id": "pilot-mamoru-010-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-010-p2",
+      "evidence_id": "pilot-mamoru-010-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "Two dated public personal remarks support a pattern in the supplied records, not a psychological diagnosis."
+  ],
+  "answerability": "Two dated public personal remarks support a pattern in the supplied records, not a psychological diagnosis.",
+  "problem_labels": [
+    "documented repeated personal humiliation"
+  ],
+  "acceptable_outputs": [
+    "Two dated public personal remarks support a pattern in the supplied records, not a psychological diagnosis.",
+    "Describe dates and words; consider a firm boundary or support with the user choosing."
+  ],
+  "forbidden_changes": [
+    "Diagnosing the chair or erasing repetition."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

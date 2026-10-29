@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-015",
+  "skill": "mamoru",
+  "task": "Help interpret a terse reply.",
+  "input": {
+    "L1": "Colleague reply, 2026-10-14: \"You send numbers now please. I need finish report.\"",
+    "L2": "Context supplied by user: colleague writes in a second language; no threat or prior conflict is reported."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Help interpret a terse reply.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-015-record"
+  ]
+}

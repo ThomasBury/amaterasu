@@ -1,0 +1,2 @@
+L1: Lead message, 2026-10-06: "I will recommend your equipment purchase tomorrow."
+L2: Delegation record, 2026-09-01: "The lead may recommend; the budget holder approves purchases."

@@ -1,0 +1,2 @@
+L1: Supervisor email, 2026-10-07: "The total on page 2 does not match the ledger. Please correct it by Friday."
+L2: Attached ledger extract totals 125; report page 2 shows 152.

@@ -1,0 +1,2 @@
+L1: Requester message, 2026-10-05: "Please cover my shift on 9 October."
+L2: Supplied thread contains no reply; recipient acceptance is unknown.

@@ -1,0 +1,2 @@
+L1: Coworker message, 2026-10-19 17:00: "I am waiting at the exit and will hit you when you leave."
+L2: User account at 17:05: "I am still inside and do not feel safe leaving."

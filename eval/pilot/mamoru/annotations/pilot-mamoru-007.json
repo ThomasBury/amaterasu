@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-007-author-v1",
+  "case_id": "pilot-mamoru-007",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-007-p1",
+      "wording": "Supervisor email, 2026-10-07: \"The total on page 2 does not match the ledger. Please correct it by Friday.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The supplied numbers support a discrepancy; firmness alone is not abuse."
+    },
+    {
+      "proposition_id": "pilot-mamoru-007-p2",
+      "wording": "Attached ledger extract totals 125; report page 2 shows 152.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The supplied numbers support a discrepancy; firmness alone is not abuse."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-007-p1",
+      "evidence_id": "pilot-mamoru-007-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-007-p2",
+      "evidence_id": "pilot-mamoru-007-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "The supplied numbers support a discrepancy; firmness alone is not abuse."
+  ],
+  "answerability": "The supplied numbers support a discrepancy; firmness alone is not abuse.",
+  "problem_labels": [
+    "ordinary specific feedback"
+  ],
+  "acceptable_outputs": [
+    "The supplied numbers support a discrepancy; firmness alone is not abuse.",
+    "Correct or discuss the discrepancy and clarify Friday timing if needed."
+  ],
+  "forbidden_changes": [
+    "Labeling the correction manipulation or humiliation."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

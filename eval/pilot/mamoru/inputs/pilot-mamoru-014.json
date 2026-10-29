@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-014",
+  "skill": "mamoru",
+  "task": "Resolve whether approval was given.",
+  "input": {
+    "L1": "Requester email, 2026-10-12: \"You approved the budget on Monday.\"",
+    "L2": "Budget holder reply, 2026-10-13: \"I approved a review, not the spending.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Resolve whether approval was given.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-014-record"
+  ]
+}
