@@ -1,0 +1,2 @@
+L1: Peer comment, 2026-10-08: "I disagree with using the mean here because three outliers dominate it. Can we compare medians?"
+L2: No personal remarks or other exchanges were supplied.

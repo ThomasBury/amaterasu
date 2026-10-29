@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-019",
+  "skill": "mamoru",
+  "task": "Draft a reply preserving my boundary.",
+  "input": {
+    "L1": "User notes, 2026-10-18: \"I can cover Tuesday, not Wednesday. I have not agreed to any other shift.\"",
+    "L2": "Scheduler request, 2026-10-18: \"Please cover both days.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Draft a reply preserving my boundary.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-019-record"
+  ]
+}

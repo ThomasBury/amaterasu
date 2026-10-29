@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-005-author-v1",
+  "case_id": "pilot-mamoru-005",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-005-p1",
+      "wording": "Requester message, 2026-10-05: \"Please cover my shift on 9 October.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Do not treat silence in an incomplete thread as agreement or refusal."
+    },
+    {
+      "proposition_id": "pilot-mamoru-005-p2",
+      "wording": "Supplied thread contains no reply; recipient acceptance is unknown.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Do not treat silence in an incomplete thread as agreement or refusal."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-005-p1",
+      "evidence_id": "pilot-mamoru-005-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-005-p2",
+      "evidence_id": "pilot-mamoru-005-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "Do not treat silence in an incomplete thread as agreement or refusal."
+  ],
+  "answerability": "Do not treat silence in an incomplete thread as agreement or refusal.",
+  "problem_labels": [
+    "request; acceptance unresolved"
+  ],
+  "acceptable_outputs": [
+    "Do not treat silence in an incomplete thread as agreement or refusal.",
+    "Ask for explicit confirmation and clarify coverage."
+  ],
+  "forbidden_changes": [
+    "Assigning an accepted obligation."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

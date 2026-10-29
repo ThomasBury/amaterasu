@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-013",
+  "skill": "mamoru",
+  "task": "Which deadline can I rely on?",
+  "input": {
+    "L1": "Agreement, 2026-10-01: \"I will deliver on 10 October.\"",
+    "L2": "Messages: on 9 October the owner proposes 14 October; on 11 October the recipient says, \"I accept 14 October.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Which deadline can I rely on?",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-013-record"
+  ]
+}

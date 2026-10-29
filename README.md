@@ -4,11 +4,12 @@ Four communication skills in development for examining evidence, preserving mean
 and choosing useful next steps. English-first, Markdown-first, and independently
 usable.
 
-**Status: Kagami, Kotoba, and Kakehashi implemented; independent effectiveness evaluation is pending.**
+**Status: all four skill packages implemented; Mamoru expert review and independent effectiveness evaluation are pending.**
 The standalone [Kagami](skills/kagami/SKILL.md),
-[Kotoba](skills/kotoba/SKILL.md), and
-[Kakehashi](skills/kakehashi/SKILL.md) skills include local references. Each has 20
-synthetic pilot cases with provisional AI-author labels only. Mamoru remains planned. No host compatibility or effectiveness is claimed.
+[Kotoba](skills/kotoba/SKILL.md),
+[Kakehashi](skills/kakehashi/SKILL.md), and [Mamoru](skills/mamoru/SKILL.md) skills include local references. Each has 20
+synthetic pilot cases with provisional AI-author labels only. Mamoru’s workplace-expert
+review is pending. No host compatibility or effectiveness is claimed.
 
 | Skill | Tagline | Intended use |
 | --- | --- | --- |
@@ -56,8 +57,9 @@ and host configuration.
 ## Development and license
 
 Work proceeds in independently reviewable phases, with one completed phase per
-session. The next phase is Mamoru. Kakehashi was implemented alone because it has no
-dependency on the remaining skills. Development dependencies are locked; skills
+session. Mamoru implementation is ready for workplace-expert review; milestone 5
+remains open until that review is recorded. Release validation stays separate
+because it requires independent annotation and host testing. Development dependencies are locked; skills
 have no runtime dependency on Python. Run:
 
 ```sh
@@ -67,11 +69,12 @@ uv run --locked pytest -q
 uv run --locked skills-ref validate skills/kagami
 uv run --locked skills-ref validate skills/kotoba
 uv run --locked skills-ref validate skills/kakehashi
+uv run --locked skills-ref validate skills/mamoru
 ```
 
 See the [Kagami](eval/kagami-verification.md),
-[Kotoba](eval/kotoba-verification.md), and
-[Kakehashi](eval/kakehashi-verification.md) pilot records for scope and limits.
+[Kotoba](eval/kotoba-verification.md),
+[Kakehashi](eval/kakehashi-verification.md), and [Mamoru](eval/mamoru-verification.md) pilot records for scope and limits.
 To review or transfer a skill, copy its entire folder including references
 and license. Host discovery and installation instructions await host-specific tests.
 

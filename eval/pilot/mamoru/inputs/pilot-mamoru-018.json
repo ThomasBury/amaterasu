@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-018",
+  "skill": "mamoru",
+  "task": "Does this establish a policy breach?",
+  "input": {
+    "L1": "Employee account, 2026-10-17: \"My transfer request was denied.\"",
+    "L2": "Referenced transfer policy attachment is unavailable; no denial reason or decision authority is supplied."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Does this establish a policy breach?",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-018-record"
+  ]
+}

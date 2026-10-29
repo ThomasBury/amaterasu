@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-002-author-v1",
+  "case_id": "pilot-mamoru-002",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-002-p1",
+      "wording": "Supplier email, 2026-10-02: \"If payment arrives by 5 October, I will ship 12 units on 8 October.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The payment missed the stated condition; the text supplies no revised shipment date."
+    },
+    {
+      "proposition_id": "pilot-mamoru-002-p2",
+      "wording": "Payment receipt dated 2026-10-07 records payment on 7 October.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The payment missed the stated condition; the text supplies no revised shipment date."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-002-p1",
+      "evidence_id": "pilot-mamoru-002-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-002-p2",
+      "evidence_id": "pilot-mamoru-002-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "The payment missed the stated condition; the text supplies no revised shipment date."
+  ],
+  "answerability": "The payment missed the stated condition; the text supplies no revised shipment date.",
+  "problem_labels": [
+    "conditional commitment; trigger not met"
+  ],
+  "acceptable_outputs": [
+    "The payment missed the stated condition; the text supplies no revised shipment date.",
+    "Ask for a revised shipment date without asserting the original condition was met."
+  ],
+  "forbidden_changes": [
+    "Inventing an unconditional 8 October obligation."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

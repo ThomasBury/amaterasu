@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-009-author-v1",
+  "case_id": "pilot-mamoru-009",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-009-p1",
+      "wording": "Manager message, 2026-10-09: \"If you report the missing safety check, I will remove you from next month's paid shifts.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The words threaten a work consequence for reporting; one instance suffices to identify that wording. Intent and eventual action are separate."
+    },
+    {
+      "proposition_id": "pilot-mamoru-009-p2",
+      "wording": "Roster delegation, 2026-09-01: \"This manager assigns paid shifts.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The words threaten a work consequence for reporting; one instance suffices to identify that wording. Intent and eventual action are separate."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-009-p1",
+      "evidence_id": "pilot-mamoru-009-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-009-p2",
+      "evidence_id": "pilot-mamoru-009-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "The words threaten a work consequence for reporting; one instance suffices to identify that wording. Intent and eventual action are separate."
+  ],
+  "answerability": "The words threaten a work consequence for reporting; one instance suffices to identify that wording. Intent and eventual action are separate.",
+  "problem_labels": [
+    "documented conditional threat"
+  ],
+  "acceptable_outputs": [
+    "The words threaten a work consequence for reporting; one instance suffices to identify that wording. Intent and eventual action are separate.",
+    "Preserve the message privately and consider a trusted support route; confrontation is optional."
+  ],
+  "forbidden_changes": [
+    "Minimizing it as mere firmness or automatically filing a complaint."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

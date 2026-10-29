@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-004-author-v1",
+  "case_id": "pilot-mamoru-004",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-004-p1",
+      "wording": "Owner email, 2026-10-04: \"I will send the signed schedule by noon on 7 October.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The deadline passed and the owner acknowledges non-delivery; the reason is unspecified."
+    },
+    {
+      "proposition_id": "pilot-mamoru-004-p2",
+      "wording": "Owner email, 2026-10-08: \"I have not sent the signed schedule yet.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The deadline passed and the owner acknowledges non-delivery; the reason is unspecified."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-004-p1",
+      "evidence_id": "pilot-mamoru-004-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-004-p2",
+      "evidence_id": "pilot-mamoru-004-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "The deadline passed and the owner acknowledges non-delivery; the reason is unspecified."
+  ],
+  "answerability": "The deadline passed and the owner acknowledges non-delivery; the reason is unspecified.",
+  "problem_labels": [
+    "documented missed commitment; intent unknown"
+  ],
+  "acceptable_outputs": [
+    "The deadline passed and the owner acknowledges non-delivery; the reason is unspecified.",
+    "State the missed deadline and request a revised date as a proposal."
+  ],
+  "forbidden_changes": [
+    "Calling the owner a liar or treating a proposed date as agreed."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

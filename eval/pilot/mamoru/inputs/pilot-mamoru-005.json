@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-005",
+  "skill": "mamoru",
+  "task": "Did my colleague accept the task?",
+  "input": {
+    "L1": "Requester message, 2026-10-05: \"Please cover my shift on 9 October.\"",
+    "L2": "Supplied thread contains no reply; recipient acceptance is unknown."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Did my colleague accept the task?",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-005-record"
+  ]
+}

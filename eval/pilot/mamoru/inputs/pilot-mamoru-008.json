@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-008",
+  "skill": "mamoru",
+  "task": "Prepare a response to disagreement.",
+  "input": {
+    "L1": "Peer comment, 2026-10-08: \"I disagree with using the mean here because three outliers dominate it. Can we compare medians?\"",
+    "L2": "No personal remarks or other exchanges were supplied."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Prepare a response to disagreement.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-008-record"
+  ]
+}

@@ -1,0 +1,2 @@
+L1: Employee account, 2026-10-17: "My transfer request was denied."
+L2: Referenced transfer policy attachment is unavailable; no denial reason or decision authority is supplied.

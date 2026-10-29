@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-011",
+  "skill": "mamoru",
+  "task": "Help with something I remember.",
+  "input": {
+    "L1": "User account recorded 2026-10-15: \"Last week my supervisor said I was incompetent in front of the team.\"",
+    "L2": "No transcript or witness statement was supplied; the exact event date is unknown."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Help with something I remember.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-011-record"
+  ]
+}

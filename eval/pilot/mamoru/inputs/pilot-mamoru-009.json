@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-009",
+  "skill": "mamoru",
+  "task": "Assess this message and response options.",
+  "input": {
+    "L1": "Manager message, 2026-10-09: \"If you report the missing safety check, I will remove you from next month's paid shifts.\"",
+    "L2": "Roster delegation, 2026-09-01: \"This manager assigns paid shifts.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Assess this message and response options.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-009-record"
+  ]
+}

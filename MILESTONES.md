@@ -81,12 +81,24 @@ three packages. No independent human annotation or
 isolated host behavioral run was performed. Kakehashi was kept alone because
 Mamoru is independent and release validation requires later independent work.
 
-## 5. Mamoru — next
+## 5. Mamoru — implemented; workplace-expert review pending
 
-- [ ] Create the standalone skill and `commitments-and-conduct.md` reference.
-- [ ] Prepare 20 pilot cases; obtain workplace-expert review of conduct labels.
-- [ ] Verify conditional commitments, actual authority, ordinary feedback,
+- [x] Create the standalone skill and `commitments-and-conduct.md` reference.
+- [x] Prepare 20 pilot cases.
+- [ ] Obtain workplace-expert review of conduct labels.
+- [x] Verify conditional commitments, actual authority, ordinary feedback,
   documented threats, chronology, and proportionate response options.
+
+Verification (2026-10-29): 20 original synthetic cases with hashed source
+snapshots and separate provisional AI-author annotations; all 60 pytest tests,
+validation of four packages and 80 records, and both Mamoru format checks pass.
+Standalone loading, provenance, and the author walkthrough are recorded in
+[the verification record](eval/mamoru-verification.md). The user volunteered as
+workplace expert; the [20-case review sheet](eval/mamoru-expert-review.md) awaits
+actual assessment. Milestone 5 remains open until review is recorded. No
+independent human annotation or isolated host behavioral run was performed.
+Mamoru stays alone: release validation requires independent work and is not a
+dependency of this implementation.
 
 ## 6. Release validation — pending
 

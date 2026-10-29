@@ -12,6 +12,7 @@ SKILL_REFERENCES = {
     'kagami': ('evidence-and-arguments.md', 'numbers-and-product-claims.md'),
     'kotoba': ('writing-and-accountability.md',),
     'kakehashi': ('audiences-and-meaning.md',),
+    'mamoru': ('commitments-and-conduct.md',),
 }
 STATUSES = {'supported', 'contradicted', 'mixed', 'insufficient evidence', 'not checked', 'inapplicable'}
 

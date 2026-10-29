@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-001",
+  "skill": "mamoru",
+  "task": "Clarify whether promotion was promised.",
+  "input": {
+    "L1": "Manager email, 2026-10-01: \"If the trial meets the agreed targets, I will put your promotion forward at the November panel.\"",
+    "L2": "Policy excerpt, 2026-09-01: \"Only the panel approves promotions.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Clarify whether promotion was promised.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-001-record"
+  ]
+}

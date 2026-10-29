@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-016",
+  "skill": "mamoru",
+  "task": "Was this a real punishment threat?",
+  "input": {
+    "L1": "Team social chat, 2026-10-15: \"Anyone who forgets cake shall be exiled to the moon 😂\"",
+    "L2": "Same thread: \"Joking, of course. No cake obligation.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Was this a real punishment threat?",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-016-record"
+  ]
+}

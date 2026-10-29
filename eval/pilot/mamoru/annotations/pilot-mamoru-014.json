@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-014-author-v1",
+  "case_id": "pilot-mamoru-014",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-014-p1",
+      "wording": "Requester email, 2026-10-12: \"You approved the budget on Monday.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The emails establish conflicting statements, not which account of Monday is correct."
+    },
+    {
+      "proposition_id": "pilot-mamoru-014-p2",
+      "wording": "Budget holder reply, 2026-10-13: \"I approved a review, not the spending.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "The emails establish conflicting statements, not which account of Monday is correct."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-014-p1",
+      "evidence_id": "pilot-mamoru-014-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-014-p2",
+      "evidence_id": "pilot-mamoru-014-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "The emails establish conflicting statements, not which account of Monday is correct."
+  ],
+  "answerability": "The emails establish conflicting statements, not which account of Monday is correct.",
+  "problem_labels": [
+    "conflicting accounts; scope unresolved"
+  ],
+  "acceptable_outputs": [
+    "The emails establish conflicting statements, not which account of Monday is correct.",
+    "Seek Monday's record and distinguish review from spending approval."
+  ],
+  "forbidden_changes": [
+    "Resolving the conflict by title alone."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

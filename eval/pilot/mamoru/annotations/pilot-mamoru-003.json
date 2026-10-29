@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-003-author-v1",
+  "case_id": "pilot-mamoru-003",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-003-p1",
+      "wording": "Owner email, 2026-10-03: \"I will send you the approved two-page brief by 16:00 on 6 October.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Acknowledgment supports timely receipt of the specified brief, not all future obligations."
+    },
+    {
+      "proposition_id": "pilot-mamoru-003-p2",
+      "wording": "Recipient acknowledgment, 2026-10-06 15:45: \"Received the approved two-page brief, thanks.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Acknowledgment supports timely receipt of the specified brief, not all future obligations."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-003-p1",
+      "evidence_id": "pilot-mamoru-003-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-003-p2",
+      "evidence_id": "pilot-mamoru-003-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "Acknowledgment supports timely receipt of the specified brief, not all future obligations."
+  ],
+  "answerability": "Acknowledgment supports timely receipt of the specified brief, not all future obligations.",
+  "problem_labels": [
+    "documented fulfillment within supplied records"
+  ],
+  "acceptable_outputs": [
+    "Acknowledgment supports timely receipt of the specified brief, not all future obligations.",
+    "Confirm this handoff is complete."
+  ],
+  "forbidden_changes": [
+    "Inventing a missed promise or broader guarantee."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

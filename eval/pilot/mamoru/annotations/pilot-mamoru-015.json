@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-015-author-v1",
+  "case_id": "pilot-mamoru-015",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-015-p1",
+      "wording": "Colleague reply, 2026-10-14: \"You send numbers now please. I need finish report.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Grammar and brevity do not establish hostility or acceptance of the request. Urgency is expressed without an agreed deadline."
+    },
+    {
+      "proposition_id": "pilot-mamoru-015-p2",
+      "wording": "Context supplied by user: colleague writes in a second language; no threat or prior conflict is reported.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "Grammar and brevity do not establish hostility or acceptance of the request. Urgency is expressed without an agreed deadline."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-015-p1",
+      "evidence_id": "pilot-mamoru-015-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-015-p2",
+      "evidence_id": "pilot-mamoru-015-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "Grammar and brevity do not establish hostility or acceptance of the request. Urgency is expressed without an agreed deadline."
+  ],
+  "answerability": "Grammar and brevity do not establish hostility or acceptance of the request. Urgency is expressed without an agreed deadline.",
+  "problem_labels": [
+    "terse request; no supported misconduct"
+  ],
+  "acceptable_outputs": [
+    "Grammar and brevity do not establish hostility or acceptance of the request. Urgency is expressed without an agreed deadline.",
+    "Clarify which numbers and when they are needed."
+  ],
+  "forbidden_changes": [
+    "Inferring aggression or inventing an agreed deadline."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-007",
+  "skill": "mamoru",
+  "task": "Help me interpret this feedback.",
+  "input": {
+    "L1": "Supervisor email, 2026-10-07: \"The total on page 2 does not match the ledger. Please correct it by Friday.\"",
+    "L2": "Attached ledger extract totals 125; report page 2 shows 152."
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Help me interpret this feedback.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-007-record"
+  ]
+}

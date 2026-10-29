@@ -1,0 +1,2 @@
+L1: Supplier email, 2026-10-02: "If payment arrives by 5 October, I will ship 12 units on 8 October."
+L2: Payment receipt dated 2026-10-07 records payment on 7 October.

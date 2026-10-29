@@ -1,0 +1,63 @@
+{
+  "annotation_id": "pilot-mamoru-018-author-v1",
+  "case_id": "pilot-mamoru-018",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-29",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-018-p1",
+      "wording": "Employee account, 2026-10-17: \"My transfer request was denied.\"",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "A denial alone does not establish a policy violation; missing policy remains visible."
+    },
+    {
+      "proposition_id": "pilot-mamoru-018-p2",
+      "wording": "Referenced transfer policy attachment is unavailable; no denial reason or decision authority is supplied.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Changes the obligation, conduct interpretation, or permitted response.",
+      "preserve": "A denial alone does not establish a policy violation; missing policy remains visible."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-018-p1",
+      "evidence_id": "pilot-mamoru-018-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    },
+    {
+      "proposition_id": "pilot-mamoru-018-p2",
+      "evidence_id": "pilot-mamoru-018-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic source contains this attributed wording/context. It is not independent corroboration of embedded allegations or real-world events."
+    }
+  ],
+  "reasoning_gaps": [
+    "A denial alone does not establish a policy violation; missing policy remains visible."
+  ],
+  "answerability": "A denial alone does not establish a policy violation; missing policy remains visible.",
+  "problem_labels": [
+    "insufficient evidence of policy breach"
+  ],
+  "acceptable_outputs": [
+    "A denial alone does not establish a policy violation; missing policy remains visible.",
+    "Request the applicable policy and decision rationale if useful."
+  ],
+  "forbidden_changes": [
+    "Inventing policy, discrimination, or an appeal deadline."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

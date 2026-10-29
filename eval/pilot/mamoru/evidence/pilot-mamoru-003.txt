@@ -1,0 +1,2 @@
+L1: Owner email, 2026-10-03: "I will send you the approved two-page brief by 16:00 on 6 October."
+L2: Recipient acknowledgment, 2026-10-06 15:45: "Received the approved two-page brief, thanks."

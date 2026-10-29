@@ -1,0 +1,2 @@
+L1: Manager message, 2026-10-09: "If you report the missing safety check, I will remove you from next month's paid shifts."
+L2: Roster delegation, 2026-09-01: "This manager assigns paid shifts."

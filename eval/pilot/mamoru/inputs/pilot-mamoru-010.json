@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-010",
+  "skill": "mamoru",
+  "task": "Help describe the documented conduct.",
+  "input": {
+    "L1": "Meeting transcript, 2026-10-06: chair says to analyst before the team, \"You are useless.\"",
+    "L2": "Meeting transcript, 2026-10-13: same chair says to same analyst before the team, \"Nobody here respects you.\""
+  },
+  "context": {
+    "date": "2026-10-29",
+    "purpose": "Help describe the documented conduct.",
+    "audience": "Participant seeking interpretation and response options",
+    "roles": "Use only the roles and authority stated in L1–L2; other authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; missing dates remain unknown.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-010-record"
+  ]
+}
