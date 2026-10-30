@@ -1,0 +1,22 @@
+{
+  "case_id": "pilot-kagami-024",
+  "skill": "kagami",
+  "task": "Audit the linked post for substance and unsupported claims.",
+  "input": {
+    "L1": "LinkedIn post supplied for audit: https://www.linkedin.com/posts/synthetic-example"
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Analyze the post only if its content is accessible.",
+    "audience": "Reader requesting a public-post audit",
+    "roles": "Synthetic reader; post author and content are unavailable.",
+    "chronology": "The synthetic URL was supplied on 2026-10-30; no post date is available.",
+    "constraints": "Web access is unavailable. Do not guess the post contents; request pasted text or an export."
+  },
+  "research_scope": {
+    "mode": "clearly-public",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

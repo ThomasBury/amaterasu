@@ -358,5 +358,41 @@
       "immediate-threat",
       "commitments-and-conduct"
     ]
+  },
+  {
+    "case_id": "pilot-mamoru-021",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-021-doc",
+    "family_id": "later-promotion-criteria",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-30",
+    "source_location": "inputs/pilot-mamoru-021.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "c4936ee015a79d4bbe7058a4fb89792f30a0427e101c4a5c5b585650b78758ec",
+    "evidence_set_id": "pilot-mamoru-021-set-v1",
+    "categories": [
+      "later-criteria-change",
+      "commitments-and-conduct"
+    ]
+  },
+  {
+    "case_id": "pilot-mamoru-022",
+    "split": "pilot",
+    "document_id": "pilot-mamoru-022-doc",
+    "family_id": "pressure-after-refusal",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-30",
+    "source_location": "inputs/pilot-mamoru-022.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "98ffe19cd9931d07a52c281439a1b5da600fe8c23b91acd245c611e99f3b05dc",
+    "evidence_set_id": "pilot-mamoru-022-set-v1",
+    "categories": [
+      "pressure-after-refusal",
+      "commitments-and-conduct"
+    ]
   }
 ]

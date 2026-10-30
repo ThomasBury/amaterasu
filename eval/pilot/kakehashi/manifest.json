@@ -358,5 +358,24 @@
       "meaningful-jargon",
       "audience-adaptation"
     ]
+  },
+  {
+    "case_id": "pilot-kakehashi-021",
+    "split": "pilot",
+    "document_id": "pilot-kakehashi-021-doc",
+    "family_id": "no-determinate-translation",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-30",
+    "source_location": "inputs/pilot-kakehashi-021.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "7576cccc5f1fe0192f4d3bdb1cad783c6b646065291acaadf46c8c6c0d0f8ab0",
+    "evidence_set_id": "pilot-kakehashi-021-set-v1",
+    "categories": [
+      "no-determinate-proposition",
+      "no-invented-translation",
+      "audience-adaptation"
+    ]
   }
 ]

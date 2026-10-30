@@ -1,0 +1,3 @@
+L1 Manager, 2026-10-29 15:10: "Send the client files by 17:00 today." No deadline basis is supplied.
+L2 Analyst, 2026-10-29 15:14: "I cannot send them until access approval is confirmed."
+L3 Manager, 2026-10-29 15:16: "Stop being difficult and send them now. Your refusal is noted."

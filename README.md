@@ -11,8 +11,8 @@ usable.
 **Status: all four skill packages implemented; Mamoru expert review and independent effectiveness evaluation are pending.**
 The standalone [Kagami](skills/kagami/SKILL.md),
 [Kotoba](skills/kotoba/SKILL.md),
-[Kakehashi](skills/kakehashi/SKILL.md), and [Mamoru](skills/mamoru/SKILL.md) skills include local references. Each has 20
-synthetic pilot cases with provisional AI-author labels only. Mamoru’s workplace-expert
+[Kakehashi](skills/kakehashi/SKILL.md), and [Mamoru](skills/mamoru/SKILL.md) skills include local references. The 90
+synthetic pilot cases have provisional AI-author labels only. Mamoru’s workplace-expert
 review is pending. No host compatibility or effectiveness is claimed.
 
 | Skill | Tagline | Intended use |
@@ -30,7 +30,7 @@ validates Amaterasu.
 ## Evaluate the skills
 
 Start with the [step-by-step evaluation guide](eval/README.md#choose-your-task).
-It explains how to review Mamoru's 20 cases, run local file checks, and prepare
+It explains how to review Mamoru's 22 cases, run local file checks, and prepare
 an evaluation of the assistant's behavior. Each path lists what you need, what
 to record, and when you are done. The full evaluation still needs independent
 reviewers, host testing, and scoring tools.

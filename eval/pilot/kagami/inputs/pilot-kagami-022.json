@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kagami-022",
+  "skill": "kagami",
+  "task": "Identify empty and concrete parts of this job description.",
+  "input": {
+    "L1": "You will drive transformative stakeholder alignment.",
+    "L2": "You will maintain the payroll database and reconcile monthly totals."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Help an applicant understand stated duties without inventing criteria.",
+    "audience": "Job applicant",
+    "roles": "Synthetic employer and applicant; decision authority is unspecified.",
+    "chronology": "Original synthetic job description; no hiring events are supplied.",
+    "constraints": "Use supplied text only. Do not treat meaningful duties as empty or empty wording as evidence of deception."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

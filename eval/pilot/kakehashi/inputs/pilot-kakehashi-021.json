@@ -1,0 +1,22 @@
+{
+  "case_id": "pilot-kakehashi-021",
+  "skill": "kakehashi",
+  "task": "Explain this statement in common English without adding meaning.",
+  "input": {
+    "L1": "We actualize adaptive people synergy."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Help a nonspecialist understand what the statement does and does not establish.",
+    "audience": "Nonspecialist reader",
+    "roles": "Synthetic organization and reader; no external authority granted.",
+    "chronology": "Original synthetic statement; no program, event, or outcome is supplied.",
+    "constraints": "Use supplied material only. Do not invent a training program, mechanism, or benefit."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

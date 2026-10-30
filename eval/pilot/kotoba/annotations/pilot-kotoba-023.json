@@ -1,0 +1,66 @@
+{
+  "annotation_id": "pilot-kotoba-023-author-v1",
+  "case_id": "pilot-kotoba-023",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-023-p1",
+      "wording": "Our revolutionary AI transforms knowledge work.",
+      "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "The hype supplies no bounded demonstrated proposition and must not become an unsupported customer promise.",
+      "preserve": "No determinate demonstrated capability is supplied by L1; omit the hype."
+    },
+    {
+      "proposition_id": "pilot-kotoba-023-p2",
+      "wording": "Internal prototype test: summarized 20 supplied reports; accuracy and customer outcomes were not measured.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The prototype setting, action, count, and both measurement limits are essential.",
+      "preserve": "Internal prototype test; summarized 20 supplied reports; accuracy unmeasured; customer outcomes unmeasured."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-023-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "The hype has no bounded proposition suitable for factual verification in this writing task."
+    },
+    {
+      "proposition_id": "pilot-kotoba-023-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "The prototype result and limits are supplied for editing, not independently verified."
+    }
+  ],
+  "reasoning_gaps": [
+    "Accuracy, customer outcomes, production readiness, test date, and product version are not supplied."
+  ],
+  "answerability": "A bounded prototype announcement is possible if all test and measurement limits remain beside the capability.",
+  "problem_labels": [
+    "hype-removal",
+    "prototype-scope"
+  ],
+  "acceptable_outputs": [
+    "In an internal prototype test, our AI summarized 20 supplied reports. Accuracy and customer outcomes were not measured.",
+    "Equivalent wording must keep the prototype and internal-test scope and both unmeasured outcomes."
+  ],
+  "forbidden_changes": [
+    "Claiming accurate summaries, customer value, production readiness, automation of knowledge work, or measured productivity.",
+    "Removing either measurement limitation or presenting the 20 reports as a customer deployment."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

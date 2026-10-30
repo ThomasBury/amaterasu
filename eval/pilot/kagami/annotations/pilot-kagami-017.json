@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-017-author-v2",
+  "annotation_id": "pilot-kagami-017-author-v3",
   "case_id": "pilot-kagami-017",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-017-p1",
       "wording": "We will launch on Friday if the safety review passes.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "commitment",
       "critical": true,
       "critical_reason": "Friday and the pending safety condition determine the obligation; neither may become an unconditional or fulfilled promise.",

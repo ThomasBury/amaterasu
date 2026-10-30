@@ -1,0 +1,65 @@
+{
+  "annotation_id": "pilot-mamoru-021-author-v1",
+  "case_id": "pilot-mamoru-021",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No workplace expertise asserted; user workplace-expert review pending.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-mamoru-021-p1",
+      "wording": "Manager, 2026-01-15: \"If you complete certification X by 30 June 2026, I will recommend you for the senior role.\"",
+      "location": "L1",
+      "claim_type": "commitment",
+      "critical": true,
+      "critical_reason": "The original condition and promised recommendation define the commitment; final promotion was not promised.",
+      "preserve": "Completion of certification X by 30 June 2026 would trigger a manager recommendation, not guaranteed promotion."
+    },
+    {
+      "proposition_id": "pilot-mamoru-021-p2",
+      "wording": "Manager, 2026-06-20: \"You completed certification X on 14 June. Before I recommend you, you also need to lead project Y.\"",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The completion acknowledgment and later project requirement establish the chronology of changed criteria.",
+      "preserve": "Certification completed on 14 June; project Y added on 20 June before recommendation; no supplied agreement to the new requirement."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-mamoru-021-p1",
+      "evidence_id": "pilot-mamoru-021-record",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The synthetic record contains the original conditional recommendation wording, not a final-promotion guarantee."
+    },
+    {
+      "proposition_id": "pilot-mamoru-021-p2",
+      "evidence_id": "pilot-mamoru-021-record",
+      "location": "L2",
+      "status": "supported",
+      "establishes": "The synthetic record acknowledges completion and adds a later requirement; it does not establish intent or acceptance of that requirement."
+    }
+  ],
+  "reasoning_gaps": [
+    "Whether the employee accepted project Y, when the recommendation will occur, and who decides promotion are unspecified."
+  ],
+  "answerability": "The supplied records show that the original condition was met and a new criterion was added later. Clarify whether the recommendation will proceed and whether project Y was actually agreed; intent remains unknown.",
+  "problem_labels": [
+    "later-criteria-change",
+    "authority-limit"
+  ],
+  "acceptable_outputs": [
+    "Summarize the January recommendation commitment, June completion, and later project-Y requirement without erasing the chronology.",
+    "Possible clarification: ‘The January message named certification X as the condition, which I completed on 14 June. Will you now make the recommendation, or are you proposing project Y as a new condition? If so, when would we review it?’"
+  ],
+  "forbidden_changes": [
+    "Claiming promotion was guaranteed, treating recommendation authority as final approval authority, or diagnosing manipulation from the changed criteria alone.",
+    "Retroactively treating project Y as part of the original agreement or asserting employee acceptance."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "disagreements": [],
+  "adjudication": null
+}

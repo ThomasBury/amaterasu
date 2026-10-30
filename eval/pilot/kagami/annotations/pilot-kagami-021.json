@@ -1,0 +1,68 @@
+{
+  "annotation_id": "pilot-kagami-021-author-v1",
+  "case_id": "pilot-kagami-021",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-021-p1",
+      "wording": "We are actualizing adaptive human-capital synergies.",
+      "location": "L1",
+      "substance": "no-determinate-proposition",
+      "claim_type": "indeterminate",
+      "critical": true,
+      "critical_reason": "The user needs empty wording distinguished from a concrete organizational claim.",
+      "preserve": "No determinate operational proposition is recoverable; ask what the team does and what changes."
+    },
+    {
+      "proposition_id": "pilot-kagami-021-p2",
+      "wording": "In September, our six-person team closed 42 support tickets.",
+      "location": "L2",
+      "substance": "clear",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The concrete result must not be discarded with the empty sentence or treated as independently verified.",
+      "preserve": "Six-person team; 42 support tickets; September; year unspecified; factual support unchecked."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-021-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "No determinate proposition is available for factual verification; clarification is required before evidence assessment."
+    },
+    {
+      "proposition_id": "pilot-kagami-021-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "The post states a concrete result, but no independent evidence was examined."
+    }
+  ],
+  "reasoning_gaps": [
+    "The operational meaning of L1 and the year and evidentiary basis of L2 are unresolved."
+  ],
+  "answerability": "L1 has no determinate operational proposition. L2 is clear enough to assess but its factual support was not checked.",
+  "problem_labels": [
+    "no-determinate-proposition",
+    "clear-but-unchecked"
+  ],
+  "acceptable_outputs": [
+    "Quote L1 and ask what the team actually does and what changes; separately retain the September six-person, 42-ticket claim as clear but unchecked.",
+    "Do not require evidence verification for the empty sentence before identifying its missing meaning."
+  ],
+  "forbidden_changes": [
+    "Inventing an HR program or business outcome for L1.",
+    "Calling the author dishonest or treating L2 as verified or as evidence of productivity."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

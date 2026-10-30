@@ -3,22 +3,24 @@
 Use this guide to review proposed interpretations, check the repository files,
 or test how an assistant behaves with a skill.
 
-All four skills have 20 fictional practice cases each, for 80 cases in total.
-Their proposed answers were prepared by AI and still need independent human
-judgment. Mamoru's [workplace-expert review](mamoru-expert-review.md) is pending.
+The pilot contains 90 fictional practice cases: 24 for Kagami, 23 for Kotoba,
+21 for Kakehashi, and 22 for Mamoru. Their proposed answers were prepared by AI
+and still need independent human judgment. Mamoru's
+[workplace-expert review](mamoru-expert-review.md) is pending.
 No independent assistant comparisons or reader-study results are available yet.
 
 The [reviewer instructions](annotation-rubric.md) explain how to judge cases and
 answers. For the checks already performed, see the [Kagami](kagami-verification.md),
-[Kotoba](kotoba-verification.md), [Kakehashi](kakehashi-verification.md), and
-[Mamoru](mamoru-verification.md) records. Those file checks and author walkthroughs
-do not establish whether the skills improve reasoning or understanding.
+[Kotoba](kotoba-verification.md), [Kakehashi](kakehashi-verification.md),
+[Mamoru](mamoru-verification.md), and [substance workflow](substance-workflow-verification.md)
+records. Those file checks and author walkthroughs do not establish whether the
+skills improve reasoning or understanding.
 
 ## Choose your task
 
 | I want to... | Start here | What I will produce |
 | --- | --- | --- |
-| Review Mamoru's proposed interpretations | [Review Mamoru](#review-mamoru) | Decisions on 20 fictional cases, with corrections and reasons |
+| Review Mamoru's proposed interpretations | [Review Mamoru](#review-mamoru) | Decisions on 22 fictional cases, with corrections and reasons |
 | Check that the files and packages are consistent | [Run local file checks](#run-local-file-checks) | Command results and any errors |
 | Test whether a skill helps an assistant | [Evaluate skill behavior](#evaluate-skill-behavior) | Recorded assistant answers and separate human assessments |
 
@@ -47,7 +49,7 @@ A complete release evaluation also needs new test cases and a reader study.
 ## Review Mamoru
 
 This path is for the workplace expert reviewing the proposed interpretations.
-You need workplace experience and the [20-case review sheet](mamoru-expert-review.md).
+You need workplace experience and the [22-case review sheet](mamoru-expert-review.md).
 You can complete it without Python, terminal commands, or an AI assistant.
 
 1. Open the sheet and read its instructions.
@@ -59,7 +61,7 @@ You can complete it without Python, terminal commands, or an AI assistant.
 5. Send your assessment to the project maintainer, for example in the review
    conversation, using the sheet's reply template. Exclude confidential examples.
 
-You are done when all 20 cases have a decision or an explicit unresolved concern
+You are done when all 22 cases have a decision or an explicit unresolved concern
 and your assessment has been submitted. The maintainer records your review
 separately, preserves disagreements, and addresses corrections. Unresolved
 expert concerns must be addressed before milestone 5 can be closed. Reading
@@ -88,7 +90,7 @@ uv run --locked skills-ref validate skills/mamoru
 2. Run the validator. With the current pilot it should report:
 
    ```text
-   Validated 4 skill packages and 80 pilot records; no behavioral score implied.
+   Validated 4 skill packages and 90 pilot records; no behavioral score implied.
    ```
 
 3. Run pytest. Its summary should say that all tests passed. The exact test
@@ -111,7 +113,9 @@ reviews in separate records; changing author labels to `independent` or
 `adjudicated` will make this validator reject them.
 
 Every proposition needs nonblank string wording and an explicit evidence
-relationship; critical propositions also need a nonblank reason. Unresolved or
+relationship; critical propositions also need a nonblank reason. Kagami requires
+a substance label, and no-determinate propositions must use `inapplicable` rather
+than conflating absent meaning with insufficient evidence. Unresolved or
 inapplicable relationships are valid and do not require a factual verdict.
 The [Kagami correction record](kagami-annotation-corrections.md) versions the
 2026-10-30 author-label repairs, with reasons and recoverable original labels.
@@ -303,7 +307,7 @@ above explain the order of work.
 
 | Stage | Kagami | Mamoru | Kotoba | Kakehashi | Total |
 | --- | --- | --- | --- | --- | --- |
-| Pilot, used to refine instructions and annotation | 20 | 20 | 20 | 20 | 80 |
+| Pilot, used to refine instructions and annotation | 24 | 22 | 23 | 21 | 90 |
 | New locked evaluation cases | 100 | 100 | 60 | 60 | 320 |
 
 The locked Kagami and Mamoru sets each contain **60 independent benign cases**.

@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-002-author-v2",
+  "annotation_id": "pilot-kagami-002-author-v3",
   "case_id": "pilot-kagami-002",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-002-p1",
       "wording": "Incidents rose from zero to four",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "The zero baseline and the increase to four determine which comparisons are defined.",
@@ -20,6 +21,7 @@
       "proposition_id": "pilot-kagami-002-p2",
       "wording": "a 400% increase.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "A percentage increase is undefined at the zero baseline, changing the conclusion.",

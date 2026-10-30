@@ -26,6 +26,8 @@ new one was proposed. Do not infer dishonest intent from lateness or failure.
 | Multiple dated records of public humiliation | Describe the documented words, occasions, and pattern without diagnosis. | A boundary or support request can address repeated conduct. |
 | One recollection or clipped quotation | Attribute the report and identify what context is missing. | Seek context if safe and useful; do not dismiss the experience or turn it into a settled allegation. |
 | Conflicting accounts or incomplete policy | Leave the conflict visible; a title cannot settle it. | Request the relevant record or clarify authority and applicable policy. |
+| New criteria appear after the agreed condition is met | Preserve the original criteria, completion record, and later addition separately; do not infer intent. | Ask whether the original commitment will be fulfilled and whether new criteria were actually agreed. |
+| A request is repeated after a clear refusal | Describe the refusal and renewed pressure; one exchange does not establish a repeated pattern or fake urgency. | Restate the boundary and ask for the deadline basis or required approval when relevant. |
 
 Separate evidence that words were written from evidence that an allegation
 inside those words is true. Do not demand corroboration before acknowledging a

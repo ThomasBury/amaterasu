@@ -97,9 +97,11 @@ when no search is performed; the Markdown skills cannot guarantee local processi
    is not a promise of approval. Assess wording and fulfillment separately.
 3. Build the relevant chronology, retaining conflicting dates and accounts.
    Separate observable conduct, plausible interpretations, and unknown intent.
+   Check whether criteria changed after completion or a request continued after
+   refusal; one exchange does not establish a repeated pattern or fake urgency.
    Consider repetition and power context. Ordinary firm feedback is not itself
-   abuse; an explicit threat does not require repetition to be recognized.
-   A missed outcome alone does not establish deception.
+   abuse; an explicit threat does not require repetition. A missed outcome alone
+   does not establish deception.
 4. Offer proportionate options tied to supported concerns and user purpose:
    clarification, a firm boundary, private factual documentation, or seeking
    support. Describe what each addresses and any relevant uncertainty. Do not

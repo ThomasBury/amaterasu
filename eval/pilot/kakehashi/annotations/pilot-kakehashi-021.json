@@ -1,0 +1,87 @@
+{
+  "annotation_id": "pilot-kakehashi-021-author-v1",
+  "case_id": "pilot-kakehashi-021",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kakehashi-021-p1",
+      "wording": "We actualize adaptive people synergy.",
+      "location": "L1",
+      "claim_type": "indeterminate",
+      "critical": true,
+      "critical_reason": "Plain-English simplification must not manufacture the action or outcome missing from the source.",
+      "preserve": "No determinate action or outcome is supplied; ask what the organization does and what changes."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kakehashi-021-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "No determinate factual proposition is recoverable from the supplied context; the task is to disclose that gap, not verify an invented claim."
+    }
+  ],
+  "reasoning_gaps": [
+    "The organization's action, people involved, mechanism, and intended outcome are unspecified."
+  ],
+  "answerability": "A faithful common-English response can say that the statement does not specify what the organization does or what changes, then request a concrete action and result.",
+  "problem_labels": [
+    "no-determinate-proposition",
+    "no-invented-translation"
+  ],
+  "acceptable_outputs": [
+    "The statement does not explain what the organization actually does or what changes for its people. Ask for a concrete action and result.",
+    "An explanation may identify the abstract wording but must not assign it a specific program or benefit."
+  ],
+  "forbidden_changes": [
+    "Inventing training, collaboration, adaptation, improved performance, or any other specific program or outcome.",
+    "Calling the organization dishonest or treating unfamiliar wording alone as evidence of intent."
+  ],
+  "questions": [
+    {
+      "question_id": "pilot-kakehashi-021-q1",
+      "kind": "comprehension",
+      "prompt": "Does the source specify what the organization actually does?"
+    },
+    {
+      "question_id": "pilot-kakehashi-021-q2",
+      "kind": "scope",
+      "prompt": "Would a training program or improved performance be a supported plain-English interpretation?"
+    },
+    {
+      "question_id": "pilot-kakehashi-021-q3",
+      "kind": "action",
+      "prompt": "What should the reader request before assigning a concrete meaning?"
+    }
+  ],
+  "answer_key": [
+    {
+      "question_id": "pilot-kakehashi-021-q1",
+      "answer": "No. The action and resulting change are unspecified.",
+      "source_locations": [
+        "L1"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-021-q2",
+      "answer": "No. Neither a training program nor improved performance is supplied.",
+      "source_locations": [
+        "L1"
+      ]
+    },
+    {
+      "question_id": "pilot-kakehashi-021-q3",
+      "answer": "Ask what the organization does and what observable result changes.",
+      "source_locations": [
+        "L1"
+      ]
+    }
+  ],
+  "disagreements": [],
+  "adjudication": null
+}

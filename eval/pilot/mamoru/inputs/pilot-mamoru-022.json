@@ -1,0 +1,26 @@
+{
+  "case_id": "pilot-mamoru-022",
+  "skill": "mamoru",
+  "task": "Interpret the renewed request after my refusal and suggest a bounded response.",
+  "input": {
+    "L1": "Manager, 2026-10-29 15:10: \"Send the client files by 17:00 today.\" No deadline basis is supplied.",
+    "L2": "Analyst, 2026-10-29 15:14: \"I cannot send them until access approval is confirmed.\"",
+    "L3": "Manager, 2026-10-29 15:16: \"Stop being difficult and send them now. Your refusal is noted.\""
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Describe the observable pressure and preserve the approval boundary without diagnosing intent.",
+    "audience": "Analyst seeking interpretation and response options",
+    "roles": "Manager and analyst; access-approval authority and applicable policy are unspecified.",
+    "chronology": "Use the dated fictional records in L1–L3; no earlier exchanges are supplied.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions, legal judgment, or claim that urgency was fabricated."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-022-record"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "case_id": "pilot-kotoba-021",
+  "skill": "kotoba",
+  "task": "Revise this LinkedIn post to remove empty abstraction without losing the supplied result.",
+  "input": {
+    "L1": "We are pioneering a new paradigm of people-centric innovation.",
+    "L2": "Our four-person support team reduced median first-response time from 18 hours to 6 hours between January and March."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Publish a concrete professional update.",
+    "audience": "Professional contacts",
+    "roles": "Synthetic writer and readers; no external authority granted.",
+    "chronology": "The supplied comparison is between January and March; no year is supplied.",
+    "constraints": "Use supplied facts only. Do not invent a cause, year, customer impact, or general productivity claim."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

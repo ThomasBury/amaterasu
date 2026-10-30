@@ -1,0 +1,114 @@
+{
+  "annotation_id": "pilot-kotoba-022-author-v1",
+  "case_id": "pilot-kotoba-022",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-022-p1",
+      "wording": "results-driven",
+      "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "Generic self-praise must not be converted into invented leadership achievements.",
+      "preserve": "No specific result is supplied by this phrase; omit it rather than fabricating substance."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p4",
+      "wording": "engineering leader",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The professional domain and leadership role are substantive even though the surrounding praise is empty.",
+      "preserve": "The applicant describes an engineering-leadership role; do not erase or inflate it."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p5",
+      "wording": "leverages cross-functional synergy",
+      "location": "L1",
+      "claim_type": "interpretation",
+      "critical": false,
+      "critical_reason": null,
+      "preserve": "No specific cross-functional action is supplied; omit the empty phrase."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p2",
+      "wording": "Led the migration of 24 services.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The applicant's concrete leadership action and service count must survive.",
+      "preserve": "The applicant led a migration of 24 services."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p3",
+      "wording": "Dates and measured outcomes not supplied.",
+      "location": "L3",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The application must show rather than hide missing evidence.",
+      "preserve": "Migration dates and measured outcomes are not supplied."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-022-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "The generic self-praise supplies no independently assessable result for the revision."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p4",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "not checked",
+      "establishes": "The applicant supplies an engineering-leadership role; its precise title and scope were not independently checked."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p5",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "No concrete cross-functional action is supplied for verification or preservation."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "The migration is supplied by the applicant and not independently verified."
+    },
+    {
+      "proposition_id": "pilot-kotoba-022-p3",
+      "evidence_id": null,
+      "location": "L3",
+      "status": "not checked",
+      "establishes": "The source explicitly identifies missing dates and outcomes."
+    }
+  ],
+  "reasoning_gaps": [
+    "Migration dates, measured outcomes, technical scope, and team size are missing."
+  ],
+  "answerability": "A bounded first-person summary is possible if the engineering-leadership role survives alongside visible date and outcome gaps.",
+  "problem_labels": [
+    "empty-self-praise-removal",
+    "visible-gaps"
+  ],
+  "acceptable_outputs": [
+    "Engineering leader who led the migration of 24 services. [Migration dates and measured outcomes not supplied.]",
+    "A question asking for migration dates and measurable outcomes may accompany the draft."
+  ],
+  "forbidden_changes": [
+    "Inventing successful completion, downtime reduction, cost savings, dates, team size, technologies, or business impact; deleting the engineering-leadership role.",
+    "Replacing generic self-praise with another unsupported claim of excellence."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

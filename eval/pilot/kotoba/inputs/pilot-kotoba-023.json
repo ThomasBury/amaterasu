@@ -1,0 +1,24 @@
+{
+  "case_id": "pilot-kotoba-023",
+  "skill": "kotoba",
+  "task": "Revise this AI product announcement without hype or unsupported outcomes.",
+  "input": {
+    "L1": "Our revolutionary AI transforms knowledge work.",
+    "L2": "Internal prototype test: summarized 20 supplied reports; accuracy and customer outcomes were not measured."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Describe demonstrated capability while retaining test limits.",
+    "audience": "Prospective customers",
+    "roles": "Synthetic vendor and readers; no external authority granted.",
+    "chronology": "Original synthetic prototype test; test date and product version are unspecified.",
+    "constraints": "Use supplied facts only. Do not claim accuracy, customer value, production readiness, or broader capability."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

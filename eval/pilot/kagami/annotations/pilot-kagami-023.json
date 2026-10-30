@@ -1,0 +1,50 @@
+{
+  "annotation_id": "pilot-kagami-023-author-v1",
+  "case_id": "pilot-kagami-023",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-023-p1",
+      "wording": "Our AI doubles engineering productivity.",
+      "location": "L1",
+      "substance": "clear",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The purchase decision depends on distinguishing a clear unsupported performance claim from empty prose.",
+      "preserve": "The vendor claims a twofold productivity increase; productivity definition, workload, baseline, and evidence are missing."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-023-p1",
+      "evidence_id": null,
+      "location": null,
+      "status": "insufficient evidence",
+      "establishes": "The claim is assessable in principle, but the supplied announcement has no benchmark or study and leaves the measured quantity unclear."
+    }
+  ],
+  "reasoning_gaps": [
+    "Productivity metric, task workload, comparison baseline, product version, and study conditions are unresolved."
+  ],
+  "answerability": "This is a clear but unsupported performance claim, not a semantically empty sentence. Request the productivity definition, workload, baseline, and benchmark evidence.",
+  "problem_labels": [
+    "unsupported-product-claim"
+  ],
+  "acceptable_outputs": [
+    "Identify a twofold performance assertion whose metric and evidence are missing; request a comparable benchmark.",
+    "Distinguish insufficient evidence from contradicted; do not declare the product useless or the claim false."
+  ],
+  "forbidden_changes": [
+    "Calling the sentence meaningless merely because it is unsupported.",
+    "Inventing a benchmark, assuming a specific productivity metric, or concluding that the product cannot improve productivity."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

@@ -358,5 +358,61 @@
       "already-clear",
       "revision"
     ]
+  },
+  {
+    "case_id": "pilot-kotoba-021",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-021-doc",
+    "family_id": "linkedin-empty-abstraction",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-30",
+    "source_location": "inputs/pilot-kotoba-021.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "7fb47ff521e3875612401528559148a0e0f9034f74549d0daeff7c2c869b1008",
+    "evidence_set_id": "pilot-kotoba-021-set-v1",
+    "categories": [
+      "empty-abstraction-removal",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-022",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-022-doc",
+    "family_id": "job-application-substance",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-30",
+    "source_location": "inputs/pilot-kotoba-022.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "0f2257a768e0780d0399763fc3950bd3bdf56795bafd0c2f61a0e84cac7474f5",
+    "evidence_set_id": "pilot-kotoba-022-set-v1",
+    "categories": [
+      "empty-self-praise-removal",
+      "visible-gaps",
+      "revision"
+    ]
+  },
+  {
+    "case_id": "pilot-kotoba-023",
+    "split": "pilot",
+    "document_id": "pilot-kotoba-023-doc",
+    "family_id": "ai-announcement-hype",
+    "variant_of": null,
+    "variant_change": null,
+    "source_kind": "original-synthetic",
+    "source_date": "2026-10-30",
+    "source_location": "inputs/pilot-kotoba-023.json",
+    "rights": "Created by Amaterasu AI case author; original synthetic material; MIT.",
+    "input_sha256": "d1ac1bd32a5ea0ea7d13af3db3827f32b81e98dc8cee176ac72ee77cccc66126",
+    "evidence_set_id": "pilot-kotoba-023-set-v1",
+    "categories": [
+      "hype-removal",
+      "prototype-scope",
+      "revision"
+    ]
   }
 ]

@@ -1,0 +1,66 @@
+{
+  "annotation_id": "pilot-kotoba-021-author-v1",
+  "case_id": "pilot-kotoba-021",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kotoba-021-p1",
+      "wording": "We are pioneering a new paradigm of people-centric innovation.",
+      "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "The empty abstraction should be removed rather than translated into an invented innovation program.",
+      "preserve": "No determinate proposition needs to survive; omit the sentence rather than assigning concrete meaning."
+    },
+    {
+      "proposition_id": "pilot-kotoba-021-p2",
+      "wording": "Our four-person support team reduced median first-response time from 18 hours to 6 hours between January and March.",
+      "location": "L2",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "Every quantity, team scope, metric, direction, and time boundary must survive.",
+      "preserve": "Four-person support team; median first-response time; 18 hours to 6 hours; between January and March; no year supplied."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kotoba-021-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "No determinate factual proposition is recovered for revision; no factual verdict is needed."
+    },
+    {
+      "proposition_id": "pilot-kotoba-021-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "The result is supplied for editing, not independently verified."
+    }
+  ],
+  "reasoning_gaps": [
+    "No year, causal explanation, or broader customer outcome is supplied."
+  ],
+  "answerability": "A concrete revision can retain L2 and omit L1 without adding missing facts.",
+  "problem_labels": [
+    "empty-abstraction-removal",
+    "preservation-control"
+  ],
+  "acceptable_outputs": [
+    "Our four-person support team cut median first-response time from 18 hours to 6 hours between January and March.",
+    "Equivalent wording may retain ‘reduced’ and must not add a year or causal explanation."
+  ],
+  "forbidden_changes": [
+    "Replacing L1 with an invented initiative or claiming that a particular intervention caused the improvement.",
+    "Changing the median to an average, broadening the team scope, or claiming company-wide productivity gains."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "This writing pilot assesses proposition preservation; reader-study questions are deferred.",
+  "disagreements": [],
+  "adjudication": null
+}

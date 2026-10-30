@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-004-author-v2",
+  "annotation_id": "pilot-kagami-004-author-v3",
   "case_id": "pilot-kagami-004",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-004-p1",
       "wording": "B processes this batch in half the elapsed time of A on the same machine.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "The same batch, same machine, elapsed time, and relative result limit the supported performance claim.",

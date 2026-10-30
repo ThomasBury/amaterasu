@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-008-author-v2",
+  "annotation_id": "pilot-kagami-008-author-v3",
   "case_id": "pilot-kagami-008",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,7 +11,8 @@
       "proposition_id": "pilot-kagami-008-p1",
       "wording": "We operationalize exponential synergy across paradigms.",
       "location": "L1",
-      "claim_type": "factual assertion",
+      "substance": "no-determinate-proposition",
+      "claim_type": "indeterminate",
       "critical": true,
       "critical_reason": "Inventing an operational meaning would add substance the supplied text does not specify.",
       "preserve": "We operationalize exponential synergy across paradigms."
@@ -21,9 +22,9 @@
     {
       "proposition_id": "pilot-kagami-008-p1",
       "evidence_id": null,
-      "location": null,
-      "status": "insufficient evidence",
-      "establishes": "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom."
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "No determinate operational proposition is available for factual verification; ask what changes for whom before assessing evidence."
     }
   ],
   "reasoning_gaps": [
@@ -31,7 +32,7 @@
   ],
   "answerability": "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom.",
   "problem_labels": [
-    "insufficient-evidence"
+    "no-determinate-proposition"
   ],
   "acceptable_outputs": [
     "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom."
