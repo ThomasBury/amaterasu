@@ -1,9 +1,9 @@
 # Kagami annotation corrections — 2026-10-30
 
-This is a provisional AI-author review of all 20 Kagami annotations, not
-independent human adjudication. Cases 014 and 015 are now `author-v3`; the
-other 18 annotations are `author-v2`. All use rubric `pilot-2026-10-30` and
-remain `draft` records by the AI case author.
+This is a provisional AI-author review of the original 20 Kagami annotations, not
+independent human adjudication. Cases 014 and 015 are now `author-v4`; the
+other 18 original annotations are `author-v3`. All use rubric `pilot-2026-10-30`
+and remain `draft` records by the AI case author.
 
 All forbidden changes now name actual failures. Case-specific criticality
 reasons replace the generic reason. Independently assessable measurements and

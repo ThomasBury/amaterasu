@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-mamoru-021-author-v1",
+  "annotation_id": "pilot-mamoru-021-author-v2",
   "case_id": "pilot-mamoru-021",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -23,7 +23,7 @@
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "The completion acknowledgment and later project requirement establish the chronology of changed criteria.",
-      "preserve": "Certification completed on 14 June; project Y added on 20 June before recommendation; no supplied agreement to the new requirement."
+      "preserve": "In the 20 June message, the manager acknowledged certification completion dated 14 June and added project Y before recommendation; no supplied agreement to the new requirement or independent completion confirmation."
     }
   ],
   "evidence_relationships": [
@@ -43,20 +43,22 @@
     }
   ],
   "reasoning_gaps": [
-    "Whether the employee accepted project Y, when the recommendation will occur, and who decides promotion are unspecified."
+    "Whether the employee accepted project Y, when the recommendation will occur, and who decides promotion are unspecified.",
+    "Certification completion is acknowledged by the manager but has no independent corroboration in the supplied records."
   ],
-  "answerability": "The supplied records show that the original condition was met and a new criterion was added later. Clarify whether the recommendation will proceed and whether project Y was actually agreed; intent remains unknown.",
+  "answerability": "The manager acknowledged completion before the agreed 30 June 2026 deadline and added a new criterion on 20 June. Completion is not independently corroborated. Clarify whether the recommendation will proceed and whether project Y was actually agreed; intent remains unknown.",
   "problem_labels": [
     "later-criteria-change",
     "authority-limit"
   ],
   "acceptable_outputs": [
-    "Summarize the January recommendation commitment, June completion, and later project-Y requirement without erasing the chronology.",
-    "Possible clarification: ‘The January message named certification X as the condition, which I completed on 14 June. Will you now make the recommendation, or are you proposing project Y as a new condition? If so, when would we review it?’"
+    "Summarize the January recommendation commitment, the manager’s acknowledgment of timely completion, and the later project-Y requirement without erasing attribution or chronology.",
+    "Possible clarification: ‘The January message named certification X by 30 June 2026 as the condition. Your 20 June message acknowledged completion on 14 June. Will you now make the recommendation, or are you proposing project Y as a new condition? If so, when would we review it?’"
   ],
   "forbidden_changes": [
     "Claiming promotion was guaranteed, treating recommendation authority as final approval authority, or diagnosing manipulation from the changed criteria alone.",
-    "Retroactively treating project Y as part of the original agreement or asserting employee acceptance."
+    "Retroactively treating project Y as part of the original agreement or asserting employee acceptance.",
+    "Treating the manager’s completion acknowledgment as independent confirmation of certification completion."
   ],
   "questions": [],
   "answer_key": [],

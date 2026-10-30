@@ -42,7 +42,7 @@ or automatic orchestration was added.
 | Kotoba 022 | A job-application draft retains the engineering-leadership role, 24 migrated services, and visible date/outcome gaps without invented success or business impact. |
 | Kotoba 023 | AI hype becomes an internal 20-report prototype statement with both accuracy and customer-outcome limitations beside the draft. |
 | Kakehashi 021 | Plain English discloses the missing action and result instead of inventing a program or benefit; all three answer keys reject fabricated meaning. |
-| Mamoru 021 | Completion on 14 June meets the explicit 30 June 2026 deadline; the later project requirement retains its chronology, recommendation remains distinct from final promotion, and intent remains unknown. |
+| Mamoru 021 | The manager acknowledges completion on 14 June before the explicit 30 June 2026 deadline; no independent completion confirmation is supplied. The later project requirement retains its chronology, recommendation remains distinct from final promotion, and intent remains unknown. |
 | Mamoru 022 | Renewed pressure after an approval-based refusal is described exactly without fabricating urgency, diagnosing bullying, or authorizing transfer. |
 
 These are author-created calibration examples, not observed model outputs or
@@ -71,6 +71,15 @@ Results on 2026-10-30:
   provenance, evidence hashes, and mutation checks.
 - Official `skills-ref` validation: all four packages pass.
 - `git diff --check`: no whitespace errors.
+
+## PR review follow-up
+
+Mamoru 021 now keeps completion attributed to the manager’s acknowledgment in
+the annotation, proposed response, and expert-review sheet. Mamoru 022 classifies
+the attributed file-transfer request as a factual assertion, not a commitment.
+Both annotations advance to `author-v2`; their previous `author-v1` records are
+recoverable from Git commit `fa1915f`. The Kagami correction summary now names the
+current versions while retaining the earlier recovery instructions.
 
 ## Remaining limits
 

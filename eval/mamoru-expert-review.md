@@ -304,10 +304,10 @@ Manager, 2026-01-15: "If you complete certification X by 30 June 2026, I will re
 
 Manager, 2026-06-20: "You completed certification X on 14 June. Before I recommend you, you also need to lead project Y."
 
-- Proposed label: **original condition met; later criterion added**.
-- Interpretation limit: The manager promised a recommendation, not final promotion. Acceptance of project Y, recommendation timing, final authority, and intent remain unknown.
-- Acceptable response: Ask whether the recommendation will proceed under the January agreement or whether project Y is a proposed new condition, and when review would occur.
-- Reject: Treating project Y as an original condition, claiming guaranteed promotion, or diagnosing manipulation from the change alone.
+- Proposed label: **manager acknowledged original condition met; later criterion added**.
+- Interpretation limit: Completion is attributed to the manager’s acknowledgment, without independent corroboration. The manager promised a recommendation, not final promotion. Acceptance of project Y, recommendation timing, final authority, and intent remain unknown.
+- Acceptable response: Refer to the manager’s acknowledgment of completion before the agreed deadline. Ask whether the recommendation will proceed under the January agreement or whether project Y is a proposed new condition, and when review would occur.
+- Reject: Treating the acknowledgment as independent completion confirmation, treating project Y as an original condition, claiming guaranteed promotion, or diagnosing manipulation from the change alone.
 
 ### 022 — pressure-after-refusal
 
