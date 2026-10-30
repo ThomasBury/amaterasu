@@ -66,7 +66,81 @@ You need an AI assistant that can load local skill folders. Amaterasu’s skills
 are plain-text Markdown files; Python is only needed for the optional evaluation
 tools.
 
-### 1. Get the files
+Choose **one installation route per agent**. Installing a plugin and local copies
+can make each skill appear twice. The GitHub plugin commands require a published
+revision containing the metadata added here. See the
+[installation record](eval/installation-verification.md) for tested routes and
+remaining host checks.
+
+### Claude Code plugin
+
+```sh
+claude plugin marketplace add ThomasBury/amaterasu
+claude plugin install amaterasu@amaterasu
+```
+
+Start a new session and invoke `/amaterasu:kagami`, `/amaterasu:kotoba`,
+`/amaterasu:kakehashi`, or `/amaterasu:mamoru`.
+
+Third-party marketplaces do **not** automatically update by default. Open
+`/plugin`, select **Marketplaces**, choose `amaterasu`, and enable auto-update
+if wanted. For manual updates:
+
+```sh
+claude plugin marketplace update amaterasu
+claude plugin update amaterasu@amaterasu
+```
+
+See [Claude's plugin guide](https://code.claude.com/docs/en/plugins/install).
+Claude runtime verification remains pending.
+
+### Codex plugin
+
+```sh
+codex plugin marketplace add ThomasBury/amaterasu
+codex plugin add amaterasu@amaterasu
+```
+
+Start a new session and select a packaged skill from `/skills` or the `$` picker.
+Use the name shown in the catalog. For an explicit refresh:
+
+```sh
+codex plugin marketplace upgrade amaterasu
+codex plugin add amaterasu@amaterasu
+```
+
+Do not rely on startup updates until verified for your version. See
+[OpenAI's plugin guide](https://developers.openai.com/plugins/build/plugins)
+and the [tested status](docs/compatibility.md).
+
+### Other agents, or editable local files
+
+Run the [Skills CLI](https://github.com/vercel-labs/skills) in your destination
+project. It requires Node.js/npm and downloads folders directly from GitHub;
+Amaterasu does not require an npm package.
+
+```sh
+npx skills@latest add ThomasBury/amaterasu -a <agent>
+```
+
+Replace `<agent>` with `codex`, `claude-code`, `github-copilot`, `gemini-cli`,
+`opencode`, or another supported agent. Omit `-a <agent>` to choose interactively.
+Choose skills in the installer, add `--skill kagami` for just Kagami, or
+`--skill '*'` for all four. Installation is project-local by default; `-g`
+selects a user-level installation. Add `--copy` for editable copies instead of
+links. Compare local edits before updating or replacing them.
+
+```sh
+npx skills@latest check
+npx skills@latest update
+```
+
+Check the CLI's reported scope. If `update` does not track your project-local
+copy, re-run its original `add` command. Re-run `add` to select new skills.
+
+### ZIP or manual copying
+
+#### 1. Get the files
 
 [Download the ZIP](https://github.com/ThomasBury/amaterasu/archive/refs/heads/main.zip)
 and extract it, or clone the repository:
@@ -76,7 +150,7 @@ git clone https://github.com/ThomasBury/amaterasu.git
 cd amaterasu
 ```
 
-### 2. Copy the skills into your project
+#### 2. Copy the skills into your project
 
 Copy the folders you want from `amaterasu/skills/` into the location for your
 assistant. A project can be a folder where you keep documents as well as a code
@@ -113,21 +187,23 @@ cp -R skills/kagami "/path/to/my-project/.agents/skills/"
 For Claude Code, use `.claude/skills/` instead. Repeat for any other skills you
 want. If a destination skill already exists, compare it before replacing it.
 
-### 3. Select a skill
+#### 3. Select a skill
 
 Open your assistant in the destination project. In Codex, use `/skills` or type
 `$` to select the installed skill. In Claude Code, invoke it with `/kagami`, for
 example. If it does not appear, restart the assistant and check the folder layout.
 
-These paths follow the linked host documentation. Installation and behavior in
-these assistants have not yet been tested by this project. See the
+These paths follow the linked host documentation. See the
+[installation record](eval/installation-verification.md) for observed results and the
 [portability guide](docs/compatibility.md) for other intended hosts and the checks
 required before claiming compatibility.
 
 ## Put it to work
 
 Choose a prompt below and add your material. These examples use Codex’s `$name`
-syntax; in Claude Code, replace it with `/name`.
+syntax for standalone copies. With the Claude plugin, replace it with
+`/amaterasu:name`; with standalone Claude copies, use `/name`. With the Codex
+plugin, select the matching packaged skill from its catalog before adding your task.
 
 **Check a proposal with Kagami**
 
