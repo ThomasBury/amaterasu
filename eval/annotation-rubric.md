@@ -3,7 +3,7 @@
 Use this guide to record what a case means and then judge an assistant's answer.
 An **annotation** is your written judgment. The **rubric** is the set of rules
 below. A **case** is one example containing a task, source text, context, and any
-permitted evidence. The current **pilot** contains 80 practice cases used to
+permitted evidence. The current **pilot** contains 90 practice cases used to
 improve the instructions before testing new cases.
 
 The `pilot-2026-10-30` clarification below applies to the revised Kagami author
@@ -128,7 +128,7 @@ Do not store private source material in public evidence artifacts.
 | Field | Required meaning |
 | --- | --- |
 | `annotation_id`, `case_id`, `annotator_id`, `rubric_version`, `state` | Traceable annotation and draft/independent/adjudicated state. Record authorship and expertise separately. |
-| `propositions` | Stable IDs, nonblank string wording at an exact source location, claim type, critical flag, a nonblank reason when critical, and conditions/attribution/quantities/scope that must survive. |
+| `propositions` | Stable IDs, nonblank string wording at an exact source location, claim type, critical flag, a nonblank reason when critical, and conditions/attribution/quantities/scope that must survive. Kagami also requires a substance label. |
 | `evidence_relationships` | At least one explicit relationship for every proposition: proposition ID, evidence ID/location, status, and what the evidence establishes or leaves unresolved. Insufficient evidence, not checked, and inapplicable remain valid; use null evidence/location where appropriate. |
 | `reasoning_gaps` | Specific unsupported step or alternative explanation; distinguish it from a false premise. |
 | `answerability`, `problem_labels` | What can be settled from permitted evidence, what must remain unresolved, and why. A clear ambiguity can be identified even if the underlying fact cannot be settled. |
@@ -150,10 +150,21 @@ a reason when a dimension genuinely does not apply.
 
 ## Labeling decisions
 
-### Claim type and status
+### Substance, claim type, and status
+
+For Kagami, label each proposition's substance as `clear`,
+`vague-but-repairable`, or `no-determinate-proposition`. Clear propositions can
+be assessed without strengthening the source. Vague but repairable wording has
+a recoverable point with missing details. No determinate proposition means the
+supplied context does not recover an assessable claim; quote the wording and
+record the clarification needed. This is separate from factual support.
 
 Use factual assertion, interpretation, opinion, prediction, aspiration, or
-commitment. A sentence may contain several types. Split it into separate statements when
+commitment for recoverable propositions. Use `indeterminate` only when no
+proposition is recoverable. A no-determinate Kagami proposition must use the
+`inapplicable` evidence status, not `insufficient evidence`: clarification must
+precede factual assessment. A clear but unsupported claim can instead have
+insufficient evidence. A sentence may contain several types. Split it into separate statements when
 the evidence for each part can differ. A conditional promise keeps its condition. A quotation retains its
 speaker. “The report says X” and “X happened” are different propositions.
 

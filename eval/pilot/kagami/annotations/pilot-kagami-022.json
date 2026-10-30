@@ -1,0 +1,68 @@
+{
+  "annotation_id": "pilot-kagami-022-author-v1",
+  "case_id": "pilot-kagami-022",
+  "annotator_id": "amaterasu-ai-author",
+  "annotator_role": "AI case author; not independent",
+  "expertise": "No independent domain expertise asserted.",
+  "rubric_version": "pilot-2026-10-30",
+  "state": "draft",
+  "propositions": [
+    {
+      "proposition_id": "pilot-kagami-022-p1",
+      "wording": "You will drive transformative stakeholder alignment.",
+      "location": "L1",
+      "substance": "no-determinate-proposition",
+      "claim_type": "indeterminate",
+      "critical": true,
+      "critical_reason": "The applicant needs to know which duty lacks an actionable meaning.",
+      "preserve": "No specific action, stakeholders, or outcome is supplied; ask what the role must actually do."
+    },
+    {
+      "proposition_id": "pilot-kagami-022-p2",
+      "wording": "You will maintain the payroll database and reconcile monthly totals.",
+      "location": "L2",
+      "substance": "clear",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The concrete duties must remain distinct from the empty wording.",
+      "preserve": "Maintain the payroll database and reconcile monthly totals."
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "proposition_id": "pilot-kagami-022-p1",
+      "evidence_id": null,
+      "location": "L1",
+      "status": "inapplicable",
+      "establishes": "No determinate duty or outcome is available for factual verification; clarification must precede evidence assessment."
+    },
+    {
+      "proposition_id": "pilot-kagami-022-p2",
+      "evidence_id": null,
+      "location": "L2",
+      "status": "not checked",
+      "establishes": "The advertisement states two concrete duties; their performance or accuracy was not examined."
+    }
+  ],
+  "reasoning_gaps": [
+    "Stakeholders, actions, and expected result in L1 are unspecified."
+  ],
+  "answerability": "L1 is vague to the point of no determinate operational duty. L2 states concrete payroll-database maintenance and monthly reconciliation duties.",
+  "problem_labels": [
+    "no-determinate-proposition",
+    "concrete-duty-control"
+  ],
+  "acceptable_outputs": [
+    "Identify L1 as lacking specific work or outcome and ask what the employee would do; explain L2 as two concrete stated duties.",
+    "A plain-English explanation may clarify L2 without adding qualifications, tools, frequency beyond monthly totals, or performance standards."
+  ],
+  "forbidden_changes": [
+    "Inventing stakeholder meetings, influence skills, KPIs, or seniority from L1.",
+    "Flagging the meaningful payroll duties as corporate bullshit or accusing the employer of deception."
+  ],
+  "questions": [],
+  "answer_key": [],
+  "questions_reason": "Reader-study questions are not part of this Kagami pilot.",
+  "disagreements": [],
+  "adjudication": null
+}

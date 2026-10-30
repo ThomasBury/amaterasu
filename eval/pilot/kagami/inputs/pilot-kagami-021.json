@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kagami-021",
+  "skill": "kagami",
+  "task": "Audit this LinkedIn-style post for substance and factual support.",
+  "input": {
+    "L1": "We are actualizing adaptive human-capital synergies.",
+    "L2": "In September, our six-person team closed 42 support tickets."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Separate empty wording from a clear but unchecked result.",
+    "audience": "Prospective applicant reading a public post",
+    "roles": "Synthetic employer and reader; no external authority granted.",
+    "chronology": "All events are fictional; September has no supplied year.",
+    "constraints": "Use supplied text only. Do not infer intent or invent an operational meaning."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

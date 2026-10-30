@@ -2,11 +2,31 @@
 
 ## Procedure and limits
 
-Separate meaning, support, and inference. Split independently assessable clauses,
-but keep conditions and attribution attached. “The memo alleges a leak” can be
-supported by the memo while “a leak occurred” remains unresolved. Vague language
-may warrant clarification; it does not establish dishonesty or meaninglessness.
-A source's title, confidence, popularity, or commercial interest is not a verdict.
+Separate meaning, support, and inference. Before checking evidence, classify each
+consequential passage as a **clear proposition**, **vague but repairable**, or
+having **no determinate proposition** in the supplied context. This is a meaning
+assessment, not a truth verdict or a score.
+
+- A clear proposition identifies enough to assess without strengthening it.
+- Vague but repairable wording has a recoverable point but lacks details such as
+  actor, action, outcome, mechanism, baseline, or timeframe. Ask only for the
+  details needed for the user's decision.
+- No determinate proposition means the wording supplies no reliable operational
+  meaning. Quote it, state what cannot be determined, and ask what would change
+  for whom. Do not invent a concrete interpretation.
+
+“We operationalize exponential synergy across paradigms” has no determinate
+operational proposition without further context. “Our AI doubles productivity”
+is clear enough to examine but remains unsupported without a defined workload,
+baseline, and evidence. “We aspire to make tools understandable” is a meaningful
+aspiration, not a measurable commitment or proof of an outcome. Technical jargon
+is not empty merely because its audience needs an explanation.
+
+Split independently assessable clauses, but keep conditions and attribution
+attached. “The memo alleges a leak” can be supported by the memo while “a leak
+occurred” remains unresolved. Vague language may warrant clarification; it does
+not establish dishonesty. A source's title, confidence, popularity, or commercial
+interest is not a verdict.
 
 For each consequential claim inspect evidence and record title/ID, author if known,
 source date (or unknown), access date for retrieval, exact section/page/line, and

@@ -80,9 +80,10 @@ when no search is performed; the Markdown skills cannot guarantee local processi
 
 ## Kagami — Reflect claims against reality.
 
-**Activate** for requested verification or critical analysis of factual support,
-arguments, numbers, and technical or product claims. Do not silently turn an
-ordinary editing request into a credibility investigation.
+**Activate** for requested verification or critical analysis of semantic substance,
+corporate rhetoric, factual support, arguments, numbers, and technical or product
+claims. Do not silently turn an ordinary editing request into a credibility
+investigation.
 
 **Inputs:** original text or an accessible source, relevant context and date,
 and supplied evidence. Record what portion is accessible. Ask for missing
@@ -90,9 +91,11 @@ context only when it could change a conclusion.
 
 **Method:**
 
-1. Extract assessable claims with original wording and locations. Resolve
-   ambiguity without strengthening the claims.
-2. Inspect evidence, dates, comparison conditions, and source independence.
+1. Classify consequential passages as clear propositions, vague but repairable,
+   or having no determinate proposition. Quote gaps in meaning and ask resolving
+   questions without strengthening the source.
+2. Extract assessable claims with original wording and locations. Inspect
+   evidence, dates, comparison conditions, and source independence.
    Follow the public/private research boundary above.
 3. Identify the inference connecting grounds to conclusions, including
    assumptions, qualifications, exceptions, and plausible alternative explanations.
@@ -101,10 +104,11 @@ context only when it could change a conclusion.
    comparison conditions, implementation maturity, and demonstrated versus
    promised capability.
 
-**Output:** a brief conclusion, then a claim table with original wording/location,
-claim type, evidence status, supporting or conflicting source/location/date, and
-a concise explanation. Follow with reasoning gaps, questions or tests that could
-resolve them, and coverage limitations. Keep unresolved claims visible.
+**Output:** a brief conclusion, substance findings kept separate from factual
+verdicts, then a claim table with original wording/location, claim type, evidence
+status, supporting or conflicting source/location/date, and a concise explanation.
+Follow with reasoning gaps, resolving questions or tests, and coverage limitations.
+Keep unresolved claims visible.
 
 **Safeguards:** no overall credibility or “bullshit” score; no truth verdict from
 memory alone; no automatic penalty for commercial interests or credit for
@@ -133,10 +137,10 @@ structure, and accountable wording.
 commitments and constraints.
 
 **Method:** identify substantive propositions before editing; separate facts,
-interpretations, and proposed action; remove repetition and repair structure.
-Use a main-point-first brief (BLUF) or situation/background/assessment/recommendation
-(SBAR) only when the genre and task benefit. Compare the revision with the
-original proposition by proposition, including conditions and attribution.
+interpretations, and proposed action; remove repetition and empty abstraction.
+Use only supplied actions, mechanisms, results, or examples to make wording
+concrete. Use BLUF or SBAR only when useful. Compare the revision with every
+original proposition and new assertion, including conditions and attribution.
 
 **Output:** a usable draft, short notes on material changes, and unresolved
 factual gaps or visibly marked placeholders. Put missing evidence inside or
@@ -171,10 +175,11 @@ audience because it materially changes the output. Inspect the source while
 waiting, but do not silently choose the destination audience.
 
 **Method:** identify essential concepts and limitations; retain necessary terms
-and explain their contribution; connect findings to consequences supported by
-the source. Separate stated managerial requirements from proposed acceptance
-criteria and unresolved implementation choices. Give an analogy's relevant
-limit whenever using it to explain a concept.
+and explain their contribution; connect findings only to supported consequences.
+If no determinate source proposition exists, disclose that rather than inventing
+a plain-English mechanism or benefit. Separate stated managerial requirements
+from proposed acceptance criteria and unresolved implementation choices. Give an
+analogy's relevant limit whenever using one.
 
 **Output:** an audience-appropriate explanation or proposed technical
 interpretation, important qualifications, essential terminology, and unresolved
@@ -207,9 +212,10 @@ the user's account without dismissing the account.
 
 **Method:** identify who promised what, under which conditions, with what timing
 and acceptance criteria. Mark unspecified details explicitly. Separate
-observable conduct, plausible interpretations, and unknown intent. Consider
-repetition and power context; an explicit threat does not need repetition to
-be recognized.
+observable conduct, plausible interpretations, and unknown intent. Check whether
+criteria changed after completion or a request continued after refusal; one
+exchange does not establish a pattern or fake urgency. Consider repetition and
+power context; an explicit threat does not need repetition to be recognized.
 
 **Output:** a commitment summary with missing details; evidence-linked
 observations; uncertainties; and proportionate options such as clarification,
@@ -239,6 +245,7 @@ The user can choose these sequences; no skill invokes another automatically:
 
 | Sequence | Purpose | Preserve across the handoff |
 | --- | --- | --- |
+| Kagami → Kakehashi | Explain substance and evidence findings in plain English. | Original wording/locations, substance classifications, evidence statuses, qualifications, and unresolved questions; never invent meaning during translation. |
 | Kotoba → Kagami | Examine the revised proposal against original evidence. | Original propositions, draft, sources, and gaps; the revision is not new evidence. |
 | Kakehashi → Kotoba | Improve presentation of an audience adaptation. | Technical qualifications, audience, and distinction between requirements and proposals. |
 | Mamoru → Kotoba | Polish a selected response. | Documented conduct, uncertainties, firmness, and original limits on accusations or promises. |

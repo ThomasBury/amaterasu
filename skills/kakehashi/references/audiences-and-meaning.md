@@ -17,6 +17,14 @@ merely because it is uncommon. Define a term by its role: a median describes the
 middle of ordered observations, not their arithmetic average. Preserve the
 source's definition when conventions differ or details are incomplete.
 
+## Translation cannot recover absent meaning
+
+Simplifying words cannot turn an indeterminate statement into a fact. For “We
+actualize adaptive people synergy,” say that the source does not specify what the
+team does or what changes; ask for that information if it matters. Do not invent a
+program, mechanism, or benefit. By contrast, explain a meaningful technical term
+by its supplied role and limits.
+
 ## Requirements are not acceptance criteria
 
 For “Staff must be able to export monthly totals,” the export capability is

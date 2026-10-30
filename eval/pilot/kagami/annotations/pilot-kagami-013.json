@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-013-author-v2",
+  "annotation_id": "pilot-kagami-013-author-v3",
   "case_id": "pilot-kagami-013",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-013-p1",
       "wording": "Therefore, every site passed.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "interpretation",
       "critical": true,
       "critical_reason": "The universal quantifier exceeds the two visible sites and cannot be resolved from the fragment.",

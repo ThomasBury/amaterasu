@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-018-author-v2",
+  "annotation_id": "pilot-kagami-018-author-v3",
   "case_id": "pilot-kagami-018",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-018-p1",
       "wording": "Test finish yesterday",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "The reported completion time is distinct from the check outcomes.",
@@ -20,6 +21,7 @@
       "proposition_id": "pilot-kagami-018-p2",
       "wording": "all three checks pass.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "The result covers exactly three checks, not general product reliability.",

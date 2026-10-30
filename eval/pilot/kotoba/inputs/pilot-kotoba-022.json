@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-kotoba-022",
+  "skill": "kotoba",
+  "task": "Revise this job-application summary without empty self-praise or invented achievements.",
+  "input": {
+    "L1": "I am a results-driven engineering leader who leverages cross-functional synergy.",
+    "L2": "Led the migration of 24 services.",
+    "L3": "Dates and measured outcomes not supplied."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Draft an honest application summary with visible gaps.",
+    "audience": "Hiring manager",
+    "roles": "Synthetic applicant and hiring manager; no authority beyond the supplied wording.",
+    "chronology": "Original synthetic application; migration dates and outcomes are missing.",
+    "constraints": "Do not invent technical scope, team size, dates, success, business impact, or metrics."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [],
+  "writing_mode": "revision"
+}

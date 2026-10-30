@@ -278,5 +278,33 @@
     "origin_id": "pilot-mamoru-020-origin",
     "rights": "Original synthetic material; MIT.",
     "availability": "accessible"
+  },
+  {
+    "evidence_id": "pilot-mamoru-021-record",
+    "location": "evidence/pilot-mamoru-021.txt",
+    "title": "Synthetic scenario record 021",
+    "author": "Amaterasu AI case author",
+    "source_date": "2026-10-30",
+    "accessed_at": null,
+    "accessed_at_reason": "Locally authored synthetic record; no retrieval.",
+    "artifact": "pilot-mamoru-021.txt",
+    "sha256": "1aba64125115fe2fdd780e168ed6012143521f15e91796930191ac46cd316de5",
+    "origin_id": "pilot-mamoru-021-origin",
+    "rights": "Original synthetic material; MIT.",
+    "availability": "accessible"
+  },
+  {
+    "evidence_id": "pilot-mamoru-022-record",
+    "location": "evidence/pilot-mamoru-022.txt",
+    "title": "Synthetic scenario record 022",
+    "author": "Amaterasu AI case author",
+    "source_date": "2026-10-30",
+    "accessed_at": null,
+    "accessed_at_reason": "Locally authored synthetic record; no retrieval.",
+    "artifact": "pilot-mamoru-022.txt",
+    "sha256": "6bb6b4124207b9c67e973ffd7fbaca8a9f7ddd259c2f532fecf8abe702e7164c",
+    "origin_id": "pilot-mamoru-022-origin",
+    "rights": "Original synthetic material; MIT.",
+    "availability": "accessible"
   }
 ]

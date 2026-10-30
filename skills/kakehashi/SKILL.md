@@ -95,9 +95,10 @@ when no search is performed; the Markdown skills cannot guarantee local processi
    Keep necessary technical terms and explain what they contribute. A job title
    alone does not establish knowledge or authority.
 3. Adapt the explanation to the audience's task. Connect findings only to
-   consequences supported by the source. When using an analogy, state both the
-   useful correspondence and its relevant limit beside it. Omit analogies that
-   would obscure the mechanism or create a guarantee.
+   consequences supported by the source. If the source has no determinate
+   proposition, say so instead of inventing a plain-English mechanism or benefit.
+   When using an analogy, state both the useful correspondence and its relevant
+   limit beside it. Omit analogies that obscure the mechanism or create a guarantee.
 4. For requirements, distinguish stated requirements, proposed acceptance
    criteria, and unresolved implementation choices. Label any proposed threshold,
    test, owner, or date as a proposal, never an existing agreement. Do not invent

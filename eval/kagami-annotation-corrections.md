@@ -1,9 +1,9 @@
 # Kagami annotation corrections — 2026-10-30
 
-This is a provisional AI-author review of all 20 Kagami annotations, not
-independent human adjudication. Cases 014 and 015 are now `author-v3`; the
-other 18 annotations are `author-v2`. All use rubric `pilot-2026-10-30` and
-remain `draft` records by the AI case author.
+This is a provisional AI-author review of the original 20 Kagami annotations, not
+independent human adjudication. Cases 014 and 015 are now `author-v4`; the
+other 18 original annotations are `author-v3`. All use rubric `pilot-2026-10-30`
+and remain `draft` records by the AI case author.
 
 All forbidden changes now name actual failures. Case-specific criticality
 reasons replace the generic reason. Independently assessable measurements and
@@ -66,3 +66,21 @@ The superseded v2 files are recoverable from Git commit
 | --- | --- | --- |
 | pilot-kagami-014 | `3a06ff7a4a4f76bcdaf8d3776505f4de078e5e3dd1249afb671ed907b2c8ee56` | Lab A supports the threshold and Lab B contradicts it; neither relationship may attribute the other lab's result to its own source. Only the joint assessment is mixed. |
 | pilot-kagami-015 | `7e8d173bb1e4e12156bab946f72e6f50f7ac4fe9db142baa480f1d56188ae778` | News A alone leaves source independence unresolved. News B supplies the shared-origin information that contradicts independence. The joint answer attributes the 90% figure specifically to News A. |
+
+## Substance-label follow-up — 2026-10-30
+
+The substance workflow adds a required `substance` label to every Kagami
+proposition. Existing propositions are `clear` except case 008, which is
+`no-determinate-proposition`. Cases 014–015 advance to `author-v4`; the other
+original cases advance to `author-v3`. Their claim wording, evidence
+relationships, and answer keys otherwise remain unchanged. The previous versions
+are recoverable from Git commit `f9238a3` and the earlier commits above.
+
+Case 008 also separates absent meaning from missing evidence. Its previous v2
+annotation SHA-256 was
+`9e34f607970835119adb9a4d0c38ada0e5651c7203a660df05d43c1755209307`.
+The v3 record changes its claim type from `factual assertion` to `indeterminate`
+and its evidence status from `insufficient evidence` to `inapplicable`, because
+clarification must precede factual assessment. Its input and intended
+clarification response are unchanged. These remain provisional AI-author labels,
+not independent adjudication.

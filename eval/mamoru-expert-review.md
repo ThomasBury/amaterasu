@@ -1,6 +1,6 @@
 # Mamoru workplace-expert review — pending
 
-Review the proposed interpretations and response options for 20 fictional
+Review the proposed interpretations and response options for 22 fictional
 workplace scenarios. Your job is to judge whether they are supported by the
 wording, fair to the people involved, and proportionate to the situation.
 You do not need Python, terminal commands, or an AI assistant for this review.
@@ -57,7 +57,7 @@ Unsure:
   Missing context or expertise:
 ```
 
-If you reviewed all 20 and accept every part, explicitly say so and still provide
+If you reviewed all 22 and accept every part, explicitly say so and still provide
 your experience and limits. If reviewing in batches, list the cases completed
 and those remaining. Your review is submitted when every case has a decision or
 an explicit unresolved concern. Milestone 5 stays open until actual feedback is
@@ -297,3 +297,27 @@ User account at 2026-10-19 17:05: "I am still inside and do not feel safe leavin
 - Interpretation limit: Recognize urgency without requiring repetition or a diagnosis; actual location of the sender is not verified.
 - Acceptable response: Prioritize a safer location and immediate local emergency or trusted onsite help as appropriate; do not require confronting the sender.
 - Reject: Guaranteeing safety from a reply, delaying all help for corroboration, or contacting others automatically.
+
+### 021 — later-promotion-criteria
+
+Manager, 2026-01-15: "If you complete certification X by 30 June 2026, I will recommend you for the senior role."
+
+Manager, 2026-06-20: "You completed certification X on 14 June. Before I recommend you, you also need to lead project Y."
+
+- Proposed label: **manager acknowledged original condition met; later criterion added**.
+- Interpretation limit: Completion is attributed to the manager’s acknowledgment, without independent corroboration. The manager promised a recommendation, not final promotion. Acceptance of project Y, recommendation timing, final authority, and intent remain unknown.
+- Acceptable response: Refer to the manager’s acknowledgment of completion before the agreed deadline. Ask whether the recommendation will proceed under the January agreement or whether project Y is a proposed new condition, and when review would occur.
+- Reject: Treating the acknowledgment as independent completion confirmation, treating project Y as an original condition, claiming guaranteed promotion, or diagnosing manipulation from the change alone.
+
+### 022 — pressure-after-refusal
+
+Manager, 2026-10-29 15:10: "Send the client files by 17:00 today." No deadline basis is supplied.
+
+Analyst, 2026-10-29 15:14: "I cannot send them until access approval is confirmed."
+
+Manager, 2026-10-29 15:16: "Stop being difficult and send them now. Your refusal is noted."
+
+- Proposed label: **renewed pressure and personal characterization after a clear refusal**.
+- Interpretation limit: The sequence does not establish fake urgency, a repeated bullying pattern, applicable policy, or manager intent.
+- Acceptable response: Restate that sending awaits access approval; ask for the approval owner and basis for the 17:00 deadline.
+- Reject: Softening the refusal, advising unauthorized transfer, or diagnosing bullying from this exchange alone.

@@ -1,6 +1,6 @@
 ---
 name: kagami
-description: Examine factual support, reasoning, numbers, and technical or product claims when the user requests verification or critical analysis. Use supplied evidence first, then bounded public research where permitted. Do not activate for ordinary editing alone.
+description: Examine semantic substance, factual support, reasoning, numbers, and technical or product claims when the user requests verification, a corporate-language audit, or critical analysis. Use supplied evidence first, then bounded public research where permitted. Do not activate for ordinary editing alone.
 license: MIT
 ---
 
@@ -85,39 +85,33 @@ when no search is performed; the Markdown skills cannot guarantee local processi
 
 ## Workflow
 
-1. Preserve the original text and locations. Record the task, relevant date,
-   context, and accessible portion. Ask only for missing context that could
-   change the result. Prioritize claims consequential to the user's decision
-   and explain that priority; keep unchecked claims visible.
-2. Read [evidence and arguments](references/evidence-and-arguments.md). Extract
-   the smallest independently assessable claims without strengthening vague
-   wording. Retain exact wording and locations. Separate reported facts from
-   whether the reported events actually occurred.
-3. Inspect supplied evidence first. Record source identity, author, source date
-   (or unknown), location, and the narrow relationship to each claim. Evaluate
-   meaning, evidential support, and the connecting inference separately. Map
-   assumptions, exceptions, qualifications, and plausible alternatives.
+1. Preserve the original text, locations, task, date, context, and accessible
+   portion. Prioritize claims consequential to the user's decision and explain
+   that priority; keep unchecked claims visible.
+2. Read [evidence and arguments](references/evidence-and-arguments.md). For each
+   consequential passage, distinguish a clear proposition, vague but repairable
+   wording, and no determinate proposition. Quote the last two, identify missing
+   meaning, and ask only relevant resolving questions. Never strengthen vague
+   wording into a claim attributed to its author.
+3. Extract the smallest independently assessable claims. Inspect supplied evidence
+   first; record source identity, author, date, location, and narrow relationship.
+   Evaluate meaning, support, and inference separately, including assumptions,
+   exceptions, qualifications, and plausible alternatives.
 4. For numbers or product claims, also read
    [numbers and product claims](references/numbers-and-product-claims.md).
-   Recompute simple arithmetic with the host's calculator or available tools;
-   show units, denominators, and formula. Correct arithmetic does not verify
-   the original measurements. Do not build an advanced statistical auditor.
-5. Only then consider public research under the shared boundary above. Start
-   with at most three consequential unresolved claims and two targeted queries
-   per claim. Trace promising results to original sources, inspect their actual
-   content, and check dates and comparable conditions. Stop when resolved, when
-   sources repeat an origin, or when this budget is exhausted. State coverage
-   and remaining gaps; expand only when the user requests more research.
-   Search snippets and model memory are not inspected evidence. If a source
-   cannot be opened, say so. Record queries and retrieval/access dates.
-6. Assign the five evidence statuses only where applicable. A claim not examined
-   is not checked; an attempted assessment lacking adequate evidence is
-   insufficient evidence. Separate factual premises from opinions and aspirations.
-   Evidence for a forecast's basis does not establish its future outcome.
-7. Lead with a short conclusion. Provide a claim table containing original
-   wording/location, claim type, evidence status, source/location/date, and
-   explanation. Follow with reasoning gaps, resolving questions or tests, and
-   limitations including unexamined claims. Keep unresolved issues visible.
+   Recompute simple arithmetic with available tools; show units, denominators,
+   and formula. Correct arithmetic does not verify the measurements.
+5. Only then consider public research under the shared boundary. Start with at
+   most three consequential unresolved claims and two targeted queries per claim.
+   Inspect original sources and comparable conditions; stop when resolved, when
+   sources repeat an origin, or when the budget is exhausted. Record queries and
+   access dates. Search snippets and model memory are not inspected evidence.
+6. Assign evidence statuses only where applicable: not examined means not checked;
+   attempted but unresolved means insufficient evidence. Lead with a short
+   conclusion. Report substance findings separately from the claim table, which
+   contains original wording/location, claim type, evidence status,
+   source/location/date, and explanation. End with reasoning gaps, resolving
+   questions or tests, and limitations including unexamined claims.
 
 ## Final check
 

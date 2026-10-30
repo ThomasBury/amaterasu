@@ -25,6 +25,7 @@ STATUSES = {
     'supported', 'contradicted', 'mixed', 'insufficient evidence',
     'not checked', 'inapplicable',
 }
+SUBSTANCE_LABELS = {'clear', 'vague-but-repairable', 'no-determinate-proposition'}
 
 
 def require(record: object, fields: str) -> None:
@@ -483,11 +484,18 @@ def _validate_annotation(
             or proposition['wording'] not in case['input'][proposition['location']]
         ):
             raise ValueError('Proposition wording/location must match original input')
+        if skill == 'kagami' and proposition.get('substance') not in SUBSTANCE_LABELS:
+            raise ValueError('Kagami proposition needs a valid substance label')
         if proposition['claim_type'] not in {
-            'factual assertion', 'interpretation', 'opinion',
+            'factual assertion', 'interpretation', 'opinion', 'indeterminate',
             'prediction', 'aspiration', 'commitment',
         }:
             raise ValueError('Invalid claim type')
+        if skill == 'kagami' and (
+            (proposition['substance'] == 'no-determinate-proposition')
+            != (proposition['claim_type'] == 'indeterminate')
+        ):
+            raise ValueError('Substance and claim type drifted')
     if not annotation['evidence_relationships']:
         raise ValueError('Missing evidence relationships')
     for relationship in annotation['evidence_relationships']:
@@ -506,6 +514,13 @@ def _validate_annotation(
             or not relationship['location']
         ):
             raise ValueError('Factual verdict requires available located evidence')
+        proposition = propositions[relationship['proposition_id']]
+        if (
+            skill == 'kagami'
+            and proposition['substance'] == 'no-determinate-proposition'
+            and relationship['status'] != 'inapplicable'
+        ):
+            raise ValueError('No determinate proposition requires inapplicable evidence status')
     related_propositions = {
         relationship['proposition_id'] for relationship in annotation['evidence_relationships']
     }

@@ -1,0 +1,2 @@
+L1 Manager, 2026-01-15: "If you complete certification X by 30 June 2026, I will recommend you for the senior role."
+L2 Manager, 2026-06-20: "You completed certification X on 14 June. Before I recommend you, you also need to lead project Y."

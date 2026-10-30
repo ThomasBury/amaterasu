@@ -1,0 +1,25 @@
+{
+  "case_id": "pilot-mamoru-021",
+  "skill": "mamoru",
+  "task": "Did the promotion-recommendation criteria change, and what should I clarify?",
+  "input": {
+    "L1": "Manager, 2026-01-15: \"If you complete certification X by 30 June 2026, I will recommend you for the senior role.\"",
+    "L2": "Manager, 2026-06-20: \"You completed certification X on 14 June. Before I recommend you, you also need to lead project Y.\""
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Separate the original conditional commitment from the later requirement and prepare a factual clarification.",
+    "audience": "Employee seeking interpretation and response options",
+    "roles": "The manager can make a recommendation; final promotion authority is unspecified.",
+    "chronology": "Use the dated fictional records in L1–L2; project Y was not mentioned in the supplied January agreement.",
+    "constraints": "Original synthetic scenario. Supplied evidence only; no external actions or intent diagnosis."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": [
+    "pilot-mamoru-021-record"
+  ]
+}

@@ -30,6 +30,18 @@ We propose a rerun; its owner and date remain to be agreed.”
 This preserves the denominator, environment, uncertainty, and proposed status.
 It does not establish production reliability or a commitment to rerun.
 
+## Concrete does not mean invented
+
+Delete an empty abstraction when it adds no recoverable proposition. Replace it
+with a concrete action, mechanism, result, or example only when the source supplies
+it. Otherwise ask a question or leave a visible gap such as “[measured result not
+supplied].” Polishing “we drove transformational synergy” must not manufacture a
+project, outcome, metric, or owner.
+
+A sentence that could describe any company unchanged is a prompt to check for
+missing substance, not proof of dishonesty. Meaningful aspirations and specialist
+terms can remain. Do not use a buzzword blacklist.
+
 ## Meaning-preservation check
 
 Compare each substantive original proposition against the draft, and each new

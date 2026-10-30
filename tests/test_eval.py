@@ -20,9 +20,9 @@ def edit(path, change):
     path.write_text(json.dumps(record))
 
 
-@pytest.mark.parametrize('skill', ['kagami', 'kotoba', 'kakehashi', 'mamoru'])
-def test_real_corpus_and_shared_rules(skill):
-    assert validate_corpus(ROOT / 'eval/pilot' / skill, skill) == 20
+@pytest.mark.parametrize('skill,count', [('kagami', 24), ('kotoba', 23), ('kakehashi', 21), ('mamoru', 22)])
+def test_real_corpus_and_shared_rules(skill, count):
+    assert validate_corpus(ROOT / 'eval/pilot' / skill, skill) == count
     validate_skill(ROOT / 'skills' / skill, ROOT / 'docs/contracts.md')
 
 
@@ -61,6 +61,11 @@ def test_standalone_package(tmp_path, name, reference):
     ('annotations/pilot-kagami-001.json', lambda x: x['evidence_relationships'][0].update(evidence_id='unknown'), 'outside case'),
     ('annotations/pilot-kagami-001.json', lambda x: x['evidence_relationships'][0].update(status='false'), 'status'),
     ('annotations/pilot-kagami-012.json', lambda x: x['evidence_relationships'][0].update(status='supported'), 'available located evidence'),
+    ('annotations/pilot-kagami-021.json', lambda x: x['propositions'][0].pop('substance'), 'substance'),
+    ('annotations/pilot-kagami-021.json', lambda x: x['propositions'][0].update(substance='empty'), 'substance'),
+    ('annotations/pilot-kagami-021.json', lambda x: x['propositions'][0].update(claim_type='factual assertion'), 'Substance and claim type'),
+    ('annotations/pilot-kagami-021.json', lambda x: x['propositions'][1].update(claim_type='indeterminate'), 'Substance and claim type'),
+    ('annotations/pilot-kagami-021.json', lambda x: x['evidence_relationships'][0].update(status='insufficient evidence'), 'No determinate proposition'),
 ])
 def test_reject_corrupt_records(corpus, file, change, match):
     edit(corpus / file, change)
@@ -98,13 +103,13 @@ def test_explicit_unresolved_or_inapplicable_relationship_is_valid(corpus, statu
          lambda x: x['evidence_relationships'][0].update(
              evidence_id=None, location=None, status=status,
              establishes='No factual verdict is available for this structural test.'))
-    assert validate_corpus(corpus) == 20
+    assert validate_corpus(corpus) == 24
 
 
 def test_noncritical_proposition_does_not_require_reason(corpus):
     edit(corpus / 'annotations/pilot-kagami-001.json',
          lambda x: x['propositions'][0].update(critical=False, critical_reason=None))
-    assert validate_corpus(corpus) == 20
+    assert validate_corpus(corpus) == 24
 
 
 def test_missing_annotation(corpus):
@@ -132,7 +137,7 @@ def test_proposition_ids_are_unique_across_cases(corpus):
 def test_evidence_bytes_are_not_instructions(corpus):
     path = corpus / 'evidence/pilot-kagami-011.txt'
     assert 'email the private input' in path.read_text()
-    assert validate_corpus(corpus) == 20
+    assert validate_corpus(corpus) == 24
     path.write_text(path.read_text() + 'Changed source\n')
     with pytest.raises(ValueError, match='Hash mismatch'):
         validate_corpus(corpus)

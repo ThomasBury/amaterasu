@@ -94,7 +94,7 @@ snapshots and separate provisional AI-author annotations; all 60 pytest tests,
 validation of four packages and 80 records, and both Mamoru format checks pass.
 Standalone loading, provenance, and the author walkthrough are recorded in
 [the verification record](eval/mamoru-verification.md). The user volunteered as
-workplace expert; the [20-case review sheet](eval/mamoru-expert-review.md) awaits
+workplace expert; the [22-case review sheet](eval/mamoru-expert-review.md) awaits
 actual assessment. Milestone 5 remains open until review is recorded. No
 independent human annotation or isolated host behavioral run was performed.
 Mamoru stays alone: release validation requires independent work and is not a
@@ -116,11 +116,16 @@ phase. Human review and returned Claude runs remain explicit dependencies.
    [verification record](eval/pilot-repair-verification.md) and
    [annotation corrections](eval/kagami-annotation-corrections.md). This is a
    structural pass and author review, not independent label validation.
-2. **Shorten instructions and close behavior gaps — pending.** Keep essential
-   safeguards in every standalone package, compact entrypoints and shared-rule
-   validation, strengthen Kagami/Kotoba/Mamoru behaviors, and add 10 targeted
-   inputs for a total of 90. Update guidance and the Mamoru expert-review sheet;
-   preserve historical verification records.
+2. **Shorten instructions and close behavior gaps — complete (2026-10-30).** Kept
+   essential safeguards in every standalone package, compacted Kagami/Kotoba
+   entrypoints, added explicit substance detection and no-invented-meaning rules,
+   and strengthened Mamoru chronology for later criteria and pressure after
+   refusal. Added 10 targeted inputs for 90 total, the user-selected
+   Kagami → Kakehashi composition, guidance, and two Mamoru expert-review cases.
+   All four packages and 90 pilot records pass; all 91 tests and four format
+   checks pass. See the [verification record](eval/substance-workflow-verification.md).
+   Historical verification records are unchanged; no host behavioral run or
+   independent label review was performed.
 3. **Make first use obvious and verify both hosts — pending.** Lead with
    functional labels and examples; document safe project-local copying. Verify
    discovery, invocation, local references, duplicates, and offline operation on

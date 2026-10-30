@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-009-author-v2",
+  "annotation_id": "pilot-kagami-009-author-v3",
   "case_id": "pilot-kagami-009",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-009-p1",
       "wording": "We forecast 120 orders next week, with a plausible range of 80–160.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "prediction",
       "critical": true,
       "critical_reason": "Attribution, next-week timing, and the plausible range distinguish a forecast from a guarantee or observed result.",

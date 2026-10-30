@@ -1,0 +1,23 @@
+{
+  "case_id": "pilot-kagami-023",
+  "skill": "kagami",
+  "task": "Assess whether this AI product claim is empty, unsupported, or supported.",
+  "input": {
+    "L1": "Our AI doubles engineering productivity.",
+    "L2": "The announcement supplies no benchmark, workload, baseline, or study."
+  },
+  "context": {
+    "date": "2026-10-30",
+    "purpose": "Decide what the announcement establishes before a purchase discussion.",
+    "audience": "Engineering leader evaluating a product",
+    "roles": "Synthetic vendor and prospective buyer; no external authority granted.",
+    "chronology": "Original synthetic announcement; no test date or product version is supplied.",
+    "constraints": "Use supplied text only. Distinguish a clear unsupported claim from semantically empty wording."
+  },
+  "research_scope": {
+    "mode": "supplied-evidence-only",
+    "web_available": false,
+    "authorization": null
+  },
+  "evidence": []
+}

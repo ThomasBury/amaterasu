@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-014-author-v3",
+  "annotation_id": "pilot-kagami-014-author-v4",
   "case_id": "pilot-kagami-014",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -11,6 +11,7 @@
       "proposition_id": "pilot-kagami-014-p1",
       "wording": "The device lasts at least 10 hours under protocol P.",
       "location": "L1",
+      "substance": "clear",
       "claim_type": "factual assertion",
       "critical": true,
       "critical_reason": "The threshold, protocol, and conflicting results control whether the performance conclusion is supported.",
