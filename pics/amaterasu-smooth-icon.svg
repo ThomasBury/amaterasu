@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc"><title id="title">Amaterasu — solar flame emblem</title><desc id="desc">Original two-color solar-fire crest with dark flame shapes and an eye-like mirror inspired by the mythical sun and the black flames of Sasuke’s Amaterasu.</desc><rect width="512" height="512" rx="92" fill="#172333"/>
+<!-- Irregular gold solar-fire crest -->
+<path fill="#E7A83E" d="M 256 62
+ C 287 103 298 143 283 175
+ C 314 151 335 124 328 91
+ C 376 124 397 172 382 217
+ C 425 241 430 293 409 339
+ C 383 403 326 446 256 446
+ C 182 446 125 402 103 338
+ C 82 286 99 239 139 216
+ C 129 173 141 139 162 110
+ C 169 155 191 177 211 182
+ C 208 136 224 105 256 62 Z"/>
+<!-- Dark flame: pointed charcoal tongues and wind-sheared tapered shapes -->
+<path fill="#172333" d="M 253 141 C 246 181 217 204 224 247
+ C 230 266 245 284 259 297
+ C 249 258 276 233 277 211
+ C 279 184 261 168 253 141 Z"/>
+<path fill="#172333" d="M 169 188 C 154 218 161 243 180 261
+ C 192 273 194 300 183 316
+ C 219 296 218 270 201 247
+ C 187 231 174 224 169 188 Z"/>
+<path fill="#172333" d="M 348 186 C 365 220 360 243 339 263
+ C 327 276 321 299 330 317
+ C 297 293 298 267 317 246
+ C 333 227 343 219 348 186 Z"/>
+<!-- Elliptical mirror-eye: central clarity, not a Sharingan reproduction -->
+<path fill="#172333" d="M 126 342 C 159 301 211 283 256 283
+ C 302 283 355 301 388 342
+ C 345 391 297 406 256 406
+ C 212 406 166 391 126 342 Z"/>
+<path fill="#E7A83E" d="M 160 342 C 194 316 223 310 256 310
+ C 289 310 319 316 354 342
+ C 319 371 290 378 256 378
+ C 221 378 191 371 160 342 Z"/>
+<circle cx="256" cy="344" r="31" fill="#172333"/>
+<!-- A sharp point of reflected light, deliberately asymmetrical -->
+<path fill="#E7A83E" d="M 257 319 L 266 334 L 281 344 L 265 350 L 256 366 L 249 350 L 233 344 L 249 336 Z"/>
+</svg>

@@ -1,5 +1,9 @@
 # Amaterasu
 
+<p>
+  <img src="pics/amaterasu-smooth-logo.svg" alt="Amaterasu — Bring the hidden to light" width="560">
+</p>
+
 Four communication skills in development for examining evidence, preserving meaning,
 and choosing useful next steps. English-first, Markdown-first, and independently
 usable.
