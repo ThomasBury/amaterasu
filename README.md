@@ -1,95 +1,198 @@
 # Amaterasu
 
-<p>
-  <img src="pics/amaterasu-smooth-logo.svg" alt="Amaterasu — Bring the hidden to light" width="560">
+<p align="center">
+  <img src="pics/amaterasu-smooth-logo.svg" alt="Amaterasu — Bring the hidden to light" width="640">
 </p>
 
-Four communication skills in development for examining evidence, preserving meaning,
-and choosing useful next steps. English-first, Markdown-first, and independently
-usable.
+<p align="center">
+  AI skills for checking claims, writing clearly, and understanding commitments.
+</p>
 
-**Status: all four skill packages implemented; Mamoru expert review and independent effectiveness evaluation are pending.**
-The standalone [Kagami](skills/kagami/SKILL.md),
-[Kotoba](skills/kotoba/SKILL.md),
-[Kakehashi](skills/kakehashi/SKILL.md), and [Mamoru](skills/mamoru/SKILL.md) skills include local references. The 90
-synthetic pilot cases have provisional AI-author labels only. Mamoru’s workplace-expert
-review is pending. No host compatibility or effectiveness is claimed.
+<p align="center">
+  <a href="#choose-a-skill">Choose a skill</a> ·
+  <a href="#install">Install</a> ·
+  <a href="#put-it-to-work">Examples</a> ·
+  <a href="#why-amaterasu">The name</a> ·
+  <a href="#evaluation-and-contributing">Evaluation</a>
+</p>
 
-| Skill | Tagline | Intended use |
+An impressive proposal can leave its central claim unsupported. Simplifying a
+report can erase uncertainty; polishing an email can turn “might” into “will.”
+And a promise to recommend someone can be mistaken for a promise to promote them.
+
+Amaterasu gives your AI assistant four focused workflows for these situations:
+check what a claim means and what supports it, improve writing without changing
+its substance, explain material across audiences, and clarify promises and
+boundaries.
+
+Each **skill** is a folder of readable instructions and references that your
+assistant loads for a task. Bring a proposal, email, technical report, application,
+or conversation. You do not need to write code to use the instructions.
+
+## Choose a skill
+
+| What you need | Skill | What to expect |
 | --- | --- | --- |
-| Kagami (`kagami`) | Reflect claims against reality. | Examine factual support, reasoning, numbers, and product claims. |
-| Kotoba (`kotoba`) | Make every word count. | Draft and revise professional communication without inventing facts or promises. |
-| Kakehashi (`kakehashi`) | Bridge expertise without losing meaning. | Explain across audiences while preserving technical scope and limitations. |
-| Mamoru (`mamoru`) | Protect fairness. Hold promises accountable. | Clarify commitments and conduct, and prepare proportionate responses. |
+| Check a claim, a number, or vague corporate language | [Kagami](skills/kagami/SKILL.md) · 鏡 · *mirror* | A claim-by-claim assessment that separates unclear meaning, missing evidence, and conflicting evidence, with sources and questions to resolve the gaps. |
+| Write or revise something clearly | [Kotoba](skills/kotoba/SKILL.md) · 言葉 · *words* | A usable draft that preserves your facts, voice, uncertainty, and commitments. Missing information stays visible. |
+| Explain material to a different audience | [Kakehashi](skills/kakehashi/SKILL.md) · 架け橋 · *bridge* | An explanation suited to the reader’s knowledge and decision, with technical meaning and limitations intact. |
+| Understand a promise, request, or difficult exchange | [Mamoru](skills/mamoru/SKILL.md) · 守る · *protect* | A summary of commitments and documented conduct, unresolved details, and response options suited to the situation. |
 
-The intended benefit is better reasoning and understanding. Vocabulary,
-confidence, prestige, and writing style are not evidence that a person is
-dishonest or that a claim is empty. None of the cited literature directly
-validates Amaterasu.
+Use one skill on its own. When useful, ask for a sequence: Kagami can examine a
+proposal, then Kakehashi can explain those findings to a nontechnical reader.
+The original wording, evidence, and unresolved questions travel with the handoff;
+no skill starts another automatically.
 
-## Evaluate the skills
+## How it works
 
-Start with the [step-by-step evaluation guide](eval/README.md#choose-your-task).
-It explains how to review Mamoru's 22 cases, run local file checks, and prepare
-an evaluation of the assistant's behavior. Each path lists what you need, what
-to record, and when you are done. The full evaluation still needs independent
-reviewers, host testing, and scoring tools.
+The instructions ask the assistant to start with your actual words and context,
+keep meaning separate from evidence, and return something you can act on:
+an assessment with sources, a draft, an explanation, or questions to clarify an
+agreement.
 
-## Read the foundation
+For example, “Our AI doubles productivity” has a claim to examine, even when no
+evidence is supplied. “We operationalize exponential synergy” needs clarification
+before factual checking can begin. Making either sentence sound better cannot
+supply the missing evidence or meaning.
 
-- [Skill contracts](docs/contracts.md): activation, inputs, methods, outputs,
-  safeguards, and optional compositions.
-- [Evidence register](docs/evidence.md): research strength, limitations, source
-  access, and upstream reuse decisions.
-- [Evaluation protocol](eval/README.md) and [annotation rubric](eval/annotation-rubric.md):
-  independent labeling, comparisons, and proposed acceptance gates.
-- [Portability contract](docs/compatibility.md): intended hosts and the evidence
-  required before claiming compatibility.
-- [Milestones](MILESTONES.md): completed work, next phase, and verification.
+Across all four skills, numbers, conditions, who said what, and uncertainty must
+survive. Unfamiliar jargon is a reason to ask what it means. A confident tone,
+prestigious title, or polished sentence cannot establish that a claim is true.
+The skills assess communication without scoring people or diagnosing their intent.
 
-## Boundaries
+## Install
 
-Clearly public material may receive public-source research. Private or ambiguous
-material uses supplied evidence unless the user authorizes a suitably scoped
-public search. Internal quotations and identifiers must never enter search
-queries. Analysis must disclose missing inputs, unavailable evidence, and
-unexamined claims.
+You need an AI assistant that can load local skill folders. Amaterasu’s skills
+are plain-text Markdown files; Python is only needed for the optional evaluation
+tools.
 
-Drafting a response does not authorize sending it, filing a complaint, or
-changing an external record. The project excludes employee rankings, aggregate
-credibility scores, deception or personality diagnosis, persistent workplace
-dossiers, autonomous escalation, and automatic skill chains.
+### 1. Get the files
 
-Markdown skills will have no required runtime dependencies. They will use the
-host's existing readers, search, and calculation tools. Supplied-evidence work
-will not require a verification service. A cloud-backed host can still transmit
-prompts to its model provider; local processing requires a suitable local model
-and host configuration.
-
-## Development and license
-
-Work proceeds in independently reviewable phases, with one completed phase per
-session. Mamoru implementation is ready for workplace-expert review; milestone 5
-remains open until that review is recorded. Release validation stays separate
-because it requires independent annotation and host testing. Development dependencies are locked; skills
-have no runtime dependency on Python. Run:
+[Download the ZIP](https://github.com/ThomasBury/amaterasu/archive/refs/heads/main.zip)
+and extract it, or clone the repository:
 
 ```sh
-uv sync --locked
-uv run --locked python eval/validate.py
-uv run --locked pytest -q
-uv run --locked skills-ref validate skills/kagami
-uv run --locked skills-ref validate skills/kotoba
-uv run --locked skills-ref validate skills/kakehashi
-uv run --locked skills-ref validate skills/mamoru
+git clone https://github.com/ThomasBury/amaterasu.git
+cd amaterasu
 ```
 
-See the [Kagami](eval/kagami-verification.md),
-[Kotoba](eval/kotoba-verification.md),
-[Kakehashi](eval/kakehashi-verification.md), and [Mamoru](eval/mamoru-verification.md) pilot records for scope and limits.
-To review or transfer a skill, copy its entire folder including references
-and license. Host discovery and installation instructions await host-specific tests.
+### 2. Copy the skills into your project
+
+Copy the folders you want from `amaterasu/skills/` into the location for your
+assistant. A project can be a folder where you keep documents as well as a code
+repository. Keep each entire skill folder, including `references/`, `LICENSE`,
+and `NOTICE.md`.
+
+| Assistant | Destination inside your project | Explicit invocation |
+| --- | --- | --- |
+| [Codex CLI or IDE extension](https://learn.chatgpt.com/docs/build-skills) | `.agents/skills/` | `$kagami`, `$kotoba`, `$kakehashi`, `$mamoru` |
+| [Claude Code in a local project](https://code.claude.com/docs/en/skills) | `.claude/skills/` | `/kagami`, `/kotoba`, `/kakehashi`, `/mamoru` |
+
+For example, a Codex installation of Kagami should contain:
+
+```text
+my-project/
+└── .agents/
+    └── skills/
+        └── kagami/
+            ├── SKILL.md
+            ├── references/
+            ├── LICENSE
+            └── NOTICE.md
+```
+
+You can copy the folders with your file manager. In a macOS or Linux terminal,
+this example copies Kagami from the Amaterasu checkout into another project.
+Replace `/path/to/my-project` with your project’s path:
+
+```sh
+mkdir -p "/path/to/my-project/.agents/skills"
+cp -R skills/kagami "/path/to/my-project/.agents/skills/"
+```
+
+For Claude Code, use `.claude/skills/` instead. Repeat for any other skills you
+want. If a destination skill already exists, compare it before replacing it.
+
+### 3. Select a skill
+
+Open your assistant in the destination project. In Codex, use `/skills` or type
+`$` to select the installed skill. In Claude Code, invoke it with `/kagami`, for
+example. If it does not appear, restart the assistant and check the folder layout.
+
+These paths follow the linked host documentation. Installation and behavior in
+these assistants have not yet been tested by this project. See the
+[portability guide](docs/compatibility.md) for other intended hosts and the checks
+required before claiming compatibility.
+
+## Put it to work
+
+Choose a prompt below and add your material. These examples use Codex’s `$name`
+syntax; in Claude Code, replace it with `/name`.
+
+**Check a proposal with Kagami**
+
+```text
+$kagami Review this vendor proposal. Separate unclear wording from claims
+that need evidence. Use only the attached sources and show what remains unchecked.
+```
+
+**Improve an email or application with Kotoba**
+
+```text
+$kotoba Rewrite this application paragraph for a hiring manager. Keep my voice
+and the results I supplied. Leave missing dates or outcomes visible.
+```
+
+**Explain technical work with Kakehashi**
+
+```text
+$kakehashi Explain this test report to a product manager deciding whether to
+launch. Preserve the test conditions and what the results cannot establish.
+```
+
+**Clarify a commitment with Mamoru**
+
+```text
+$mamoru Read these dated messages. What was promised, under which conditions,
+and by whom? Help me draft a firm clarification without guessing anyone’s intent.
+```
+
+Supply the original text, intended audience, relevant dates, and available
+sources. If a page or attachment is inaccessible, provide its text or an export.
+Without web access, claims needing external sources remain unresolved.
+
+For private or ambiguous material, the skills use supplied evidence unless you
+authorize a suitably scoped public search. Local skill files do not make a cloud
+assistant private: your model provider may still receive the material you submit.
+Drafting a response does not authorize sending it, filing a complaint, or changing
+an external record.
+
+## Why Amaterasu?
+
+Amaterasu takes its name from the sun goddess of Japanese mythology. In the
+[story of her return from a cave](https://www.mlit.go.jp/tagengo-db/en/R1-00756.html),
+a mirror helps draw her out and restore light to the world.
+
+The project borrows that image of light and reflection. Kagami is the mirror for
+examining claims; Kotoba attends to words; Kakehashi bridges understanding; Mamoru
+protects boundaries and keeps commitments clear.
+
+## Evaluation and contributing
+
+To inspect the design, extend a skill, or test whether it helps, start with the
+[evaluation guide](eval/README.md#choose-your-task). It covers local file checks,
+case annotation, human review, and comparisons of assistant behavior. The
+[annotation rubric](eval/annotation-rubric.md) explains how to judge outputs;
+[skill contracts](docs/contracts.md) define the intended behavior, and the
+[evidence register](docs/evidence.md) records the research behind the design.
+
+Amaterasu is experimental. Its examples and automated checks do not establish
+that the skills improve an assistant’s answers; independent effectiveness
+evaluation is still needed. When reporting a problem, include a nonconfidential
+example, the skill, your assistant and model, and what the response got wrong.
+
+## License
 
 Original project material is available under the [MIT license](LICENSE).
-[NOTICE.md](NOTICE.md) records attribution and the boundary around third-party
+[NOTICE.md](NOTICE.md) records attribution and the terms applying to third-party
 material.
