@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-014-author-v1",
+  "annotation_id": "pilot-kagami-014-author-v3",
   "case_id": "pilot-kagami-014",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The threshold, protocol, and conflicting results control whether the performance conclusion is supported.",
       "preserve": "The device lasts at least 10 hours under protocol P."
     }
   ],
@@ -22,29 +22,30 @@
       "proposition_id": "pilot-kagami-014-p1",
       "evidence_id": "pilot-kagami-014-e1",
       "location": "L1",
-      "status": "mixed",
-      "establishes": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+      "status": "supported",
+      "establishes": "Lab A reports 11 hours under protocol P for the same model and date, consistent with the claimed threshold."
     },
     {
       "proposition_id": "pilot-kagami-014-p1",
       "evidence_id": "pilot-kagami-014-e2",
       "location": "L1",
-      "status": "mixed",
-      "establishes": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+      "status": "contradicted",
+      "establishes": "Independent Lab B reports 9 hours under protocol P for the same model and date, below the claimed threshold."
     }
   ],
   "reasoning_gaps": [
     "Do not average into a verdict or choose by prestige."
   ],
-  "answerability": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving.",
+  "answerability": "Lab A reports 11 hours and independent Lab B reports 9 under protocol P for the same model and date. The joint evidence is mixed; investigate sample variation and measurement before resolving the conflict.",
   "problem_labels": [
     "insufficient-evidence"
   ],
   "acceptable_outputs": [
-    "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+    "Lab A reports 11 hours and independent Lab B reports 9 under protocol P for the same model and date. The joint evidence is mixed; investigate sample variation and measurement before resolving the conflict."
   ],
   "forbidden_changes": [
-    "Do not average into a verdict or choose by prestige."
+    "Resolving the conflicting reports by averaging their measurements or choosing by prestige.",
+    "Hiding a conflicting report or generalizing beyond protocol P."
   ],
   "questions": [],
   "answer_key": [],

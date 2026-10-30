@@ -1,20 +1,29 @@
 {
-  "annotation_id": "pilot-kagami-002-author-v1",
+  "annotation_id": "pilot-kagami-002-author-v2",
   "case_id": "pilot-kagami-002",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
       "proposition_id": "pilot-kagami-002-p1",
-      "wording": "Incidents rose from zero to four, a 400% increase.",
+      "wording": "Incidents rose from zero to four",
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
-      "preserve": "Incidents rose from zero to four, a 400% increase."
+      "critical_reason": "The zero baseline and the increase to four determine which comparisons are defined.",
+      "preserve": "Reported incident counts: zero before, four now; retain the zero baseline."
+    },
+    {
+      "proposition_id": "pilot-kagami-002-p2",
+      "wording": "a 400% increase.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "A percentage increase is undefined at the zero baseline, changing the conclusion.",
+      "preserve": "The source claims 400% for the zero-to-four change; preserve attribution while correcting the arithmetic."
     }
   ],
   "evidence_relationships": [
@@ -22,8 +31,15 @@
       "proposition_id": "pilot-kagami-002-p1",
       "evidence_id": "pilot-kagami-002-e1",
       "location": "L1",
+      "status": "supported",
+      "establishes": "The supplied monthly counts are 0 and 4; the absolute increase is 4."
+    },
+    {
+      "proposition_id": "pilot-kagami-002-p2",
+      "evidence_id": "pilot-kagami-002-e1",
+      "location": "L1",
       "status": "contradicted",
-      "establishes": "Absolute increase is 4; relative increase is undefined with zero baseline."
+      "establishes": "Relative percentage increase is undefined with a zero baseline; 400% is not a valid calculation."
     }
   ],
   "reasoning_gaps": [
@@ -37,7 +53,8 @@
     "Absolute increase is 4; relative increase is undefined with zero baseline."
   ],
   "forbidden_changes": [
-    "Do not divide by zero or invent a percentage."
+    "Reporting any finite percentage increase from the zero baseline.",
+    "Changing the incident counts or omitting the zero-baseline limitation."
   ],
   "questions": [],
   "answer_key": [],

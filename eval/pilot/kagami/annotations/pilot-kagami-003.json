@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-003-author-v1",
+  "annotation_id": "pilot-kagami-003-author-v2",
   "case_id": "pilot-kagami-003",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "A count change alone does not determine the rate without request totals.",
       "preserve": "Failures doubled"
     },
     {
@@ -22,7 +22,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "Treating a count change as a rate change reverses the conclusion here.",
       "preserve": "our failure rate doubled."
     }
   ],
@@ -32,14 +32,14 @@
       "evidence_id": "pilot-kagami-003-e1",
       "location": "L1",
       "status": "supported",
-      "establishes": "Both rates are 1%; counts doubled and exposure doubled."
+      "establishes": "The supplied failure counts rise from 10 to 20, so the count doubled."
     },
     {
       "proposition_id": "pilot-kagami-003-p2",
       "evidence_id": "pilot-kagami-003-e1",
       "location": "L1",
       "status": "contradicted",
-      "establishes": "Both rates are 1%; counts doubled and exposure doubled."
+      "establishes": "10/1000 and 20/2000 both equal 1%; requests doubled too, so the rate did not double."
     }
   ],
   "reasoning_gaps": [
@@ -53,7 +53,7 @@
     "Both rates are 1%; counts doubled and exposure doubled."
   ],
   "forbidden_changes": [
-    "Counts alone do not establish a rate change."
+    "Claiming that the failure rate doubled while ignoring the doubled request count."
   ],
   "questions": [],
   "answer_key": [],

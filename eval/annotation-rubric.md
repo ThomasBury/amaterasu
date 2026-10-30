@@ -1,40 +1,88 @@
 # Pilot annotation rubric
 
-This is the working rubric for the 80-case pilot. Refine it using independently
-observed disagreements, then version and freeze it before the new locked
-evaluation. It is a labeling procedure, not a model prompt or a completed
-annotation set. Read the [protocol](README.md) for sampling, comparisons, gates,
-and uncertainty.
+Use this guide to record what a case means and then judge an assistant's answer.
+An **annotation** is your written judgment. The **rubric** is the set of rules
+below. A **case** is one example containing a task, source text, context, and any
+permitted evidence. The current **pilot** contains 80 practice cases used to
+improve the instructions before testing new cases.
+
+The `pilot-2026-10-30` clarification below applies to the revised Kagami author
+labels. Other skills retain their recorded rubric version. See the
+[Kagami correction record](kagami-annotation-corrections.md) for previous versions
+and reasons; these corrections remain provisional author judgments.
+
+For the pending Mamoru expert assessment, use the
+[expert review sheet](mamoru-expert-review.md). That task asks you to assess
+visible author proposals. The independent review described here starts before
+reviewers see author proposals or assistant answers.
+
+Read the [evaluation guide](README.md#evaluate-skill-behavior) for the order of
+work and the coordinator's responsibilities. That guide also explains sampling,
+comparison setups, release requirements, and uncertainty in results.
 
 ## Annotator procedure
 
-1. Read the original input, task, permitted evidence, date, audience, and context.
-   Mark missing information. Do not inspect another annotator's labels or a model
-   answer before preparing the case's expected labels.
-2. Identify atomic claims or propositions, original locations, critical
-   limitations, and commitments. Preserve attribution and conditional wording.
-3. Record evidence relationships, justified interpretations, answerability, and
-   acceptable response options. Record reasoning gaps separately from factual
-   support. Do not infer a person's intent or character from style.
-4. Label the anonymized model output against the frozen case annotations. Quote
-   the relevant output span for each failure and link it to the affected input
-   or evidence. A preferred phrasing is not an answer key.
-5. Submit independently. A third human resolves disagreements, preserving both
-   originals and giving a reason with evidence. If evidence cannot settle a
-   disagreement, retain uncertainty instead of forcing a binary truth label.
+The coordinator assigns two human reviewers to each case and a third to resolve
+disagreements. Record your reviewer ID, relevant expertise, and the version of
+these instructions you used. Use reviewer IDs instead of personal names in
+public reports. Keep your work separate from the provisional AI-author labels
+in `pilot/<skill>/annotations/`.
 
-Use final adjudicated labels for scoring, following the protocol's
-[rules for unresolved disagreements](README.md#metric-definitions-and-uncertainty).
-Original independent labels remain available for agreement reporting.
+### First, record what a suitable answer must preserve
 
-Skill authors may prepare provisional annotations and calibration examples.
-These do not count as independent human annotation. Record annotator role and
-relevant domain expertise; use pseudonymous IDs in public reporting.
+1. Read the task, original text, date, audience, context, and permitted evidence.
+   Note missing information. Do not read another reviewer's labels, AI-author
+   labels, or assistant answers before submitting your own expected judgments.
+   Tell the coordinator if you have already seen them, so the coordinator can
+   arrange a reviewer who has not seen them for the independent assessment.
+2. List the separate statements in the source, with their exact wording and
+   location. These are called **claims** or **propositions**. For example,
+   “We may finish in June if the migration succeeds” keeps both the uncertainty
+   and the condition. Do not turn it into an unconditional promise.
+3. Identify details whose loss could change the decision, obligation, or safety
+   interpretation. Mark these **critical**, and explain why. Record quantities,
+   who said what, timing, conditions, and uncertainty that must survive.
+4. For each factual statement, record what the evidence supports, contradicts,
+   or leaves unresolved. Cite the source and location. Keep an unsupported
+   reasoning step separate from a false fact. Note when the evidence cannot
+   answer the question; do not infer intent or character from style.
+5. Describe suitable response options and changes that would fail. Accept
+   equivalent wording. For relevant cases, prepare understanding/action questions
+   and expected answers, including questions about uncertainty and scope.
+6. Submit independently. The third reviewer compares both submissions and
+   records a decision with evidence and reasons. This is **adjudication**.
+   Preserve both original reviews and any unresolved disagreements. Finish this
+   stage before assessing assistant outputs.
+
+### Then, judge the assistant's answer
+
+1. Receive answers in random order without names showing which setup produced
+   them. Use the agreed expected judgments from the first stage.
+2. Compare the answer with the source and expected judgments. Record whether
+   claims were faithfully extracted, evidence was used correctly, important
+   details survived, and the response fits the concern. Check the
+   [critical failures](#critical-failures) and relevant tool activity as well
+   as the final prose.
+3. For each failure, quote the exact answer span and cite the affected input or
+   evidence location. Describe what changed or was added. A wording preference
+   alone is not a failure. Mark a judgment unresolved if the evidence cannot
+   settle it, or not applicable with a reason if the dimension does not apply.
+4. Submit independently. The third reviewer resolves disagreements, records
+   reasons, and preserves the original judgments. Apply the
+   [rules for unresolved disagreements](README.md#metric-definitions-and-uncertainty)
+   before calculating results.
+
+Use the [record fields](#minimum-records) below for the saved annotations.
+Your review is complete when each assigned case or answer has its required
+judgments, evidence locations, and explicit unresolved items, and you have
+submitted it to the coordinator. The coordinator retains both independent
+reviews and the adjudication record. Skill and case authors cannot be the sole
+judges; AI-author drafts do not count as independent human reviews.
 
 ## Minimum records
 
-Use ordinary JSON when cases are implemented; no custom parser or schema
-framework is required. Keep model-visible input records separate from hidden
+The implemented pilot uses ordinary JSON records. The coordinator saves human
+annotations separately using the information below; no new parser is needed. Keep model-visible input records separate from hidden
 labels. The fields below define required information rather than an executable
 schema. Unknown values must be explicit (`null` plus a reason), not invented.
 
@@ -80,11 +128,11 @@ Do not store private source material in public evidence artifacts.
 | Field | Required meaning |
 | --- | --- |
 | `annotation_id`, `case_id`, `annotator_id`, `rubric_version`, `state` | Traceable annotation and draft/independent/adjudicated state. Record authorship and expertise separately. |
-| `propositions` | Stable IDs, exact wording/location, claim type, critical flag/reason, and conditions/attribution/quantities/scope that must survive. |
-| `evidence_relationships` | Proposition ID, evidence ID/location, supported/contradicted/mixed/insufficient-evidence/not-checked status where applicable, and what the evidence establishes. |
+| `propositions` | Stable IDs, nonblank string wording at an exact source location, claim type, critical flag, a nonblank reason when critical, and conditions/attribution/quantities/scope that must survive. |
+| `evidence_relationships` | At least one explicit relationship for every proposition: proposition ID, evidence ID/location, status, and what the evidence establishes or leaves unresolved. Insufficient evidence, not checked, and inapplicable remain valid; use null evidence/location where appropriate. |
 | `reasoning_gaps` | Specific unsupported step or alternative explanation; distinguish it from a false premise. |
 | `answerability`, `problem_labels` | What can be settled from permitted evidence, what must remain unresolved, and why. A clear ambiguity can be identified even if the underlying fact cannot be settled. |
-| `acceptable_outputs`, `forbidden_changes` | Substantive response range and meaning changes that would fail. Include proportional response options for Mamoru. |
+| `acceptable_outputs`, `forbidden_changes` | Substantive response range and actual failure conditions. For example, forbid "Removing the safety condition," not "Preserve the safety condition." Include proportional response options for Mamoru. |
 | `questions`, `answer_key` | Comprehension and action questions for applicable cases, including uncertainty/scope checks. Keys are hidden from models and study readers. |
 | `disagreements`, `adjudication` | Original competing labels, disagreement category, third annotator, rationale, and version. No silent overwriting. |
 
@@ -93,8 +141,9 @@ Do not store private source material in public evidence artifacts.
 Join each run to `case_id`, `condition`, `repetition`, `configuration_id`, and
 `evidence_set_id`. Record the reproducibility fields in the
 [protocol](README.md#comparisons-and-run-records), with output artifact/hash and
-complete/error/timeout state. Output annotators record claim-to-gold mappings,
-evidence relationship judgments, proposition preservation, unsupported additions,
+complete/error/timeout state. Output reviewers record matches between output
+claims and expected human-labeled claims, evidence relationship judgments,
+proposition preservation, unsupported additions,
 appropriate abstention, coverage, response proportionality, critical failures,
 and exact output spans supporting those judgments. Record “not applicable” with
 a reason when a dimension genuinely does not apply.
@@ -104,9 +153,24 @@ a reason when a dimension genuinely does not apply.
 ### Claim type and status
 
 Use factual assertion, interpretation, opinion, prediction, aspiration, or
-commitment. A sentence may contain several types; split it when their support
-can differ. A conditional promise keeps its condition. A quotation retains its
+commitment. A sentence may contain several types. Split it into separate statements when
+the evidence for each part can differ. A conditional promise keeps its condition. A quotation retains its
 speaker. “The report says X” and “X happened” are different propositions.
+
+Separate an observed measurement from a numerical interpretation or causal
+conclusion even when they share a sentence. For example, the count change from
+zero to four can be supported while “400% increase” is contradicted. A reported
+`p = 0.3` can be supported while the conclusion of treatment equivalence remains
+unresolved. Source independence and the percentage reported by those sources
+also need separate judgments.
+
+Do not detach a condition, forecast range, speaker, or test scope just to create
+more rows. Keep definitions with the terms they explain. An embedded event and
+the claim that an audit proves it may use overlapping exact spans when they
+require distinct judgments; preservation notes must retain their relationship
+and attribution. Splitting a claim never promotes a quotation into an observed
+fact. Record boundary or type changes with the annotation version, reasons, and
+recoverable previous labels; do not compare counts across versions silently.
 
 Apply the [five evidence statuses](../docs/contracts.md#evidence-and-meaning)
 without ordering them as severity. “Not checked” describes absent examination;
@@ -125,9 +189,9 @@ actually has authority, the population studied, or staging-only performance.
 Other annotated substantive propositions still count toward preservation.
 Redundant words and ornamental phrasing are not separate propositions.
 
-Count a proposition as preserved only if its actor, attribution, quantity/unit,
-negation, modality, timing, conditions, scope, and relevant uncertainty remain
-intact where applicable. Equivalent wording is acceptable. Faithful omission of
+Count a proposition as preserved only if who acts and who said it, quantities and units,
+negation, words such as “may” or “must,” timing, conditions, scope, and relevant
+uncertainty remain intact where applicable. Equivalent wording is acceptable. Faithful omission of
 redundant phrasing is acceptable; loss of an annotated substantive limitation is
 not. Do not count an attractive rewrite as correct when it changes an obligation.
 

@@ -1,20 +1,29 @@
 {
-  "annotation_id": "pilot-kagami-006-author-v1",
+  "annotation_id": "pilot-kagami-006-author-v2",
   "case_id": "pilot-kagami-006",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
       "proposition_id": "pilot-kagami-006-p1",
-      "wording": "The two treatments are equivalent because p = 0.3.",
+      "wording": "The two treatments are equivalent",
+      "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "An equivalence conclusion needs evidence beyond a nonsignificant difference test.",
+      "preserve": "The source concludes equivalence from p = 0.3; retain the proposed inference without endorsing it."
+    },
+    {
+      "proposition_id": "pilot-kagami-006-p2",
+      "wording": "p = 0.3.",
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
-      "preserve": "The two treatments are equivalent because p = 0.3."
+      "critical_reason": "The reported p-value is a measurement from a difference test, not an equivalence result.",
+      "preserve": "Reported p = 0.3 from a difference test; no equivalence margin or equivalence test is supplied."
     }
   ],
   "evidence_relationships": [
@@ -23,11 +32,18 @@
       "evidence_id": "pilot-kagami-006-e1",
       "location": "L1",
       "status": "insufficient evidence",
-      "establishes": "Nonsignificance does not establish equivalence or prove a difference."
+      "establishes": "A nonsignificant difference test establishes neither equivalence nor a difference; no equivalence margin or test is supplied."
+    },
+    {
+      "proposition_id": "pilot-kagami-006-p2",
+      "evidence_id": "pilot-kagami-006-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The supplied record reports difference-test p = 0.3; this is not an equivalence result."
     }
   ],
   "reasoning_gaps": [
-    "Request a relevant margin and appropriate analysis."
+    "Failure to reject a difference does not establish equivalence; a relevant margin and appropriate analysis are missing."
   ],
   "answerability": "Nonsignificance does not establish equivalence or prove a difference.",
   "problem_labels": [
@@ -37,7 +53,8 @@
     "Nonsignificance does not establish equivalence or prove a difference."
   ],
   "forbidden_changes": [
-    "Request a relevant margin and appropriate analysis."
+    "Treating p = 0.3 from a difference test as proof of equivalence or proof of a difference.",
+    "Inventing an equivalence margin, equivalence test, or result."
   ],
   "questions": [],
   "answer_key": [],

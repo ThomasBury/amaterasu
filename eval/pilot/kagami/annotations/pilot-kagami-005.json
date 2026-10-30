@@ -1,20 +1,29 @@
 {
-  "annotation_id": "pilot-kagami-005-author-v1",
+  "annotation_id": "pilot-kagami-005-author-v2",
   "case_id": "pilot-kagami-005",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
       "proposition_id": "pilot-kagami-005-p1",
       "wording": "Training caused the observed drop in errors.",
       "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "Assigning causation would rule out task mix without evidence.",
+      "preserve": "The source attributes the observed decline to training; retain that this is a causal claim under assessment, not established causation."
+    },
+    {
+      "proposition_id": "pilot-kagami-005-p2",
+      "wording": "the observed drop in errors.",
+      "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
-      "preserve": "Training caused the observed drop in errors."
+      "critical_reason": "The observed decline is distinct from whether training caused it.",
+      "preserve": "The source reports an error decline; this does not by itself attribute the decline to training."
     }
   ],
   "evidence_relationships": [
@@ -23,7 +32,14 @@
       "evidence_id": "pilot-kagami-005-e1",
       "location": "L1",
       "status": "insufficient evidence",
-      "establishes": "The causal effect is unresolved; task mix is an alternative explanation."
+      "establishes": "Errors fell after training, but easier tasks and no control group leave the causal effect unresolved."
+    },
+    {
+      "proposition_id": "pilot-kagami-005-p2",
+      "evidence_id": "pilot-kagami-005-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The supplied record reports that errors fell; it does not establish the cause."
     }
   ],
   "reasoning_gaps": [
@@ -37,7 +53,8 @@
     "The causal effect is unresolved; task mix is an alternative explanation."
   ],
   "forbidden_changes": [
-    "Before-after timing does not isolate training."
+    "Treating before-after timing as proof that training caused the drop.",
+    "Treating the unresolved causal effect as proof that training had no effect."
   ],
   "questions": [],
   "answer_key": [],

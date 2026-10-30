@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-007-author-v1",
+  "annotation_id": "pilot-kagami-007-author-v2",
   "case_id": "pilot-kagami-007",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The stated insertion/removal order defines the technical meaning being assessed.",
       "preserve": "The queue uses FIFO: the first item inserted is the first removed."
     }
   ],
@@ -37,7 +37,8 @@
     "The technical term is explained and consistent with the supplied design."
   ],
   "forbidden_changes": [
-    "No accusation based on jargon."
+    "Accusing the statement or its author of emptiness or deception solely because it uses FIFO.",
+    "Changing the insertion/removal order described by FIFO."
   ],
   "questions": [],
   "answer_key": [],

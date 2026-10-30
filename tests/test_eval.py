@@ -44,11 +44,17 @@ def test_standalone_package(tmp_path, name, reference):
     ('manifest.json', lambda x: x[0].pop('rights'), 'Missing required'),
     ('manifest.json', lambda x: x[0].update(input_sha256='0'*64), 'Hash mismatch'),
     ('manifest.json', lambda x: x[0].update(variant_of=x[1]['case_id'], variant_change='title'), 'cluster'),
+    ('manifest.json', lambda x: x[0].update(variant_of=x[0]['case_id'], variant_change='title'), 'cluster'),
+    ('manifest.json', lambda x: x[0].update(variant_change='title'), 'without parent'),
+    ('manifest.json', lambda x: x[0].update(source_location='inputs/pilot-kagami-002.json'), 'does not match case'),
     ('evidence.json', lambda x: x[0].update(sha256='0'*64), 'Hash mismatch'),
     ('evidence.json', lambda x: x[0].update(artifact='../manifest.json'), 'escaping'),
     ('evidence.json', lambda x: x[0].update(artifact='/etc/passwd'), 'Invalid local path'),
     ('evidence.json', lambda x: x[0].update(availability='unavailable'), 'null artifact'),
     ('evidence.json', lambda x: x[0].update(source_date=None), 'needs a reason'),
+    ('inputs/pilot-kagami-001.json', lambda x: x['research_scope'].update(mode='authorized-public-search', authorization=None), 'recorded scope authorization'),
+    ('inputs/pilot-kagami-001.json', lambda x: x['research_scope'].update(web_available='yes'), 'Invalid research scope'),
+    ('inputs/pilot-kagami-001.json', lambda x: x.update(evidence=['unknown']), 'Invalid evidence references'),
     ('annotations/pilot-kagami-001.json', lambda x: x.update(state='independent'), 'provisional'),
     ('annotations/pilot-kagami-001.json', lambda x: x['propositions'].append(x['propositions'][0]), 'duplicate'),
     ('annotations/pilot-kagami-001.json', lambda x: x['propositions'][0].update(wording='Invented'), 'original input'),
@@ -62,9 +68,64 @@ def test_reject_corrupt_records(corpus, file, change, match):
         validate_corpus(corpus)
 
 
+@pytest.mark.parametrize('wording', ['', ' ', '\n', None, 42, [], {}])
+def test_reject_blank_or_nonstring_proposition_wording(corpus, wording):
+    edit(corpus / 'annotations/pilot-kagami-001.json',
+         lambda x: x['propositions'][0].update(wording=wording))
+    with pytest.raises(ValueError, match='nonblank string wording'):
+        validate_corpus(corpus)
+
+
+@pytest.mark.parametrize('reason', ['', ' ', None, 42, False, [], {}])
+def test_critical_proposition_requires_reason(corpus, reason):
+    edit(corpus / 'annotations/pilot-kagami-001.json',
+         lambda x: x['propositions'][0].update(critical_reason=reason))
+    with pytest.raises(ValueError, match='Critical proposition needs a nonblank reason'):
+        validate_corpus(corpus)
+
+
+def test_every_proposition_requires_evidence_relationship(corpus):
+    # Leave the second proposition's relationship so a nonempty list cannot pass.
+    edit(corpus / 'annotations/pilot-kagami-001.json',
+         lambda x: x['evidence_relationships'].pop(0))
+    with pytest.raises(ValueError, match='Every proposition needs an explicit evidence relationship'):
+        validate_corpus(corpus)
+
+
+@pytest.mark.parametrize('status', ['insufficient evidence', 'not checked', 'inapplicable'])
+def test_explicit_unresolved_or_inapplicable_relationship_is_valid(corpus, status):
+    edit(corpus / 'annotations/pilot-kagami-001.json',
+         lambda x: x['evidence_relationships'][0].update(
+             evidence_id=None, location=None, status=status,
+             establishes='No factual verdict is available for this structural test.'))
+    assert validate_corpus(corpus) == 20
+
+
+def test_noncritical_proposition_does_not_require_reason(corpus):
+    edit(corpus / 'annotations/pilot-kagami-001.json',
+         lambda x: x['propositions'][0].update(critical=False, critical_reason=None))
+    assert validate_corpus(corpus) == 20
+
+
 def test_missing_annotation(corpus):
     (corpus / 'annotations/pilot-kagami-001.json').unlink()
     with pytest.raises(ValueError, match='IDs must match'):
+        validate_corpus(corpus)
+
+
+def test_proposition_ids_are_unique_across_cases(corpus):
+    first = json.loads((corpus / 'annotations/pilot-kagami-001.json').read_text())
+    duplicate_id = first['propositions'][0]['proposition_id']
+
+    def duplicate_proposition(annotation):
+        original_id = annotation['propositions'][0]['proposition_id']
+        annotation['propositions'][0]['proposition_id'] = duplicate_id
+        for relationship in annotation['evidence_relationships']:
+            if relationship['proposition_id'] == original_id:
+                relationship['proposition_id'] = duplicate_id
+
+    edit(corpus / 'annotations/pilot-kagami-002.json', duplicate_proposition)
+    with pytest.raises(ValueError, match='duplicate proposition_id'):
         validate_corpus(corpus)
 
 

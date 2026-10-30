@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-001-author-v1",
+  "annotation_id": "pilot-kagami-001-author-v2",
   "case_id": "pilot-kagami-001",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The measured rate change must remain separate from its incorrect percentage-point description.",
       "preserve": "Defects fell from 8% to 6%"
     },
     {
@@ -22,7 +22,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "Confusing percentage points and relative percentages changes the numerical conclusion.",
       "preserve": "a 25-percentage-point decrease."
     }
   ],
@@ -32,14 +32,14 @@
       "evidence_id": "pilot-kagami-001-e1",
       "location": "L1",
       "status": "supported",
-      "establishes": "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results."
+      "establishes": "The supplied counts give 80/1000 = 8% before and 60/1000 = 6% after; these are synthetic measurements."
     },
     {
       "proposition_id": "pilot-kagami-001-p2",
       "evidence_id": "pilot-kagami-001-e1",
       "location": "L1",
       "status": "contradicted",
-      "establishes": "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results."
+      "establishes": "8% minus 6% is 2 percentage points, or a 25% relative decrease, not 25 percentage points."
     }
   ],
   "reasoning_gaps": [
@@ -53,7 +53,8 @@
     "2 percentage points; 25% relative decrease. Measurements are synthetic, not verified real-world results."
   ],
   "forbidden_changes": [
-    "Do not infer causality from these rates."
+    "Reporting a 25-percentage-point decrease or confusing it with the 25% relative decrease.",
+    "Inferring that an intervention caused the change from these rates alone."
   ],
   "questions": [],
   "answer_key": [],

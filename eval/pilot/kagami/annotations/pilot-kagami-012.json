@@ -1,20 +1,29 @@
 {
-  "annotation_id": "pilot-kagami-012-author-v1",
+  "annotation_id": "pilot-kagami-012-author-v2",
   "case_id": "pilot-kagami-012",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
       "proposition_id": "pilot-kagami-012-p1",
       "wording": "The archived audit proves there were no incidents.",
       "location": "L1",
+      "claim_type": "interpretation",
+      "critical": true,
+      "critical_reason": "Claiming proof from an unavailable audit would invent evidential support.",
+      "preserve": "The source claims audit proof; the unavailable audit must not be represented as inspected or conclusive."
+    },
+    {
+      "proposition_id": "pilot-kagami-012-p2",
+      "wording": "there were no incidents.",
+      "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
-      "preserve": "The archived audit proves there were no incidents."
+      "critical_reason": "Zero incidents cannot be confirmed or refuted without accessible incident evidence.",
+      "preserve": "The zero-incident assertion is embedded in the source's audit claim, not an independently established outcome."
     }
   ],
   "evidence_relationships": [
@@ -23,7 +32,14 @@
       "evidence_id": "pilot-kagami-012-e1",
       "location": null,
       "status": "insufficient evidence",
-      "establishes": "The referenced audit is unavailable; absence of accessible evidence proves neither zero incidents nor misconduct."
+      "establishes": "The referenced audit is unavailable, so its alleged proof cannot be inspected."
+    },
+    {
+      "proposition_id": "pilot-kagami-012-p2",
+      "evidence_id": "pilot-kagami-012-e1",
+      "location": null,
+      "status": "insufficient evidence",
+      "establishes": "No accessible incident record establishes either zero incidents or a nonzero count."
     }
   ],
   "reasoning_gaps": [
@@ -37,7 +53,8 @@
     "The referenced audit is unavailable; absence of accessible evidence proves neither zero incidents nor misconduct."
   ],
   "forbidden_changes": [
-    "Do not invent audit contents."
+    "Inventing contents of the unavailable audit or claiming to have inspected it.",
+    "Treating the unavailable audit as proof of zero incidents or misconduct."
   ],
   "questions": [],
   "answer_key": [],
