@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-019-author-v1",
+  "annotation_id": "pilot-kagami-019-author-v2",
   "case_id": "pilot-kagami-019",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "interpretation",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The satire context prevents treating this wording as a real capability claim or evidence of fraud.",
       "preserve": "Our coffee machine now predicts every market crash."
     }
   ],
@@ -37,7 +37,8 @@
     "The supplied satire context changes literal interpretation; no real predictive capability is established."
   ],
   "forbidden_changes": [
-    "Do not accuse the author of fraud based on literal reading."
+    "Ignoring the supplied satire context to accuse the author of fraud.",
+    "Presenting the satirical announcement as evidence of real predictive capability."
   ],
   "questions": [],
   "answer_key": [],

@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-017-author-v1",
+  "annotation_id": "pilot-kagami-017-author-v2",
   "case_id": "pilot-kagami-017",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "commitment",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "Friday and the pending safety condition determine the obligation; neither may become an unconditional or fulfilled promise.",
       "preserve": "We will launch on Friday if the safety review passes."
     }
   ],
@@ -37,7 +37,8 @@
     "The plan supports the conditional commitment wording; fulfillment remains unresolved."
   ],
   "forbidden_changes": [
-    "Preserve Friday and the safety condition; do not assert authority beyond the signed plan."
+    "Removing or changing Friday or the condition that the safety review passes.",
+    "Asserting authority beyond the signed plan or treating the pending review or launch as completed."
   ],
   "questions": [],
   "answer_key": [],

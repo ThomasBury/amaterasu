@@ -1,20 +1,289 @@
-# Evaluation protocol
+# How to evaluate Amaterasu
 
-**Status: all four skills have pilot artifacts.** Each has 20 original
-synthetic cases with provisional AI-author annotations (80 cases total).
-Mamoru workplace-expert review is [pending](mamoru-expert-review.md).
-Independent annotations, isolated model runs, baseline results, and reader-study
-results remain pending. See the [Kagami](kagami-verification.md),
+Use this guide to review proposed interpretations, check the repository files,
+or test how an assistant behaves with a skill.
+
+All four skills have 20 fictional practice cases each, for 80 cases in total.
+Their proposed answers were prepared by AI and still need independent human
+judgment. Mamoru's [workplace-expert review](mamoru-expert-review.md) is pending.
+No independent assistant comparisons or reader-study results are available yet.
+
+The [reviewer instructions](annotation-rubric.md) explain how to judge cases and
+answers. For the checks already performed, see the [Kagami](kagami-verification.md),
 [Kotoba](kotoba-verification.md), [Kakehashi](kakehashi-verification.md), and
-[Mamoru](mamoru-verification.md) verification records.
-The [annotation rubric](annotation-rubric.md) defines what to collect and how to
-judge it. Examples in that rubric are author calibration examples, not evidence
-of effectiveness.
+[Mamoru](mamoru-verification.md) records. Those file checks and author walkthroughs
+do not establish whether the skills improve reasoning or understanding.
 
-The question is whether Amaterasu improves reasoning, preservation, comprehension,
-and useful action without false accusations or fabricated meaning. A confident
-tone, shorter text, a model's self-rating, or a passing file validator cannot
-answer that question.
+## Choose your task
+
+| I want to... | Start here | What I will produce |
+| --- | --- | --- |
+| Review Mamoru's proposed interpretations | [Review Mamoru](#review-mamoru) | Decisions on 20 fictional cases, with corrections and reasons |
+| Check that the files and packages are consistent | [Run local file checks](#run-local-file-checks) | Command results and any errors |
+| Test whether a skill helps an assistant | [Evaluate skill behavior](#evaluate-skill-behavior) | Recorded assistant answers and separate human assessments |
+
+You can do the expert review and local checks today. Behavior testing is a
+manual process: this repository has no automated evaluation runner or scorer.
+Host-specific installation and invocation instructions still need testing.
+A complete release evaluation also needs new test cases and a reader study.
+
+### Words used in this guide
+
+- A **case** is one test example: a task, source text, context, and any evidence.
+  The **pilot** is the set of practice cases used to improve the instructions.
+- An **annotation** is a recorded human judgment about a case or an answer.
+  The **rubric** is the set of rules reviewers use to make those judgments.
+- A **claim** or **proposition** is one statement whose meaning or support can
+  be judged separately. Keep a promise's conditions attached to it.
+- A **baseline** is a comparison setup, such as the same assistant without the
+  skill. A **condition** is one setup being compared.
+- A **configuration** identifies the host application, model, settings, and
+  tools. A **repetition** is a fresh run of the same case under that setup.
+- **Adjudication** means a third human reviews disagreements and records a
+  reasoned decision. Unresolved questions can remain unresolved.
+- **Freezing** means fixing and versioning the material and rules before testing.
+  A **gate** is a requirement that must be met before claiming a validated release.
+
+## Review Mamoru
+
+This path is for the workplace expert reviewing the proposed interpretations.
+You need workplace experience and the [20-case review sheet](mamoru-expert-review.md).
+You can complete it without Python, terminal commands, or an AI assistant.
+
+1. Open the sheet and read its instructions.
+2. State your relevant experience and the limits of your expertise.
+3. Read each scenario, then assess its proposed label, interpretation limits,
+   acceptable response, and rejected response.
+4. Record **accept**, **revise**, or **unsure** for each case. Give the case
+   number and a reason for each correction or unresolved concern.
+5. Send your assessment to the project maintainer, for example in the review
+   conversation, using the sheet's reply template. Exclude confidential examples.
+
+You are done when all 20 cases have a decision or an explicit unresolved concern
+and your assessment has been submitted. The maintainer records your review
+separately, preserves disagreements, and addresses corrections. Unresolved
+expert concerns must be addressed before milestone 5 can be closed. Reading
+this sheet does not count as independent labeling of those same cases before
+seeing the author's proposals.
+
+## Run local file checks
+
+This path is for a contributor checking the repository. You need a local checkout,
+Python 3.11 or later, and uv already installed. The first dependency download
+needs network access. Run these commands in the repository root, the folder
+containing `pyproject.toml`:
+
+```sh
+uv sync --locked
+uv run --locked python eval/validate.py
+uv run --locked pytest -q
+uv run --locked skills-ref validate skills/kagami
+uv run --locked skills-ref validate skills/kotoba
+uv run --locked skills-ref validate skills/kakehashi
+uv run --locked skills-ref validate skills/mamoru
+```
+
+1. Run `uv sync --locked` to install the recorded development dependencies.
+   If it fails, resolve the installation or network error before continuing.
+2. Run the validator. With the current pilot it should report:
+
+   ```text
+   Validated 4 skill packages and 80 pilot records; no behavioral score implied.
+   ```
+
+3. Run pytest. Its summary should say that all tests passed. The exact test
+   count can change as the project develops.
+4. Run each `skills-ref` command. Each should report `Valid skill:` followed by
+   the corresponding folder.
+5. Save the date, repository revision, commands, exit results, and any errors in
+   your check record. If a check fails, save the complete error and inspect the
+   named file. Correct the underlying problem before repeating the check;
+   do not remove a check or rewrite evidence merely to obtain a pass.
+
+You are done when every command succeeds and you have saved the results.
+These commands check file structure, source hashes, references, and validation
+code. They do not run the skills against an assistant or assess their usefulness.
+A hash identifies exact file bytes; it does not prove the contents are true.
+The link check handles local inline Markdown links and basic heading anchors.
+
+The validator expects the existing provisional AI-author annotations. Keep human
+reviews in separate records; changing author labels to `independent` or
+`adjudicated` will make this validator reject them.
+
+Every proposition needs nonblank string wording and an explicit evidence
+relationship; critical propositions also need a nonblank reason. Unresolved or
+inapplicable relationships are valid and do not require a factual verdict.
+The [Kagami correction record](kagami-annotation-corrections.md) versions the
+2026-10-30 author-label repairs, with reasons and recoverable original labels.
+The [repair verification record](pilot-repair-verification.md) records the
+structural checks. Neither record establishes semantic truth or effectiveness.
+
+## Evaluate skill behavior
+
+This path is for an evaluation coordinator and human reviewers. The coordinator
+organizes cases, runs, and records. Two humans judge cases independently; a third
+resolves disagreements. Choose reviewers with the relevant domain experience.
+Use the [annotation instructions](annotation-rubric.md) for their work.
+
+### 1. Prepare expected judgments
+
+Give each reviewer only the selected inputs, context, and permitted evidence.
+For the pilot, these come from `pilot/<skill>/inputs/`, `evidence.json`, and the
+referenced files in `evidence/`. The coordinator selects the evidence for each
+case. Do not give reviewers author annotations or other reviewers' answers
+before they submit their own expected judgments.
+
+Each reviewer records what the source says, what the evidence supports, which
+details must survive, and what a suitable response could say. Save human reviews
+in a private folder outside the repository and outside the tested assistant's
+access. Keep `pilot/<skill>/annotations/` unchanged; it contains AI-author drafts.
+Have the third reviewer resolve disagreements with reasons while retaining both
+originals. Record unresolved items explicitly. Finish this stage before showing
+reviewers any assistant answers to assess.
+
+### 2. Prepare a workspace that hides the answers
+
+Use a separate workspace to which the tested assistant has access. Include only
+the selected case input, its permitted evidence, and, in the skill condition,
+the complete selected skill folder with its local references. Retain evidence
+identifiers and source locations so the assistant can cite them.
+
+Keep the repository checkout, manifest, annotations, answer keys, expert review
+sheet, and this guide outside the assistant's accessible files and conversation.
+Verify its file permissions and tools actually prevent access; asking it not to
+read nearby answers is insufficient. A new chat alone does not restrict tools.
+For a baseline run, also ensure Amaterasu instructions are absent from loaded
+skills, global instructions, and earlier conversation.
+
+For supplied-evidence tests, disable web access. If the host cannot enforce the
+required isolation or tool restrictions, stop and record that setup as unavailable.
+Use fictional public pilot material for practice. A cloud-backed host may send
+prompts to its provider even when browsing is disabled.
+
+### 3. Rehearse one pilot case
+
+This walkthrough explains the procedure; it is not a recorded evaluation result.
+Use `pilot/mamoru/inputs/pilot-mamoru-001.json`, its referenced evidence, and the
+complete `skills/mamoru/` folder copied from the repository. Inspect the input's
+`task`, located `input`, `context`, and `research_scope` fields. Give the assistant
+those fields and the permitted evidence, then use this instruction in a fresh,
+isolated session:
+
+```text
+Read the supplied Mamoru SKILL.md and its linked reference.
+Complete the task in the supplied case using its original text and context.
+Use only the supplied evidence. Leave missing information visible.
+Do not search, send messages, file anything, or change external records.
+```
+
+Save the exact prompt, input and evidence versions, complete answer, and tool
+activity. Use this record template for the rehearsal and add the detailed
+[run fields](#comparisons-and-run-records) when preparing comparisons:
+
+```text
+Case ID:
+Condition and repetition:
+Host/model versions, settings, tools, and skill revision:
+Input and evidence hashes:
+Exact prompt and saved answer location:
+Tool activity and errors:
+Outcome: complete / error / timeout
+Tokens, elapsed time, and cost (or unavailable, with reason):
+```
+
+Reviewers then compare the answer with their previously recorded expectations.
+For this instructional example, a promotion recommendation conditional on targets
+must remain distinct from the panel's approval. A claim that promotion was
+guaranteed would change the source meaning. This example is visible to readers
+of this guide and must never become a new unseen test case.
+
+An example review note could be:
+
+```text
+Case: pilot-mamoru-001
+Output quote: [paste the exact relevant words]
+Decision: [meets expectations / needs correction / unresolved]
+Reason and source location: [explain using L1 or L2]
+Required correction, if any: [state it]
+Reviewer ID, expertise, date, and rubric version: [record these]
+```
+
+The rehearsal is complete when you have a saved answer, tool record, and human
+assessment. One rehearsal does not establish effectiveness or meet release gates.
+
+### 4. Run the planned pilot comparisons
+
+Before running comparisons, record the exact configurations, prompts, conditions,
+case list, evidence versions, and settings. Use the same model and tools for the
+no-skill, short generic instruction, and skill conditions. Include the applicable
+external baselines and original-text comparisons listed in
+[comparisons and run records](#comparisons-and-run-records). Record unavailable
+comparisons with reasons. Test explicitly selected skill combinations separately.
+
+Run every selected case three times per configuration and condition, including
+role/title variants when present. Start each repetition with a fresh context and
+the correct isolated workspace. Save complete answers and tool traces, including
+errors and timeouts. Keep tests using fixed evidence separate from tests using
+live search. Verify host setup against the
+[host checks](../docs/compatibility.md#required-host-checks); installation and
+invocation instructions for specific versions remain pending.
+
+Give output reviewers answers in random order with setup names hidden. They
+assess each answer independently against the agreed expectations; a third human
+resolves disagreements. Use findings to refine the pilot instructions and rubric,
+record reasons for changes, and reassess affected cases. Finish when every
+planned run and judgment is recorded, or explicitly marked missing with a reason.
+
+### 5. Prepare the new locked evaluation
+
+After pilot refinement, create the new 320 cases plus 80 matched role/title
+variants described in [stages and corpus](#stages-and-corpus). Keep related cases
+together and exclude pilot material. Obtain independent expected judgments.
+Before running the locked tests, freeze inputs, evidence, labels, questions,
+prompts, settings, scoring rules, and the analysis plan.
+
+The coordinator must obtain statistical advice to settle how uncertainty will
+be calculated for related cases and how the reader study will be analyzed.
+Record the method, random seed where applicable, exclusions, and missing-data
+rules before freezing. Stop here if those decisions or independent labels are
+missing. Keep expected labels inaccessible to the tested assistant.
+
+### 6. Run, assess, and calculate results
+
+Repeat the recorded comparison procedure on the locked material. Preserve human
+judgments, original disagreements, full outputs, and failed runs. Calculate the
+[defined metrics](#metric-definitions-and-uncertainty) against the final human
+labels, with counts, missing results, and uncertainty for each tested setup.
+
+`score.py` is planned and does not exist yet. A maintainer must implement and
+verify the calculations against independent labels before claiming automated
+scoring. A model's rating of its own answer cannot substitute for human labels.
+Missing required runs, unresolved judgments, and undefined rates leave affected
+release requirements **not evaluated**. Do not average away a failing repetition.
+
+### 7. Conduct the reader study and report the outcome
+
+Follow the [reader study](#reader-study) procedure with 60 independent readers.
+Before recruiting, obtain statistical review and fix the passages, questions,
+answers, assignments, and analysis. Readers answer understanding and action
+questions; scorers work without knowing which setup produced each passage.
+Do not replace reader responses with model-generated answers.
+
+Compare the completed benchmark and reader-study results with the
+[release requirements](#proposed-validated-release-gates). Report counts,
+uncertainty, disagreements, costs, unavailable comparisons, failures, and limits
+for each configuration. Keep private material out of public reports. Preparing
+a report does not authorize publishing it.
+
+The full evaluation is complete only when its planned records and analyses are
+accounted for. A completed evaluation can fail the release requirements or remain
+inconclusive. Pending work cannot be recorded as a pass.
+
+## Detailed evaluation rules
+
+The sections below specify sampling, comparisons, calculations, and release
+requirements. Use them when preparing the full evaluation; the numbered paths
+above explain the order of work.
 
 ## Stages and corpus
 
@@ -95,12 +364,14 @@ Compare the same model and tools under:
 2. A fixed short generic instruction, such as “check the evidence and preserve
    meaning.” Record its exact text.
 3. The relevant Amaterasu skill, or an explicitly selected composition.
-4. Applicable upstream baselines: the existing detector for verification,
+4. Applicable external baselines: the SerhiiKorniienko detector for verification,
    ClaimBuster for claim detection, Vale for style consistency, and De-Jargonizer
    for lexical accessibility. Do not score a style linter as a truth verifier.
 5. Original text for rewriting and comprehension comparisons.
 
-Freeze upstream revisions and licensing decisions before use. Record unavailable
+Find baseline identities, sources, and known limits in the
+[evidence register](../docs/evidence.md#existing-implementations). Freeze their
+revisions and licensing decisions before use. Record unavailable
 baselines and reasons; “not run” is neither a zero score nor a successful result.
 Do not submit proprietary material to external baseline services.
 
@@ -226,17 +497,17 @@ LLM's self-evaluation or lower thresholds after observing data.
 
 ## Implementation and reporting
 
-Add small utilities only when the case format and actual data need them:
+Current tools and remaining work:
 
-- `validate.py`: local references, unique case/claim identifiers, evidence hashes,
+- `validate.py` exists and checks local references, unique case/claim identifiers, evidence hashes,
   required fields, and shared safeguards. Use standard JSON for case/annotation
   records; use the existing `skills-ref` validator for skill frontmatter.
-- `score.py`: calculations and uncertainty from independent annotations. Reject
-  incomplete or inconsistent inputs; do not infer truth or manufacture labels.
-- `tests/test_eval.py`: meaningful checks for malformed/missing evidence,
-  duplicate IDs, denominator errors, partial runs, and dependent variants.
+- `score.py` is pending. It must calculate results and uncertainty from independent
+  annotations, reject incomplete or inconsistent inputs, and never manufacture labels.
+- `../tests/test_eval.py` exists and tests the validator. Tests of scoring
+  denominators, partial runs, and uncertainty remain work for the future scorer.
 
-Development will use uv and pytest with a committed lockfile. No custom YAML
+Development uses uv and pytest with a committed lockfile. No custom YAML
 parser, Pydantic model layer, mandatory Vale, or model API wrapper is justified.
 The skills themselves remain Markdown only.
 

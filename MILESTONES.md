@@ -100,7 +100,43 @@ independent human annotation or isolated host behavioral run was performed.
 Mamoru stays alone: release validation requires independent work and is not a
 dependency of this implementation.
 
-## 6. Release validation — pending
+## Improvement sequence — one phase per implementation session
+
+This four-phase sequence improves the existing four standalone skills. It is
+separate from the full release evaluation below. Keep names and directories,
+preserve unrelated work and branding assets, and stop after each reviewable
+phase. Human review and returned Claude runs remain explicit dependencies.
+
+1. **Repair the pilot and validator — complete (2026-10-30).** Reviewed all
+   20 Kagami annotations, corrected forbidden changes, separated assessable
+   measurements and conclusions, and versioned the provisional author labels
+   with reasons. Added checks and regression tests for proposition wording,
+   criticality reasons, and per-proposition evidence relationships. All four
+   packages and 80 pilot records pass; see the
+   [verification record](eval/pilot-repair-verification.md) and
+   [annotation corrections](eval/kagami-annotation-corrections.md). This is a
+   structural pass and author review, not independent label validation.
+2. **Shorten instructions and close behavior gaps — pending.** Keep essential
+   safeguards in every standalone package, compact entrypoints and shared-rule
+   validation, strengthen Kagami/Kotoba/Mamoru behaviors, and add 10 targeted
+   inputs for a total of 90. Update guidance and the Mamoru expert-review sheet;
+   preserve historical verification records.
+3. **Make first use obvious and verify both hosts — pending.** Lead with
+   functional labels and examples; document safe project-local copying. Verify
+   discovery, invocation, local references, duplicates, and offline operation on
+   Codex and Claude Code in disposable installations. Prepare the frozen Claude
+   transfer packet; its verification stays pending until returned runs are
+   recorded. Leave personal host configuration untouched.
+4. **Run a bounded comparison and obtain human review — pending.** Freeze the
+   specified 12 inputs, generic baseline, model/settings, and evidence/tool
+   access; obtain expected human judgments before exposing author proposals.
+   Run three repetitions per condition and host (144 outputs, 72 blinded pairs)
+   with hidden-label and baseline isolation. Record human judgments, missing
+   runs, critical failures, and exploratory limits; repetitions and role variants
+   are not independent cases. Simplify skills without a clear advantage before
+   expanding evaluation. Do not send or publish artifacts automatically.
+
+## 6. Full release validation — pending
 
 - [ ] Complete independent pilot annotation and instruction refinement before
   freezing the new 320-case test set plus 80 matched role/title variants.

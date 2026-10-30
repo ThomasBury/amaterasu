@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-004-author-v1",
+  "annotation_id": "pilot-kagami-004-author-v2",
   "case_id": "pilot-kagami-004",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The same batch, same machine, elapsed time, and relative result limit the supported performance claim.",
       "preserve": "B processes this batch in half the elapsed time of A on the same machine."
     }
   ],
@@ -37,7 +37,7 @@
     "The scoped elapsed-time result is supported."
   ],
   "forbidden_changes": [
-    "Do not extend one batch to all workloads or production."
+    "Extending the one-batch elapsed-time result to all workloads or production."
   ],
   "questions": [],
   "answer_key": [],

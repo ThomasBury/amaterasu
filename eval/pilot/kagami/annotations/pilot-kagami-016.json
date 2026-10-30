@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-016-author-v1",
+  "annotation_id": "pilot-kagami-016-author-v2",
   "case_id": "pilot-kagami-016",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "opinion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "Treating a personal preference as a factual allegation would change the kind of assessment.",
       "preserve": "I prefer the blue interface."
     }
   ],
@@ -37,7 +37,8 @@
     "This is a preference, with no supplied factual premise requiring verification."
   ],
   "forbidden_changes": [
-    "Do not label a preference false or unsupported as a factual allegation."
+    "Labeling the preference false or unsupported as though it were a factual allegation.",
+    "Changing a personal preference into an objective interface-quality claim."
   ],
   "questions": [],
   "answer_key": [],

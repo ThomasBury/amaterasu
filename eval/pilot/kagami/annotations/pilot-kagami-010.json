@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-010-author-v1",
+  "annotation_id": "pilot-kagami-010-author-v2",
   "case_id": "pilot-kagami-010",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "Present availability is the decision at issue; a roadmap does not establish shipment.",
       "preserve": "Offline mode is available today."
     }
   ],
@@ -37,7 +37,8 @@
     "The current-version note conflicts with present availability; a roadmap is not shipment."
   ],
   "forbidden_changes": [
-    "Do not call the vendor dishonest."
+    "Presenting roadmap intent as currently shipped offline functionality.",
+    "Calling the vendor dishonest without evidence of intent."
   ],
   "questions": [],
   "answer_key": [],

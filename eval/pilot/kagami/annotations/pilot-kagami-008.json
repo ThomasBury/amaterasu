@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-008-author-v1",
+  "annotation_id": "pilot-kagami-008-author-v2",
   "case_id": "pilot-kagami-008",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "Inventing an operational meaning would add substance the supplied text does not specify.",
       "preserve": "We operationalize exponential synergy across paradigms."
     }
   ],
@@ -37,7 +37,8 @@
     "No determinate operational proposition is recoverable in the supplied context; ask what changes for whom."
   ],
   "forbidden_changes": [
-    "Do not invent a testable promise or diagnose the speaker."
+    "Inventing a concrete operation, measurable benefit, or testable promise absent from the context.",
+    "Inferring the speaker's intent or character from the vague phrasing."
   ],
   "questions": [],
   "answer_key": [],

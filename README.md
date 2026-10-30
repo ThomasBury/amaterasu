@@ -27,6 +27,14 @@ confidence, prestige, and writing style are not evidence that a person is
 dishonest or that a claim is empty. None of the cited literature directly
 validates Amaterasu.
 
+## Evaluate the skills
+
+Start with the [step-by-step evaluation guide](eval/README.md#choose-your-task).
+It explains how to review Mamoru's 20 cases, run local file checks, and prepare
+an evaluation of the assistant's behavior. Each path lists what you need, what
+to record, and when you are done. The full evaluation still needs independent
+reviewers, host testing, and scoring tools.
+
 ## Read the foundation
 
 - [Skill contracts](docs/contracts.md): activation, inputs, methods, outputs,

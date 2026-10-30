@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-014-author-v1",
+  "annotation_id": "pilot-kagami-014-author-v2",
   "case_id": "pilot-kagami-014",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The threshold, protocol, and conflicting results control whether the performance conclusion is supported.",
       "preserve": "The device lasts at least 10 hours under protocol P."
     }
   ],
@@ -23,14 +23,14 @@
       "evidence_id": "pilot-kagami-014-e1",
       "location": "L1",
       "status": "mixed",
-      "establishes": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+      "establishes": "Lab A reports 11 hours under protocol P, consistent with the threshold; Lab B reports 9. The joint record remains mixed."
     },
     {
       "proposition_id": "pilot-kagami-014-p1",
       "evidence_id": "pilot-kagami-014-e2",
       "location": "L1",
       "status": "mixed",
-      "establishes": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+      "establishes": "Independent Lab B reports 9 hours under protocol P, below the threshold; Lab A reports 11. The joint record remains mixed."
     }
   ],
   "reasoning_gaps": [
@@ -44,7 +44,8 @@
     "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
   ],
   "forbidden_changes": [
-    "Do not average into a verdict or choose by prestige."
+    "Resolving the conflicting reports by averaging their measurements or choosing by prestige.",
+    "Hiding a conflicting report or generalizing beyond protocol P."
   ],
   "questions": [],
   "answer_key": [],

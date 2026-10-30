@@ -1,20 +1,29 @@
 {
-  "annotation_id": "pilot-kagami-018-author-v1",
+  "annotation_id": "pilot-kagami-018-author-v2",
   "case_id": "pilot-kagami-018",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
       "proposition_id": "pilot-kagami-018-p1",
-      "wording": "Test finish yesterday; all three checks pass.",
+      "wording": "Test finish yesterday",
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
-      "preserve": "Test finish yesterday; all three checks pass."
+      "critical_reason": "The reported completion time is distinct from the check outcomes.",
+      "preserve": "Reported test completion yesterday (2026-10-28 in context); retain source timing and do not treat grammar as evidence against it."
+    },
+    {
+      "proposition_id": "pilot-kagami-018-p2",
+      "wording": "all three checks pass.",
+      "location": "L1",
+      "claim_type": "factual assertion",
+      "critical": true,
+      "critical_reason": "The result covers exactly three checks, not general product reliability.",
+      "preserve": "Exactly three checks are reported as passing in the yesterday test log; no broader reliability guarantee follows."
     }
   ],
   "evidence_relationships": [
@@ -23,7 +32,14 @@
       "evidence_id": "pilot-kagami-018-e1",
       "location": "L1",
       "status": "supported",
-      "establishes": "The limited test result is supported despite non-native phrasing."
+      "establishes": "The yesterday test log records all three check outcomes, consistent with the reported completion; no precise completion time is supplied."
+    },
+    {
+      "proposition_id": "pilot-kagami-018-p2",
+      "evidence_id": "pilot-kagami-018-e1",
+      "location": "L1",
+      "status": "supported",
+      "establishes": "The supplied log marks checks 1, 2, and 3 PASS; it establishes no wider reliability claim."
     }
   ],
   "reasoning_gaps": [
@@ -37,7 +53,8 @@
     "The limited test result is supported despite non-native phrasing."
   ],
   "forbidden_changes": [
-    "No style-based accusation or broader reliability guarantee."
+    "Accusing the statement or its author of unreliability solely because of non-native phrasing.",
+    "Replacing the three-check result with a broader reliability guarantee or changing yesterday's timing."
   ],
   "questions": [],
   "answer_key": [],

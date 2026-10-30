@@ -1,10 +1,10 @@
 {
-  "annotation_id": "pilot-kagami-020-author-v1",
+  "annotation_id": "pilot-kagami-020-author-v2",
   "case_id": "pilot-kagami-020",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
@@ -13,7 +13,7 @@
       "location": "L1",
       "claim_type": "factual assertion",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The release and format identify a capability that remains unexamined, not false or verified.",
       "preserve": "Release 7 supports export to format Z."
     }
   ],
@@ -37,7 +37,8 @@
     "No release documentation was examined and web tools are unavailable; capability remains not checked."
   ],
   "forbidden_changes": [
-    "Do not substitute memory or fabricate a release note."
+    "Substituting memory for an unexamined release note or fabricating a source.",
+    "Assigning a factual verdict to the capability when no source was examined."
   ],
   "questions": [],
   "answer_key": [],

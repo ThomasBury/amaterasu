@@ -1,19 +1,19 @@
 {
-  "annotation_id": "pilot-kagami-013-author-v1",
+  "annotation_id": "pilot-kagami-013-author-v2",
   "case_id": "pilot-kagami-013",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
   "expertise": "No independent domain expertise asserted.",
-  "rubric_version": "pilot-2026-10-29",
+  "rubric_version": "pilot-2026-10-30",
   "state": "draft",
   "propositions": [
     {
       "proposition_id": "pilot-kagami-013-p1",
       "wording": "Therefore, every site passed.",
       "location": "L1",
-      "claim_type": "factual assertion",
+      "claim_type": "interpretation",
       "critical": true,
-      "critical_reason": "Controls the requested assessment.",
+      "critical_reason": "The universal quantifier exceeds the two visible sites and cannot be resolved from the fragment.",
       "preserve": "Therefore, every site passed."
     }
   ],
@@ -37,7 +37,8 @@
     "The fragment cannot establish the universal claim; request the missing coverage."
   ],
   "forbidden_changes": [
-    "Keep partial-source coverage explicit."
+    "Concealing that only sites A and B are visible and the remaining pages are missing.",
+    "Treating the fragment as proof that every site passed or that an unseen site failed."
   ],
   "questions": [],
   "answer_key": [],

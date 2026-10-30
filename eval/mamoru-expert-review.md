@@ -1,24 +1,82 @@
 # Mamoru workplace-expert review — pending
 
-The user has offered to serve as workplace expert. No review has yet been
-received. The proposed labels below are AI-author drafts, not expert decisions.
-All scenarios are fictional. This review satisfies only milestone 5's expert
-review requirement when completed; it does not replace the independent
-annotation and adjudication required for release validation.
+Review the proposed interpretations and response options for 20 fictional
+workplace scenarios. Your job is to judge whether they are supported by the
+wording, fair to the people involved, and proportionate to the situation.
+You do not need Python, terminal commands, or an AI assistant for this review.
 
-For each case, accept the substantive label/response range or give a correction
-with the case number and reason. Flag overstatement, missed harmful conduct,
-missing context, or disproportionate response options. Equivalent wording is
-acceptable. You may approve all unchanged cases together while listing exceptions.
-Record relevant expertise or limits in your reply; do not include confidential
-workplace examples. Your review will be recorded separately from author labels,
-with disagreements preserved. No review is inferred from volunteering.
+The user has offered to serve as workplace expert. No assessment has been
+received. The proposed labels below are AI-author drafts. This review addresses
+milestone 5's expert-review requirement; the later release evaluation separately
+requires two independent human reviewers and a third to resolve disagreements.
 
-The source of truth is the numbered [pilot manifest](pilot/mamoru/manifest.json),
-with original inputs, hashed synthetic records, and separate draft annotations.
-The source snapshots establish wording in the fictional cases, not independent
-corroboration. “Supported” relationships in those annotations refer to the
-attributed source wording, not the truth of embedded allegations.
+## How to complete your review
+
+1. **Describe your experience.** State your relevant workplace, management,
+   employee-support, or conflict-resolution experience and its limits. Flag
+   questions outside your expertise. Exclude confidential workplace examples.
+2. **Read a scenario before its proposed assessment.** Form your own view of
+   what the wording establishes. Use the supplied facts; leave missing context
+   unresolved.
+3. **Check all four parts of the assessment.** The *proposed label* summarizes
+   the situation. The *interpretation limit* says what cannot be concluded.
+   The *acceptable response* gives a suitable next step. *Reject* describes
+   an unsupported interpretation or unsuitable response.
+4. **Ask whether the assessment fits.** Does it preserve conditions, dates,
+   acceptance, and actual authority? Does it distinguish a reported concern
+   from a confirmed event? Does it recognize harmful conduct without treating
+   ordinary feedback as abuse? Are its response options realistic given power,
+   urgency, and the person's choices? Equivalent wording is acceptable.
+5. **Record a decision for every case.** Use **accept** if all four parts are
+   suitable, **revise** if a part needs changing, or **unsure** if you cannot
+   settle it. For revisions, give the case number, affected part, replacement
+   or requested change, and reason. For uncertainty, explain the missing
+   context or expertise. You may list accepted cases together after reviewing
+   them all.
+6. **Submit your assessment.** Reply in the project review conversation or give
+   the completed template below to the maintainer. The maintainer records it
+   separately from author labels, preserves disagreements, and addresses
+   corrections. Do not overwrite the AI-author annotation files.
+
+```text
+Review date:
+Reviewer name or ID:
+Relevant experience:
+Limits of my expertise:
+Cases reviewed:
+
+Accepted without changes: [case numbers]
+
+Revisions:
+- Case [number], part [label / limit / acceptable response / reject]:
+  Requested change:
+  Reason and relevant scenario wording:
+
+Unsure:
+- Case [number]:
+  Missing context or expertise:
+```
+
+If you reviewed all 20 and accept every part, explicitly say so and still provide
+your experience and limits. If reviewing in batches, list the cases completed
+and those remaining. Your review is submitted when every case has a decision or
+an explicit unresolved concern. Milestone 5 stays open until actual feedback is
+recorded and outstanding expert concerns are addressed. Volunteering or silence
+never counts as approval.
+
+## What the records establish
+
+The [pilot manifest](pilot/mamoru/manifest.json) identifies original inputs,
+source snapshots, and separate author annotations. The snapshots reproduce
+fictional records; they do not independently confirm that an alleged event
+happened. A “supported” relationship in an author annotation means the snapshot
+contains the attributed wording, not that every allegation within it is true.
+
+This sheet exposes the author's proposals. Reviewing it does not count as making
+independent expected judgments before seeing those proposals. See the
+[evaluation guide](README.md#evaluate-skill-behavior) for that separate process.
+
+## Cases to review
 
 ### 001 — conditional-promotion
 
