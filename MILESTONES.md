@@ -128,10 +128,14 @@ phase. Human review and returned Claude runs remain explicit dependencies.
    transfer packet; its verification stays pending until returned runs are
    recorded. Leave personal host configuration untouched.
 4. **Run a bounded comparison and obtain human review — pending.** Freeze the
-   specified 12 inputs, generic baseline, model/settings, and evidence/tool
-   access; obtain expected human judgments before exposing author proposals.
-   Run three repetitions per condition and host (144 outputs, 72 blinded pairs)
-   with hidden-label and baseline isolation. Record human judgments, missing
+   specified 12 inputs, model/settings, and evidence/tool access. Compare exactly
+   two conditions: the relevant skill and the fixed generic instruction in the
+   [comparison guide](eval/README.md#4-run-the-planned-pilot-comparisons).
+   Obtain expected human judgments before exposing author proposals. Run three
+   repetitions per condition on Codex and Claude Code (144 outputs, 72 blinded
+   pairs) with hidden-label and baseline isolation. No-skill and other baseline
+   comparisons remain part of the broader evaluation after this bounded pilot;
+   they are not counted here. Record human judgments, missing
    runs, critical failures, and exploratory limits; repetitions and role variants
    are not independent cases. Simplify skills without a clear advantage before
    expanding evaluation. Do not send or publish artifacts automatically.

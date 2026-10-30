@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-015-author-v2",
+  "annotation_id": "pilot-kagami-015-author-v3",
   "case_id": "pilot-kagami-015",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -31,8 +31,8 @@
       "proposition_id": "pilot-kagami-015-p1",
       "evidence_id": "pilot-kagami-015-e1",
       "location": "L1",
-      "status": "contradicted",
-      "establishes": "News A repeats Survey S; News B identifies the same origin and no additional survey."
+      "status": "insufficient evidence",
+      "establishes": "News A repeats Survey S. This source alone does not establish whether a second report has an independent origin."
     },
     {
       "proposition_id": "pilot-kagami-015-p1",
@@ -59,12 +59,12 @@
   "reasoning_gaps": [
     "Two outlets repeating one survey do not supply independent confirmation; the underlying adoption measurement is not independently verified."
   ],
-  "answerability": "The two reports share one survey origin. Both repeat 90% adoption, but the underlying rate is not independently verified.",
+  "answerability": "News A reports 90% adoption from Survey S; News B repeats the same survey and says neither outlet conducted another. There is one survey origin, and the underlying adoption rate is not independently verified.",
   "problem_labels": [
     "problem"
   ],
   "acceptable_outputs": [
-    "The two reports share one survey origin. Both repeat 90% adoption, but the underlying rate is not independently verified."
+    "News A reports 90% adoption from Survey S; News B repeats the same survey and says neither outlet conducted another. There is one survey origin, and the underlying adoption rate is not independently verified."
   ],
   "forbidden_changes": [
     "Counting the two outlets repeating Survey S as independent confirmations.",

@@ -1,5 +1,5 @@
 {
-  "annotation_id": "pilot-kagami-014-author-v2",
+  "annotation_id": "pilot-kagami-014-author-v3",
   "case_id": "pilot-kagami-014",
   "annotator_id": "amaterasu-ai-author",
   "annotator_role": "AI case author; not independent",
@@ -22,26 +22,26 @@
       "proposition_id": "pilot-kagami-014-p1",
       "evidence_id": "pilot-kagami-014-e1",
       "location": "L1",
-      "status": "mixed",
-      "establishes": "Lab A reports 11 hours under protocol P, consistent with the threshold; Lab B reports 9. The joint record remains mixed."
+      "status": "supported",
+      "establishes": "Lab A reports 11 hours under protocol P for the same model and date, consistent with the claimed threshold."
     },
     {
       "proposition_id": "pilot-kagami-014-p1",
       "evidence_id": "pilot-kagami-014-e2",
       "location": "L1",
-      "status": "mixed",
-      "establishes": "Independent Lab B reports 9 hours under protocol P, below the threshold; Lab A reports 11. The joint record remains mixed."
+      "status": "contradicted",
+      "establishes": "Independent Lab B reports 9 hours under protocol P for the same model and date, below the claimed threshold."
     }
   ],
   "reasoning_gaps": [
     "Do not average into a verdict or choose by prestige."
   ],
-  "answerability": "Comparable supplied reports conflict; investigate sample variation and measurement before resolving.",
+  "answerability": "Lab A reports 11 hours and independent Lab B reports 9 under protocol P for the same model and date. The joint evidence is mixed; investigate sample variation and measurement before resolving the conflict.",
   "problem_labels": [
     "insufficient-evidence"
   ],
   "acceptable_outputs": [
-    "Comparable supplied reports conflict; investigate sample variation and measurement before resolving."
+    "Lab A reports 11 hours and independent Lab B reports 9 under protocol P for the same model and date. The joint evidence is mixed; investigate sample variation and measurement before resolving the conflict."
   ],
   "forbidden_changes": [
     "Resolving the conflicting reports by averaging their measurements or choosing by prestige.",

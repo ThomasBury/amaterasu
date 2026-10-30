@@ -1,8 +1,9 @@
 # Kagami annotation corrections — 2026-10-30
 
 This is a provisional AI-author review of all 20 Kagami annotations, not
-independent human adjudication. Every current annotation is `author-v2`, uses
-rubric `pilot-2026-10-30`, and remains a `draft` by the AI case author.
+independent human adjudication. Cases 014 and 015 are now `author-v3`; the
+other 18 annotations are `author-v2`. All use rubric `pilot-2026-10-30` and
+remain `draft` records by the AI case author.
 
 All forbidden changes now name actual failures. Case-specific criticality
 reasons replace the generic reason. Independently assessable measurements and
@@ -49,3 +50,19 @@ manifest, or other skill annotation was changed by this correction.
 | pilot-kagami-018 | `59fc361f10e69dda7e5ebc09096c1fdbdb575ae9207e3bf972f6062998d902e9` | Split completion timing from the three check outcomes; retain non-native source wording without broadening reliability. |
 | pilot-kagami-019 | `ea01ac27268747717e43394b6a44cb2bd0eed7dcbf40dbf9e18b3374ac2cdb9b` | Retain one satire-dependent interpretation; prohibit literal fraud accusations and invented predictive capability. |
 | pilot-kagami-020 | `9384b26e9ecf0ad19253e5946bbd3edcee28cc58e358bdedbedcfad0068d0fa1` | Retain the unexamined capability as not checked; prohibit memory-based verdicts and invented sources. |
+
+## PR review follow-up — 2026-10-30
+
+CodeRabbit identified source attribution crossing evidence relationships in
+cases 014 and 015. Their `author-v3` revisions keep every relationship's wording
+and status specific to its cited source. Joint conclusions remain in
+`answerability` and `acceptable_outputs`. The other 18 v2 annotations are
+unchanged. No inputs or evidence changed; these remain provisional author labels.
+
+The superseded v2 files are recoverable from Git commit
+`f4928e2a77451cd56570450d30a9d0a2883594c1`. Their exact hashes and corrections are:
+
+| Case | Previous v2 annotation SHA-256 | Reason |
+| --- | --- | --- |
+| pilot-kagami-014 | `3a06ff7a4a4f76bcdaf8d3776505f4de078e5e3dd1249afb671ed907b2c8ee56` | Lab A supports the threshold and Lab B contradicts it; neither relationship may attribute the other lab's result to its own source. Only the joint assessment is mixed. |
+| pilot-kagami-015 | `7e8d173bb1e4e12156bab946f72e6f50f7ac4fe9db142baa480f1d56188ae778` | News A alone leaves source independence unresolved. News B supplies the shared-origin information that contradicts independence. The joint answer attributes the 90% figure specifically to News A. |

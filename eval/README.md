@@ -213,8 +213,22 @@ assessment. One rehearsal does not establish effectiveness or meet release gates
 
 ### 4. Run the planned pilot comparisons
 
-Before running comparisons, record the exact configurations, prompts, conditions,
-case list, evidence versions, and settings. Use the same model and tools for the
+Improvement Phase 4 in [the milestone sequence](../MILESTONES.md#improvement-sequence--one-phase-per-implementation-session)
+is a bounded pilot with exactly two conditions: the relevant Amaterasu skill
+and this fixed generic instruction:
+
+```text
+Complete the task in plain language. Preserve facts, attribution, uncertainty, scope, and commitments. Do not invent missing information. Explain relevant evidence gaps.
+```
+
+Its 12 inputs, three repetitions, two conditions, and two hosts (Codex and Claude
+Code) produce 144 outputs, presented as 72 blinded pairs. No-skill, external
+baselines, and original-text comparisons are deferred to the broader evaluation
+after this bounded pilot; they are not included in those counts.
+
+For the broader pilot comparisons preparing the full release evaluation, record
+the exact configurations, prompts, conditions, case list, evidence versions,
+and settings. Use the same model and tools for the
 no-skill, short generic instruction, and skill conditions. Include the applicable
 external baselines and original-text comparisons listed in
 [comparisons and run records](#comparisons-and-run-records). Record unavailable

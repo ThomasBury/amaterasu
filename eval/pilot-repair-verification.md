@@ -92,3 +92,22 @@ independent label quality, host behavior, or usefulness. No skill behavior,
 isolated Codex/Claude run, human assessment, or comparison was performed here.
 Those remain later improvement phases and full-release requirements. Phase 2
 is pending; no personal host settings, dependencies, or publishing changed.
+
+## PR review follow-up — 2026-10-30
+
+Codex found no issues in `f4928e2`. CodeRabbit identified two corrections:
+
+- Source relationships in cases 014 and 015 included information from another
+  evidence artifact. Each now describes only its cited source, with matching
+  per-source statuses; the combined conclusion stays in the annotation-level
+  answer. These two annotations advance to `author-v3`; their v2 hashes and
+  recovery revision are appended to the correction record.
+- The milestone summary did not explicitly distinguish the bounded two-condition
+  comparison from the broader baseline evaluation. The milestone and evaluation
+  guide now name the skill and fixed generic instruction, retain 144 outputs and
+  72 pairs, and defer the other comparisons to the broader evaluation afterwards.
+
+The supplied artifacts were reread to check attribution. The locked validator,
+86-test suite, local links/anchors, and whitespace checks pass again. Inputs,
+evidence, manifests, and skill packages remain unchanged. This follow-up adds no
+behavioral or independent-human validation result.
