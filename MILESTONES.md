@@ -126,12 +126,13 @@ phase. Human review and returned Claude runs remain explicit dependencies.
    checks pass. See the [verification record](eval/substance-workflow-verification.md).
    Historical verification records are unchanged; no host behavioral run or
    independent label review was performed.
-3. **Make first use obvious and verify both hosts — pending.** Lead with
-   functional labels and examples; document safe project-local copying. Verify
-   discovery, invocation, local references, duplicates, and offline operation on
-   Codex and Claude Code in disposable installations. Prepare the frozen Claude
-   transfer packet; its verification stays pending until returned runs are
-   recorded. Leave personal host configuration untouched.
+3. **Plugin and Skills CLI installation — implemented; host checks pending.**
+   Package the existing four folders with shared Claude/Codex metadata; document
+   installation, invocation, updates, duplicate avoidance, and manual copying.
+   Record disposable checks and remaining limits in the
+   [installation record](eval/installation-verification.md). Claude verification
+   stays pending until the frozen transfer packet's returned runs are recorded.
+   Leave personal host configuration untouched; no publishing is authorized.
 4. **Run a bounded comparison and obtain human review — pending.** Freeze the
    specified 12 inputs, model/settings, and evidence/tool access. Compare exactly
    two conditions: the relevant skill and the fixed generic instruction in the
@@ -145,7 +146,7 @@ phase. Human review and returned Claude runs remain explicit dependencies.
    are not independent cases. Simplify skills without a clear advantage before
    expanding evaluation. Do not send or publish artifacts automatically.
 
-## 6. Full release validation — pending
+## 6. Full effectiveness validation — deferred
 
 - [ ] Complete independent pilot annotation and instruction refinement before
   freezing the new 320-case test set plus 80 matched role/title variants.
@@ -161,6 +162,14 @@ phase. Human review and returned Claude runs remain explicit dependencies.
 - [ ] Conduct the 60-reader study with independent comprehension/action scoring.
 - [ ] Publish configuration-specific results, uncertainty, costs, failures, and
   limitations. Never publish private evaluation material.
+
+The next release targets **experimental** use. Keep the validator, 90 pilot
+cases, Mamoru expert review, and bounded comparison above. The 320-case benchmark
+and 60-reader study are deferred requirements for stronger effectiveness claims,
+not prerequisites for trying the skills. SkillOpt integration is deferred: it
+needs trustworthy scored runs and supplies no independent judgments here.
+Reconsider it after the bounded comparison identifies recurring failures worth
+optimizing.
 
 A pilot-supported release may be called **experimental**. A validated release
 requires the locked evaluation and reader-study gates; absence of data is not a

@@ -1,14 +1,15 @@
 # Portability contract
 
-**No host has been runtime-tested. Kagami, Kotoba, and Kakehashi have standalone skill folders.**
-This document records packaging requirements and the validation work needed
-before publishing installation instructions or compatibility claims.
+All four skills have standalone folders and shared Claude/Codex plugin metadata.
+See the [installation record](../eval/installation-verification.md) for exact
+checks and pending runtime verification. Installation does not establish
+behavioral effectiveness.
 
 ## Portable package
 
-Each skill will be a self-contained folder with `SKILL.md` and its relevant
+Each skill is a self-contained folder with `SKILL.md` and its relevant
 `references/` files. The folder and frontmatter `name` will match: `kagami`,
-`kotoba`, `kakehashi`, or `mamoru`. Frontmatter will include a concise description
+`kotoba`, `kakehashi`, or `mamoru`. Frontmatter includes a concise description
 of when to use it. References will use relative paths inside the installed folder.
 These conventions follow the [Agent Skills specification](https://agentskills.io/specification).
 
@@ -32,9 +33,9 @@ documented feature does not earn a runtime compatibility badge.
 
 | Target | Planned delivery | Documentation entry point | Tested version / status |
 | --- | --- | --- | --- |
-| Codex | Documented local skill discovery; user or project installation where supported. | [Build skills](https://learn.chatgpt.com/docs/build-skills) | None / pending |
+| Codex | Shared plugin marketplace; Skills CLI or manual folders. | [Build skills](https://learn.chatgpt.com/docs/build-skills) | CLI 0.165.0: manifest/catalog parsing only; native install and behavior pending |
 | OpenCode 2 | Native discovery or configured local skill directory; use v2 syntax and verify precedence. | [v2.1.2 skills documentation](https://github.com/anomalyco/opencode/blob/v2.1.2/services/www/src/docs/content/skills.mdx) | None / pending; documentation tag is not a tested version |
-| Claude Code | Standard `.claude/skills` installation without Claude-specific execution dependencies. | [Skills](https://code.claude.com/docs/en/skills) | None / pending |
+| Claude Code | Shared plugin marketplace; Skills CLI or manual `.claude/skills` copies. | [Skills](https://code.claude.com/docs/en/skills) | CLI unavailable / runtime pending |
 | Pi v1 | Directory-based discovery, including `.agents/skills` where supported; explicit invocation. | [v1.0.0 skills documentation](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/docs/skills.md) | None / pending; documentation tag is not a tested version |
 | Hermes | Self-contained skill-store folder or standard repository tap. | [Skills](https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/skills.md) | None / pending |
 | OpenClaw | Documented Agent Skills discovery; no required gateway, messaging, or automation integration. | [Skills](https://github.com/openclaw/openclaw/blob/main/docs/tools/skills.md) | None / pending |
