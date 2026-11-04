@@ -20,6 +20,25 @@ def edit(path, change):
     path.write_text(json.dumps(record))
 
 
+def test_plugin_packages_every_standalone_skill():
+    """A manifest omission must not silently remove a skill from plugin installs."""
+    manifest = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())
+    marketplace = json.loads((ROOT / '.claude-plugin/marketplace.json').read_text())
+    assert manifest['name'] == marketplace['name'] == 'amaterasu'
+    entry, = marketplace['plugins']
+    assert entry['name'] == manifest['name']
+    assert entry['source'] == './'
+    paths = manifest['skills']
+    expected = {f'./skills/{p.name}' for p in (ROOT / 'skills').iterdir() if p.is_dir()}
+    assert len(paths) == len(expected)
+    assert set(paths) == expected
+    for name in paths:
+        folder = ROOT / name
+        validate_skill(folder)
+        assert (folder / 'LICENSE').is_file()
+        assert (folder / 'NOTICE.md').is_file()
+
+
 @pytest.mark.parametrize('skill,count', [('kagami', 24), ('kotoba', 23), ('kakehashi', 21), ('mamoru', 22)])
 def test_real_corpus_and_shared_rules(skill, count):
     assert validate_corpus(ROOT / 'eval/pilot' / skill, skill) == count

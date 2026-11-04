@@ -1,0 +1,12 @@
+{
+  "name": "amaterasu",
+  "owner": { "name": "Thomas Bury" },
+  "plugins": [
+    {
+      "name": "amaterasu",
+      "source": "./",
+      "description": "Four experimental skills for claims, writing, explanations, and commitments.",
+      "category": "productivity"
+    }
+  ]
+}

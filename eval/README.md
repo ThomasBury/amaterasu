@@ -16,6 +16,12 @@ answers. For the checks already performed, see the [Kagami](kagami-verification.
 records. Those file checks and author walkthroughs do not establish whether the
 skills improve reasoning or understanding.
 
+The next release is experimental. File checks and the bounded 12-input comparison
+remain maintainer work; users do not need Python or this process to install a
+skill. The full benchmark and reader study below are **deferred requirements for
+stronger effectiveness claims**, not an experimental installation gate. SkillOpt
+integration and automated optimization are deferred.
+
 ## Choose your task
 
 | I want to... | Start here | What I will produce |
@@ -26,7 +32,8 @@ skills improve reasoning or understanding.
 
 You can do the expert review and local checks today. Behavior testing is a
 manual process: this repository has no automated evaluation runner or scorer.
-Host-specific installation and invocation instructions still need testing.
+See the [installation record](installation-verification.md) for tested installation
+routes and pending host checks.
 A complete release evaluation also needs new test cases and a reader study.
 
 ### Words used in this guide

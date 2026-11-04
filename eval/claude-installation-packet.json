@@ -1,0 +1,24 @@
+{
+  "base_commit": "7f5cb3c0f048563dc51bbd143605756f0f8fc5f2",
+  "files": {
+    ".claude-plugin/marketplace.json": "9882a3d019f4e6c120313e7da1f3f0b03b07f0eb5811da8ad9e55e50dccef3e5",
+    ".claude-plugin/plugin.json": "0c91f3fe93a0a84811659082097cd48ce0e3390ec23b1c72803c9c2af9af1a88",
+    "skills/kagami/LICENSE": "800a3e8e9d92386499de0e346f275f160d2f43d6f0673285b01307e7aa49cdbb",
+    "skills/kagami/NOTICE.md": "7cf73264cbfff93d1d300a06fc6b48434b8c16131457110f6c7d59b4e5f9acf8",
+    "skills/kagami/SKILL.md": "30da49eee9e8963ec89e405671d993aef4cd3aca53c51b6d61760173bc414e27",
+    "skills/kagami/references/evidence-and-arguments.md": "eeef099e5d246dd2665e0f33c5d8d5933779d95e7ecf3a9496f2eec2c77fa2a5",
+    "skills/kagami/references/numbers-and-product-claims.md": "a4c53454a9caf506c3f44df46df2affcaf013562f56a79eaeba5e0e7f3dcfa1f",
+    "skills/kakehashi/LICENSE": "800a3e8e9d92386499de0e346f275f160d2f43d6f0673285b01307e7aa49cdbb",
+    "skills/kakehashi/NOTICE.md": "96188e4fa4c4ee63b1d6d5a1d70263cca2837b5f5aafab895cd77b2e919b7f1e",
+    "skills/kakehashi/SKILL.md": "b646516d8784447982eab3a052fbca88abadbbf0ecf3738847554240fcbfc612",
+    "skills/kakehashi/references/audiences-and-meaning.md": "43a8cbeb5858aff7d6ec421fa826093455090ad35c734939a27d01e6a949dd56",
+    "skills/kotoba/LICENSE": "800a3e8e9d92386499de0e346f275f160d2f43d6f0673285b01307e7aa49cdbb",
+    "skills/kotoba/NOTICE.md": "6e63a2445fa749d07ab49cfd1d27478c359e59b6d1295d21d43aaad20e02c6a9",
+    "skills/kotoba/SKILL.md": "4575be6b5a0f38888e76db4836a0b7cd11abbb828b67d5b1e1add4b1f68960ae",
+    "skills/kotoba/references/writing-and-accountability.md": "bf51a827a43f4f01af1ec3875833bd6242de109344d15cf9ae50e620220b55a6",
+    "skills/mamoru/LICENSE": "800a3e8e9d92386499de0e346f275f160d2f43d6f0673285b01307e7aa49cdbb",
+    "skills/mamoru/NOTICE.md": "f18e8a1dca11f86b66e9628da49dc4d05fffd33059c6d75ea4c4ba338691f432",
+    "skills/mamoru/SKILL.md": "7b93e77c9606655e648526a998edc89e18d646dac322da9a3bd728525674aa4c",
+    "skills/mamoru/references/commitments-and-conduct.md": "df07d25a1d50ebe504ccb8aa1861969be4c752fec1a867e7bdacd3a29752e349"
+  }
+}

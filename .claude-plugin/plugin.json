@@ -1,0 +1,14 @@
+{
+  "name": "amaterasu",
+  "version": "0.1.0",
+  "description": "Experimental skills for checking claims, writing clearly, explaining material, and understanding commitments.",
+  "author": { "name": "Thomas Bury" },
+  "repository": "https://github.com/ThomasBury/amaterasu",
+  "license": "MIT",
+  "skills": [
+    "./skills/kagami",
+    "./skills/kotoba",
+    "./skills/kakehashi",
+    "./skills/mamoru"
+  ]
+}
