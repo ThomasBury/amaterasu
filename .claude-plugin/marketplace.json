@@ -5,7 +5,7 @@
     {
       "name": "amaterasu",
       "source": "./",
-      "description": "Four experimental skills for claims, writing, explanations, and commitments.",
+      "description": "Kagami reviews URLs and text for empty language, unsupported claims, misleading reasoning, and promises. Includes Kotoba, Kakehashi, and Mamoru.",
       "category": "productivity"
     }
   ]

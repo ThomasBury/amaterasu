@@ -74,7 +74,7 @@ contains the attributed wording, not that every allegation within it is true.
 
 This sheet exposes the author's proposals. Reviewing it does not count as making
 independent expected judgments before seeing those proposals. See the
-[evaluation guide](README.md#evaluate-skill-behavior) for that separate process.
+[historical research protocol](research-protocol.md#evaluate-skill-behavior) for that separate process.
 
 ## Cases to review
 

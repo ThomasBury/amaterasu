@@ -16,9 +16,10 @@ For the pending Mamoru expert assessment, use the
 visible author proposals. The independent review described here starts before
 reviewers see author proposals or assistant answers.
 
-Read the [evaluation guide](README.md#evaluate-skill-behavior) for the order of
-work and the coordinator's responsibilities. That guide also explains sampling,
-comparison setups, release requirements, and uncertainty in results.
+The [historical research protocol](research-protocol.md#evaluate-skill-behavior)
+describes the proposed order of work and coordinator responsibilities, including
+sampling, comparison setups, and uncertainty. These proposals are not current
+release requirements; use the [quality-check guide](README.md) for ongoing work.
 
 ## Annotator procedure
 
@@ -69,7 +70,7 @@ in `pilot/<skill>/annotations/`.
    settle it, or not applicable with a reason if the dimension does not apply.
 4. Submit independently. The third reviewer resolves disagreements, records
    reasons, and preserves the original judgments. Apply the
-   [rules for unresolved disagreements](README.md#metric-definitions-and-uncertainty)
+   [rules for unresolved disagreements](research-protocol.md#metric-definitions-and-uncertainty)
    before calculating results.
 
 Use the [record fields](#minimum-records) below for the saved annotations.
@@ -140,7 +141,7 @@ Do not store private source material in public evidence artifacts.
 
 Join each run to `case_id`, `condition`, `repetition`, `configuration_id`, and
 `evidence_set_id`. Record the reproducibility fields in the
-[protocol](README.md#comparisons-and-run-records), with output artifact/hash and
+[protocol](research-protocol.md#comparisons-and-run-records), with output artifact/hash and
 complete/error/timeout state. Output reviewers record matches between output
 claims and expected human-labeled claims, evidence relationship judgments,
 proposition preservation, unsupported additions,
@@ -183,7 +184,7 @@ and attribution. Splitting a claim never promotes a quotation into an observed
 fact. Record boundary or type changes with the annotation version, reasons, and
 recoverable previous labels; do not compare counts across versions silently.
 
-Apply the [five evidence statuses](../docs/contracts.md#evidence-and-meaning)
+Apply the [five evidence statuses](../skills/kagami/references/evidence-and-arguments.md#evidence-status-and-source-limits)
 without ordering them as severity. “Not checked” describes absent examination;
 “insufficient evidence” describes an attempted assessment that cannot settle
 the question. An opinion may have no applicable factual verdict while its

@@ -1,8 +1,10 @@
 # Portability contract
 
 All four skills have standalone folders and shared Claude/Codex plugin metadata.
-See the [installation record](../eval/installation-verification.md) for exact
-checks and pending runtime verification. Installation does not establish
+See the [current first-use record](../eval/first-use-verification.md) for exact
+checks and unavailable runtime verification. The
+[2026-10-30 installation record](../eval/installation-verification.md) remains
+historical evidence for its tested versions. Installation does not establish
 behavioral effectiveness.
 
 ## Portable package
@@ -24,26 +26,33 @@ unrelated skill collections, including after a more specific retry; the official
 specification was used directly. This establishes format requirements, not
 behavioral compatibility.
 
-## Intended targets
+## Documented routes and tested status
 
-The links below are the implementation plan's host-documentation entry points.
-Host-specific installation paths, configuration syntax, and precedence must be
-checked against the exact version during implementation. A listed link or
-documented feature does not earn a runtime compatibility badge.
+The [README](../README.md#install) pairs installation with first use. The
+[installation guide](installation.md) covers alternate scopes, updates, and
+troubleshooting. Commands were checked against primary documentation and available
+CLI help on 2026-11-04–05. See the first-use record for observed runtime results.
 
-| Target | Planned delivery | Documentation entry point | Tested version / status |
+| Target | Documented delivery | Documentation | Tested version / status |
 | --- | --- | --- | --- |
-| Codex | Shared plugin marketplace; Skills CLI or manual folders. | [Build skills](https://learn.chatgpt.com/docs/build-skills) | CLI 0.165.0: manifest/catalog parsing only; native install and behavior pending |
-| OpenCode 2 | Native discovery or configured local skill directory; use v2 syntax and verify precedence. | [v2.1.2 skills documentation](https://github.com/anomalyco/opencode/blob/v2.1.2/services/www/src/docs/content/skills.mdx) | None / pending; documentation tag is not a tested version |
-| Claude Code | Shared plugin marketplace; Skills CLI or manual `.claude/skills` copies. | [Skills](https://code.claude.com/docs/en/skills) | CLI unavailable / runtime pending |
-| Pi v1 | Directory-based discovery, including `.agents/skills` where supported; explicit invocation. | [v1.0.0 skills documentation](https://github.com/earendil-works/pi/blob/v1.0.0/packages/coding-agent/docs/skills.md) | None / pending; documentation tag is not a tested version |
-| Hermes | Self-contained skill-store folder or standard repository tap. | [Skills](https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/skills.md) | None / pending |
-| OpenClaw | Documented Agent Skills discovery; no required gateway, messaging, or automation integration. | [Skills](https://github.com/openclaw/openclaw/blob/main/docs/tools/skills.md) | None / pending |
-| Grok web/app | Manual prompt: paste the skill instructions and task-relevant references beside the input. | No native skill-installation claim. | None / manual workflow pending |
+| Codex | Shared plugin for the user; Skills CLI/manual project or user folders. | [Plugin commands](https://learn.chatgpt.com/docs/developer-commands#codex-plugin), [skills](https://learn.chatgpt.com/docs/build-skills) | CLI 0.166.0: local catalog parsing; isolated native install unavailable. Skills CLI folder copy passes. |
+| Claude Code | Shared plugin with project/user scope; standalone folders. | [Plugin CLI](https://code.claude.com/docs/en/plugins/cli-reference) | Host unavailable. Skills CLI folder copy passes; runtime untested. |
+| OpenCode 2 | Skills CLI or native skill folders; no extension required. | [V2 skills](https://opencode.ai/v2/docs/skills) | CLI 2.2.5: disposable runtime check; see the current record for discovery, reference loading, and response failures. |
+| Pi | Skills CLI or native skill folders; `/skill:kagami`. | [Skills](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md) | Host unavailable. Skills CLI folder copy passes; runtime untested. |
+
+Skills CLI **1.7.4** installed only Kagami into separate temporary projects for all
+four targets, with every packaged file byte-matching its source. Those checks
+used the local checkout; GitHub-source installation, remote updates, user-scope
+installation, and project/user precedence were not exercised. The README's
+`@latest` examples follow current documentation; they are not a test of every
+future CLI version.
+
+Hermes, OpenClaw, and manual Grok use remain foundation-era intended targets.
+No new compatibility or installation claim is made for them in this phase.
 
 ## Required host checks
 
-For each tested host/version, publish a separate record containing the skill
+For each tested host/version, keep a separate record containing the skill
 commit, installation scope/path, model/version, available tools, date, commands
 or invocation text, observed output, and failures. Verify:
 
@@ -61,11 +70,13 @@ discovery in the affected host; do not delete shared assets another host needs.
 Test the catalog again after any such change. This repository's implementation
 does not itself authorize changing a user's host configuration.
 
-Run full behavioral comparisons on Codex and Claude Code first. Other targets
-need installation and representative behavioral smoke tests. Report results per
-host/model configuration; a compatible host does not imply equal behavior from
-every model. Grok manual use does not imply native discovery, equivalent tool
-access, persistent instructions, or equivalent performance.
+Use the six-scenario manual review on Codex and one representative review for
+each other available host, using isolated installations where supported. Mark
+unavailable checks explicitly; do not install missing hosts to fill a table or
+change personal configuration. Report results per host/model configuration;
+a compatible host does not imply equal behavior from every model. Grok manual
+use does not imply native discovery, equivalent tool access, persistent
+instructions, or equivalent performance.
 
 Local Markdown files do not ensure private execution. A cloud-backed host can
 transmit prompts to a provider. Genuinely local processing requires an appropriate
