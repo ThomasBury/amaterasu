@@ -78,6 +78,6 @@ is uncertain; neither blanket jargon removal nor meaning preservation by this
 skill is established. Analogies and the requirements split above are design
 choices, not separately validated interventions.
 
-Examples are original synthetic illustrations. Independent annotations and
-reader comprehension/action tests are still required; model self-ratings and
-structural checks cannot substitute for them.
+Examples are original synthetic illustrations. Assessing effectiveness would need
+independent annotations and reader comprehension/action tests; no such result is
+available. Model self-ratings and structural checks do not establish effectiveness.

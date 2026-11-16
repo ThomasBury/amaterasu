@@ -22,6 +22,10 @@ margin and appropriate analysis. Do not reverse it into proof of a difference.
 These checks are elementary arithmetic and methodological safeguards, not a
 statistical audit, replication, or validation of the measurements.
 
+For papers, tie each numerical finding to the abstract, full-text passage, or
+table actually inspected. A reported estimate in an abstract does not establish
+the uninspected analysis, denominator, or data quality.
+
 ## Product and benchmark claims
 
 Distinguish measured capability, prototype, roadmap, forecast, and commitment.
@@ -35,6 +39,13 @@ This establishes neither every workload's performance nor a production guarantee
 A staging percentile is not an average or an availability promise. A vendor's
 roadmap is evidence of its stated plan, not of a shipped feature. A missing
 benchmark warrants a scoped unresolved verdict, not an accusation of deception.
+
+For a concrete delivery promise, use the compact promise check in
+[evidence and arguments](evidence-and-arguments.md). Preserve actor, outcome,
+deadline, conditions, and dated fulfillment evidence. Missing shipment evidence
+alone does not establish a missed commitment; a documented missed deadline can
+coexist with unknown current fulfillment. Keep a demonstrated benchmark result
+separate from a promise about future production performance.
 
 ## Evidence strength and citations
 

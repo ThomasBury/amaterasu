@@ -1,7 +1,7 @@
 {
   "name": "amaterasu",
-  "version": "0.1.0",
-  "description": "Experimental skills for checking claims, writing clearly, explaining material, and understanding commitments.",
+  "version": "0.2.0",
+  "description": "Kagami reviews URLs and text for empty language, unsupported claims, misleading reasoning, and promises. Includes Kotoba, Kakehashi, and Mamoru.",
   "author": { "name": "Thomas Bury" },
   "repository": "https://github.com/ThomasBury/amaterasu",
   "license": "MIT",

@@ -74,7 +74,8 @@ able to help at weekends.”
 
 These checks are Amaterasu design safeguards, not empirically established effects
 of Kotoba. Shorter writing and a model's self-rating do not prove preservation.
-Independent readers and proposition-level annotations must test that hypothesis.
+Independent readers and proposition-level annotations would be needed to assess
+that hypothesis; no such effectiveness result is available.
 
 - [Army main-point-first guidance](https://tjaglcs.army.mil/Periodicals/The-Army-Lawyer/tal-2019-issue-1/Post/5907/No-2-Find-Your-Yoda)
   (2019, “Rule #9”) is operational guidance. The project foundation inspected

@@ -4,271 +4,219 @@
   <img src="pics/amaterasu-smooth-logo.svg" alt="Amaterasu — Bring the hidden to light" width="640">
 </p>
 
-<p align="center">
-  AI skills for checking claims, writing clearly, and understanding commitments.
-</p>
+**Give Kagami a URL or pasted text to review its claims, reasoning, numbers, and
+promises.** You get a short verdict, up to five findings with quotations and
+evidence, and an explanation of what Kagami could check.
 
-<p align="center">
-  <a href="#choose-a-skill">Choose a skill</a> ·
-  <a href="#install">Install</a> ·
-  <a href="#put-it-to-work">Examples</a> ·
-  <a href="#why-amaterasu">The name</a> ·
-  <a href="#evaluation-and-contributing">Evaluation</a>
-</p>
+Amaterasu provides four skills, which are instructions and references your AI
+assistant loads for a specific task. Start with Kagami for a critical review.
 
-An impressive proposal can leave its central claim unsupported. Simplifying a
-report can erase uncertainty; polishing an email can turn “might” into “will.”
-And a promise to recommend someone can be mistaken for a promise to promote them.
+| Skill | What it does |
+| --- | --- |
+| [Kagami](skills/kagami/SKILL.md) · 鏡 · *mirror* | Review claims and arguments for empty language, missing support, and misleading reasoning. |
+| [Kotoba](skills/kotoba/SKILL.md) · 言葉 · *words* | Draft or revise writing while preserving facts, voice, uncertainty, and commitments. |
+| [Kakehashi](skills/kakehashi/SKILL.md) · 架け橋 · *bridge* | Explain material to a specific audience while preserving its meaning and qualifications. |
+| [Mamoru](skills/mamoru/SKILL.md) · 守る · *protect* | Clarify commitments, boundaries, and documented conduct, then suggest a proportionate response. |
 
-Amaterasu gives your AI assistant four focused workflows for these situations:
-check what a claim means and what supports it, improve writing without changing
-its substance, explain material across audiences, and clarify promises and
-boundaries.
+**Example claim**
 
-Each **skill** is a folder of readable instructions and references that your
-assistant loads for a task. Bring a proposal, email, technical report, application,
-or conversation. You do not need to write code to use the instructions.
+```text
+Defects fell from 2% to 1%, a 50-percentage-point decrease.
+```
 
-## Choose a skill
+**Illustrative response**
 
-| What you need | Skill | What to expect |
-| --- | --- | --- |
-| Check a claim, a number, or vague corporate language | [Kagami](skills/kagami/SKILL.md) · 鏡 · *mirror* | A claim-by-claim assessment that separates unclear meaning, missing evidence, and conflicting evidence, with sources and questions to resolve the gaps. |
-| Write or revise something clearly | [Kotoba](skills/kotoba/SKILL.md) · 言葉 · *words* | A usable draft that preserves your facts, voice, uncertainty, and commitments. Missing information stays visible. |
-| Explain material to a different audience | [Kakehashi](skills/kakehashi/SKILL.md) · 架け橋 · *bridge* | An explanation suited to the reader’s knowledge and decision, with technical meaning and limitations intact. |
-| Understand a promise, request, or difficult exchange | [Mamoru](skills/mamoru/SKILL.md) · 守る · *protect* | A summary of commitments and documented conduct, unresolved details, and response options suited to the situation. |
+> The decrease is **1 percentage point**, or **50% relative**. Checking the
+> measurements or explaining the change requires more evidence.
 
-Use one skill on its own. When useful, ask for a sequence: Kagami can examine a
-proposal, then Kakehashi can explain those findings to a nontechnical reader.
-The original wording, evidence, and unresolved questions travel with the handoff;
-no skill starts another automatically.
+Amaterasu is experimental. Review quality depends on the host model and the
+sources it can access.
 
-## How it works
+## Contents
 
-The instructions ask the assistant to start with your actual words and context,
-keep meaning separate from evidence, and return something you can act on:
-an assessment with sources, a draft, an explanation, or questions to clarify an
-agreement.
-
-For example, “Our AI doubles productivity” has a claim to examine, even when no
-evidence is supplied. “We operationalize exponential synergy” needs clarification
-before factual checking can begin. Making either sentence sound better cannot
-supply the missing evidence or meaning.
-
-Across all four skills, numbers, conditions, who said what, and uncertainty must
-survive. Unfamiliar jargon is a reason to ask what it means. A confident tone,
-prestigious title, or polished sentence cannot establish that a claim is true.
-The skills assess communication without scoring people or diagnosing their intent.
+- [Install](#install) ([Claude Code](#claude-code), [Codex](#codex), [OpenCode](#opencode), [Pi](#pi))
+- [Examples and use cases](#examples-and-use-cases)
+- [Optional companions](#optional-companions)
+- [Source access and privacy](#source-access-and-privacy)
+- [Method and feedback](#method-and-feedback)
+- [Why Amaterasu?](#why-amaterasu)
+- [License](#license)
 
 ## Install
 
-You need an AI assistant that can load local skill folders. Amaterasu’s skills
-are plain-text Markdown files; Python is only needed for the optional evaluation
-tools.
+Choose one route for your host. The plugins install all four skills. The
+OpenCode and Pi commands install Kagami only and use the Skills CLI, which
+requires Node.js and npm. You can use the skills without Python.
 
-Choose **one installation route per agent**. Installing a plugin and local copies
-can make each skill appear twice. The GitHub plugin commands require a published
-revision containing the metadata added here. See the
-[installation record](eval/installation-verification.md) for tested routes and
-remaining host checks.
+For other installation scopes, updates, manual copying, and troubleshooting,
+see the [installation guide](docs/installation.md). For tested versions and
+runtime limits, see the [installation check record](eval/first-use-verification.md).
 
-### Claude Code plugin
+### Claude Code
 
-```sh
-claude plugin marketplace add ThomasBury/amaterasu
-claude plugin install amaterasu@amaterasu
-```
-
-Start a new session and invoke `/amaterasu:kagami`, `/amaterasu:kotoba`,
-`/amaterasu:kakehashi`, or `/amaterasu:mamoru`.
-
-Third-party marketplaces do **not** automatically update by default. Open
-`/plugin`, select **Marketplaces**, choose `amaterasu`, and enable auto-update
-if wanted. For manual updates:
+Run these commands in the project where you want to use Amaterasu.
 
 ```sh
-claude plugin marketplace update amaterasu
-claude plugin update amaterasu@amaterasu
+claude plugin marketplace add ThomasBury/amaterasu --scope project
+claude plugin install amaterasu@amaterasu --scope project
 ```
 
-See [Claude's plugin guide](https://code.claude.com/docs/en/plugins/install).
-Claude runtime verification remains pending.
+Start a new session in that project and send this prompt.
 
-### Codex plugin
+```text
+/amaterasu:kagami Review this claim. Defects fell from 2% to 1%, a 50-percentage-point decrease.
+```
+
+### Codex
+
+These commands install the plugin for your user.
 
 ```sh
 codex plugin marketplace add ThomasBury/amaterasu
 codex plugin add amaterasu@amaterasu
 ```
 
-Start a new session and select a packaged skill from `/skills` or the `$` picker.
-Use the name shown in the catalog. For an explicit refresh:
-
-```sh
-codex plugin marketplace upgrade amaterasu
-codex plugin add amaterasu@amaterasu
-```
-
-Do not rely on startup updates until verified for your version. See
-[OpenAI's plugin guide](https://developers.openai.com/plugins/build/plugins)
-and the [tested status](docs/compatibility.md).
-
-### Other agents, or editable local files
-
-Run the [Skills CLI](https://github.com/vercel-labs/skills) in your destination
-project. It requires Node.js/npm and downloads folders directly from GitHub;
-Amaterasu does not require an npm package.
-
-```sh
-npx skills@latest add ThomasBury/amaterasu -a <agent>
-```
-
-Replace `<agent>` with `codex`, `claude-code`, `github-copilot`, `gemini-cli`,
-`opencode`, or another supported agent. Omit `-a <agent>` to choose interactively.
-Choose skills in the installer, add `--skill kagami` for just Kagami, or
-`--skill '*'` for all four. Installation is project-local by default; `-g`
-selects a user-level installation. Add `--copy` for editable copies instead of
-links. Compare local edits before updating or replacing them.
-
-```sh
-npx skills@latest check
-npx skills@latest update
-```
-
-Check the CLI's reported scope. If `update` does not track your project-local
-copy, re-run its original `add` command. Re-run `add` to select new skills.
-
-### ZIP or manual copying
-
-#### 1. Get the files
-
-[Download the ZIP](https://github.com/ThomasBury/amaterasu/archive/refs/heads/main.zip)
-and extract it, or clone the repository:
-
-```sh
-git clone https://github.com/ThomasBury/amaterasu.git
-cd amaterasu
-```
-
-#### 2. Copy the skills into your project
-
-Copy the folders you want from `amaterasu/skills/` into the location for your
-assistant. A project can be a folder where you keep documents as well as a code
-repository. Keep each entire skill folder, including `references/`, `LICENSE`,
-and `NOTICE.md`.
-
-| Assistant | Destination inside your project | Explicit invocation |
-| --- | --- | --- |
-| [Codex CLI or IDE extension](https://learn.chatgpt.com/docs/build-skills) | `.agents/skills/` | `$kagami`, `$kotoba`, `$kakehashi`, `$mamoru` |
-| [Claude Code in a local project](https://code.claude.com/docs/en/skills) | `.claude/skills/` | `/kagami`, `/kotoba`, `/kakehashi`, `/mamoru` |
-
-For example, a Codex installation of Kagami should contain:
+Start a new session. Select Kagami from `/skills` or the `$` picker using the
+name shown in the catalog, then send this prompt.
 
 ```text
-my-project/
-└── .agents/
-    └── skills/
-        └── kagami/
-            ├── SKILL.md
-            ├── references/
-            ├── LICENSE
-            └── NOTICE.md
+Review this claim. Defects fell from 2% to 1%, a 50-percentage-point decrease.
 ```
 
-You can copy the folders with your file manager. In a macOS or Linux terminal,
-this example copies Kagami from the Amaterasu checkout into another project.
-Replace `/path/to/my-project` with your project’s path:
+### OpenCode
+
+Run this command in the project where you want to use Kagami.
 
 ```sh
-mkdir -p "/path/to/my-project/.agents/skills"
-cp -R skills/kagami "/path/to/my-project/.agents/skills/"
+npx skills@latest add ThomasBury/amaterasu --skill kagami -a opencode
 ```
 
-For Claude Code, use `.claude/skills/` instead. Repeat for any other skills you
-want. If a destination skill already exists, compare it before replacing it.
-
-#### 3. Select a skill
-
-Open your assistant in the destination project. In Codex, use `/skills` or type
-`$` to select the installed skill. In Claude Code, invoke it with `/kagami`, for
-example. If it does not appear, restart the assistant and check the folder layout.
-
-These paths follow the linked host documentation. See the
-[installation record](eval/installation-verification.md) for observed results and the
-[portability guide](docs/compatibility.md) for other intended hosts and the checks
-required before claiming compatibility.
-
-## Put it to work
-
-Choose a prompt below and add your material. These examples use Codex’s `$name`
-syntax for standalone copies. With the Claude plugin, replace it with
-`/amaterasu:name`; with standalone Claude copies, use `/name`. With the Codex
-plugin, select the matching packaged skill from its catalog before adding your task.
-
-**Check a proposal with Kagami**
+Start a new session in that project and send this prompt.
 
 ```text
-$kagami Review this vendor proposal. Separate unclear wording from claims
-that need evidence. Use only the attached sources and show what remains unchecked.
+Use the kagami skill to review this claim. Defects fell from 2% to 1%, a 50-percentage-point decrease.
 ```
 
-**Improve an email or application with Kotoba**
+### Pi
+
+Run this command in the project where you want to use Kagami.
+
+```sh
+npx skills@latest add ThomasBury/amaterasu --skill kagami -a pi
+```
+
+Run `/reload` or start a new session in that project, then send this prompt.
 
 ```text
-$kotoba Rewrite this application paragraph for a hiring manager. Keep my voice
-and the results I supplied. Leave missing dates or outcomes visible.
+/skill:kagami Review this claim. Defects fell from 2% to 1%, a 50-percentage-point decrease.
 ```
 
-**Explain technical work with Kakehashi**
+## Examples and use cases
+
+Use the Kagami invocation for your host with either prompt below. When you
+review your own material, include your decision, any relevant dates, and the
+evidence you already have.
+
+### Check numbers in a public announcement
 
 ```text
-$kakehashi Explain this test report to a product manager deciding whether to
-launch. Preserve the test conditions and what the results cannot establish.
+Review NASA's 2022 DART announcement. Check the change in orbit period and separate the measured result from possible future uses.
+https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/
 ```
 
-**Clarify a commitment with Mamoru**
+The reported periods differ by 32 minutes. A review can check that arithmetic
+and preserve the reported uncertainty of about two minutes. [NASA’s DART announcement](https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/)
+
+### Review a paper abstract
 
 ```text
-$mamoru Read these dated messages. What was promised, under which conditions,
-and by whom? Help me draft a firm clarification without guessing anyone’s intent.
+Review only the abstract of Attention Is All You Need. Which claims does it report, and which comparisons would require checking the methods or results tables?
+https://arxiv.org/abs/1706.03762
 ```
 
-Supply the original text, intended audience, relevant dates, and available
-sources. If a page or attachment is inaccessible, provide its text or an export.
-Without web access, claims needing external sources remain unresolved.
+The abstract reports results for specific translation tasks. Checking whether
+the training comparisons are fair requires details beyond the abstract.
+[Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 
-For private or ambiguous material, the skills use supplied evidence unless you
-authorize a suitably scoped public search. Local skill files do not make a cloud
-assistant private: your model provider may still receive the material you submit.
-Drafting a response does not authorize sending it, filing a complaint, or changing
-an external record.
+## Optional companions
+
+Invoke each companion separately by name using your host’s invocation pattern.
+If you installed only Kagami, copy the companion’s full folder before using it. See the
+[manual installation instructions](docs/installation.md#manual-installation).
+
+These short examples use fictional inputs.
+
+### Kotoba for revising an update
+
+```text
+Tighten this update for my manager. Keep the uncertainty and condition.
+“We may finish in June if the migration succeeds.”
+```
+
+The revision should still make June conditional on a successful migration.
+
+### Kakehashi for explaining a result
+
+```text
+Explain this result to a nontechnical manager.
+“Defects fell from 2% to 1% in our pilot. We have not tested production.”
+```
+
+The explanation should make the size of the change clear and keep the
+conclusion limited to the pilot. To explain a Kagami review, invoke Kakehashi
+with the findings, original wording, sources, and open questions.
+
+### Mamoru for clarifying a commitment
+
+```text
+A vendor wrote, “If the pilot succeeds, I will recommend renewal to the committee.”
+What has the vendor promised? Suggest one follow-up question.
+```
+
+The vendor has promised a recommendation if the pilot succeeds. A useful
+follow-up is to ask what counts as a successful pilot.
+
+## Source access and privacy
+
+Kagami can review pasted posts, articles, and papers without browsing. For a URL,
+access depends on your host’s tools. If a page is blocked, paste the relevant text
+or supply an export. If only a paper’s abstract is available, the review covers
+the abstract and identifies what would require the methods or tables.
+
+For **YouTube**, use Kagami to review claims or Mamoru to examine commitments.
+If the host cannot retrieve captions, paste a transcript with the link and
+timestamps. A transcript covers spoken content. Supply any chart or screenshot
+the review also needs.
+
+For private material or material whose public status is unclear, Kagami uses
+supplied evidence unless you authorize a safe public search. A cloud-backed host
+may send prompts to its model provider even when skill files are local. Sending
+messages, publishing, and changing external records require separate
+authorization.
+
+## Method and feedback
+
+The skills separate what a source says, what its evidence supports, and what
+follows from it. They distinguish missing evidence from contradictory evidence
+and assess the material without scoring people or inferring intent from a
+missed promise.
+
+- [Skill contracts](docs/contracts.md) describe each skill’s intended behavior.
+- [Evidence register](docs/evidence.md) explains the methods and their limits.
+- [Evaluation guide](eval/README.md) gives file checks and manual review scenarios.
+- [Roadmap](MILESTONES.md) records completed work and proposed research.
+
+To report a problem, share a nonconfidential example, your host and model, and
+what Kagami missed, unfairly flagged, or made unnecessarily verbose.
 
 ## Why Amaterasu?
 
-Amaterasu takes its name from the sun goddess of Japanese mythology. In the
-[story of her return from a cave](https://www.mlit.go.jp/tagengo-db/en/R1-00756.html),
-a mirror helps draw her out and restore light to the world.
-
-The project borrows that image of light and reflection. Kagami is the mirror for
-examining claims; Kotoba attends to words; Kakehashi bridges understanding; Mamoru
-protects boundaries and keeps commitments clear.
-
-## Evaluation and contributing
-
-To inspect the design, extend a skill, or test whether it helps, start with the
-[evaluation guide](eval/README.md#choose-your-task). It covers local file checks,
-case annotation, human review, and comparisons of assistant behavior. The
-[annotation rubric](eval/annotation-rubric.md) explains how to judge outputs;
-[skill contracts](docs/contracts.md) define the intended behavior, and the
-[evidence register](docs/evidence.md) records the research behind the design.
-
-Amaterasu is experimental. Its examples and automated checks do not establish
-that the skills improve an assistant’s answers; independent effectiveness
-evaluation is still needed. When reporting a problem, include a nonconfidential
-example, the skill, your assistant and model, and what the response got wrong.
+Amaterasu takes its name from the sun goddess of Japanese mythology. A mirror
+helps draw her out of a cave and restore light to the world. Kagami is the
+mirror. The companions attend to words, bridge understanding, and protect
+boundaries. [Amaterasu’s story](https://www.mlit.go.jp/tagengo-db/en/R1-00756.html)
 
 ## License
 
-Original project material is available under the [MIT license](LICENSE).
-[NOTICE.md](NOTICE.md) records attribution and the terms applying to third-party
-material.
+Original project material is available under the MIT license. See the
+[license](LICENSE) and [attribution notice](NOTICE.md).

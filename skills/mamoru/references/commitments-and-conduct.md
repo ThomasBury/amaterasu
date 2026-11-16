@@ -59,6 +59,6 @@ full-text retrieval failed; no detailed validation claim is made here. The
 foundation distinguishes workplace-exposure questionnaires from interpreting
 individual messages. This phase adds no new literature review and does not
 claim that questionnaire findings establish these instructions' effectiveness.
-Workplace-expert review of pilot labels and independent behavioral evaluation
-remain necessary. A source citation, author walkthrough, or passing file check
-cannot replace either.
+Pilot labels have not received workplace-expert review, and no independent
+behavioral benefit has been measured. A source citation, author walkthrough, or
+passing file check establishes neither label quality nor effectiveness.

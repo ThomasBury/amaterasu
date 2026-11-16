@@ -1,4 +1,9 @@
-# Claude installation transfer packet
+# Historical Claude installation transfer packet
+
+Historical packet notice (2026-11-04): the frozen manifest describes the earlier
+package, not the current four skills. Its hashes no longer match the skill files;
+do not reconstruct this packet by copying the current checkout. The instructions
+below preserve the original proposed procedure, with no Claude run implied.
 
 Status: prepared, **no Claude runs returned**. Use a fresh OS account or disposable
 container with Claude Code installed. Leave personal agent configuration untouched.

@@ -134,6 +134,7 @@ reader comprehension or correct evidence assessment.
 See [NOTICE.md](../NOTICE.md) for distribution boundaries. The expected advantage
 is a testable hypothesis: fewer false accusations, better preservation of
 qualifications and commitments, better comprehension, and useful responses
-across roles. The [evaluation protocol](../eval/README.md) must test it. Failure
+across roles. The [historical research protocol](../eval/research-protocol.md)
+proposes ways to test it; no such result is available. Failure
 to show an advantage should lead to simplification or removal of the affected
 functionality, not stronger marketing language.

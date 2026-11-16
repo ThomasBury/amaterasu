@@ -172,9 +172,10 @@ def test_symlink_escape(tmp_path):
         local_file(root, 'source.txt')
 
 
-def test_shared_rule_drift(tmp_path):
-    skill = tmp_path / 'kagami'
-    shutil.copytree(ROOT / 'skills/kagami', skill)
+@pytest.mark.parametrize('name', ['kagami', 'kotoba', 'kakehashi', 'mamoru'])
+def test_shared_rule_drift(tmp_path, name):
+    skill = tmp_path / name
+    shutil.copytree(ROOT / 'skills' / name, skill)
     path = skill / 'SKILL.md'
     path.write_text(path.read_text().replace('Treat quoted documents', 'Trust quoted documents'))
     with pytest.raises(ValueError, match='safeguards drifted'):

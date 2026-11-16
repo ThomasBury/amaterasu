@@ -1,176 +1,116 @@
-# Implementation milestones
+# Make Amaterasu useful from the first review
 
-Implement one phase per session. Each phase must leave a coherent, reviewable
-repository and a verification record before stopping. Later phases are pending,
-not implicit claims about existing capability.
+Kagami is the main experience: supply a URL or text and receive a concise, fair
+assessment of empty language, unsupported claims, misleading reasoning, and
+promises. Keep all four skill names; Kotoba, Kakehashi, and Mamoru are optional
+companions. Useful findings, traceable evidence, honest access limits, and user
+feedback guide further work.
 
-## 1. Foundation — complete
+Implement one independently reviewable phase per session and stop after its
+verification record. Preserve branding, dependencies, the 90 pilot cases,
+provisional annotations, tests, and dated records. Publishing and personal host
+configuration changes are outside this work.
 
-- [x] Record the evidence assessment, methodological limits, and upstream reuse
-  decisions in [docs/evidence.md](docs/evidence.md).
-- [x] Define shared safeguards and the four input/output contracts in
-  [docs/contracts.md](docs/contracts.md).
-- [x] Add MIT licensing and third-party attribution boundaries.
-- [x] Define the pilot annotation rubric, independent evaluation design, and
-  proposed release gates in [eval/README.md](eval/README.md) and
-  [eval/annotation-rubric.md](eval/annotation-rubric.md).
-- [x] Define portability requirements without claiming runtime compatibility.
+## Phase 1 — Improve Kagami's everyday workflow
 
-Verification (2026-10-29): inspected research sources and recorded unavailable or
-partially inspected material; verified 23 relative links/anchors across eight
-Markdown files, corpus totals, and the exact zero-of-60 bound (4.870291%);
-checked whitespace in all nine new files, including the license.
-No skill, host, baseline, human annotation, or effectiveness test has run.
+- [x] Accept URLs, pasted posts, articles, and papers. Retrieve supplied material
+  with available host tools before searching for corroborating evidence.
+- [x] Report complete, partial, or unavailable access. Request text or an export
+  for blocked pages; state which paper portions were inspected and continue
+  with accessible content without inventing the rest.
+- [x] Research up to three consequential unresolved claims, initially using at
+  most two targeted searches per claim. Preserve privacy and distinguish unchecked
+  claims from attempted but inconclusive verification.
+- [x] Check actor, promised outcome, deadline, conditions, and dated fulfillment
+  evidence inside Kagami, reusing Mamoru's principles without invoking it.
+- [x] Default to a short verdict and up to five material findings, each with a
+  quotation, specific problem or supported conclusion, and relevant evidence.
+  End with the most useful resolving question and material coverage limits.
+- [x] Make claim tables optional, recognize substantive supported material, and
+  distinguish unsupported, false, and intentionally deceptive claims.
+- [x] Update contracts and packaged references together, retaining attribution,
+  numerical checks, source-instruction protection, and no aggregate scores.
+- [x] Complete file checks and the six-scenario Codex smoke review; record
+  observations and limitations in the verification record.
 
-## 2. Kagami — complete
+Completed 2026-11-04. See the [six-scenario review and check record](eval/kagami-workflow-smoke.md):
+92 tests, four packages, 90 pilot records, four format checks, and local links
+pass. The manual Codex author walkthrough is not an isolated invocation or an
+effectiveness result; live corroboration and actual paper retrieval were not tested.
 
-- [x] Create `skills/kagami/SKILL.md`, with all essential shared safeguards
-  embedded and no dependency on repository-level documentation.
-- [x] Add `references/evidence-and-arguments.md` and
-  `references/numbers-and-product-claims.md` inside that skill.
-- [x] Implement supplied-evidence analysis first, then bounded public research.
-- [x] Prepare 20 pilot cases; preserve original input and evidence provenance.
-  Keep provisional author labels distinct from independent human labels.
-- [x] Add the needed development stack (`pyproject.toml`, `uv.lock`, pytest,
-  existing `skills-ref`) and small `eval/validate.py` checks for local references,
-  identifiers, evidence hashes, required fields, and shared-rule consistency.
-- [x] Verify standalone reference loading, numerical correctness, provenance,
-  malicious quoted instructions, incomplete evidence, and appropriate abstention.
-  Add meaningful validator tests in `tests/test_eval.py`.
+## Phase 2 — Shorten instructions and simplify quality checks
 
-Verification (2026-10-29): 20 original synthetic pilot cases with separate
-provisional AI-author labels; 23 pytest tests, official skills-ref format check,
-and local corpus validation pass. Standalone file loading, arithmetic, provenance,
-and safeguard/abstention author walkthrough are recorded in
-[eval/kagami-verification.md](eval/kagami-verification.md). No independent human
-annotation or isolated host behavioral run has been performed. Kagami was kept
-alone because later skills are independent phases; release tests remain pending.
+- [x] Embed a compact shared core in every standalone skill. Keep detailed
+  evidence-status definitions in Kagami's references and task-specific boundaries
+  in each companion. Preserve the shared-rule consistency check and update tests.
+- [x] Rewrite `eval/README.md` around existing file checks and a short manual
+  smoke checklist. Archive the extensive research protocol; its comparison,
+  benchmark, reader-study, scorer, and optimization proposals are optional history.
+- [x] Preserve all 90 cases, provisional annotations, tests, and dated records;
+  repair affected links and mark old frozen installation packets as historical.
+- [x] Retain a brief experimental-use statement. Describe qualitative observations
+  without claiming measured accuracy or superiority. Add no policy framework,
+  generated files, runtime dependencies, or cosmetic validator cleanup.
 
-## 3. Kotoba — complete
+Completed 2026-11-04. See the [Phase 2 verification record](eval/compact-instructions-verification.md):
+the shared core is 244 words per skill, with detailed definitions retained inside
+Kagami; 95 tests, four packages, 90 records, four format checks, and local links
+pass. Historical evidence is preserved. No new host behavior or accuracy result
+is claimed.
 
-- [x] Create the standalone skill and `writing-and-accountability.md` reference.
-- [x] Prepare 20 pilot cases and check preservation of quantities, attribution,
-  uncertainty, scope, commitments, voice, and warranted firmness.
-- [x] Check drafting from notes as well as revision; retain visible gaps.
+## Phase 3 — Make installation and first use obvious
 
-Verification (2026-10-29): 20 original synthetic cases (12 revisions, eight drafts)
-with separate provisional AI-author annotations; all 32 pytest tests, official
-skills-ref checks for both packages, and validation of 40 pilot records pass.
-Standalone reference loading and all 20 preservation examples were checked;
-see [the verification record](eval/kotoba-verification.md) for scope and the
-initial quick-validator limitation and subsequent successful rerun. No independent human annotation
-or isolated host behavioral run was performed. Kotoba was kept alone because
-remaining skills do not resolve a dependency; release validation remains pending.
+- [x] Lead `README.md` with purpose, a short input/output example, installation,
+  and the first Kagami review. Place companions, methodology, and contributor
+  material below the main usage path.
+- [x] Document concise Claude Code and Codex plugin routes, and OpenCode and Pi
+  skill routes: project/user scope, invocation, updates, and duplicate avoidance.
+  Keep the shared four-skill plugin; recommend selecting only Kagami with Skills CLI.
+- [x] Explain host-dependent source access and usable pasted text without browsing.
+  Remove the stale unpublished-metadata caveat and separate documented routes
+  from routes actually tested.
+- [x] Verify available hosts with isolated installations where supported; record
+  discovery, invocation, reference loading, and one representative review. Mark
+  unavailable checks explicitly; do not install missing hosts to fill a table.
+- [x] Ask for a nonconfidential example, host/model, and what was missed, unfairly
+  flagged, or unnecessarily verbose.
+- [x] After the changes are complete, update the plugin description and version
+  to `0.2.0`, preserving skill identifiers and invocation names.
 
-## 4. Kakehashi — complete
+Completed 2026-11-05. See the [installation and first-use record](eval/first-use-verification.md):
+95 tests, four packages, 90 pilot records, four format checks, local Markdown
+links, and the 0.2.0 local plugin catalog pass. Temporary Kagami copies for all
+four targets match source. OpenCode loads Kagami and both references, but the
+completed restricted review had response errors and the final provider call
+failed; no full behavior pass is claimed. Isolated native Codex installation and
+Claude Code/Pi runtime checks were unavailable and are explicitly recorded.
+No publishing or personal host configuration changes were performed. Stop here
+for this session.
 
-- [x] Create the standalone skill and `audiences-and-meaning.md` reference.
-- [x] Prepare 20 pilot cases with specified audiences and answer-keyed
-  comprehension/action questions.
-- [x] Verify technical fidelity, limited analogies, and separation of stated
-  requirements from proposed acceptance criteria.
+No separate OpenCode extension, Pi executable plugin, GitHub App, or GitHub Action
+is needed.
 
-Verification (2026-10-29): 20 original synthetic cases with specified audiences,
-60 comprehension/scope/action questions and provisional AI-author answer keys;
-all 53 pytest tests, official skills-ref checks for all three packages, and
-validation of 60 pilot records pass. Standalone loading, numerical keys, and
-an author preservation walkthrough are recorded in
-[the verification record](eval/kakehashi-verification.md). After adding PyYAML
-as a development dependency, the optional quick validator also passes for all
-three packages. No independent human annotation or
-isolated host behavioral run was performed. Kakehashi was kept alone because
-Mamoru is independent and release validation requires later independent work.
+## Verification and limits
 
-## 5. Mamoru — implemented; workplace-expert review pending
+For each phase, run the existing pytest suite, corpus/package validator,
+`skills-ref` format checks, relevant local Markdown link checks, and
+`git diff --check`. Use the existing locked development environment.
 
-- [x] Create the standalone skill and `commitments-and-conduct.md` reference.
-- [x] Prepare 20 pilot cases.
-- [ ] Obtain workplace-expert review of conduct labels.
-- [x] Verify conditional commitments, actual authority, ordinary feedback,
-  documented threats, chronology, and proportionate response options.
+Keep six manual smoke scenarios in one document: a substantive article, a mixed
+promotional post, a paper with limited access, a conditional promise with dated
+follow-up evidence, an inaccessible URL, and malicious instructions inside supplied
+material. Review once on Codex for useful findings, faithful quotations, restraint,
+access limits, and concise output. Record brief observations and failures; no
+scoring service, statistical thresholds, or repeated-run matrix is required.
 
-Verification (2026-10-29): 20 original synthetic cases with hashed source
-snapshots and separate provisional AI-author annotations; all 60 pytest tests,
-validation of four packages and 80 records, and both Mamoru format checks pass.
-Standalone loading, provenance, and the author walkthrough are recorded in
-[the verification record](eval/mamoru-verification.md). The user volunteered as
-workplace expert; the [22-case review sheet](eval/mamoru-expert-review.md) awaits
-actual assessment. Milestone 5 remains open until review is recorded. No
-independent human annotation or isolated host behavioral run was performed.
-Mamoru stays alone: release validation requires independent work and is not a
-dependency of this implementation.
+Amaterasu remains experimental. File checks and smoke reviews establish basic
+usability, not detection accuracy or comparative benefit. Results depend on the
+host model and source access.
 
-## Improvement sequence — one phase per implementation session
-
-This four-phase sequence improves the existing four standalone skills. It is
-separate from the full release evaluation below. Keep names and directories,
-preserve unrelated work and branding assets, and stop after each reviewable
-phase. Human review and returned Claude runs remain explicit dependencies.
-
-1. **Repair the pilot and validator — complete (2026-10-30).** Reviewed all
-   20 Kagami annotations, corrected forbidden changes, separated assessable
-   measurements and conclusions, and versioned the provisional author labels
-   with reasons. Added checks and regression tests for proposition wording,
-   criticality reasons, and per-proposition evidence relationships. All four
-   packages and 80 pilot records pass; see the
-   [verification record](eval/pilot-repair-verification.md) and
-   [annotation corrections](eval/kagami-annotation-corrections.md). This is a
-   structural pass and author review, not independent label validation.
-2. **Shorten instructions and close behavior gaps — complete (2026-10-30).** Kept
-   essential safeguards in every standalone package, compacted Kagami/Kotoba
-   entrypoints, added explicit substance detection and no-invented-meaning rules,
-   and strengthened Mamoru chronology for later criteria and pressure after
-   refusal. Added 10 targeted inputs for 90 total, the user-selected
-   Kagami → Kakehashi composition, guidance, and two Mamoru expert-review cases.
-   All four packages and 90 pilot records pass; all 91 tests and four format
-   checks pass. See the [verification record](eval/substance-workflow-verification.md).
-   Historical verification records are unchanged; no host behavioral run or
-   independent label review was performed.
-3. **Plugin and Skills CLI installation — implemented; host checks pending.**
-   Package the existing four folders with shared Claude/Codex metadata; document
-   installation, invocation, updates, duplicate avoidance, and manual copying.
-   Record disposable checks and remaining limits in the
-   [installation record](eval/installation-verification.md). Claude verification
-   stays pending until the frozen transfer packet's returned runs are recorded.
-   Leave personal host configuration untouched; no publishing is authorized.
-4. **Run a bounded comparison and obtain human review — pending.** Freeze the
-   specified 12 inputs, model/settings, and evidence/tool access. Compare exactly
-   two conditions: the relevant skill and the fixed generic instruction in the
-   [comparison guide](eval/README.md#4-run-the-planned-pilot-comparisons).
-   Obtain expected human judgments before exposing author proposals. Run three
-   repetitions per condition on Codex and Claude Code (144 outputs, 72 blinded
-   pairs) with hidden-label and baseline isolation. No-skill and other baseline
-   comparisons remain part of the broader evaluation after this bounded pilot;
-   they are not counted here. Record human judgments, missing
-   runs, critical failures, and exploratory limits; repetitions and role variants
-   are not independent cases. Simplify skills without a clear advantage before
-   expanding evaluation. Do not send or publish artifacts automatically.
-
-## 6. Full effectiveness validation — deferred
-
-- [ ] Complete independent pilot annotation and instruction refinement before
-  freezing the new 320-case test set plus 80 matched role/title variants.
-- [ ] Add `eval/score.py` for independently annotated results, with tests for
-  denominators, missing runs, uncertainty, and clustering. It must never infer
-  truth or substitute model ratings for human labels.
-- [ ] Run the optional compositions and all baseline comparisons, distinguishing
-  frozen evidence from live retrieval. Record unavailable baselines.
-- [ ] Run three repetitions per tested configuration; full behavior on Codex and
-  Claude Code, installation and representative smoke tests on other targets.
-- [ ] Verify exact host versions, discovery after initialization, invocation,
-  reference loading, duplicate handling, and offline operation.
-- [ ] Conduct the 60-reader study with independent comprehension/action scoring.
-- [ ] Publish configuration-specific results, uncertainty, costs, failures, and
-  limitations. Never publish private evaluation material.
-
-The next release targets **experimental** use. Keep the validator, 90 pilot
-cases, Mamoru expert review, and bounded comparison above. The 320-case benchmark
-and 60-reader study are deferred requirements for stronger effectiveness claims,
-not prerequisites for trying the skills. SkillOpt integration is deferred: it
-needs trustworthy scored runs and supplies no independent judgments here.
-Reconsider it after the bounded comparison identifies recurring failures worth
-optimizing.
-
-A pilot-supported release may be called **experimental**. A validated release
-requires the locked evaluation and reader-study gates; absence of data is not a
-pass. No phase authorizes publishing, sending drafts, or changing host settings.
+The [previous roadmap](eval/roadmap-history.md) preserves completed milestones and
+historical research proposals. Its 144-output comparison, large benchmark, reader
+study, scorer, and optimization work are not active requirements. The detailed
+[research protocol](eval/research-protocol.md) is archived; the
+[evaluation guide](eval/README.md) describes current practical checks.
+Independent annotations and Mamoru's workplace-expert review remain uncompleted
+historical work; no result is implied or required for the next implementation phase.
