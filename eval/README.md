@@ -19,14 +19,20 @@ Use Python 3.11 or later and the existing uv development environment. From the
 repository root, install locked dependencies if needed, then run:
 
 ```sh
-uv sync --locked
-uv run --locked python eval/validate.py
-uv run --locked pytest -q
-for skill_id in kagami kotoba kakehashi mamoru; do
-  uv run --locked skills-ref validate "skills/$skill_id"
-done
-git diff --check
+(
+  set -e
+  uv sync --locked
+  uv run --locked python eval/validate.py
+  uv run --locked pytest -q
+  for skill_id in kagami kotoba kakehashi mamoru; do
+    uv run --locked skills-ref validate "skills/$skill_id"
+  done
+  git diff --check
+  git diff --cached --check
+)
 ```
+
+The subshell stops at the first failed check without changing your shell settings.
 
 The validator should report:
 
