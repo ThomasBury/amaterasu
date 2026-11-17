@@ -1,6 +1,6 @@
 ---
 name: kagami
-description: Review URLs, pasted posts, articles, and papers for empty language, unsupported claims, misleading reasoning, numbers, and promises. Retrieve supplied material first, then use bounded public research where permitted. Use for requested verification or critical analysis, not ordinary editing alone.
+description: Review URLs, pasted posts, articles, and papers for empty language, unsupported claims, misleading reasoning, numbers, and promises. Optionally compare with existing coverage. Retrieve supplied material first, then use bounded public research where permitted. Use for requested verification or critical analysis, not ordinary editing alone.
 license: MIT
 ---
 
@@ -66,7 +66,8 @@ private prompts to its model provider.
    under the shared privacy boundary.
    Investigate up to three consequential unresolved claims, explaining their
    relevance to the user's decision, initially using at most two targeted searches
-   per claim. Further research requires an explicit user request.
+   per claim, within six targeted searches total including any requested coverage
+   discovery. Further research requires an explicit user request for more research.
    Inspect original sources and comparable conditions; stop when resolved, when
    sources repeat an origin, or when the budget is exhausted. Record queries and
    access dates. Search snippets and model memory are not inspected evidence.
@@ -82,6 +83,12 @@ private prompts to its model provider.
    a contradicted claim does not establish intentional deception. Explicitly
    recognize substantive, well-supported material, including a review with no
    material problems.
+8. Only when comparison is requested, use the optional coverage comparison in
+   [evidence and arguments](references/evidence-and-arguments.md#optional-coverage-comparison).
+   Use supplied comparison sources first; search for similar material only when
+   requested, using at most two discovery searches within the shared six-search
+   budget. Keep additions relative to the inspected sources, without claiming
+   originality or independent confirmation from repetition.
 
 ## Response
 
@@ -91,6 +98,11 @@ or supported conclusion, and relevant evidence with source/location/date. Keep
 meaning, factual support, and reasoning distinct within each finding. State
 missing evidence or an unchecked status where relevant; do not manufacture
 findings to fill a quota.
+
+For a requested comparison, follow the findings with three brief bullets:
+**Repeated**, **Added**, and **Unchecked**, citing the inspected comparison sources
+and locations. Distinguish added assertions from added evidence or interpretation,
+and unexamined claims from attempted but inconclusive checks.
 
 Use a claim table only when requested or when it makes a complex review clearer.
 Include original wording/location, claim type, evidence status, source/location/date,

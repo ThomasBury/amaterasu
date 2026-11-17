@@ -90,6 +90,24 @@ for this session.
 No separate OpenCode extension, Pi executable plugin, GitHub App, or GitHub Action
 is needed.
 
+## Phase 4 — Optional comparison with existing coverage
+
+- [x] Add an opt-in comparison using supplied sources first, with requested
+  discovery of similar articles, posts, papers, or videos.
+- [x] Limit discovery to two searches within the shared six-search allowance;
+  retain privacy, access, attribution, and claim-checking limits.
+- [x] Report Repeated, Added, and Unchecked briefly, distinguishing assertions
+  from evidence and limiting additions to the inspected comparison set.
+- [x] Align packaged instructions, contract, and a README example; verify local
+  files and record a focused author walkthrough without changing pilot records.
+
+Completed 2026-11-17. See the
+[coverage-comparison addendum](eval/kagami-workflow-smoke.md#coverage-comparison-addendum--2026-11-17)
+for commands, responses, and limits. The walkthrough includes two live discovery
+queries and inspection of public page text; video access is limited to page text
+and a synthetic transcript case. No independent invocation or accuracy result
+is claimed. Stop here for this phase.
+
 ## Verification and limits
 
 For each phase, run the existing pytest suite, corpus/package validator,

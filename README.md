@@ -113,7 +113,7 @@ Run `/reload` or start a new session in that project, then send this prompt.
 
 ## Examples and use cases
 
-Use the Kagami invocation for your host with either prompt below. When you
+Use the Kagami invocation for your host with the prompts below. When you
 review your own material, include your decision, any relevant dates, and the
 evidence you already have.
 
@@ -137,6 +137,21 @@ https://arxiv.org/abs/1706.03762
 The abstract reports results for specific translation tasks. Checking whether
 the training comparisons are fair requires details beyond the abstract.
 [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+### Compare with existing coverage
+
+```text
+Review the new post below and compare it with the earlier article supplied below.
+Briefly state what is repeated, what is added, and what remains unchecked.
+New post: [paste text]
+Earlier article: [paste text or link]
+```
+
+To find comparison material too, add: “Also search for similar public articles,
+posts, or videos.” Kagami uses supplied sources first; requested discovery uses
+up to two searches within its shared six-search research budget. Additions are
+relative to inspected sources, not proof of originality. Video coverage depends
+on accessible transcripts and visuals.
 
 ## Optional companions
 
