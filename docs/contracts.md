@@ -61,10 +61,11 @@ missing context only when it could change a conclusion.
    Inspect supplied evidence first, then follow the public/private research
    boundary above for corroboration. Investigate up to three consequential
    unresolved claims, explaining their relevance to the user's decision, initially
-   using at most two targeted searches per claim. Further research requires an
-   explicit user request. Inspect original sources; stop when resolved, when
-   sources repeat an origin, or at the budget. Retain queries and access dates.
-   Distinguish not checked from attempted but inconclusive verification.
+   using at most two targeted searches per claim, within six targeted searches
+   total including requested coverage discovery. Further research requires an
+   explicit user request for more research. Inspect original sources; stop when
+   resolved, when sources repeat an origin, or at the budget. Retain queries and
+   access dates. Distinguish not checked from attempted but inconclusive verification.
 3. Identify the inference connecting grounds to conclusions, including
    assumptions, qualifications, exceptions, and plausible alternative explanations.
 4. For numbers, check denominators, units, baselines, absolute versus relative
@@ -81,15 +82,30 @@ missing context only when it could change a conclusion.
    follow-up is unknown. A later proposal does not erase an earlier obligation or
    miss. State the latest inspected status date; an older record does not establish
    current nonfulfillment. A promise to recommend is not a promise of approval.
+6. Compare with existing coverage only when requested. Inspect supplied links,
+   text, files, or prior reviews first. Without supplied comparison material or a
+   discovery request, ask for sources while continuing the ordinary review.
+   Search for similar articles, posts, papers, or videos only when requested,
+   using at most two discovery searches within the shared six-search total.
+   Preserve the privacy and access boundaries; identify the inspected set and
+   locations, including transcript versus visual access for videos. Compare
+   substance, including paraphrases, while preserving conditions and dates.
+   Repetition is not independent confirmation; absence from this set is not
+   originality. Prior reviews do not verify uninspected underlying sources.
 
 **Output:** a short verdict followed by up to five material findings, ordered by
 consequence. Each includes a short exact quotation/location, the specific problem
 or supported conclusion, and relevant evidence with source/location/date or an
 explicit evidence gap. Keep meaning, factual support, and reasoning distinct.
 Recognize substantive, well-supported material; do not manufacture criticism or
-findings to fill a quota. Use a claim table only when requested or helpful for a
-complex review, including original wording/location, claim type, evidence status,
-source/location/date, and explanation. Finish with the most useful resolving
+findings to fill a quota. For a requested comparison, follow the findings with
+three brief, source/location-cited bullets: **Repeated**, **Added**, and
+**Unchecked**. Distinguish added assertions from evidence or interpretation,
+and unexamined claims from attempted but inconclusive checks; say when no
+comparison is possible or no material overlap or addition was found.
+Use a claim table only when requested or helpful for a complex review, including
+original wording/location, claim type, evidence status, source/location/date,
+and explanation. Finish with the most useful resolving
 question, if any, and material coverage limits, including access level, paper
 portions inspected, unchecked claims, and inconclusive checks. With no accessible
 content, report that limit and request text without findings about unseen material.

@@ -62,6 +62,11 @@ follow-up, inaccessible URL, and malicious instructions inside supplied material
 The existing record is a Codex author walkthrough with synthetic inputs, not an
 isolated invocation or an effectiveness result.
 
+The dated [coverage-comparison addendum](kagami-workflow-smoke.md#coverage-comparison-addendum--2026-11-17)
+records the optional comparison checks, including a bounded public discovery
+walkthrough and transcript-only limits. Keep later observations separate from
+the original six-scenario record.
+
 For a behavior change, review the affected scenarios once on Codex:
 
 1. Load the selected skill and its packaged references. Record the host/model,
