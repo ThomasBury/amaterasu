@@ -6,7 +6,9 @@ They do not establish factual truth, label quality, or skill effectiveness.
 
 import hashlib
 import json
+import os
 import re
+import subprocess
 from collections.abc import Iterable
 from pathlib import Path
 from typing import Any
@@ -132,13 +134,15 @@ def check_hash(path: Path, expected: str) -> None:
         raise ValueError(f'Hash mismatch: {path.name}')
 
 
-def check_links(folder: Path) -> None:
+def check_links(folder: Path, documents: Iterable[Path] | None = None) -> None:
     """Check local inline Markdown links and heading anchors recursively.
 
     Parameters
     ----------
     folder : pathlib.Path
-        Package directory containing Markdown files and local link targets.
+        Directory containing the Markdown files and their local link targets.
+    documents : iterable of pathlib.Path, optional
+        Markdown files to check. Defaults to all Markdown files in the directory.
 
     Raises
     ------
@@ -154,8 +158,10 @@ def check_links(folder: Path) -> None:
     suffixes and renderer-specific anchor rules are not implemented.
     """
     # ponytail: inline Markdown links only; extend if reference-style links are introduced.
-    for path in folder.rglob('*.md'):
-        targets = re.findall(r'\[[^\]]*\]\(([^)]+)\)', path.read_text())
+    if documents is None:
+        documents = folder.rglob('*.md')
+    for path in documents:
+        targets = re.findall(r'\[[^\]]*\]\(([^)]+)\)', path.read_text(encoding='utf-8'))
         for target in targets:
             link = urlsplit(target)
             if link.scheme or link.netloc:
@@ -165,7 +171,7 @@ def check_links(folder: Path) -> None:
                 relative_path = (path.parent / unquote(link.path)).relative_to(folder)
                 destination = local_file(folder, str(relative_path))
             if link.fragment:
-                headings = re.findall(r'^#+ (.+)$', destination.read_text(), re.MULTILINE)
+                headings = re.findall(r'^#+ (.+)$', destination.read_text(encoding='utf-8'), re.MULTILINE)
                 anchors = {
                     re.sub(r'[^\w\- ]', '', heading.lower()).replace(' ', '-')
                     for heading in headings
@@ -208,12 +214,12 @@ def validate_skill(folder: Path, contracts: Path | None = None) -> None:
         local_file(folder, name)
     if contracts:
         shared = (
-            contracts.read_text()
+            contracts.read_text(encoding='utf-8')
             .split('## Shared essentials\n\n')[1]
             .split('## Kagami')[0]
             .strip()
         )
-        if shared not in (folder / 'SKILL.md').read_text():
+        if shared not in (folder / 'SKILL.md').read_text(encoding='utf-8'):
             raise ValueError('Shared safeguards drifted from contracts')
 
 
@@ -562,14 +568,14 @@ def validate_corpus(folder: Path, skill: str = 'kagami') -> int:
     """
     if skill not in SKILL_REFERENCES:
         raise ValueError('Unsupported pilot skill')
-    manifest = unique(json.loads(local_file(folder, 'manifest.json').read_text()), 'case_id')
-    evidence = unique(json.loads(local_file(folder, 'evidence.json').read_text()), 'evidence_id')
+    manifest = unique(json.loads(local_file(folder, 'manifest.json').read_text(encoding='utf-8')), 'case_id')
+    evidence = unique(json.loads(local_file(folder, 'evidence.json').read_text(encoding='utf-8')), 'evidence_id')
     cases = unique(
-        (json.loads(path.read_text()) for path in sorted((folder / 'inputs').glob('*.json'))),
+        (json.loads(path.read_text(encoding='utf-8')) for path in sorted((folder / 'inputs').glob('*.json'))),
         'case_id',
     )
     annotations = [
-        json.loads(path.read_text())
+        json.loads(path.read_text(encoding='utf-8'))
         for path in sorted((folder / 'annotations').glob('*.json'))
     ]
     unique(annotations, 'annotation_id')
@@ -595,7 +601,13 @@ if __name__ == '__main__':
         for skill in SKILL_REFERENCES:
             validate_skill(ROOT / 'skills' / skill, ROOT / 'docs/contracts.md')
             count += validate_corpus(ROOT / 'eval/pilot' / skill, skill)
-    except (ValueError, KeyError, TypeError, OSError) as error:
+        paths = subprocess.check_output(
+            ['git', 'ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', '*.md'],
+            cwd=ROOT,
+        ).split(b'\0')
+        documents = [ROOT / os.fsdecode(path) for path in paths if path]
+        check_links(ROOT, (path for path in documents if path.is_file()))
+    except (ValueError, KeyError, TypeError, OSError, subprocess.CalledProcessError) as error:
         raise SystemExit(f'Validation failed: {error}')
     print(
         f'Validated {len(SKILL_REFERENCES)} skill packages and {count} pilot records; '

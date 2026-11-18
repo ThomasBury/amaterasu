@@ -50,7 +50,7 @@ requires Node.js and npm. You can use the skills without Python.
 
 For other installation scopes, updates, manual copying, and troubleshooting,
 see the [installation guide](docs/installation.md). For tested versions and
-runtime limits, see the [installation check record](eval/first-use-verification.md).
+runtime limits, see the [installation check record](eval/phase-6-verification.md).
 
 ### Claude Code
 

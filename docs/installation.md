@@ -74,5 +74,5 @@ location. Keep `SKILL.md`, `references/`, `LICENSE`, and `NOTICE.md` together.
   the affected host to preserve the copy used by the other host.
 
 The installation record distinguishes a successful file copy from discovery and
-use in an initialized host. See [tested versions and results](../eval/first-use-verification.md)
+use in an initialized host. See [tested versions and results](../eval/phase-6-verification.md)
 and the [portability contract](compatibility.md).

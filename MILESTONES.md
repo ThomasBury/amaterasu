@@ -87,8 +87,8 @@ Claude Code/Pi runtime checks were unavailable and are explicitly recorded.
 No publishing or personal host configuration changes were performed. Stop here
 for this session.
 
-No separate OpenCode extension, Pi executable plugin, GitHub App, or GitHub Action
-is needed.
+Phase 3 needed no separate OpenCode extension, Pi executable plugin, or GitHub
+App. Contributor CI is tracked in Phase 6.
 
 ## Phase 4 — Optional comparison with existing coverage
 
@@ -129,6 +129,32 @@ Completed 2026-11-17. The
 documents fresh Codex runs for the search budget and chronology. Live and
 controlled searches both stopped at six, and each chronology case matched the
 available dates. Repository checks passed across four skills and 90 pilot cases.
+
+## Phase 6 — Automate validation and verify installation
+
+- [x] Add one fail-fast command and run it in GitHub Actions on pull requests and
+  pushes to `main`. Use locked uv and Python 3.11 for pytest, package and corpus
+  validation, all four `skills-ref` checks, and repository Markdown links and
+  anchors. Check staged and unstaged whitespace locally and the committed change
+  range in CI.
+- [x] Pin pilot JSON and text fixtures to LF with `.gitattributes`. Use explicit
+  UTF-8 for repository validation and test I/O, and Python UTF-8 mode for the
+  pinned `skills-ref`. Test a fresh checkout with `core.autocrlf=true`, run the
+  check from a forced ASCII locale, and verify byte-for-byte SHA-256 checks still
+  reject altered fixtures.
+- [x] Test GitHub installation and public updates in available disposable profiles.
+  Use the shared plugin for Codex and Claude Code and standalone Kagami for
+  OpenCode and Pi. Record install, discovery, invocation, reference loading, and
+  update separately. Where supported, also advance a controlled Git source from
+  `v0.2.0` to `v0.3.0` and check that installed files change. Record versions,
+  commands, revisions, file changes, and outstanding checks. Fix instructions
+  that fail on the tested versions.
+
+Completed 2026-11-18. The [Phase 6 verification record](eval/phase-6-verification.md)
+documents the Python 3.11 and forced ASCII checkout checks, the live installs
+and updates, and the controlled v0.2.0 to v0.3.0 updates. Claude Code and Pi
+runtime checks require the corresponding hosts. A GitHub-hosted CI run is
+pending publication of the workflow.
 
 ## Verification and limits
 

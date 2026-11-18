@@ -1,0 +1,3 @@
+eval/check.sh text eol=lf
+eval/pilot/**/*.json text eol=lf
+eval/pilot/**/*.txt text eol=lf

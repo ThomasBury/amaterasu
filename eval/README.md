@@ -15,24 +15,17 @@ Installing or using a skill does not require Python or this contributor workflow
 
 ## Run local file checks
 
-Use Python 3.11 or later and the existing uv development environment. From the
-repository root, install locked dependencies if needed, then run:
+With Git and uv installed, run this from the repository root.
 
 ```sh
-(
-  set -e
-  uv sync --locked
-  uv run --locked python eval/validate.py
-  uv run --locked pytest -q
-  for skill_id in kagami kotoba kakehashi mamoru; do
-    uv run --locked skills-ref validate "skills/$skill_id"
-  done
-  git diff --check
-  git diff --cached --check
-)
+sh eval/check.sh
 ```
 
-The subshell stops at the first failed check without changing your shell settings.
+The command uses Python 3.11 and `uv.lock` and stops at the first failed check.
+It checks staged and unstaged whitespace locally. GitHub Actions runs the same
+checks on pull requests and pushes to `main`, comparing committed whitespace
+against the base-branch parent of the tested pull request merge or the previous
+`main` tip.
 
 The validator should report:
 
@@ -46,12 +39,9 @@ shared-rule consistency. Standalone-package tests copy each skill without the
 rest of the repository. These checks do not judge the truth of source material
 or the quality of provisional labels. A matching hash identifies bytes, not truth.
 
-For documentation changes, also check affected local file links and heading
-anchors; the package validator covers only the skill folders. The existing
-`eval.validate.check_links` helper checks inline Markdown links and basic anchors,
-skipping external URLs. Save the date, working-tree revision, commands, results,
-and any errors in a short verification record. Correct failed checks rather than
-discarding them or changing historical evidence to obtain a pass.
+The command also checks local inline Markdown links and basic heading anchors in
+repository documents. It skips external URLs. Record the date, revision, commands,
+results, and any errors when verifying a milestone.
 
 ## Manual smoke review
 
@@ -89,9 +79,8 @@ discovery, invocation, reference loading, and one representative review. Mark
 unavailable checks explicitly; do not install missing hosts to fill a table or
 change personal configuration. See the [portability contract](../docs/compatibility.md)
 and [installation record](installation-verification.md) for the scope of earlier
-checks. The [current first-use record](first-use-verification.md) describes Phase 3
-checks and unavailable hosts. Host compatibility and model behavior are separate
-observations.
+checks. The [latest installation verification](phase-6-verification.md) records
+the public GitHub routes, updates, and remaining runtime checks.
 
 For feedback, provide a nonconfidential example, your host/model, and what was
 missed, unfairly flagged, or unnecessarily verbose.
