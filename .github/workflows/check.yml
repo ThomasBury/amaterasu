@@ -22,7 +22,7 @@ jobs:
           enable-cache: false
       - name: Validate repository
         env:
-          BASE_REVISION: ${{ github.event.before || 'HEAD^1' }}
+          BASE_REVISION: ${{ github.event_name == 'push' && github.event.before || 'HEAD^1' }}
         run: |
           # Pull requests use the first parent of the tested merge commit.
           if [ "$BASE_REVISION" = 0000000000000000000000000000000000000000 ]; then
