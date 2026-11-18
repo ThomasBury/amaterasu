@@ -42,14 +42,14 @@ claims and promises in URLs, pasted posts, articles, or papers. Do not silently
 turn an ordinary editing request into a credibility investigation.
 
 **Inputs:** a URL, pasted post, article, or paper, relevant context, and supplied
-evidence. Retrieve the supplied material with available host tools, or read the
-pasted text/file, before corroboration searches. Apply the shared privacy boundary
-to both. Record source identity, locations, and review date, and establish access
-as complete, partial, or unavailable. Request pasted text or an export for blocked
-pages; continue with accessible material without inventing missing contents. For
-papers, state whether the assessment covers the abstract, full text, or particular
-inspected tables; do not imply examination of unseen methods or data. Ask for
-missing context only when it could change a conclusion.
+evidence. Retrieve the reviewed item and supplied comparison sources with available
+host tools, or read the pasted text/file, before searching. Apply the shared privacy
+boundary to both. Record source identity, locations, and review date. Establish
+access as complete, partial, or unavailable. Request pasted text or an export for
+blocked pages. Continue with accessible material without inventing missing contents.
+For papers, state whether the assessment covers the abstract, full text, or
+particular inspected tables. Ask for missing context only when it could change a
+conclusion.
 
 **Method:**
 
@@ -59,13 +59,16 @@ missing context only when it could change a conclusion.
 2. Extract assessable claims with original wording and locations. Inspect
    evidence, dates, comparison conditions, and source independence.
    Inspect supplied evidence first, then follow the public/private research
-   boundary above for corroboration. Investigate up to three consequential
-   unresolved claims, explaining their relevance to the user's decision, initially
-   using at most two targeted searches per claim, within six targeted searches
-   total including requested coverage discovery. Further research requires an
-   explicit user request for more research. Inspect original sources; stop when
-   resolved, when sources repeat an origin, or at the budget. Retain queries and
-   access dates. Distinguish not checked from attempted but inconclusive verification.
+   boundary above for corroboration. If discovery is requested and permitted,
+   reserve two of the six search slots and run discovery first. Inspect discovered
+   sources, use them for relevant claim checks, and return unused slots to
+   corroboration. Without requested discovery, all six slots are available for
+   corroboration. Count every issued query, including failed or empty attempts.
+   Investigate up to three consequential unresolved claims, explaining their
+   relevance to the user's decision, with at most two targeted searches per claim.
+   Further research requires an explicit request. Inspect original sources; stop
+   when resolved, when sources repeat an origin, or at the budget. Retain queries
+   and access dates. Distinguish unchecked from attempted but inconclusive checks.
 3. Identify the inference connecting grounds to conclusions, including
    assumptions, qualifications, exceptions, and plausible alternative explanations.
 4. For numbers, check denominators, units, baselines, absolute versus relative
@@ -85,8 +88,7 @@ missing context only when it could change a conclusion.
 6. Compare with existing coverage only when requested. Inspect supplied links,
    text, files, or prior reviews first. Without supplied comparison material or a
    discovery request, ask for sources while continuing the ordinary review.
-   Search for similar articles, posts, papers, or videos only when requested,
-   using at most two discovery searches within the shared six-search total.
+   Search for similar articles, posts, papers, or videos only when requested.
    Preserve the privacy and access boundaries; identify the inspected set and
    locations, including transcript versus visual access for videos. Compare
    substance, including paraphrases, while preserving conditions and dates.
@@ -99,10 +101,13 @@ or supported conclusion, and relevant evidence with source/location/date or an
 explicit evidence gap. Keep meaning, factual support, and reasoning distinct.
 Recognize substantive, well-supported material; do not manufacture criticism or
 findings to fill a quota. For a requested comparison, follow the findings with
-three brief, source/location-cited bullets: **Repeated**, **Added**, and
-**Unchecked**. Distinguish added assertions from evidence or interpretation,
-and unexamined claims from attempted but inconclusive checks; say when no
-comparison is possible or no material overlap or addition was found.
+three brief bullets with source and location citations. **Overlap** marks substantive
+matches. Say the item repeats earlier coverage only when the matching passage is
+known to predate it. Describe later, undated, or ambiguously ordered matches neutrally
+and cite the dates or state what is unknown. **Added** is relative to the inspected
+set and distinguishes added assertions from evidence or interpretation. **Unchecked**
+distinguishes unexamined claims from attempted but inconclusive checks. Say when
+no comparison is possible or no material overlap or addition was found.
 Use a claim table only when requested or helpful for a complex review, including
 original wording/location, claim type, evidence status, source/location/date,
 and explanation. Finish with the most useful resolving

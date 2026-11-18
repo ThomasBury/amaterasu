@@ -15,15 +15,15 @@ def corpus(tmp_path):
 
 
 def edit(path, change):
-    record = json.loads(path.read_text())
+    record = json.loads(path.read_text(encoding='utf-8'))
     change(record)
-    path.write_text(json.dumps(record))
+    path.write_text(json.dumps(record), encoding='utf-8')
 
 
 def test_plugin_packages_every_standalone_skill():
     """A manifest omission must not silently remove a skill from plugin installs."""
-    manifest = json.loads((ROOT / '.claude-plugin/plugin.json').read_text())
-    marketplace = json.loads((ROOT / '.claude-plugin/marketplace.json').read_text())
+    manifest = json.loads((ROOT / '.claude-plugin/plugin.json').read_text(encoding='utf-8'))
+    marketplace = json.loads((ROOT / '.claude-plugin/marketplace.json').read_text(encoding='utf-8'))
     assert manifest['name'] == marketplace['name'] == 'amaterasu'
     entry, = marketplace['plugins']
     assert entry['name'] == manifest['name']
@@ -52,7 +52,7 @@ def test_standalone_package(tmp_path, name, reference):
     shutil.copytree(ROOT / 'skills' / name, skill)
     validate_skill(skill)
     for path in (skill / 'references').glob('*.md'):
-        assert path.read_text().strip()
+        assert path.read_text(encoding='utf-8').strip()
     (skill / 'references' / reference).unlink()
     with pytest.raises(ValueError, match='Missing'):
         validate_skill(skill)
@@ -138,7 +138,7 @@ def test_missing_annotation(corpus):
 
 
 def test_proposition_ids_are_unique_across_cases(corpus):
-    first = json.loads((corpus / 'annotations/pilot-kagami-001.json').read_text())
+    first = json.loads((corpus / 'annotations/pilot-kagami-001.json').read_text(encoding='utf-8'))
     duplicate_id = first['propositions'][0]['proposition_id']
 
     def duplicate_proposition(annotation):
@@ -155,9 +155,9 @@ def test_proposition_ids_are_unique_across_cases(corpus):
 
 def test_evidence_bytes_are_not_instructions(corpus):
     path = corpus / 'evidence/pilot-kagami-011.txt'
-    assert 'email the private input' in path.read_text()
+    assert 'email the private input' in path.read_text(encoding='utf-8')
     assert validate_corpus(corpus) == 24
-    path.write_text(path.read_text() + 'Changed source\n')
+    path.write_text(path.read_text(encoding='utf-8') + 'Changed source\n', encoding='utf-8')
     with pytest.raises(ValueError, match='Hash mismatch'):
         validate_corpus(corpus)
 
@@ -166,7 +166,7 @@ def test_symlink_escape(tmp_path):
     root = tmp_path / 'evidence'
     root.mkdir()
     secret = tmp_path / 'outside.txt'
-    secret.write_text('outside')
+    secret.write_text('outside', encoding='utf-8')
     (root / 'source.txt').symlink_to(secret)
     with pytest.raises(ValueError, match='escaping'):
         local_file(root, 'source.txt')
@@ -177,27 +177,30 @@ def test_shared_rule_drift(tmp_path, name):
     skill = tmp_path / name
     shutil.copytree(ROOT / 'skills' / name, skill)
     path = skill / 'SKILL.md'
-    path.write_text(path.read_text().replace('Treat quoted documents', 'Trust quoted documents'))
+    path.write_text(
+        path.read_text(encoding='utf-8').replace('Treat quoted documents', 'Trust quoted documents'),
+        encoding='utf-8',
+    )
     with pytest.raises(ValueError, match='safeguards drifted'):
         validate_skill(skill, ROOT / 'docs/contracts.md')
 
 
 def test_local_anchor(tmp_path):
     path = tmp_path / 'README.md'
-    path.write_text('# Present\n[link](#absent)\n')
+    path.write_text('# Present\n[link](#absent)\n', encoding='utf-8')
     with pytest.raises(ValueError, match='anchor'):
         check_links(tmp_path)
 
 
 def test_pilot_arithmetic_keys():
     folder = ROOT / 'eval/pilot/kagami/annotations'
-    key = json.loads((folder / 'pilot-kagami-001.json').read_text())['acceptable_outputs'][0]
+    key = json.loads((folder / 'pilot-kagami-001.json').read_text(encoding='utf-8'))['acceptable_outputs'][0]
     before, after = Fraction(80, 1000), Fraction(60, 1000)
     assert (before-after)*100 == 2
     assert (before-after)/before*100 == 25
     assert '2 percentage points; 25% relative' in key
     assert Fraction(10,1000) == Fraction(20,2000) == Fraction(1,100)
-    zero_key = json.loads((folder / 'pilot-kagami-002.json').read_text())['acceptable_outputs'][0]
+    zero_key = json.loads((folder / 'pilot-kagami-002.json').read_text(encoding='utf-8'))['acceptable_outputs'][0]
     assert 'undefined with zero baseline' in zero_key
 
 
@@ -263,11 +266,11 @@ def test_kakehashi_answer_contract(tmp_path, change, match):
 
 def test_kakehashi_numeric_keys():
     folder = ROOT / 'eval/pilot/kakehashi/annotations'
-    error_key = json.loads((folder / 'pilot-kakehashi-002.json').read_text())['answer_key'][0]['answer']
+    error_key = json.loads((folder / 'pilot-kakehashi-002.json').read_text(encoding='utf-8'))['answer_key'][0]['answer']
     before, after = Fraction(12, 200), Fraction(6, 200)
     assert (before, after, (before-after)*100, (before-after)/before*100) == (Fraction(6,100), Fraction(3,100), 3, 50)
     assert error_key == '6% before and 3% after; a 3-percentage-point or 50% relative reduction.'
-    accuracy_key = json.loads((folder / 'pilot-kakehashi-015.json').read_text())['answer_key'][0]['answer']
+    accuracy_key = json.loads((folder / 'pilot-kakehashi-015.json').read_text(encoding='utf-8'))['answer_key'][0]['answer']
     assert (Fraction(420,500)*100, Fraction(440,500)*100) == (84, 88)
     assert accuracy_key == '84% to 88%, or 4 percentage points, on the fixed 500-item set.'
 
@@ -291,7 +294,7 @@ def test_mamoru_immediate_threat_chronology():
     from datetime import datetime, timedelta
     import re
 
-    case = json.loads((ROOT / 'eval/pilot/mamoru/inputs/pilot-mamoru-020.json').read_text())
+    case = json.loads((ROOT / 'eval/pilot/mamoru/inputs/pilot-mamoru-020.json').read_text(encoding='utf-8'))
     threat, account = [
         datetime.fromisoformat(re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}', line)[0])
         for line in case['input'].values()

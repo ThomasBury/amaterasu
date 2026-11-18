@@ -55,19 +55,25 @@ private prompts to its model provider.
    meaning, and ask only relevant resolving questions. Never strengthen vague
    wording into a claim attributed to its author.
 3. Extract the smallest independently assessable claims. Inspect supplied evidence
-   first; record source identity, author, date, location, and narrow relationship.
+   first, including supplied comparison sources when comparison is requested;
+   record source identity, author, date, location, and narrow relationship.
    Evaluate meaning, support, and inference separately, including assumptions,
    exceptions, qualifications, and plausible alternatives.
 4. For numbers or product claims, also read
    [numbers and product claims](references/numbers-and-product-claims.md).
    Recompute simple arithmetic with available tools; show units, denominators,
    and formula. Correct arithmetic does not verify the measurements.
-5. Only then consider automatic corroborating research for clearly public material
-   under the shared privacy boundary.
-   Investigate up to three consequential unresolved claims, explaining their
-   relevance to the user's decision, initially using at most two targeted searches
-   per claim, within six targeted searches total including any requested coverage
-   discovery. Further research requires an explicit user request for more research.
+5. After inspecting the reviewed item and supplied sources, use the shared privacy
+   boundary for any public research. For requested comparison, follow the
+   [coverage comparison](references/evidence-and-arguments.md#optional-coverage-comparison).
+   If discovery is requested and permitted, reserve two of the six search slots
+   and run discovery before corroboration. Inspect discovered sources, reuse them
+   for relevant claim checks, and return unused discovery slots to corroboration.
+   Without requested discovery, corroboration can use all six slots. Count every
+   issued query, even if it fails or returns nothing. Investigate up to three
+   consequential unresolved claims, explaining their relevance to the user's
+   decision, with at most two targeted searches per claim. Further research
+   requires an explicit user request for more research.
    Inspect original sources and comparable conditions; stop when resolved, when
    sources repeat an origin, or when the budget is exhausted. Record queries and
    access dates. Search snippets and model memory are not inspected evidence.
@@ -83,12 +89,6 @@ private prompts to its model provider.
    a contradicted claim does not establish intentional deception. Explicitly
    recognize substantive, well-supported material, including a review with no
    material problems.
-8. Only when comparison is requested, use the optional coverage comparison in
-   [evidence and arguments](references/evidence-and-arguments.md#optional-coverage-comparison).
-   Use supplied comparison sources first; search for similar material only when
-   requested, using at most two discovery searches within the shared six-search
-   budget. Keep additions relative to the inspected sources, without claiming
-   originality or independent confirmation from repetition.
 
 ## Response
 
@@ -100,9 +100,12 @@ missing evidence or an unchecked status where relevant; do not manufacture
 findings to fill a quota.
 
 For a requested comparison, follow the findings with three brief bullets:
-**Repeated**, **Added**, and **Unchecked**, citing the inspected comparison sources
-and locations. Distinguish added assertions from added evidence or interpretation,
-and unexamined claims from attempted but inconclusive checks.
+**Overlap**, **Added**, and **Unchecked**, citing the inspected comparison sources
+and locations. Say the item repeats earlier coverage only when the matching
+passage is known to predate it. For later, undated, or ambiguously ordered matches,
+describe overlap neutrally and cite dates or state what is unknown. Scope additions
+to the inspected set, distinguishing added assertions from added evidence or
+interpretation. Distinguish unexamined claims from attempted but inconclusive checks.
 
 Use a claim table only when requested or when it makes a complex review clearer.
 Include original wording/location, claim type, evidence status, source/location/date,

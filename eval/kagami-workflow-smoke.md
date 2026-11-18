@@ -513,3 +513,151 @@ No new runtime, dependency, parser, string-matching tests, or corpus changes.
 The manual cases do not establish accuracy, independent invocation, other-host
 behavior, or real video retrieval. Publishing and personal configuration changes
 remain outside this phase.
+
+## Phase 5 regressions — 2026-11-17
+
+Base `e336c1f930cc37ae8cb9c48905c359b0c870fb15` with the Phase 5 working-tree
+changes. Each review started in a fresh Codex task with `gpt-6.2-sol` at high
+reasoning effort in the existing Codex profile. Each task was directed to read
+the working-tree Kagami skill and its packaged references. The excerpts were
+supplied as separate local files.
+
+### Shared search budget
+
+Task prompt after the instruction to load Kagami:
+
+```text
+Review budget-item.txt for an outreach editor deciding whether to publish it.
+Compare it with the supplied budget-comparison.txt. Also search for similar
+public articles or technical coverage. You may research public sources on NASA's
+DART mission. The two supplied excerpts are synthetic test material.
+```
+
+`budget-item.txt`
+
+```text
+DART retrospective — 2026-11-10
+L1. NASA sent DART into Dimorphos to test asteroid deflection.
+L2. Exactly 37% of the mission's downlinked images were captured in the last 20 seconds before impact.
+L3. Ground-based observers saw ejecta from Dimorphos for exactly 51 days after impact.
+L4. An independent radar-only analysis reproduced NASA's initial orbital-period change to within 0.1 minutes.
+```
+
+`budget-comparison.txt`
+
+```text
+Outreach briefing — 2026-11-05
+L1. NASA sent DART into Dimorphos to test asteroid deflection.
+L2. Cameras and ground telescopes recorded parts of the event. This briefing contains no image count, ejecta duration, or radar-only estimate.
+```
+
+**Live search.** Codex task `01a1eb75-4683-7393-acb2-6fb65abc3fdb`. Its tool
+trace shows reads of both supplied files and both references before any search.
+The first web call issued two discovery queries, one for mission results and one
+for technical coverage. Codex then opened discovered sources before the first
+corroboration query. This was the order of all six individual queries:
+
+| Query | Purpose | Search terms |
+| --- | --- | --- |
+| 1 | Discovery | NASA DART Dimorphos mission impact asteroid deflection mission results cameras ejecta orbital period NASA Johns Hopkins APL retrospective |
+| 2 | Discovery | DART Dimorphos asteroid impact observations technical overview DRACO ejecta tail ground based telescopes orbital period change Nature 2023 DART |
+| 3 | L2 | DART DRACO Daly successful kinetic impact final 20 seconds number images downlinked 23:14 PDS archive total images |
+| 4 | L4 | DART Dimorphos independent radar only orbital period change estimate Goldstone 32 minutes radar observations analysis |
+| 5 | L2 | DART DRACO images Daly successful kinetic impact 2023 total images transmitted images received final minutes number DRACO DART PDS collection image timestamps |
+| 6 | L4 | DART Dimorphos orbit period initial 2022 radar data only separate estimate Goldstone team independent photometry radar solution before October 11 32 minutes |
+
+The review reused an inspected discovery source for L3. It cited ground-based
+images of the tail more than 51 days post-impact and issued zero separate ejecta
+queries. It used two queries each for image counts and radar estimates, then
+stopped searching. The answer distinguished the rate-based frame estimate from
+an actual count and left the exact radar comparison unresolved. **Overlap** cited
+the earlier supplied briefing for L1. **Added** treated L2–L4 as assertions.
+[Ground-based observations, §VIII and Figure 9](https://arxiv.org/html/2311.01971#S8)
+
+**Controlled search.** Codex task `01a1eb78-1cc1-72f2-99c8-4d193165aa38` used
+the same budget inputs with a local search stub, because live discovery settled
+L3 before any targeted search. The stub let Codex issue any number of queries
+and returned a fixture path, an empty result, or an error. It used no network.
+In this run all three quantitative claims remained unresolved.
+
+| Query | Purpose | Stub response |
+| --- | --- | --- |
+| 1 | Discovery for mission coverage | Astronomy club summary, 2022-10-12. It described the deflection test and visual orbit observations. |
+| 2 | Discovery for technical coverage | Engineering note, 2022-09-27. It described the change in imaging cadence and supplied neither image count. |
+| 3 | L4, radar-only analysis | Search backend error, exit 1. |
+| 4 | L4, alternate planetary radar terms | No results. |
+| 5 | L2, final-20-second and mission image counts | Image collection guide, 2023-01-12. It described a partial release and supplied neither count. |
+| 6 | L3, dated ground-based ejecta detections | No results. |
+
+The trace shows both supplied-file reads before query 1, both discovered-file
+reads before query 3, and inspection of the image collection guide after query 5.
+The answer used the discovery documents to assess L1, L2, and L4. It correctly
+counted the failed attempt and both empty results and stopped at six with all
+three claims still inconclusive. It made no external searches.
+
+### Chronology and added material
+
+Task prompt after the instruction to load Kagami:
+
+```text
+Review chronology-item.txt and compare it with chronology-comparison.txt for an editor deciding what the update contributes. Use only the supplied fictional excerpts.
+```
+
+`chronology-item.txt`
+
+```text
+Quay library update — 2026-10-20, publication time unknown
+L1. The Saturday opening moved to 9 a.m.
+L2. The return slot now accepts oversized books.
+L3. The library added a quiet study room.
+L4. Visitors can reserve a study room online.
+L5. This change will halve no-shows.
+L6. The October booking export recorded 24 no-shows out of 120 bookings before online reservations began.
+```
+
+`chronology-comparison.txt`
+
+```text
+Staff bulletin — 2026-10-18
+L1. Saturday doors will open at 9 a.m.
+
+Community newsletter — 2026-10-22
+L1. The return slot takes oversized books.
+
+Room guide — date unknown
+L1. There is a new quiet study room at the library.
+
+Booking notice — 2026-10-20, publication time and ordering unknown
+L1. Visitors can reserve study rooms online.
+```
+
+**Result.** Codex task `01a1eb77-6588-7120-8bc1-5e2df22624c1` read both files
+and both packaged references. The trace shows zero search queries. The **Overlap**
+bullet cited the update at L1–L4 and the comparison excerpts at L1 of each notice.
+
+| Update passage | Comparison citation | Wording in the answer |
+| --- | --- | --- |
+| L1, Saturday opening | Staff bulletin, 2026-10-18, L1 | “repeats the 18 October staff bulletin” |
+| L2, return slot | Community newsletter, 2026-10-22, L1 | “overlaps with the later 22 October community newsletter” |
+| L3, quiet room | Room guide, undated, L1 | “overlaps with the undated room guide” |
+| L4, online reservations | Booking notice, 2026-10-20, L1 | “overlap with the 20 October booking notice, whose publication order relative to the update is unknown” |
+
+**Added** cited update L5–L6 and the comparison file. It called the forecast an
+added assertion and the reported export an added baseline, calculated as 20%.
+The review retained the attribution and asked for comparable post-launch booking
+data to check the forecast. It reported that neither the underlying export nor
+actual operations had been independently checked.
+
+### Repository checks and limits
+
+- In the existing locked environment, `uv run --locked --no-sync --offline`
+  ran `pytest -q` (95 passed), `python eval/validate.py` (four packages and 90
+  pilot records valid), and `skills-ref validate` for each of the four skills.
+- `eval.validate.check_links` passed on a snapshot of tracked working-tree files
+  covering all 38 repository Markdown files. Both `git diff --check` and
+  `git diff --cached --check` passed.
+- The pilot files and their hashes match the base revision. This addendum was
+  appended to the existing smoke record.
+
+The traces cover this model and these cases. They provide no measurement of
+comparative benefit or reliability across hosts.

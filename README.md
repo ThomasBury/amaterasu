@@ -50,7 +50,7 @@ requires Node.js and npm. You can use the skills without Python.
 
 For other installation scopes, updates, manual copying, and troubleshooting,
 see the [installation guide](docs/installation.md). For tested versions and
-runtime limits, see the [installation check record](eval/first-use-verification.md).
+runtime limits, see the [installation check record](eval/phase-6-verification.md).
 
 ### Claude Code
 
@@ -141,17 +141,20 @@ the training comparisons are fair requires details beyond the abstract.
 ### Compare with existing coverage
 
 ```text
-Review the new post below and compare it with the earlier article supplied below.
-Briefly state what is repeated, what is added, and what remains unchecked.
-New post: [paste text]
-Earlier article: [paste text or link]
+Review the new post and compare it with the supplied article.
+Briefly state what overlaps, what the post adds, and what remains unchecked.
+New post: [paste text and date, if known]
+Comparison article: [paste text and date, or link]
 ```
 
 To find comparison material too, add: “Also search for similar public articles,
-posts, or videos.” Kagami uses supplied sources first; requested discovery uses
-up to two searches within its shared six-search research budget. Additions are
-relative to inspected sources, not proof of originality. Video coverage depends
-on accessible transcripts and visuals.
+posts, or videos.” Kagami reads the post and supplied sources first. When public
+research is permitted, it reserves two of six searches for discovery before any
+corroboration searches. Claim checks can use the sources discovery finds and any
+unused slots. A match counts as repeating earlier coverage only when that passage
+is known to predate the post. Kagami reports additions relative to the sources it
+inspected and distinguishes added assertions from added evidence. Video coverage
+depends on accessible transcripts and visuals.
 
 ## Optional companions
 

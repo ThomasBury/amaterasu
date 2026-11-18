@@ -1,7 +1,7 @@
 # Portability contract
 
 All four skills have standalone folders and shared Claude/Codex plugin metadata.
-See the [current first-use record](../eval/first-use-verification.md) for exact
+See the [latest installation verification](../eval/phase-6-verification.md) for exact
 checks and unavailable runtime verification. The
 [2026-10-30 installation record](../eval/installation-verification.md) remains
 historical evidence for its tested versions. Installation does not establish
@@ -30,22 +30,19 @@ behavioral compatibility.
 
 The [README](../README.md#install) pairs installation with first use. The
 [installation guide](installation.md) covers alternate scopes, updates, and
-troubleshooting. Commands were checked against primary documentation and available
-CLI help on 2026-11-04–05. See the first-use record for observed runtime results.
+troubleshooting. The [installation verification](../eval/phase-6-verification.md)
+records the commands tested against the public GitHub source and the runtime results.
 
 | Target | Documented delivery | Documentation | Tested version / status |
 | --- | --- | --- | --- |
-| Codex | Shared plugin for the user; Skills CLI/manual project or user folders. | [Plugin commands](https://learn.chatgpt.com/docs/developer-commands#codex-plugin), [skills](https://learn.chatgpt.com/docs/build-skills) | CLI 0.166.0: local catalog parsing; isolated native install unavailable. Skills CLI folder copy passes. |
-| Claude Code | Shared plugin with project/user scope; standalone folders. | [Plugin CLI](https://code.claude.com/docs/en/plugins/cli-reference) | Host unavailable. Skills CLI folder copy passes; runtime untested. |
-| OpenCode 2 | Skills CLI or native skill folders; no extension required. | [V2 skills](https://opencode.ai/v2/docs/skills) | CLI 2.2.5: disposable runtime check; see the current record for discovery, reference loading, and response failures. |
-| Pi | Skills CLI or native skill folders; `/skill:kagami`. | [Skills](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md) | Host unavailable. Skills CLI folder copy passes; runtime untested. |
+| Codex | Shared plugin for the user; Skills CLI/manual project or user folders. | [Plugin commands](https://learn.chatgpt.com/docs/developer-commands#codex-plugin), [skills](https://learn.chatgpt.com/docs/build-skills) | CLI 0.169.0: public install, discovery, and update verified. Kagami review completed using a read-only reference tool because the nested shell sandbox failed. |
+| Claude Code | Shared plugin with project/user scope; standalone folders. | [Plugin CLI](https://code.claude.com/docs/en/plugins/cli-reference) | Host unavailable. Shared-plugin installation and runtime checks outstanding. |
+| OpenCode 2 | Skills CLI or native skill folders; no extension required. | [V2 skills](https://opencode.ai/v2/docs/skills) | CLI 2.3.0: GitHub install, discovery, invocation, reference reads, and update verified. |
+| Pi | Skills CLI or native skill folders; `/skill:kagami`. | [Skills](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/skills.md) | GitHub install and update verified with Skills CLI. Pi runtime unavailable. |
 
-Skills CLI **1.7.4** installed only Kagami into separate temporary projects for all
-four targets, with every packaged file byte-matching its source. Those checks
-used the local checkout; GitHub-source installation, remote updates, user-scope
-installation, and project/user precedence were not exercised. The README's
-`@latest` examples follow current documentation; they are not a test of every
-future CLI version.
+Skills CLI **1.9.0** installed Kagami from GitHub into separate OpenCode and Pi
+projects. Earlier [local-copy checks](../eval/first-use-verification.md) used
+1.7.4. User-scope installation and project/user precedence remain untested.
 
 Hermes, OpenClaw, and manual Grok use remain foundation-era intended targets.
 No new compatibility or installation claim is made for them in this phase.
