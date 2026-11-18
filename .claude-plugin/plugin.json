@@ -1,6 +1,6 @@
 {
   "name": "amaterasu",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Kagami reviews URLs and text for empty language, unsupported claims, misleading reasoning, and promises, with optional coverage comparison. Includes Kotoba, Kakehashi, and Mamoru.",
   "author": { "name": "Thomas Bury" },
   "repository": "https://github.com/ThomasBury/amaterasu",
