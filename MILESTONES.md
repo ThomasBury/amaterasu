@@ -156,6 +156,28 @@ and updates, and the controlled v0.2.0 to v0.3.0 updates. Claude Code and Pi
 runtime checks require the corresponding hosts. A GitHub-hosted CI run is
 pending publication of the workflow.
 
+## Phase 7 — Compare all four skills with an ordinary prompt
+
+- [x] Freeze eight prompts and source excerpts. Use the chronology regression and
+  pilot `023` for Kagami, `003` and `013` for Kotoba, `001` and `017` for
+  Kakehashi, and `001` and `012` for Mamoru. Generate one answer per condition in
+  fresh sessions with the same model, settings, permissions, and task wording.
+  Load the relevant skill in one condition and use a profile without Amaterasu
+  skills for the baseline.
+- [ ] Give an independent human reviewer the sources and randomly ordered pairs.
+  Withhold condition labels and provisional annotations until judgments are
+  recorded. Record a winner or tie per pair for fidelity to the source, handling
+  of missing evidence, and usefulness for the next decision. Record material
+  errors in each answer separately.
+- [ ] Report results by skill and criterion, with examples, ties, regressions,
+  incomplete pairs, and specific wording worth revising. Scope conclusions to
+  the eight cases and tested model.
+
+Generated eight matched answer pairs on 2026-11-18. The
+[Phase 7 verification record](eval/phase-7-verification.md) documents the runs
+and SkillEvaluator checks. The [blinded packet](eval/phase-7-review.md) is ready
+for independent review.
+
 ## Verification and limits
 
 For each phase, run the existing pytest suite, corpus/package validator,
