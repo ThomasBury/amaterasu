@@ -106,9 +106,10 @@ claims not checked at all. Retain explicit uncertainty rather than inventing a
 source or using memory as verification.
 
 For corroboration, prioritize up to three unresolved claims that could change the
-user's decision, initially using at most two targeted searches per claim, within
-six targeted searches total including requested coverage discovery. Retrieve
-and inspect the relevant sources, rather than treating search results as evidence.
+user's decision, with at most two targeted searches per claim. All six search slots
+are available for corroboration when discovery is not requested. When discovery
+runs, use only the slots it leaves. Count each issued query, even if it fails or
+returns nothing. Retrieve and inspect relevant sources before relying on them.
 Stop when resolved, when sources repeat an origin, or at the budget; further
 research needs an explicit user request for more research. Retain queries and
 access dates and report material coverage limits. A claim skipped because of the
@@ -119,19 +120,19 @@ alone does not establish intentional deception.
 
 ## Optional coverage comparison
 
-Compare only when requested. Read supplied comparison links, pasted text, files,
-or prior reviews first. If none are supplied and discovery was not requested,
+Compare only when requested. Inspect the reviewed item and any supplied comparison
+links, pasted text, files, or prior reviews before searching. If no comparison
+sources are supplied and discovery was not requested,
 ask for comparison material while continuing the ordinary review. If sources
 are inaccessible, report the gap rather than substituting an unrequested search.
 
-When asked to find similar articles, posts, papers, or videos, use available host
-tools under the existing privacy boundary. Use at most two targeted discovery
-searches, counted within the same six-search total as claim checking, not added
-to it. Claim checking still covers at most three consequential claims with at
-most two searches each; allocate the remaining searches by consequence. Retrieval
-of supplied sources is not a discovery search. A request to compare or find
-coverage does not itself expand the budget; further research needs an explicit
-request for more research. Record queries, access dates, and limits.
+When asked to find similar articles, posts, papers, or videos and the privacy
+boundary permits it, reserve two of the six search slots and do discovery first.
+Inspect the discovered sources and use them for claim checks where relevant. Return
+unused discovery slots to corroboration, allocating the remaining queries by
+consequence within the per-claim limits. Count individual queries in a batch and
+count failed or empty queries. Direct retrieval of supplied or discovered sources
+does not spend a search slot. Record queries, access dates, and limits.
 
 Compare substantive claims, evidence, qualifications, and interpretations,
 including paraphrases. Preserve conditions and dates; different workloads or
@@ -145,8 +146,11 @@ not the accuracy of uninspected underlying sources.
 After the normal findings, give three brief bullets, normally one or two sentences
 each, with source/location citations:
 
-- **Repeated:** substantive points already present in the inspected coverage,
-  even if reworded. Repeated accounts from one origin are not independent evidence.
+- **Overlap:** substantive matches in the inspected coverage, including paraphrases.
+  Say the reviewed item repeats earlier coverage only when the matching passage
+  is known to predate it. Describe matches in later or undated coverage, or when
+  the order is unclear (including same-day dates without known order), as overlap.
+  Cite dates or say what is unknown. A shared origin counts as one source of evidence.
 - **Added:** claims, evidence, qualifications, or interpretations absent from that
   set, including material revisions or disagreements. Distinguish a new assertion
   from new supporting evidence or interpretation; added does not mean verified.

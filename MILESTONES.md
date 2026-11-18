@@ -108,6 +108,28 @@ queries and inspection of public page text; video access is limited to page text
 and a synthetic transcript case. No independent invocation or accuracy result
 is claimed. Stop here for this phase.
 
+## Phase 5 — Fix search allocation and chronology
+
+- [x] Inspect the reviewed item and supplied sources first. Reserve two of six
+  searches for requested and permitted discovery, run it before corroboration,
+  reuse inspected results, and release unused slots. Count every issued query.
+  Keep the limits of three claims and two searches per claim. Without requested
+  discovery, make all six slots available for corroboration.
+- [x] Use **Overlap**. Describe repetition only for passages known to predate the
+  reviewed item. Cite dates or uncertainties for later, undated, and ambiguously
+  ordered matches. Scope **Added** to inspected sources and distinguish assertions
+  from evidence.
+- [x] Align the skill, reference, contract, and README. Run the search-budget and
+  chronology regressions in fresh Codex sessions and record both in the smoke
+  document. Inspect the query trace and chronology wording and citations. Label
+  any controlled search used to exercise the ceiling.
+
+Completed 2026-11-17. The
+[Phase 5 verification record](eval/kagami-workflow-smoke.md#phase-5-regressions--2026-11-17)
+documents fresh Codex runs for the search budget and chronology. Live and
+controlled searches both stopped at six, and each chronology case matched the
+available dates. Repository checks passed across four skills and 90 pilot cases.
+
 ## Verification and limits
 
 For each phase, run the existing pytest suite, corpus/package validator,
