@@ -63,8 +63,9 @@ cannot establish what its missing pages contain.
 Ask a question with an assessable answer when understanding matters: “Does this
 test establish production response time?” is better than “Does that make sense?”
 Check factual understanding, scope/uncertainty, and the relevant decision or next
-action separately. Seeking evidence or declining to act may be correct. Do not
-judge readers solely by agreement with the explanation or exact wording.
+action separately. Seeking evidence or declining to act may be correct.
+Agreement with the explanation or repetition of its exact wording does not by
+itself establish understanding.
 
 ## Evidence and limits
 
