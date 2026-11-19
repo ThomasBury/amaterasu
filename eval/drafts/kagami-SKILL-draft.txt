@@ -1,0 +1,70 @@
+DRAFT — not installed. Candidate A from eval/instruction-consolidation-proposal.md.
+Verbatim regions are marked in brackets; assemble by copying them from the
+current skills/kagami/SKILL.md before any comparison run.
+
+---
+name: kagami
+description: Review URLs, pasted posts, articles, and papers for empty language, unsupported claims, misleading reasoning, numbers, and promises. Optionally compare with existing coverage. Retrieve supplied material first, then use bounded public research where permitted. Use for requested verification or critical analysis, not ordinary editing alone.
+license: MIT
+---
+
+# Kagami — Reflect claims against reality.
+
+Give a useful, scoped assessment of communication, never a rating of its author.
+This is an unvalidated reasoning aid, not an automated truth detector.
+
+## Shared essentials
+
+[Copy the current Shared essentials 1–8 and the cloud-processing note verbatim;
+drift-checked against docs/contracts.md.]
+
+## Workflow
+
+1. Get separate authority before sending, filing, publishing, or changing
+   external records. Accept a URL, pasted post, article, or paper. Retrieve
+   the supplied material first with available host tools, or read the pasted
+   text or supplied file. This is separate from searching for corroboration.
+   Apply shared essentials 5–6 to both. Record source identity, locations,
+   context, and review date. Establish access as complete, partial, or
+   unavailable. For blocked pages, request pasted text or an export and
+   continue with accessible material without reconstructing missing content.
+   For papers, state which portions you inspected. An abstract cannot
+   establish uninspected methods or results.
+2. Read [evidence and arguments](references/evidence-and-arguments.md).
+   Classify each consequential passage as a clear proposition, vague but
+   repairable, or having no determinate proposition; quote the last two and
+   ask only relevant resolving questions. Never strengthen vague wording into
+   a claim attributed to its author.
+3. Extract the smallest independently assessable claims. Inspect supplied
+   evidence first, including supplied comparison sources; record source
+   identity, author, date, location, and narrow relationship. Evaluate meaning,
+   support, and inference separately, including assumptions, exceptions,
+   qualifications, and plausible alternatives.
+4. For numbers or product claims, also read
+   [numbers and product claims](references/numbers-and-product-claims.md).
+   Recompute simple arithmetic with available tools; show units, denominators,
+   and formula. Correct arithmetic does not verify the measurements.
+5. For public research, follow the search budget in evidence and arguments:
+   at most six counted queries, discovery first when requested and permitted,
+   up to three consequential unresolved claims with at most two targeted
+   searches each. Inspect original sources; search snippets and model memory
+   are not inspected evidence. Further research requires an explicit user
+   request. For requested comparison, follow the coverage-comparison procedure
+   in the same reference.
+6. For promises, apply the compact promise check in evidence and arguments:
+   actor, promised outcome, deadline, conditions, and dated evidence of
+   fulfillment as of the review date. A promise to recommend is not a promise
+   of approval. Do not invoke another skill.
+7. Assign evidence statuses only where applicable, using the status table in
+   evidence and arguments: not examined is **not checked**; attempted but
+   unresolved is **insufficient evidence**. Call empty wording and misleading
+   reasoning out plainly; explain the actual inference error rather than merely
+   naming a fallacy. Unsupported does not mean false. Explicitly recognize
+   substantive, well-supported material, including a review with no material
+   problems.
+
+## Response
+
+[Copy the current Response section verbatim.]
+
+See [attribution](NOTICE.md) and [license](LICENSE) for distribution terms.

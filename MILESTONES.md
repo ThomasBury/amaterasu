@@ -153,8 +153,9 @@ available dates. Repository checks passed across four skills and 90 pilot cases.
 Completed 2026-11-18. The [Phase 6 verification record](eval/phase-6-verification.md)
 documents the Python 3.11 and forced ASCII checkout checks, the live installs
 and updates, and the controlled v0.2.0 to v0.3.0 updates. Claude Code and Pi
-runtime checks require the corresponding hosts. A GitHub-hosted CI run is
-pending publication of the workflow.
+runtime checks require the corresponding hosts. GitHub-hosted CI ran green on
+2026-11-18 for [pull request #11](https://github.com/ThomasBury/amaterasu/actions/runs/44352543751)
+and the [main push](https://github.com/ThomasBury/amaterasu/actions/runs/44356618740).
 
 ## Phase 7 — Compare all four skills with an ordinary prompt
 
@@ -166,17 +167,76 @@ pending publication of the workflow.
   skills for the baseline.
 - [ ] Give an independent human reviewer the sources and randomly ordered pairs.
   Withhold condition labels and provisional annotations until judgments are
-  recorded. Record a winner or tie per pair for fidelity to the source, handling
-  of missing evidence, and usefulness for the next decision. Record material
-  errors in each answer separately.
-- [ ] Report results by skill and criterion, with examples, ties, regressions,
-  incomplete pairs, and specific wording worth revising. Scope conclusions to
-  the eight cases and tested model.
+  recorded. Use the [separate scorecard](eval/phase-7-scorecard.md): record a
+  winner, tie, or N/A with a reason per criterion (source fidelity, handling
+  of missing evidence, and usefulness for the next decision). Record material
+  errors separately for each answer. After judgments are submitted, run the
+  post-judgment blinding check (guess, confidence, cue) and report guesses
+  descriptively.
+- [ ] Before scoring, transfer the condition key and nonce to an independent
+  custodian against the published commitment. Reveal both after all judgments
+  and blinding guesses are submitted, then verify the digest. Report case-level
+  findings including ties, inapplicable criteria, examples, regressions,
+  incomplete pairs, and specific wording worth revising. Keep per-skill
+  summaries descriptive and scope conclusions to the eight cases and tested
+  model. Pairs 03 and 07 are basic
+  controls, not equivalence evidence.
 
 Generated eight matched answer pairs on 2026-11-18. The
 [Phase 7 verification record](eval/phase-7-verification.md) documents the runs
 and SkillEvaluator checks. The [blinded packet](eval/phase-7-review.md) is ready
-for independent review.
+for independent review; its bytes stay frozen.
+
+Integrity follow-up on 2026-11-19: added the
+[separate scorecard](eval/phase-7-scorecard.md) with reporting rules and the
+post-judgment blinding check, and published a nonce commitment to the condition
+key (`0830130369a7c923d481463d88d3b9099edcaca1703ef23f0a583b47c3993cdd`).
+Custodian transfer and independent judgments remain pending. See the
+[follow-up verification record](eval/review-followup-verification.md).
+
+## Phase 8 — Redesign the effectiveness study
+
+Execute the [effectiveness protocol](eval/effectiveness-protocol.md). The 90
+pilot micro-cases remain fixtures and regression sources, not the study
+sample.
+
+- [ ] Preregister before generating answers: freeze case selection, natural
+  prompts, conditions, repeat counts, criteria, and the analysis plan. Publish
+  digests for private inputs. Commit condition mappings with the
+  nonce-and-custodian procedure.
+- [ ] Build 12–20 fresh realistic cases with natural requests: ordinary work,
+  clean documents deserving few or zero criticisms, and hard cases with buried
+  qualifications or conflicting evidence. Keep cases selected for known
+  baseline failures as a separate, labeled challenge set.
+- [ ] Have independent reviewers record what matters per case before seeing
+  outputs. Optionally adjudicate about ten pilot micro-cases; route Mamoru's
+  expert sheet to a workplace-domain reviewer separately.
+- [ ] Run the skill, an ordinary-prompt baseline, and a concise well-written
+  baseline in fresh sessions with identical settings. Give all three conditions
+  identical controlled fetch and search access in tool-enabled Kagami cases.
+  Inspect traces for retrieval order, query counts, failed searches, and
+  private identifiers in public queries.
+- [ ] Score fidelity, missing-evidence handling, usefulness, material errors,
+  and unnecessary length using the blinded form for each case and repeat.
+  Report case-level results with ties and inapplicable criteria. Keep per-skill
+  summaries descriptive until sample size and repeated runs support a
+  reliable-benefit claim.
+- [ ] Apply the decision rule in [docs/evidence.md](docs/evidence.md): simplify
+  or retire a companion that repeatedly adds little while a shorter
+  alternative preserves the safeguards. Two easy pairs per skill are
+  insufficient for that decision.
+
+## Phase 9 — Compare consolidated instructions before shipping
+
+- [ ] Review the [consolidation proposal](eval/instruction-consolidation-proposal.md):
+  remove genuinely duplicated detail where the skill reliably reads the
+  canonical reference; keep privacy and tool-use rules visible before the
+  first relevant action.
+- [ ] Compare the shorter wording against the current skill in fresh sessions
+  on the smoke scenarios, Phase 5 regressions, tool-enabled cases, a clean
+  findings-only review with simulated external actions, and a number-heavy
+  claim. Record the comparison in a dated verification record. Ship only if
+  safeguards and usefulness are preserved.
 
 ## Verification and limits
 

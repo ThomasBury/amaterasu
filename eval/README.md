@@ -98,6 +98,11 @@ remains unanswered. Neither is a required gate for the
 [active implementation roadmap](../MILESTONES.md). Case authors' walkthroughs
 cannot substitute for independent judgments.
 
+The Phase 7 [blinded packet](phase-7-review.md) stays frozen. Independent
+reviewers record judgments in the [separate scorecard](phase-7-scorecard.md),
+which adds reporting rules, a post-judgment blinding check, and the
+condition-key commitment and reveal procedure.
+
 Earlier dated records remain available: [Kagami](kagami-verification.md),
 [Kotoba](kotoba-verification.md), [Kakehashi](kakehashi-verification.md),
 [Mamoru](mamoru-verification.md), [pilot repairs](pilot-repair-verification.md),
@@ -108,7 +113,12 @@ and reasons. Counts and observations in these files describe their original date
 The [old roadmap](roadmap-history.md) and
 [research protocol](research-protocol.md) preserve historical proposals, including
 the 144-output comparison, large benchmark, reader study, scorer, and optimization
-work. They are not active requirements, and no such results are claimed.
+work. They are not active requirements, and no such results are claimed. The
+[effectiveness protocol](effectiveness-protocol.md) is the active design for the
+next study: fresh realistic cases, natural requests, tool-enabled Kagami runs,
+and preregistration. The
+[instruction consolidation proposal](instruction-consolidation-proposal.md) is
+a draft gated on a fresh-session comparison; it is not installed.
 
 The [Claude transfer instructions](claude-installation-checks.md) and
 [frozen manifest](claude-installation-packet.json) describe an earlier package.
