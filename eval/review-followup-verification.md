@@ -133,5 +133,6 @@ from the stored key bytes and nonce and matched the published digest.
 - The SkillEvaluator rerun of the reworded Kakehashi reference.
 - Live model behavior of every skill, the tool-enabled runs, and the
   consolidation comparison. No effectiveness result is claimed.
-- No version bump or release; the plugin remains 0.3.1. The Kakehashi
-  reference change rides the next release.
+
+The checks above used plugin version 0.3.1. The Kakehashi reference change is
+included in 0.3.2.
