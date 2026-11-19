@@ -1,7 +1,3 @@
-DRAFT — not installed. Candidate A from eval/instruction-consolidation-proposal.md.
-Verbatim regions are marked in brackets; assemble by copying them from the
-current skills/kagami/SKILL.md before any comparison run.
-
 ---
 name: kagami
 description: Review URLs, pasted posts, articles, and papers for empty language, unsupported claims, misleading reasoning, numbers, and promises. Optionally compare with existing coverage. Retrieve supplied material first, then use bounded public research where permitted. Use for requested verification or critical analysis, not ordinary editing alone.

@@ -58,8 +58,7 @@ that claim and fresh runs to assess variability.
 - For Kagami, include at least one case with confidential identifiers or
   embedded instructions in supplied material, and one where corroboration
   requires choosing what to search. Use synthetic identifiers and details in
-  any privacy probe that can reach live search. Use a controlled offline fixture
-  for any probe containing real confidential material.
+  any privacy probe that can reach live search.
 - Keep cases selected for known baseline failures as a separate, labeled
   challenge set. Report them apart from the ordinary sample; they show whether
   the skill fixes known failures, not how often users meet them.
@@ -92,8 +91,10 @@ per condition on cases used to support a claim of stability.
 
 Phase 7 ran with tools disabled and references preloaded, so it tested prose
 only. In each tool-enabled Kagami case, give the skill condition and both
-baselines the same controlled fetch and search access, using the same recorded
-fixture set or logged live proxy. Inspect the tool traces for these behaviors.
+baselines the same controlled fetch and search access. Cases containing real
+private material require an offline fixture set with no live fetch or search.
+Other cases may use a recorded fixture set or a logged live proxy. Inspect the
+tool traces for these behaviors.
 
 - Supplied material retrieved and read before any corroboration search.
 - Discovery runs before corroboration when requested and permitted, within

@@ -7,7 +7,11 @@ adds the reporting rules and the post-judgment blinding check without altering
 the frozen answers. The packet's embedded scorecard remains part of the frozen
 artifact; record judgments here.
 
-Coordinators should give reviewers the packet and this scorecard. Keep
+Coordinators should give reviewers an export of the committed packet, this
+scorecard, and the recorded digest. From an empty review directory outside
+the checkout, replace `/path/to/amaterasu` with the checkout path and run
+`git -C "/path/to/amaterasu" show HEAD:eval/phase-7-review.md > phase-7-review.md`.
+This export preserves the committed bytes across checkout line endings. Keep
 coordinator notes with examples of answer features private until all reviewers
 have submitted their blinding guesses.
 
@@ -15,10 +19,9 @@ have submitted their blinding guesses.
 
 1. Record your reviewer name or ID and the review date below. You should be
    independent of the case design and answer generation.
-2. If you have a repository checkout, run
-   `git show HEAD:eval/phase-7-review.md | sha256sum` from its root and compare
-   the digest with the verification record. Git supplies the committed bytes
-   before checkout line-ending conversion.
+2. Run `sha256sum phase-7-review.md` on the export you received and compare
+   it with the recorded digest. Use that verified file for judging. If the
+   digest differs, ask the coordinator for a fresh export before judging.
 3. Read each prompt and its source excerpts, then compare answers A and B.
    Open the blinding-check section after submitting your judgments. Wait until
    you submit your blinding guesses to consult pilot annotations or comparison

@@ -49,8 +49,9 @@ Unique `Final check` content and its destination:
 
 Draft entry point: [drafts/kagami-SKILL-draft.txt](drafts/kagami-SKILL-draft.txt)
 (plain text so repository link checks do not treat draft links as installed
-ones). Verbatim regions are marked; assemble by copying them from the current
-`SKILL.md`.
+ones). To assemble the candidate `SKILL.md`, keep the frontmatter at the top
+and replace each bracketed placeholder with the marked verbatim region from
+the current `SKILL.md`.
 
 The draft removes the `Final check` section and the workflow restatements of
 rules the mandated reference already carries. It keeps every rule in at least
